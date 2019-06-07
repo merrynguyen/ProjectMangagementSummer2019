@@ -11,7 +11,6 @@ public class ActionModifier : MonoBehaviour
 
     public void Add()
     {
-        Debug.Log("Add " + transform.name);
         ReachDestAct.Action += CallEvent;
         //ReachDestAct.Action -= Null;
     }
@@ -23,7 +22,6 @@ public class ActionModifier : MonoBehaviour
 
     public void Sub()
     {
-        Debug.Log("Sub " + transform.name);
         ReachDestAct.Action -= CallEvent;
         ReachDestAct.Action += Null;
     }
