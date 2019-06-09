@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Cat Character Model.ma
-//Last modified: Sun, Jun 09, 2019 10:48:40 AM
+//Last modified: Sun, Jun 09, 2019 10:51:41 AM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
