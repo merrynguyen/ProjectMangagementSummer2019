@@ -86,8 +86,14 @@
             <e p="Choice_Selection.cs" t="Include" />
           </e>
           <e p="Door_Script.cs" t="Include" />
+          <e p="Event_Scripts" t="Include">
+            <e p="ActionModifier.cs" t="Include" />
+            <e p="EventsScript.cs" t="Include" />
+            <e p="If_Events.cs" t="Include" />
+            <e p="Mouse_Events.cs" t="Include" />
+            <e p="OnTriggerWIthPLayerEvent.cs" t="Include" />
+          </e>
           <e p="Game_Manager_Cafe.cs" t="Include" />
-          <e p="If_Events.cs" t="Include" />
           <e p="Input_Text.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="DropDown_Script.cs" t="Include" />
@@ -100,16 +106,13 @@
           </e>
           <e p="Item_Pickup.cs" t="Include" />
           <e p="MiscScripts" t="Include">
-            <e p="ActionModifier.cs" t="Include" />
             <e p="AutomaticSnapScript.cs" t="Include" />
             <e p="Change_Rigidbody_Script.cs" t="Include" />
             <e p="Change_Scene.cs" t="Include" />
             <e p="DeacvtivateSnapAreas.cs" t="Include" />
             <e p="Drag_Script.cs" t="Include" />
-            <e p="EventsScript.cs" t="Include" />
             <e p="Interact_with_object.cs" t="Include" />
             <e p="Move_Script.cs" t="Include" />
-            <e p="OnTriggerWIthPLayerEvent.cs" t="Include" />
             <e p="Pause_Script.cs" t="Include" />
             <e p="Rotate_Script.cs" t="Include" />
             <e p="Snap_Script.cs" t="Include" />
@@ -161,6 +164,7 @@
               <e p="Slide_Tiles.cs" t="Include" />
             </e>
           </e>
+          <e p="Show_Text.cs" t="Include" />
         </e>
         <e p="Test.cs" t="Include" />
       </e>

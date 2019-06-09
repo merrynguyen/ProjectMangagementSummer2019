@@ -130,11 +130,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinDiff: 2
   MoveDist: 3
-  SlideTileEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   tile: {fileID: 11400000, guid: 882722ef106b542478a0c087b199c653, type: 2}
   Slide_Directions: {fileID: 11400000, guid: 6874119caa5630044812d088440834b0, type: 2}
 --- !u!222 &6153019882221928795

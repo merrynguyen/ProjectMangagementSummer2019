@@ -10,13 +10,13 @@ public class EventsScript : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Start");
+        //Debug.Log("Start");
         StartEvent.Invoke();
     }
 
     private void Awake()
     {
-        Debug.Log("Awake");
+        //Debug.Log("Awake");
         AwakeEvent.Invoke();
     }
 
