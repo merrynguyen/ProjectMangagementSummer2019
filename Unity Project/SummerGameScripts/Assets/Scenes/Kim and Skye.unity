@@ -192,11 +192,6 @@ PrefabInstance:
       objectReference: {fileID: 1566251765}
     - target: {fileID: 7615886023411008218, guid: c86e24d15521e8d438d48ffa37866a75,
         type: 3}
-      propertyPath: m_CameraDistance
-      value: 3.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7615886023411008218, guid: c86e24d15521e8d438d48ffa37866a75,
-        type: 3}
       propertyPath: m_ScreenY
       value: 1
       objectReference: {fileID: 0}
@@ -2196,26 +2191,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1683950187260228941, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 1683950187260228941, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 1683950187260228941, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 950029797492104201, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6953026306408994956, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
         type: 3}
       propertyPath: StartEvent.m_PersistentCalls.m_Calls.Array.size
@@ -2298,6 +2273,26 @@ PrefabInstance:
         type: 3}
       propertyPath: StartEvent.m_PersistentCalls.m_Calls.Array.data[8].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683950187260228941, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683950187260228941, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683950187260228941, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 950029797492104201, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23dc72362010a5b4d94cd71e6c8fb8ad, type: 3}
@@ -2518,6 +2513,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.9208094
       objectReference: {fileID: 0}
+    - target: {fileID: 6221335472296215590, guid: 7d806f57566f0024ba514f9446af8fe8,
+        type: 3}
+      propertyPath: m_Name
+      value: Pick_up_book
+      objectReference: {fileID: 0}
     - target: {fileID: 6221335472296215591, guid: 7d806f57566f0024ba514f9446af8fe8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2547,11 +2547,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.15227282
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221335472296215590, guid: 7d806f57566f0024ba514f9446af8fe8,
-        type: 3}
-      propertyPath: m_Name
-      value: Pick_up_book
       objectReference: {fileID: 0}
     - target: {fileID: 6221335472296215588, guid: 7d806f57566f0024ba514f9446af8fe8,
         type: 3}
