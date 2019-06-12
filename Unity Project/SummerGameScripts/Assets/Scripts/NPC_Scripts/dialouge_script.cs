@@ -11,20 +11,23 @@ public class dialouge_script : MonoBehaviour
     public Text Dialouge_Text, Character_Text;
     public GameObject Dialouge_Object;
     public KeyCodeData Interact;
-    public IntData ConvNum, BasicConNum;
+    public IntData ConvNum, BasicConNum, Number_Of_Choices;
     private bool ConvStart, SpeedUp, inRange;
     private int _char, line, paragraph, _conNum;
     private string _text_to_display;
     public ActionObject EndDialouge;
-    public UnityEvent OnInteract;
+    public UnityEvent OnInteract, OnChoiceSelectStart;
+    private char _choice_char;
+    public BoolData choiceselection;
+    public List<StringData> ChoiceOptions;
     
 
     private void Start()
     {
+        _choice_char = '{';
         inRange = false;
         SpeedUp = false;
         ConvStart = false;
-        //ConvNum.value = 0;
         line = 0;
         paragraph = 0;
         character.Initialize();
@@ -49,7 +52,8 @@ public class dialouge_script : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (inRange && !ConvStart && Interact.KeyDown())
+        
+        if (inRange && !ConvStart && Interact.KeyDown() && !choiceselection.value)
         {
             OnInteract.Invoke();
             StartConv();
@@ -58,7 +62,7 @@ public class dialouge_script : MonoBehaviour
 
     public void StartConv()
     {
-        if (!ConvStart){
+        if (!ConvStart && !choiceselection.value){
             ConvStart = true;
         Dialouge_Object.SetActive(true);
         StartCoroutine(ScrollText());
@@ -78,7 +82,6 @@ public class dialouge_script : MonoBehaviour
         {
             if (Interact.KeyDown())
             {
-                Debug.Log("Speed");
                 SpeedUp = true;
             }
             yield return new WaitForFixedUpdate();
@@ -88,31 +91,56 @@ public class dialouge_script : MonoBehaviour
 
     public IEnumerator ScrollText()
     {
+        SpeedUp = false;
         _conNum = ConvNum.value;
-        Debug.Log("Start Dialouge");
         paragraph = 0;
         line = 0;
         _char = 0;
         _text_to_display = "";
-        while (paragraph < character.Script.Dialouge[_conNum].Count && ConvStart)
+        while (paragraph < character.Script.Dialouge[_conNum].Count && ConvStart && !choiceselection.value)
         {
-            Character_Text.text = character.Script.Characters[_conNum][paragraph];
+            if (paragraph > character.Script.Characters[_conNum].Count)
+                Character_Text.text = "";
+            else
+                Character_Text.text = character.Script.Characters[_conNum][paragraph];
             while (line < character.Script.Dialouge[_conNum][paragraph].Count)
             {
                 _text_to_display = "";
                 while (_char < character.Script.Dialouge[_conNum][paragraph][line].Length)
                 {
-                    _text_to_display += character.Script.Dialouge[_conNum][paragraph][line][_char];
-                    Dialouge_Text.text = _text_to_display;
-                    _char++;
-                    yield return new WaitForSeconds(.01f);
+                    if (character.Script.Dialouge[_conNum][paragraph][line][_char] == _choice_char)
+                    {
+                        choiceselection.value = true;
+                        CallChoice();
+                        StopCoroutine(ScrollText());
+                        _char++;
+                    }
+                    else
+                    {
+                        _text_to_display += character.Script.Dialouge[_conNum][paragraph][line][_char];
+                        Dialouge_Text.text = _text_to_display;
+                        _char++;
+                        yield return new WaitForSeconds(.01f);
+                    }
+
                     if (SpeedUp)
                     {
                         while (_char < character.Script.Dialouge[_conNum][paragraph][line].Length)
                         {
-                            _text_to_display += character.Script.Dialouge[_conNum][paragraph][line][_char];
-                            Dialouge_Text.text = _text_to_display;
-                            _char++;
+                            if (character.Script.Dialouge[_conNum][paragraph][line][_char] == _choice_char)
+                            {
+                                paragraph++;
+                                choiceselection.value = true;
+                                CallChoice();
+                                StopCoroutine(ScrollText());
+                                _char++;
+                            }
+                            else
+                            {
+                                _text_to_display += character.Script.Dialouge[_conNum][paragraph][line][_char];
+                                Dialouge_Text.text = _text_to_display;
+                                _char++;
+                            }
                         }
                         yield return new WaitForSeconds(.1f);
                     }    
@@ -125,12 +153,52 @@ public class dialouge_script : MonoBehaviour
             line = 0;
             paragraph++;
         }
-        paragraph = 0;
+
+        if (!choiceselection.value)
+        {
+            paragraph = 0;
+            Dialouge_Text.text = "";
+            Character_Text.text = "";
+            Dialouge_Object.SetActive(false);
+            ConvStart = false;
+            EndDialouge.Action.Invoke();
+        }
+    }
+
+    private void CallChoice()
+    {
+        StopCoroutine(ScrollText());
+        StartCoroutine(ChoiceSelect());
+    }
+
+    private IEnumerator ChoiceSelect()
+    {
+        yield return new WaitForSeconds(.1f);
+        yield return new WaitUntil(Interact.KeyDown);
         Dialouge_Text.text = "";
         Character_Text.text = "";
         Dialouge_Object.SetActive(false);
-        Debug.Log("End Dialouge");
+        choiceselection.value = true;
+        line = 0;
+        Number_Of_Choices.value = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            Debug.Log(character.Script.Dialouge[_conNum][paragraph].Count);
+            if(i > character.Script.Dialouge[_conNum][paragraph].Count-1)
+            {
+                ChoiceOptions[i].value = "";
+            }
+            else
+            {
+                ChoiceOptions[i].value = character.Script.Dialouge[_conNum][paragraph][line];
+                line++;
+                Number_Of_Choices.value++;
+            }
+        }
+        Dialouge_Text.text = "";
+        Character_Text.text = "";
+        Dialouge_Object.SetActive(false);
+        OnChoiceSelectStart.Invoke(); 
         ConvStart = false;
-        EndDialouge.Action.Invoke();
     }
 }
