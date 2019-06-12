@@ -49,9 +49,6 @@
           </e>
         </e>
         <e p="Resources" t="Include">
-          <e p="Items" t="Include">
-            <e p="Inventory_Dialouge.cs" t="Include" />
-          </e>
           <e p="Text_Files" t="Include">
             <e p="Captain_Al_Dialogue.txt" t="Include" />
             <e p="Carl_Dialogue.txt" t="Include" />
@@ -78,6 +75,7 @@
             <e p="FloatInput.cs" t="Include" />
             <e p="FloatInputAxis.cs" t="Include" />
             <e p="IntData.cs" t="Include" />
+            <e p="KeyBoard_StringData.cs" t="Include" />
             <e p="KeyCodeData.cs" t="Include" />
             <e p="KeyCodeDataKeys.cs" t="Include" />
             <e p="ListData.cs" t="Include" />
@@ -91,6 +89,7 @@
           <e p="Dialogue_Scripts" t="Include">
             <e p="Choice_Selection.cs" t="Include" />
           </e>
+          <e p="Dont_Destroy.cs" t="Include" />
           <e p="Door_Script.cs" t="Include" />
           <e p="Event_Scripts" t="Include">
             <e p="ActionModifier.cs" t="Include" />
@@ -106,6 +105,7 @@
             <e p="Hover_Pointer_Script.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="Inventory_Button_Object.cs" t="Include" />
+            <e p="Inventory_Dialouge.cs" t="Include" />
             <e p="Inventory_Display.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="Note.cs" t="Include" />
@@ -170,7 +170,10 @@
               <e p="Slide_Tiles.cs" t="Include" />
             </e>
           </e>
+          <e p="Scriptable_Object_Holder.cs" t="Include" />
+          <e p="Scriptable_Object_Saving.cs" t="Include" />
           <e p="Show_Text.cs" t="Include" />
+          <e p="UnityEvent_List_Script.cs" t="Include" />
         </e>
         <e p="Test.cs" t="Include" />
       </e>
