@@ -53,8 +53,14 @@
             <e p="Inventory_Dialouge.cs" t="Include" />
           </e>
           <e p="Text_Files" t="Include">
+            <e p="Captain_Al_Dialogue.txt" t="Include" />
+            <e p="Carl_Dialogue.txt" t="Include" />
             <e p="Get_Item_01.txt" t="Include" />
+            <e p="Group_Dialogues.txt" t="Include" />
+            <e p="Kim_Dialogue.txt" t="Include" />
+            <e p="Kirk_Dialogue.txt" t="Include" />
             <e p="NPC_01.txt" t="Include" />
+            <e p="Rose_Dialogue.txt" t="Include" />
             <e p="Test.txt" t="Include" />
           </e>
         </e>
