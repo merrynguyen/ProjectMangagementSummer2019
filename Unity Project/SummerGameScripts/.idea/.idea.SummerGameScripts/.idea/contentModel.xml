@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\10689129\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.-1994171889.00" t="ExcludeRecursive" />
-    <e p="C:\Users\10689129\Documents\GitRepos\Summer2019\ProjectMangagementSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
+    <e p="C:\Users\Owner\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.179902281.00" t="ExcludeRecursive" />
+    <e p="E:\School\College\Summer2019\ProjectMangagementSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="packages" t="Include">
@@ -55,8 +55,14 @@
             <e p="Inventory_Dialouge.cs" t="Include" />
           </e>
           <e p="Text_Files" t="Include">
+            <e p="Captain_Al_Dialogue.txt" t="Include" />
+            <e p="Carl_Dialogue.txt" t="Include" />
             <e p="Get_Item_01.txt" t="Include" />
+            <e p="Group_Dialogues.txt" t="Include" />
+            <e p="Kim_Dialogue.txt" t="Include" />
+            <e p="Kirk_Dialogue.txt" t="Include" />
             <e p="NPC_01.txt" t="Include" />
+            <e p="Rose_Dialogue.txt" t="Include" />
             <e p="Test.txt" t="Include" />
           </e>
         </e>
@@ -84,6 +90,17 @@
             <e p="UnityKeyCodeObject.cs" t="Include" />
             <e p="Vector3Data.cs" t="Include" />
           </e>
+          <e p="Dialogue_Scripts" t="Include">
+            <e p="Choice_Selection.cs" t="Include" />
+          </e>
+          <e p="Door_Script.cs" t="Include" />
+          <e p="Event_Scripts" t="Include">
+            <e p="ActionModifier.cs" t="Include" />
+            <e p="EventsScript.cs" t="Include" />
+            <e p="If_Events.cs" t="Include" />
+            <e p="Mouse_Events.cs" t="Include" />
+            <e p="OnTriggerWIthPLayerEvent.cs" t="Include" />
+          </e>
           <e p="Game_Manager_Cafe.cs" t="Include" />
           <e p="Input_Text.cs" t="Include" />
           <e p="Inventory" t="Include">
@@ -97,16 +114,13 @@
           </e>
           <e p="Item_Pickup.cs" t="Include" />
           <e p="MiscScripts" t="Include">
-            <e p="ActionModifier.cs" t="Include" />
             <e p="AutomaticSnapScript.cs" t="Include" />
             <e p="Change_Rigidbody_Script.cs" t="Include" />
             <e p="Change_Scene.cs" t="Include" />
             <e p="DeacvtivateSnapAreas.cs" t="Include" />
             <e p="Drag_Script.cs" t="Include" />
-            <e p="EventsScript.cs" t="Include" />
             <e p="Interact_with_object.cs" t="Include" />
             <e p="Move_Script.cs" t="Include" />
-            <e p="OnTriggerWIthPLayerEvent.cs" t="Include" />
             <e p="Pause_Script.cs" t="Include" />
             <e p="Rotate_Script.cs" t="Include" />
             <e p="Snap_Script.cs" t="Include" />
@@ -158,6 +172,7 @@
               <e p="Slide_Tiles.cs" t="Include" />
             </e>
           </e>
+          <e p="Show_Text.cs" t="Include" />
         </e>
         <e p="Test.cs" t="Include" />
       </e>
