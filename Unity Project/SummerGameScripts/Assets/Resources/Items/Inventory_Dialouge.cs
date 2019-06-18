@@ -14,6 +14,7 @@ public class Inventory_Dialouge : MonoBehaviour
     private int _char;
     private string _text_to_display;
     public UnityEvent OnInteract;
+    public UnityEvent OnEnd;
     
 
     private void Start()
@@ -95,6 +96,7 @@ public class Inventory_Dialouge : MonoBehaviour
         SpeedUp = false;
         Dialouge_Text.text = "";
         Character_Text.text = "";
+        OnEnd.Invoke();
         Dialouge_Object.SetActive(false);
         Destroy(gameObject);
     }
