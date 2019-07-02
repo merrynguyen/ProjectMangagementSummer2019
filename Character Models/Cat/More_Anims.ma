@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: More_Anims.ma
-//Last modified: Tue, Jul 02, 2019 02:51:10 PM
+//Last modified: Tue, Jul 02, 2019 05:41:39 PM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -9,18 +9,18 @@ fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
 fileInfo "version" "2018";
 fileInfo "cutIdentifier" "201706261615-f9658c4cfc";
-fileInfo "osv" "Microsoft Windows 8 Enterprise Edition, 64-bit  (Build 9200)\n";
+fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "A872CABA-4237-299E-5272-D682FDDBAC1B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -18.199792264889588 5.1820409362339186 1.8966043750559871 ;
-	setAttr ".r" -type "double3" 1073.6616465665277 -2964.999999999854 -4.5615965470278218e-15 ;
+	setAttr ".t" -type "double3" 21.141391757086755 5.5100415425016829 7.6555167879046948 ;
+	setAttr ".r" -type "double3" 712.46164656388441 -2809.3999999999874 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "241B4FCA-4DDA-B91E-8ECD-CDA67CDB0DD7";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 21.152246813558516;
+	setAttr ".coi" 21.552196606846721;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -78,9 +78,9 @@ createNode transform -n "Raccoon_Rig:Rig";
 	rename -uid "2CBFD044-4343-6EE1-A83D-F0A96800A39E";
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:prototype_rig" -p "Raccoon_Rig:Rig";
 	rename -uid "4806BDFE-4FAD-AEF4-ACCD-E188C415E5E5";
-createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:Joints" -p "Raccoon_Rig:Racoon:Base_Rig1:prototype_rig";
+createNode transform -n "Base_Rig_Master_jnt_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:prototype_rig";
 	rename -uid "BCD7DD7D-4D53-BDFA-3A19-999A89672288";
-createNode joint -n "Raccoon_Rig:Racoon:Base_Rig1:Root" -p "Raccoon_Rig:Racoon:Base_Rig1:Joints";
+createNode joint -n "Raccoon_Rig:Racoon:Base_Rig1:Root" -p "Base_Rig_Master_jnt_grp";
 	rename -uid "1C59B1AA-4633-4477-2441-3A8D2BF6B0FC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -308,7 +308,7 @@ createNode parentConstraint -n "l_elbow_jnt_RK_parentConstraint1" -p "Raccoon_Ri
 	setAttr ".tg[1].tot" -type "double3" 8.8817841970012523e-16 0 -5.5883686909372109e-17 ;
 	setAttr ".tg[1].tor" -type "double3" -3.5545468495750987e-23 -5.6872749593201589e-22 
 		7.9513867036587968e-16 ;
-	setAttr ".lr" -type "double3" 1.7772734247875488e-23 5.6928289387726187e-22 -7.9513867036587899e-16 ;
+	setAttr ".lr" -type "double3" 1.7772734247875488e-23 7.5885872585460047e-22 -7.951386703658789e-16 ;
 	setAttr ".rst" -type "double3" 1.3121687378792721 0 1.1922402322910554e-17 ;
 	setAttr ".rsrr" -type "double3" -5.6081552488746241e-16 -1.9341194318410298e-16 
 		-3.9756934222558442e-16 ;
@@ -338,7 +338,7 @@ createNode parentConstraint -n "l_shoulder_jnt_RK_parentConstraint1" -p "Raccoon
 	setAttr ".tg[0].tor" -type "double3" -8.1672160318800469 0.33657763629353432 0.23751923636583477 ;
 	setAttr ".tg[1].tot" -type "double3" 2.2204460492503131e-16 0 0 ;
 	setAttr ".tg[1].tor" -type "double3" 2.8249000307521022e-30 3.1805546814635152e-15 
-		6.3611093629270296e-15 ;
+		6.3611093629270304e-15 ;
 	setAttr ".lr" -type "double3" -6.361109362927032e-15 -1.0593375115320375e-30 -1.9083328088781097e-14 ;
 	setAttr ".rst" -type "double3" -1.1446449316106708 2.9802322811185105e-08 0.62123477458953891 ;
 	setAttr ".rsrr" -type "double3" 0 0 -2.5444437451708122e-14 ;
@@ -402,11 +402,10 @@ createNode parentConstraint -n "r_hand_jnt_RK_parentConstraint1" -p "Raccoon_Rig
 	setAttr -s 2 ".tg";
 	setAttr ".tg[0].tot" -type "double3" 1.436263951459793e-05 5.8737088615146149e-07 
 		3.1242286709087796e-10 ;
-	setAttr ".tg[0].tor" -type "double3" -0.19720469869548948 -0.010173120345635009 
+	setAttr ".tg[0].tor" -type "double3" -0.19720469869548951 -0.010173120345635009 
 		-0.25066249121439627 ;
 	setAttr ".tg[1].tot" -type "double3" -4.4408920985006262e-16 -8.8817841970012523e-16 
 		-2.996246702014079e-19 ;
-	setAttr ".lr" -type "double3" -1.7637859384760228e-14 8.4802335109693944e-15 -2.3738679613775717e-14 ;
 	setAttr ".rst" -type "double3" -0.85383984917002431 -0.034842198361968002 8.3574915759560611e-09 ;
 	setAttr ".rsrr" -type "double3" 1.2422525117811044e-17 8.2503402076537763e-19 -1.5166066558187086e-21 ;
 	setAttr -k on ".w0";
@@ -435,7 +434,7 @@ createNode parentConstraint -n "r_elbow_jnt_RK_parentConstraint1" -p "Raccoon_Ri
 	setAttr ".tg[1].tot" -type "double3" 0 0 -8.4703294725430034e-22 ;
 	setAttr ".tg[1].tor" -type "double3" 1.1848489498583662e-23 -5.6872749593201579e-22 
 		-3.975693351829396e-16 ;
-	setAttr ".lr" -type "double3" -1.7947257320399729e-14 8.4642616936219717e-15 -2.2661452330806781e-14 ;
+	setAttr ".lr" -type "double3" -1.1848489498583661e-23 3.7933679660309255e-22 3.975693351829395e-16 ;
 	setAttr ".rst" -type "double3" -1.2188988516731842 0 3.2153970218281219e-16 ;
 	setAttr ".rsrr" -type "double3" -2.3302578327227971e-17 1.5603275820684834e-19 3.9756933489030898e-16 ;
 	setAttr -k on ".w0";
@@ -460,10 +459,9 @@ createNode parentConstraint -n "r_shoulder_jnt_RK_parentConstraint1" -p "Raccoon
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
 	setAttr ".tg[0].tot" -type "double3" -1.1102230246251565e-16 0 0 ;
-	setAttr ".tg[0].tor" -type "double3" 0.0064026122579738968 0.00086388288924463339 
+	setAttr ".tg[0].tor" -type "double3" 0.0064026122579738968 0.0008638828892446335 
 		0.17574903958678514 ;
-	setAttr ".tg[1].tor" -type "double3" -5.296687557660115e-31 0 5.649800061504203e-30 ;
-	setAttr ".lr" -type "double3" 4.7829498599359708 -0.014897296855831821 -0.00062223006654018405 ;
+	setAttr ".tg[1].tor" -type "double3" -5.2966875576601159e-31 0 5.6498000615042044e-30 ;
 	setAttr ".rst" -type "double3" -1.1446498338018323 2.9802299723184151e-08 -0.62123499999999987 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
@@ -539,9 +537,9 @@ createNode joint -n "Raccoon_Rig:Racoon:Base_Rig1:l_foot_jnt_RK" -p "Raccoon_Rig
 	setAttr ".bps" -type "matrix" -0.020622807533637218 -0.99978732728987385 -3.2349602703794515e-08 0
 		 2.7231994879405841e-07 2.6739287528989116e-08 -0.99999999999996259 0 0.99978732728983744 -0.020622807533645253 2.7171059459223027e-07 0
 		 0.52476844015970281 0.31576281785964988 -3.1143734285545486e-08 1;
-	setAttr ".radi" 0.5;
+	setAttr ".radi" 0.7;
 createNode parentConstraint -n "l_foot_jnt_RK_parentConstraint1" -p "Raccoon_Rig:Racoon:Base_Rig1:l_foot_jnt_RK";
-	rename -uid "EE2EF90D-4B01-885E-C9D5-6C80542FDC27";
+	rename -uid "EAC31740-4873-2C06-D397-F98D24CB4F5C";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "l_foot_jnt_IkW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "l_foot_jnt_FKW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -557,20 +555,20 @@ createNode parentConstraint -n "l_foot_jnt_RK_parentConstraint1" -p "Raccoon_Rig
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".tg[0].tot" -type "double3" 1.0063819318673062e-05 -4.2338399988499625e-07 
-		1.8609855456652724e-07 ;
-	setAttr ".tg[0].tor" -type "double3" 1.3196488508371957 2.2404443557745148 -2.3330420271559507 ;
-	setAttr ".tg[1].tot" -type "double3" -2.4980018054066022e-15 -3.113084309175969e-18 
-		2.2204460492503131e-16 ;
-	setAttr ".tg[1].tor" -type "double3" -3.0332133116374176e-21 1.1927080055488192e-15 
-		-3.7915166395467729e-22 ;
-	setAttr ".lr" -type "double3" 9.9393841516023616e-17 -5.9635400277440959e-16 1.8957583197682138e-22 ;
-	setAttr ".rst" -type "double3" 0.96241438665473744 4.086457393587985e-09 0.015002897629114775 ;
-	setAttr ".rsrr" -type "double3" 9.9393841516023616e-17 -5.9635400277440959e-16 1.8957583197682138e-22 ;
+	setAttr ".tg[0].tot" -type "double3" 1.0085100667689417e-05 -4.2428274717870584e-07 
+		1.8648356581163483e-07 ;
+	setAttr ".tg[0].tor" -type "double3" 0.40302375457263934 2.2412854630711077 -2.385824553770501 ;
+	setAttr ".tg[1].tot" -type "double3" -2.1268969585541697e-08 3.3492889866763854e-12 
+		-1.2177432395787946e-09 ;
+	setAttr ".tg[1].tor" -type "double3" 0.91456105694685585 -0.00046914624000025511 
+		0.052746782958974656 ;
+	setAttr ".lr" -type "double3" -6.2120208622334343e-18 -3.9601632996738129e-16 7.9513867036587919e-16 ;
+	setAttr ".rst" -type "double3" 0.96241408902822878 -2.3762677901772999e-09 0.015008057826413457 ;
+	setAttr ".rsrr" -type "double3" 2.5469618773924216e-16 -1.916262841760055e-16 7.186819790260902e-19 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
 createNode parentConstraint -n "l_knee_jnt_RK_parentConstraint1" -p "Raccoon_Rig:Racoon:Base_Rig1:l_knee_jnt_RK";
-	rename -uid "ECC60AE4-4D90-366D-74ED-26861BEEF448";
+	rename -uid "60DFCC37-45A6-3908-DF0B-63B1463B4983";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "l_knee_jnt_IkW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "l_knee_jnt_FKW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -586,20 +584,21 @@ createNode parentConstraint -n "l_knee_jnt_RK_parentConstraint1" -p "Raccoon_Rig
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".tg[0].tot" -type "double3" 0.00097110794686905422 0.039516707952767169 
-		0.037639456548084427 ;
-	setAttr ".tg[0].tor" -type "double3" 1.3196488508371946 2.2404443557745144 -2.3330420271559511 ;
-	setAttr ".tg[1].tot" -type "double3" -8.8817841970012523e-16 -7.1130650536863939e-18 
-		1.1102230246251565e-16 ;
-	setAttr ".tg[1].tor" -type "double3" 6.0664266232748351e-21 -2.7829853462805772e-15 
-		-3.791516639546772e-22 ;
-	setAttr ".lr" -type "double3" -7.4707882429960168e-17 1.590277314969393e-15 7.9473601129875927e-17 ;
-	setAttr ".rst" -type "double3" 1.1154451382700779 4.5370359885407954e-08 0.065469249145388597 ;
-	setAttr ".rsrr" -type "double3" -7.4707882429960168e-17 1.590277314969393e-15 7.9473601129875927e-17 ;
+	setAttr ".tg[0].tot" -type "double3" 0.00099823960156131264 0.040162658987689989 
+		0.037644810121972405 ;
+	setAttr ".tg[0].tor" -type "double3" 0.40302375457263889 2.2412854630711081 -2.3858245537705014 ;
+	setAttr ".tg[1].tot" -type "double3" 5.8655870582846603e-07 -0.00064644667920351923 
+		-1.1129863128012119e-05 ;
+	setAttr ".tg[1].tor" -type "double3" 0.91456105694685585 -0.0004691462400005324 
+		0.052746782958975419 ;
+	setAttr ".lr" -type "double3" -0.00018312231344787009 -8.2765049459549437e-05 2.6612625483106558e-05 ;
+	setAttr ".rst" -type "double3" 1.1154451775948899 1.6904215255700294e-07 0.065463952072847331 ;
+	setAttr ".rsrr" -type "double3" -0.00018312231344814179 -8.2765049459549396e-05 
+		2.661262548386409e-05 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
 createNode parentConstraint -n "l_hip_jnt_RK_parentConstraint1" -p "Raccoon_Rig:Racoon:Base_Rig1:l_hip_jnt_RK";
-	rename -uid "F56505C8-4006-D74D-612A-E884007CC848";
+	rename -uid "1C3C9C0D-4ADB-781B-066E-48B92DE133F6";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "l_hip_jnt_IkW0" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "l_hip_jnt_FKW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -615,16 +614,16 @@ createNode parentConstraint -n "l_hip_jnt_RK_parentConstraint1" -p "Raccoon_Rig:
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".tg[0].tot" -type "double3" -1.3322676295501878e-15 -6.9388939039072284e-17 
-		1.6653345369377348e-16 ;
-	setAttr ".tg[0].tor" -type "double3" 1.8165541691099996 -1.9522502470470811 2.120340566543319 ;
-	setAttr ".tg[1].tot" -type "double3" -2.2204460492503131e-15 -3.651188458698865e-18 
-		2.2204460492503131e-16 ;
-	setAttr ".tg[1].tor" -type "double3" -6.0664266232748336e-21 1.9878466759146985e-16 
-		-9.4787915988669323e-23 ;
-	setAttr ".lr" -type "double3" -1.9567812768097857e-16 2.9817672402378492e-16 -6.0256578666685276e-16 ;
-	setAttr ".rst" -type "double3" 0.53109121322631569 1.4901161409897134e-08 0.52495270967483532 ;
-	setAttr ".rsrr" -type "double3" -1.9567812768097857e-16 2.9817672402378492e-16 -6.0256578666685276e-16 ;
+	setAttr ".tg[0].tot" -type "double3" -3.5527136788005009e-15 -1.5265566588595902e-16 
+		2.7755575615628914e-16 ;
+	setAttr ".tg[0].tor" -type "double3" 0.90122225108738019 -1.9517978975861388 2.0997864648155171 ;
+	setAttr ".tg[1].tot" -type "double3" -3.9968028886505635e-15 -1.3347333424596451e-17 
+		3.8857805861880479e-16 ;
+	setAttr ".tg[1].tor" -type "double3" 0.91603202215473689 -0.00012931842642885708 
+		0.02054674709915328 ;
+	setAttr ".lr" -type "double3" 0.91603202215473667 -0.00012931842642962884 0.020546747099151261 ;
+	setAttr ".rst" -type "double3" 0.53109121322631259 1.4901161399832483e-08 0.52495270967483554 ;
+	setAttr ".rsrr" -type "double3" 0.91603202215473689 -0.00012931842642865097 0.020546747099153266 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
 createNode transform -n "R_Leg_RK_Master_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:waist_jnt";
@@ -634,8 +633,6 @@ createNode joint -n "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK" -p "R_Leg_RK_Mas
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" 0.53108992370605357 1.4901199874076101e-08 -0.52495300000000034 ;
-	setAttr ".r" -type "double3" -1.0304441947108027e-06 -7.6016494578749382e-15 1.6786829760285181e-08 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -643,14 +640,12 @@ createNode joint -n "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK" -p "R_Leg_RK_Mas
 	setAttr ".bps" -type "matrix" 0.014521840750976416 0.99989455251101522 -1.1922726995937511e-16 0
 		 -9.2040400052350788e-07 1.3367369996991779e-08 0.99999999999957634 0 0.99989455251059156 -0.014521840750970265 9.2050106505115673e-07 0
 		 -0.60194995201564294 2.3926600000000002 -1.490119997119992e-08 1;
-	setAttr ".radi" 0.5029122253357915;
+	setAttr ".radi" 0.7;
 createNode joint -n "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK" -p "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK";
 	rename -uid "4B490309-411A-64FC-8EBA-FB8AF38FA8AA";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" -1.1144975128979389 1.4574167080274615e-08 5.554582480638004e-07 ;
-	setAttr ".r" -type "double3" 0 0 -2.509558344200207e-06 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -658,20 +653,101 @@ createNode joint -n "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK" -p "Raccoon_Rig
 	setAttr ".bps" -type "matrix" -0.020622807533636756 0.99978732728987396 3.2349602708371749e-08 0
 		 2.7219132652177483e-07 -2.6741940650178807e-08 0.99999999999996259 0 0.99978732728983744 0.020622807533644788 -2.7158194495958585e-07 0
 		 -0.6181339520156427 1.2782800000000003 3.5987366051846325e-17 1;
-	setAttr ".radi" 0.5;
+	setAttr ".radi" 0.7;
 createNode joint -n "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK" -p "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK";
 	rename -uid "C2BEEDF7-449B-4FA5-5193-8281D7717CFB";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" -0.96221088314858316 -1.8437381098829131e-08 0.03135877796444908 ;
-	setAttr ".r" -type "double3" 3.3464826024131697e-07 0 6.0793730163837319e-07 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" -0.020622807533636756 0.99978732728987396 3.2349602708371749e-08 0
 		 2.7219132652177483e-07 -2.6741940650178807e-08 0.99999999999996259 0 0.99978732728983744 0.020622807533644788 -2.7158194495958585e-07 0
 		 -0.59827995201564277 0.31576300000000057 -3.114370008689823e-08 1;
-	setAttr ".radi" 0.5;
+	setAttr ".radi" 0.7;
+createNode parentConstraint -n "r_foot_jnt_RK_parentConstraint1" -p "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK";
+	rename -uid "78E1860D-49AF-14FD-4101-DA9C75415E10";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "r_foot_jnt_IKW0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "r_foot_jnt_FKW1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr ".tg[0].tot" -type "double3" 0.0002755744476091726 2.0765813238287321e-05 
+		-0.0024715951105672707 ;
+	setAttr ".tg[0].tor" -type "double3" 0.48115234103917826 -0.93328263744242279 -0.0078372582640143015 ;
+	setAttr ".tg[1].tot" -type "double3" -5.4848589593814445e-05 3.5960231599147657e-07 
+		-0.0024721530795460689 ;
+	setAttr ".tg[1].tor" -type "double3" -0.015204999624776009 -1.3551628071684081 -1.0474877427154474 ;
+	setAttr ".lr" -type "double3" -6.8274465550485089e-05 -2.0137530377374508 1.1123006432653467e-06 ;
+	setAttr ".rst" -type "double3" -0.96221088314858327 -1.8437381097761023e-08 0.031358777964449192 ;
+	setAttr ".rsrr" -type "double3" -7.91668674337366e-19 9.9362001662618527e-17 -1.9169908129548479e-18 ;
+	setAttr -k on ".w0";
+	setAttr -k on ".w1" 0;
+createNode parentConstraint -n "r_knee_jnt_RK_parentConstraint1" -p "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK";
+	rename -uid "E5C75D1E-4E59-A5A9-A2FA-A09287E5AAFE";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "r_knee_jnt_IKW0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "r_knee_jnt_FKW1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr ".tg[0].tot" -type "double3" 0.00014785113384707671 0.00015247060533868199 
+		-0.018152486774793197 ;
+	setAttr ".tg[0].tor" -type "double3" 0.48124232874499689 1.0803993871828679 0.0090751813002114337 ;
+	setAttr ".tg[1].tot" -type "double3" -0.00025423535431645661 -0.017606845625737326 
+		-0.011066043387429669 ;
+	setAttr ".tg[1].tor" -type "double3" -0.015133468574833959 0.65859016000579484 -1.048020875051058 ;
+	setAttr ".lr" -type "double3" 2.773824455546688e-16 5.6822601062781712e-16 -2.5095583441866375e-06 ;
+	setAttr ".rst" -type "double3" -1.1144975128979391 1.4574167083914527e-08 5.5545824795277809e-07 ;
+	setAttr ".rsrr" -type "double3" -6.8310941077139151e-05 -2.0137530377362149 -1.3063714409453498e-06 ;
+	setAttr -k on ".w0";
+	setAttr -k on ".w1" 0;
+createNode parentConstraint -n "r_hip_jnt_RK_parentConstraint1" -p "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK";
+	rename -uid "32B4E6AC-4EAD-BBCC-E89C-A68551F241F0";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "r_hip_jnt_IKW0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "r_hip_jnt_FK1W1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr ".tg[0].tot" -type "double3" 0 -1.7347234759768071e-18 -3.3306690738754696e-16 ;
+	setAttr ".tg[0].tor" -type "double3" -0.69493550336560062 -0.93321616183014944 0.011316800924385325 ;
+	setAttr ".tg[1].tot" -type "double3" 0 6.9388939039072284e-18 -2.2204460492503131e-16 ;
+	setAttr ".tg[1].tor" -type "double3" 0.039162403802333601 -0.56976226778494776 0.90474451682265933 ;
+	setAttr ".lr" -type "double3" -1.987725347382233e-16 -9.9392333795734924e-17 4.6593947983390288e-18 ;
+	setAttr ".rst" -type "double3" 0.53108992370605312 1.4901199870302735e-08 -0.52495300000000045 ;
+	setAttr ".rsrr" -type "double3" -9.3192445786747998e-17 -9.9392333795734874e-17 
+		3.0066485242420127e-16 ;
+	setAttr -k on ".w0";
+	setAttr -k on ".w1" 0;
 createNode parentConstraint -n "Raccoon_Rig:Racoon:Base_Rig1:Root_parentConstraint1" 
 		-p "Raccoon_Rig:Racoon:Base_Rig1:Root";
 	rename -uid "8B57BA6E-4AF3-9256-F4EE-DA844D6F4D15";
@@ -690,20 +766,12 @@ createNode parentConstraint -n "Raccoon_Rig:Racoon:Base_Rig1:Root_parentConstrai
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0 2.9949727058410645 0 ;
 	setAttr -k on ".w0";
-createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:Controls" -p "Raccoon_Rig:Racoon:Base_Rig1:prototype_rig";
+createNode transform -n "BaseRig_Master_Ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:prototype_rig";
 	rename -uid "DBAF53C9-4E68-F22E-BF9D-86A431FE4A52";
-createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:Controls";
+createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp" -p "BaseRig_Master_Ctrl_grp";
 	rename -uid "D961BDE9-464C-310E-8178-8E973E4F4DD3";
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl" -p "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp";
 	rename -uid "8F6C8628-4B55-30F9-28D5-FB9DDFBDEFEE";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl";
 	rename -uid "4B011E77-40D0-3751-05B2-5A9F9648B10D";
 	setAttr -k off ".v";
@@ -728,13 +796,7 @@ createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp" -p "Raccoon_
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl" -p "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp";
 	rename -uid "D1A6E6F0-4486-F925-E59B-3BBCA567A9D9";
 	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
 	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl";
 	rename -uid "2E968375-4C46-A3C7-FF72-ED877483CA87";
 	setAttr -k off ".v";
@@ -761,13 +823,9 @@ createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp" -p "Raccoon
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:root_ctrl" -p "Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp";
 	rename -uid "444F94C8-46AF-A7EF-4248-3CB9730A16CD";
 	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
 	setAttr -av ".ty";
-	setAttr -av ".tz";
 	setAttr ".r" -type "double3" 0 0 0 ;
 	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" -0.07699695201564305 2.9949727058410645 0 ;
 	setAttr ".sp" -type "double3" -0.07699695201564305 2.9949727058410645 0 ;
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:root_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:root_ctrl";
@@ -795,14 +853,8 @@ createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:spine_ctrl_grp" -p "Raccoo
 	setAttr ".sp" -type "double3" -0.07699695201564305 2.9949727058410645 0 ;
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:spine_ctrl" -p "Raccoon_Rig:Racoon:Base_Rig1:spine_ctrl_grp";
 	rename -uid "89CD649B-410C-B2E1-D6E6-4D8CF874D0AA";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
 	setAttr ".r" -type "double3" 0 0 0 ;
 	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" -0.07699695201564305 2.9949727058410645 0 ;
 	setAttr ".sp" -type "double3" -0.07699695201564305 2.9949727058410645 0 ;
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:spine_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:spine_ctrl";
@@ -830,14 +882,8 @@ createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp" -p "Raccoo
 	setAttr ".sp" -type "double3" -0.07699695201564305 3.1057937145233159 0 ;
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl" -p "Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp";
 	rename -uid "3E70AE99-45E2-8FA7-8A9F-C58E9E32AAFF";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
 	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".ry";
 	setAttr -av ".rx";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" -0.07699695201564305 3.1057937145233159 0 ;
 	setAttr ".sp" -type "double3" -0.07699695201564305 3.1057937145233159 0 ;
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:torso_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl";
@@ -865,14 +911,8 @@ createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:neck_ctrl_grp" -p "Raccoon
 	setAttr ".sp" -type "double3" -0.076996653992419173 4.6869306564331055 -2.9802322387695313e-08 ;
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:neck_ctrl" -p "Raccoon_Rig:Racoon:Base_Rig1:neck_ctrl_grp";
 	rename -uid "675A1032-4527-C273-C7EC-DF9368634441";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
 	setAttr ".r" -type "double3" 0 0 0 ;
 	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" -0.076996653992419173 4.6869306564331055 -2.9802322387695313e-08 ;
 	setAttr ".sp" -type "double3" -0.076996653992419173 4.6869306564331055 -2.9802322387695313e-08 ;
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:neck_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:neck_ctrl";
@@ -900,14 +940,6 @@ createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:head_ctrl_grp" -p "Raccoon
 	setAttr ".sp" -type "double3" -0.076997145941062592 5.8213958740234375 -9.2042490926497504e-08 ;
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:head_ctrl" -p "Raccoon_Rig:Racoon:Base_Rig1:head_ctrl_grp";
 	rename -uid "177E3D11-4484-E45B-5E45-BEADDA2A7F53";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".ry";
-	setAttr -av ".rx";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" -0.076997145941062606 5.8213958740234375 -9.2042490926497504e-08 ;
 	setAttr ".sp" -type "double3" -0.076997145941062606 5.8213958740234375 -9.2042490926497504e-08 ;
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:head_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:head_ctrl";
@@ -937,14 +969,6 @@ createNode transform -n "L_Shoulder_FK_ctrl_grp" -p "L_Arm_FK_master_Grp";
 	setAttr ".sp" -type "double3" 0.54423782257389552 4.3650650978088379 -2.9802322387695313e-08 ;
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:l_shoulder_ctrl" -p "L_Shoulder_FK_ctrl_grp";
 	rename -uid "9D061743-49D8-F463-635A-C1A2A3F959B7";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" 0.54423782257389552 4.2504386461339863 -2.9802322387695313e-08 ;
 	setAttr ".sp" -type "double3" 0.54423782257389552 4.2504386461339863 -2.9802322387695313e-08 ;
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:l_shoulder_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:l_shoulder_ctrl";
@@ -972,14 +996,8 @@ createNode transform -n "L_Elbow_FK_ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:l
 	setAttr ".sp" -type "double3" 1.6147528591568423 4.2504386461339863 -2.9802322387695313e-08 ;
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:l_elbow_ctrl" -p "L_Elbow_FK_ctrl_grp";
 	rename -uid "218779A5-4AE0-987F-20AD-40A4CE6B919A";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
 	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
 	setAttr -av ".ry";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" 1.8564065604531681 4.2504386461339863 -2.9802322387695313e-08 ;
 	setAttr ".sp" -type "double3" 1.8564065604531681 4.2504386461339863 -2.9802322387695313e-08 ;
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:l_elbow_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:l_elbow_ctrl";
@@ -1007,14 +1025,6 @@ createNode transform -n "L_Hand_Fk_Ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:l_
 	setAttr ".sp" -type "double3" 3.0416198878610041 4.3077883279882334 3.4072020740801419e-16 ;
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:l_hand_ctrl" -p "L_Hand_Fk_Ctrl_grp";
 	rename -uid "ED30EAFF-466B-E416-BA9B-85B4765361F7";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" 2.6897381824645996 4.261153403176662 3.4072020740801419e-16 ;
 	setAttr ".sp" -type "double3" 2.6897381824645996 4.261153403176662 3.4072020740801419e-16 ;
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:l_hand_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:l_hand_ctrl";
@@ -1095,59 +1105,6 @@ createNode nurbsCurve -n "l_elbow_ctrlShape" -p "l_elbow_ctrl";
 		1.8564065604531681 4.2504386461339863 -0.68370320705567555
 		1.8564065604531679 3.7669874931793519 -0.48345118275695659
 		;
-createNode transform -n "l_hand_IK_ctrl_grp" -p "l_elbow_ctrl";
-	rename -uid "F8073557-49F4-089D-A124-76B855C2BC38";
-	setAttr ".t" -type "double3" 5.426067390695736 -1.1780114623171405 2.0622824928226184 ;
-	setAttr ".r" -type "double3" 0 89.999999999999972 0 ;
-	setAttr ".s" -type "double3" 1.2771505626574822 1.2771505626574822 1.2771505626574822 ;
-	setAttr ".rp" -type "double3" 3.8846065511718693 5.5016942868995073 4.3515100459991933e-16 ;
-	setAttr ".rpt" -type "double3" -3.884606551171867 0 -3.8846065511718697 ;
-	setAttr ".sp" -type "double3" 3.0416198878610041 4.3077883279882334 3.4072020740801419e-16 ;
-	setAttr ".spt" -type "double3" 0.84298666331086514 1.1939059589112737 9.4430797191905152e-17 ;
-createNode transform -n "l_hand_ctrl" -p "l_hand_IK_ctrl_grp";
-	rename -uid "5CB36504-4417-F051-A72E-2D853756C0DA";
-	setAttr ".rp" -type "double3" 2.6897381824645996 4.261153403176662 3.4072020740801419e-16 ;
-	setAttr ".sp" -type "double3" 2.6897381824645996 4.261153403176662 3.4072020740801419e-16 ;
-createNode nurbsCurve -n "l_hand_ctrlShape" -p "l_hand_ctrl";
-	rename -uid "A49B6E65-4B09-FEB5-F600-429F1A8BFC03";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		2.6897381824645996 4.7446045561312964 -0.48345115295463392
-		2.6897381824645996 4.261153403176662 -0.68370317725335272
-		2.6897381824645996 3.7777022502220277 -0.48345115295463376
-		2.6897381824645992 3.5774502259233087 3.0527691396626668e-16
-		2.6897381824645996 3.7777022502220277 0.48345115295463448
-		2.6897381824645996 4.261153403176662 0.68370317725335372
-		2.6897381824645996 4.7446045561312964 0.48345115295463442
-		2.6897381824646001 4.9448565804300157 4.3395656828962165e-16
-		2.6897381824645996 4.7446045561312964 -0.48345115295463392
-		2.6897381824645996 4.261153403176662 -0.68370317725335272
-		2.6897381824645996 3.7777022502220277 -0.48345115295463376
-		;
-createNode ikHandle -n "L_ikHandle2" -p "l_hand_ctrl";
-	rename -uid "FA116BEF-4935-20B1-A802-C5A467B341D0";
-	setAttr ".t" -type "double3" 2.689735452709034 4.2611533895441038 -3.9973233056933566e-14 ;
-	setAttr ".roc" yes;
-createNode poleVectorConstraint -n "L_ikHandle2_poleVectorConstraint1" -p "L_ikHandle2";
-	rename -uid "5A8F542D-467D-694A-BC37-9B8693787260";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "l_elbow_ctrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" 1.070515036582947 0 -2.7950195509860638 ;
-	setAttr -k on ".w0";
 createNode transform -n "R_Arm_Fk_Master_CTRl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl";
 	rename -uid "E18E52C3-45BD-1FF9-4077-5380FCD83575";
 createNode transform -n "r_shoulder_FK_ctrl_grp" -p "R_Arm_Fk_Master_CTRl_grp";
@@ -1160,7 +1117,7 @@ createNode transform -n "r_shoulder_ctrl" -p "r_shoulder_FK_ctrl_grp";
 	setAttr ".rp" -type "double3" -0.69823196502376073 4.2504434145055683 -2.9802299295056397e-08 ;
 	setAttr ".sp" -type "double3" -0.69823196502376073 4.2504434145055683 -2.9802299295056397e-08 ;
 	setAttr ".oclr" -type "float3" 1 0 0 ;
-createNode nurbsCurve -n "r_shoulder_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl";
+createNode nurbsCurve -n "r_shoulder_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl";
 	rename -uid "DB76FC35-48E6-8D0E-4D2E-D69A02B7BDDA";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -1179,7 +1136,7 @@ createNode nurbsCurve -n "r_shoulder_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig
 		-0.69823196502376084 4.2504434145055683 -1.0272639640351631
 		-0.69823196502376106 3.5240581205411385 -0.72638532376672893
 		;
-createNode transform -n "r_elbow_FK_ctrl_grp" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl";
+createNode transform -n "r_elbow_FK_ctrl_grp" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl";
 	rename -uid "3305FDFC-4248-6547-5F26-C3B0E9386A32";
 	setAttr ".rp" -type "double3" -1.7687470016067071 4.2504434145055683 -2.9802299295056397e-08 ;
 	setAttr ".sp" -type "double3" -1.7687470016067071 4.2504434145055683 -2.9802299295056397e-08 ;
@@ -1189,7 +1146,7 @@ createNode transform -n "r_elbow_ctrl" -p "r_elbow_FK_ctrl_grp";
 	setAttr ".rp" -type "double3" -1.9171308532798896 4.2504434145055683 -2.9802299295056397e-08 ;
 	setAttr ".sp" -type "double3" -1.9171308532798896 4.2504434145055683 -2.9802299295056397e-08 ;
 	setAttr ".oclr" -type "float3" 1 0 0 ;
-createNode nurbsCurve -n "r_elbow_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl";
+createNode nurbsCurve -n "r_elbow_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl";
 	rename -uid "E586EAE8-47CF-C931-44FB-AE88EC09F6B5";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -1208,7 +1165,7 @@ createNode nurbsCurve -n "r_elbow_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Ra
 		-1.9171308532798896 4.2504434145055683 -0.68370320705565246
 		-1.9171308532798899 3.7669922615509339 -0.4834511827569335
 		;
-createNode transform -n "r_hand_FK_ctrl_grp" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl";
+createNode transform -n "r_hand_FK_ctrl_grp" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl";
 	rename -uid "969F9A26-4B50-2BC2-6FB5-5489A9A53028";
 	setAttr ".rp" -type "double3" -3.1023408428276187 4.3077835596166532 8.5431562072950706e-16 ;
 	setAttr ".sp" -type "double3" -3.1023408428276187 4.3077835596166532 8.5431562072950706e-16 ;
@@ -1218,7 +1175,7 @@ createNode transform -n "r_hand_ctrl" -p "r_hand_FK_ctrl_grp";
 	setAttr ".rp" -type "double3" -2.7716568305273834 4.2569090961858471 8.5431562072950706e-16 ;
 	setAttr ".sp" -type "double3" -2.7716568305273834 4.2569090961858471 8.5431562072950706e-16 ;
 	setAttr ".oclr" -type "float3" 1 0 0 ;
-createNode nurbsCurve -n "r_hand_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl";
+createNode nurbsCurve -n "r_hand_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl";
 	rename -uid "19459875-4258-CAEB-2F2D-45B592E4CE43";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -1248,7 +1205,7 @@ createNode transform -n "r_shoulder_ctrl" -p "r_shoulder_IK_ctrl_grp";
 	setAttr ".rp" -type "double3" -0.69823196502376073 4.2504434145055683 -2.9802299295056397e-08 ;
 	setAttr ".sp" -type "double3" -0.69823196502376073 4.2504434145055683 -2.9802299295056397e-08 ;
 	setAttr ".oclr" -type "float3" 1 0 0 ;
-createNode nurbsCurve -n "r_shoulder_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl";
+createNode nurbsCurve -n "r_shoulder_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl";
 	rename -uid "B666F138-4483-2DB2-E666-0CBC2DA4DC3A";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -1267,19 +1224,19 @@ createNode nurbsCurve -n "r_shoulder_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig
 		-0.69823196502376084 4.2504434145055683 -1.0272639640351631
 		-0.69823196502376106 3.5240581205411385 -0.72638532376672893
 		;
-createNode transform -n "r_PoleVector_IK_ctrl_grp" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl";
+createNode transform -n "r_PoleVector_IK_ctrl_grp" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl";
 	rename -uid "763889DB-4745-98EA-5A92-12BC811CA020";
 	setAttr ".t" -type "double3" 0 0 -2.8944516003500134 ;
 	setAttr ".r" -type "double3" 0 89.999999999999972 0 ;
 	setAttr ".s" -type "double3" 0.8071868924344372 0.8071868924344372 0.8071868924344372 ;
 	setAttr ".rp" -type "double3" -1.7687470016067071 4.2504434145055683 -2.9802299295056397e-08 ;
 	setAttr ".sp" -type "double3" -1.7687470016067071 4.2504434145055683 -2.9802299295056397e-08 ;
-createNode transform -n "r_elbow_ctrl" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp";
+createNode transform -n "r_elbow_ctrl" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp";
 	rename -uid "46B09D07-4335-B847-C9FD-099154751733";
 	setAttr ".rp" -type "double3" -1.9171308532798896 4.2504434145055683 -2.9802299295056397e-08 ;
 	setAttr ".sp" -type "double3" -1.9171308532798896 4.2504434145055683 -2.9802299295056397e-08 ;
 	setAttr ".oclr" -type "float3" 1 0 0 ;
-createNode nurbsCurve -n "r_elbow_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl";
+createNode nurbsCurve -n "r_elbow_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl";
 	rename -uid "1F620F54-4656-3071-ED73-C68CDD93AA4A";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -1298,74 +1255,12 @@ createNode nurbsCurve -n "r_elbow_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Ra
 		-1.9171308532798896 4.2504434145055683 -0.68370320705565246
 		-1.9171308532798899 3.7669922615509339 -0.4834511827569335
 		;
-createNode transform -n "r_hand_IK_ctrl_grp" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl";
-	rename -uid "9EF2CE3C-4995-BCB4-AFA3-FF8DD68351E0";
-	setAttr ".t" -type "double3" -5.3545976358046738 -1.0153053908131524 2.1912483888535732 ;
-	setAttr ".r" -type "double3" 0 -89.999999999999972 0 ;
-	setAttr ".s" -type "double3" 1.2388704640433985 1.2388704640433985 1.2388704640433985 ;
-	setAttr ".rp" -type "double3" -3.8433984395746403 5.3367858175008065 1.0583863894926884e-15 ;
-	setAttr ".rpt" -type "double3" 3.8433984395746377 0 -3.8433984395746412 ;
-	setAttr ".sp" -type "double3" -3.1023408428276187 4.3077835596166532 8.5431562072950706e-16 ;
-	setAttr ".spt" -type "double3" -0.74105759674702143 1.0290022578841531 2.0407076876318141e-16 ;
-createNode transform -n "r_hand_ctrl" -p "r_hand_IK_ctrl_grp";
-	rename -uid "D034776E-4851-4EB9-E02D-AA8FC246E658";
-	setAttr ".rp" -type "double3" -2.7716568305273834 4.2569090961858471 8.5431562072950706e-16 ;
-	setAttr ".sp" -type "double3" -2.7716568305273834 4.2569090961858471 8.5431562072950706e-16 ;
-	setAttr ".oclr" -type "float3" 1 0 0 ;
-createNode nurbsCurve -n "r_hand_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl|r_hand_IK_ctrl_grp|r_hand_ctrl";
-	rename -uid "B52A0AE3-4545-3C82-1EB4-02B27603F0C8";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-2.7716568305273834 4.7403602491404815 -0.48345115295463342
-		-2.7716568305273834 4.2569090961858471 -0.68370317725335217
-		-2.7716568305273834 3.7734579432312128 -0.48345115295463326
-		-2.7716568305273839 3.5732059189324938 8.1887232728775954e-16
-		-2.7716568305273834 3.7734579432312128 0.48345115295463498
-		-2.7716568305273834 4.2569090961858471 0.68370317725335428
-		-2.7716568305273834 4.7403602491404815 0.48345115295463492
-		-2.771656830527383 4.9406122734392008 9.4755198161111451e-16
-		-2.7716568305273834 4.7403602491404815 -0.48345115295463342
-		-2.7716568305273834 4.2569090961858471 -0.68370317725335217
-		-2.7716568305273834 3.7734579432312128 -0.48345115295463326
-		;
-createNode ikHandle -n "R_ikHandle1" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl|r_hand_IK_ctrl_grp|r_hand_ctrl";
-	rename -uid "2435D9B6-47C7-3CE1-1AC5-85BEB6203A33";
-	setAttr ".t" -type "double3" -2.7716711659644258 4.2569091294816568 -3.0687439893893609e-13 ;
-	setAttr ".roc" yes;
-createNode poleVectorConstraint -n "R_ikHandle1_poleVectorConstraint1" -p "R_ikHandle1";
-	rename -uid "A76DC1B5-4F95-9809-AEF9-AAA836798082";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "r_elbow_ctrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" -1.070515049591064 -1.3381957941760447e-07 -2.7746781002304846 ;
-	setAttr -k on ".w0";
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:root_ctrl";
 	rename -uid "8634DFA1-4004-5A89-7A73-E8AD1AFE86BF";
 	setAttr ".rp" -type "double3" -0.076996952015643022 2.9237499237060551 2.0210920805536849e-17 ;
 	setAttr ".sp" -type "double3" -0.076996952015643022 2.9237499237060551 2.0210920805536849e-17 ;
 createNode transform -n "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl" -p "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl_grp";
 	rename -uid "0B333F6E-4E7C-5A72-CB3C-60994A5FAE4C";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".ry";
-	setAttr -av ".rx";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" -0.076996952015643022 2.9237499237060551 2.0210920805536849e-17 ;
 	setAttr ".sp" -type "double3" -0.076996952015643022 2.9237499237060551 2.0210920805536849e-17 ;
 createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrlShape" -p "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl";
@@ -1387,125 +1282,12 @@ createNode nurbsCurve -n "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrlShape" -p "Racc
 		-0.076996952015642925 2.9237499237060551 -1.6485244043841758
 		-1.2426797373072085 2.9237499237060551 -1.1656827852915652
 		;
-createNode transform -n "r_hip_FK_ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl";
-	rename -uid "94EBF1DA-490C-E99F-00CE-2395226FBE68";
-	setAttr ".rp" -type "double3" -0.60194995971370202 2.3926599025726327 -1.490120027369812e-08 ;
-	setAttr ".sp" -type "double3" -0.60194995971370202 2.3926599025726327 -1.490120027369812e-08 ;
-createNode transform -n "r_hip_FK_ctrl" -p "r_hip_FK_ctrl_grp";
-	rename -uid "71DAA8A9-4B7E-A6AC-34D8-DE8315A97CB9";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".rp" -type "double3" -0.60194995971370202 2.3926599025726327 -1.490120027369812e-08 ;
-	setAttr ".sp" -type "double3" -0.60194995971370202 2.3926599025726327 -1.490120027369812e-08 ;
-createNode nurbsCurve -n "r_hip_FK_ctrlShape" -p "r_hip_FK_ctrl";
-	rename -uid "8D104179-4F12-0C8B-626F-13BEBD3BDB24";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.18166166517752236 2.3926599025726327 -0.78361163979242476
-		-0.60194995971370191 2.3926599025726327 -1.1081942024555878
-		-1.3855615846049263 2.3926599025726327 -0.78361163979242454
-		-1.7101441472680898 2.3926599025726327 -1.4901200331147104e-08
-		-1.3855615846049263 2.3926599025726327 0.7836116099900241
-		-0.60194995971370213 2.3926599025726327 1.1081941726531879
-		0.18166166517752236 2.3926599025726327 0.78361160999002399
-		0.5062442278406859 2.3926599025726327 -1.4901200122574068e-08
-		0.18166166517752236 2.3926599025726327 -0.78361163979242476
-		-0.60194995971370191 2.3926599025726327 -1.1081942024555878
-		-1.3855615846049263 2.3926599025726327 -0.78361163979242454
-		;
-createNode transform -n "r_knee_FK_ctrl_grp" -p "r_hip_FK_ctrl";
-	rename -uid "29676193-46B5-8C69-1CD8-6DAC9F9748AB";
-	setAttr ".rp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
-	setAttr ".sp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
-createNode transform -n "r_FK_knee_ctrl" -p "r_knee_FK_ctrl_grp";
-	rename -uid "E2DD8EE7-48D2-074F-91BC-FAB91EEFB8CB";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".rp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
-	setAttr ".sp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
-createNode nurbsCurve -n "r_FK_knee_ctrlShape" -p "r_FK_knee_ctrl";
-	rename -uid "BCDE9396-4F5E-CE36-83BA-E98FE49DA30F";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.16547769281881874 1.2782800197601327 -0.78361162489122449
-		-0.61813393207240552 1.2782800197601327 -1.1081941875543875
-		-1.4017455569636299 1.2782800197601327 -0.78361162489122427
-		-1.7263281196267934 1.2782800197601327 -2.1461616323401967e-17
-		-1.4017455569636299 1.2782800197601327 0.78361162489122438
-		-0.61813393207240575 1.2782800197601327 1.1081941875543881
-		0.16547769281881874 1.2782800197601327 0.78361162489122427
-		0.49006025548198229 1.2782800197601327 1.871114161298422e-16
-		0.16547769281881874 1.2782800197601327 -0.78361162489122449
-		-0.61813393207240552 1.2782800197601327 -1.1081941875543875
-		-1.4017455569636299 1.2782800197601327 -0.78361162489122427
-		;
-createNode transform -n "r_foot_FK_ctrl_grp" -p "r_FK_knee_ctrl";
-	rename -uid "04BB87F1-4FD0-8DDB-46DE-5A9DAD5281EF";
-	setAttr ".rp" -type "double3" -0.59827992292094689 0.31576299667358487 -3.1143699175117938e-08 ;
-	setAttr ".sp" -type "double3" -0.59827992292094689 0.31576299667358487 -3.1143699175117938e-08 ;
-createNode transform -n "r_foot_FK_ctrl" -p "r_foot_FK_ctrl_grp";
-	rename -uid "1154173D-42ED-F471-B9A4-B6AA006C3065";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".rp" -type "double3" -0.59827992292094689 0.31576299667358487 -3.1143699175117938e-08 ;
-	setAttr ".sp" -type "double3" -0.59827992292094689 0.31576299667358487 -3.1143699175117938e-08 ;
-createNode nurbsCurve -n "r_foot_FK_ctrlShape" -p "r_foot_FK_ctrl";
-	rename -uid "5A669B8E-4C25-93C2-48A0-61A386B6A893";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.18533170197027748 0.31576299667358493 -0.78361165603492366
-		-0.59827992292094678 0.31576299667358493 -1.1081942186980867
-		-1.3818915478121712 0.31576299667358493 -0.78361165603492344
-		-1.7064741104753347 0.31576299667358487 -3.1143699232566922e-08
-		-1.3818915478121712 0.31576299667358482 0.7836115937475252
-		-0.598279922920947 0.31576299667358482 1.108194156410689
-		0.18533170197027748 0.31576299667358482 0.78361159374752509
-		0.50991426463344103 0.31576299667358487 -3.1143699023993887e-08
-		0.18533170197027748 0.31576299667358493 -0.78361165603492366
-		-0.59827992292094678 0.31576299667358493 -1.1081942186980867
-		-1.3818915478121712 0.31576299667358493 -0.78361165603492344
-		;
 createNode transform -n "l_hip_ctrl_grp_FK" -p "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl";
 	rename -uid "D1D8E96E-491C-E511-4358-A3BBC83C8546";
 	setAttr ".rp" -type "double3" 0.44795575765919216 2.3926587104797372 -1.4901161193847653e-08 ;
 	setAttr ".sp" -type "double3" 0.44795575765919216 2.3926587104797372 -1.4901161193847653e-08 ;
 createNode transform -n "l_hip_ctrl_FK" -p "l_hip_ctrl_grp_FK";
 	rename -uid "866E06DC-4993-44AA-B730-95B8B58FC0F4";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" 0.44795575765919216 2.3926587104797372 -1.4901161193847653e-08 ;
 	setAttr ".sp" -type "double3" 0.44795575765919216 2.3926587104797372 -1.4901161193847653e-08 ;
 createNode nurbsCurve -n "l_hip_ctrl_FKShape" -p "l_hip_ctrl_FK";
@@ -1533,14 +1315,8 @@ createNode transform -n "l_knee_ctrl_grp_FK" -p "l_hip_ctrl_FK";
 	setAttr ".sp" -type "double3" 0.46414026645969875 1.2782819271087655 -8.4169225562935172e-17 ;
 createNode transform -n "l_knee_ctrl_FK" -p "l_knee_ctrl_grp_FK";
 	rename -uid "8080076B-40A6-386D-B24B-78B025DD93AE";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
 	setAttr ".r" -type "double3" 0 0 0 ;
 	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" 0.52961641990107 1.2782819271087655 -8.4169225562935172e-17 ;
 	setAttr ".sp" -type "double3" 0.52961641990107 1.2782819271087655 -8.4169225562935172e-17 ;
 createNode nurbsCurve -n "l_knee_ctrl_FKShape" -p "l_knee_ctrl_FK";
@@ -1568,14 +1344,6 @@ createNode transform -n "l_foot_ctrl_grp_FK" -p "l_knee_ctrl_FK";
 	setAttr ".sp" -type "double3" 0.50976235114496649 0.31576281785965055 -3.1143734702254726e-08 ;
 createNode transform -n "l_foot_ctrl_FK" -p "l_foot_ctrl_grp_FK";
 	rename -uid "67E07750-42D0-A7E8-00FF-A38676F6E3DF";
-	setAttr ".t" -type "double3" 0 0 0 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" 0.5247684401597017 0.31576281785965055 -3.1143734702254726e-08 ;
 	setAttr ".sp" -type "double3" 0.5247684401597017 0.31576281785965055 -3.1143734702254726e-08 ;
 createNode nurbsCurve -n "l_foot_ctrl_FKShape" -p "l_foot_ctrl_FK";
@@ -1654,43 +1422,6 @@ createNode nurbsCurve -n "l_knee_ctrlShape" -p "l_knee_ctrl";
 		0.52961641990107011 1.2782819271087655 -1.1081941875543875
 		-0.25399520499015438 1.2782819271087655 -0.78361162489122438
 		;
-createNode transform -n "l_foot_IK_ctrl_grp" -p "l_knee_ctrl";
-	rename -uid "C6948820-4E34-27FD-D109-C5B5A2BB2649";
-	setAttr ".t" -type "double3" -0.78415628863558196 8.0799382996292834 -3.4379153056934344 ;
-	setAttr ".r" -type "double3" 90.000000000000028 0 0 ;
-	setAttr ".s" -type "double3" 2.6894812738762242 2.6894812738762242 2.6894812738762242 ;
-	setAttr ".rp" -type "double3" 1.3709962975315033 0.84923818561991904 -8.3760491280283213e-08 ;
-	setAttr ".rpt" -type "double3" 0 -0.84923810185942805 0.84923826938041036 ;
-	setAttr ".sp" -type "double3" 0.50976235114496649 0.31576281785965055 -3.1143734702254726e-08 ;
-	setAttr ".spt" -type "double3" 0.86123394638653694 0.53347536776026849 -5.2616756578028481e-08 ;
-createNode transform -n "l_foot_ctrl" -p "l_foot_IK_ctrl_grp";
-	rename -uid "445AA279-4529-50BF-0E95-78B86A788F97";
-	setAttr ".rp" -type "double3" 0.5247684401597017 0.31576281785965055 -3.1143734702254726e-08 ;
-	setAttr ".sp" -type "double3" 0.5247684401597017 0.31576281785965055 -3.1143734702254726e-08 ;
-createNode nurbsCurve -n "l_foot_ctrlShape" -p "l_foot_ctrl";
-	rename -uid "B1DF48A9-4060-216D-1BCB-E39AEAC08EC6";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.3083800650509261 0.3157628178596506 -0.78361165603495919
-		0.52476844015970181 0.3157628178596506 -1.1081942186981222
-		-0.25884318473152268 0.3157628178596506 -0.78361165603495897
-		-0.58342574739468622 0.31576281785965055 -3.114373475970371e-08
-		-0.25884318473152268 0.31576281785965049 0.78361159374748968
-		0.52476844015970159 0.31576281785965049 1.1081941564106534
-		1.3083800650509261 0.31576281785965049 0.78361159374748957
-		1.6329626277140896 0.31576281785965055 -3.1143734551130675e-08
-		1.3083800650509261 0.3157628178596506 -0.78361165603495919
-		0.52476844015970181 0.3157628178596506 -1.1081942186981222
-		-0.25884318473152268 0.3157628178596506 -0.78361165603495897
-		;
-createNode ikHandle -n "L_Leg_IK_handle" -p "l_foot_ctrl";
-	rename -uid "8A7B169E-4851-4D01-8AF7-238FEC67BA48";
-	setAttr ".t" -type "double3" 0.5247681602198625 0.31577038699948701 -3.1143691271717788e-08 ;
-	setAttr ".pv" -type "double3" 0.0967762755732091 -1.3636295504808138 1.4598454718022975 ;
-	setAttr ".roc" yes;
 createNode transform -n "R_Leg_IK_master_Ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl";
 	rename -uid "40783E86-48AB-5ADB-EC0E-E09FFD88CD9F";
 createNode transform -n "r_hip_ctrl_IK_grp" -p "R_Leg_IK_master_Ctrl_grp";
@@ -1727,7 +1458,7 @@ createNode transform -n "r_PoleVector_IK_ctrl_grp" -p "r_hip_ctrl";
 	setAttr ".s" -type "double3" 0.34537706244570715 0.34537706244570715 0.34537706244570715 ;
 	setAttr ".rp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
 	setAttr ".sp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
-createNode transform -n "r_knee_ctrl" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl|R_Leg_IK_master_Ctrl_grp|r_hip_ctrl_IK_grp|r_hip_ctrl|r_PoleVector_IK_ctrl_grp";
+createNode transform -n "r_knee_ctrl" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl|R_Leg_IK_master_Ctrl_grp|r_hip_ctrl_IK_grp|r_hip_ctrl|r_PoleVector_IK_ctrl_grp";
 	rename -uid "070E1876-455F-2B6E-8DA2-A3BA4D06B96A";
 	setAttr ".rp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
 	setAttr ".sp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
@@ -1750,15 +1481,248 @@ createNode nurbsCurve -n "r_knee_ctrlShape" -p "r_knee_ctrl";
 		-0.61813393207240552 1.2782800197601327 -1.1081941875543875
 		-1.4017455569636299 1.2782800197601327 -0.78361162489122427
 		;
-createNode transform -n "r_foot_IK_ctrl_grp" -p "r_knee_ctrl";
-	rename -uid "6AD1D2C5-48F9-D1D8-A709-76A149F91E2A";
-	setAttr ".t" -type "double3" 1.1716025596773194 -6.0624760747343114 3.7011144014842552 ;
-	setAttr ".r" -type "double3" -90.000000000000028 0 0 ;
-	setAttr ".s" -type "double3" 2.8953862567442465 2.8953862567442465 2.8953862567442465 ;
-	setAttr ".rp" -type "double3" -1.7322514665113167 0.9142558409570769 -9.0173038575813608e-08 ;
-	setAttr ".rpt" -type "double3" 0 -0.91425593113011594 -0.91425575078403831 ;
+createNode transform -n "R_Leg_FK_Master_Ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl";
+	rename -uid "10D1DD94-4179-2F22-D4BD-99B7C61F5C61";
+createNode transform -n "r_hip_FK_ctrl_grp" -p "R_Leg_FK_Master_Ctrl_grp";
+	rename -uid "94EBF1DA-490C-E99F-00CE-2395226FBE68";
+	setAttr ".rp" -type "double3" -0.60194995971370202 2.3926599025726327 -1.490120027369812e-08 ;
+	setAttr ".sp" -type "double3" -0.60194995971370202 2.3926599025726327 -1.490120027369812e-08 ;
+createNode transform -n "r_hip_FK_ctrl" -p "r_hip_FK_ctrl_grp";
+	rename -uid "71DAA8A9-4B7E-A6AC-34D8-DE8315A97CB9";
+	setAttr ".rp" -type "double3" -0.60194995971370202 2.3926599025726327 -1.490120027369812e-08 ;
+	setAttr ".sp" -type "double3" -0.60194995971370202 2.3926599025726327 -1.490120027369812e-08 ;
+createNode nurbsCurve -n "r_hip_FK_ctrlShape" -p "r_hip_FK_ctrl";
+	rename -uid "8D104179-4F12-0C8B-626F-13BEBD3BDB24";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.18166166517752236 2.3926599025726327 -0.78361163979242476
+		-0.60194995971370191 2.3926599025726327 -1.1081942024555878
+		-1.3855615846049263 2.3926599025726327 -0.78361163979242454
+		-1.7101441472680898 2.3926599025726327 -1.4901200331147104e-08
+		-1.3855615846049263 2.3926599025726327 0.7836116099900241
+		-0.60194995971370213 2.3926599025726327 1.1081941726531879
+		0.18166166517752236 2.3926599025726327 0.78361160999002399
+		0.5062442278406859 2.3926599025726327 -1.4901200122574068e-08
+		0.18166166517752236 2.3926599025726327 -0.78361163979242476
+		-0.60194995971370191 2.3926599025726327 -1.1081942024555878
+		-1.3855615846049263 2.3926599025726327 -0.78361163979242454
+		;
+createNode transform -n "r_knee_FK_ctrl_grp" -p "r_hip_FK_ctrl";
+	rename -uid "29676193-46B5-8C69-1CD8-6DAC9F9748AB";
+	setAttr ".rp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
+	setAttr ".sp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
+createNode transform -n "r_FK_knee_ctrl" -p "r_knee_FK_ctrl_grp";
+	rename -uid "E2DD8EE7-48D2-074F-91BC-FAB91EEFB8CB";
+	setAttr ".r" -type "double3" 0 0 0 ;
+	setAttr -av ".rx";
+	setAttr ".rp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
+	setAttr ".sp" -type "double3" -0.61813393207240563 1.2782800197601327 3.5987366051846325e-17 ;
+createNode nurbsCurve -n "r_FK_knee_ctrlShape" -p "r_FK_knee_ctrl";
+	rename -uid "BCDE9396-4F5E-CE36-83BA-E98FE49DA30F";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.16547769281881874 1.2782800197601327 -0.78361162489122449
+		-0.61813393207240552 1.2782800197601327 -1.1081941875543875
+		-1.4017455569636299 1.2782800197601327 -0.78361162489122427
+		-1.7263281196267934 1.2782800197601327 -2.1461616323401967e-17
+		-1.4017455569636299 1.2782800197601327 0.78361162489122438
+		-0.61813393207240575 1.2782800197601327 1.1081941875543881
+		0.16547769281881874 1.2782800197601327 0.78361162489122427
+		0.49006025548198229 1.2782800197601327 1.871114161298422e-16
+		0.16547769281881874 1.2782800197601327 -0.78361162489122449
+		-0.61813393207240552 1.2782800197601327 -1.1081941875543875
+		-1.4017455569636299 1.2782800197601327 -0.78361162489122427
+		;
+createNode transform -n "r_foot_FK_ctrl_grp" -p "r_FK_knee_ctrl";
+	rename -uid "04BB87F1-4FD0-8DDB-46DE-5A9DAD5281EF";
+	setAttr ".rp" -type "double3" -0.59827992292094689 0.31576299667358487 -3.1143699175117938e-08 ;
 	setAttr ".sp" -type "double3" -0.59827992292094689 0.31576299667358487 -3.1143699175117938e-08 ;
-	setAttr ".spt" -type "double3" -1.1339715435903699 0.59849284428349203 -5.902933940069567e-08 ;
+createNode transform -n "r_foot_FK_ctrl" -p "r_foot_FK_ctrl_grp";
+	rename -uid "1154173D-42ED-F471-B9A4-B6AA006C3065";
+	setAttr ".rp" -type "double3" -0.59827992292094689 0.31576299667358487 -3.1143699175117938e-08 ;
+	setAttr ".sp" -type "double3" -0.59827992292094689 0.31576299667358487 -3.1143699175117938e-08 ;
+createNode nurbsCurve -n "r_foot_FK_ctrlShape" -p "r_foot_FK_ctrl";
+	rename -uid "5A669B8E-4C25-93C2-48A0-61A386B6A893";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.18533170197027748 0.31576299667358493 -0.78361165603492366
+		-0.59827992292094678 0.31576299667358493 -1.1081942186980867
+		-1.3818915478121712 0.31576299667358493 -0.78361165603492344
+		-1.7064741104753347 0.31576299667358487 -3.1143699232566922e-08
+		-1.3818915478121712 0.31576299667358482 0.7836115937475252
+		-0.598279922920947 0.31576299667358482 1.108194156410689
+		0.18533170197027748 0.31576299667358482 0.78361159374752509
+		0.50991426463344103 0.31576299667358487 -3.1143699023993887e-08
+		0.18533170197027748 0.31576299667358493 -0.78361165603492366
+		-0.59827992292094678 0.31576299667358493 -1.1081942186980867
+		-1.3818915478121712 0.31576299667358493 -0.78361165603492344
+		;
+createNode transform -n "l_hand_IK_ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl";
+	rename -uid "F8073557-49F4-089D-A124-76B855C2BC38";
+	setAttr ".t" -type "double3" -4.4408920985006262e-16 4.4408920985006262e-16 1.7763568394002505e-15 ;
+	setAttr ".rp" -type "double3" 3.0416198878610041 4.3077883279882334 3.4072020740801419e-16 ;
+	setAttr ".sp" -type "double3" 3.0416198878610041 4.3077883279882334 3.4072020740801419e-16 ;
+createNode transform -n "l_hand_ctrl" -p "l_hand_IK_ctrl_grp";
+	rename -uid "5CB36504-4417-F051-A72E-2D853756C0DA";
+	setAttr ".rp" -type "double3" 2.6897381824645996 4.261153403176662 3.4072020740801419e-16 ;
+	setAttr ".sp" -type "double3" 2.6897381824645996 4.261153403176662 3.4072020740801419e-16 ;
+createNode nurbsCurve -n "l_hand_ctrlShape" -p "l_hand_ctrl";
+	rename -uid "A49B6E65-4B09-FEB5-F600-429F1A8BFC03";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		2.6897381824645996 4.7446045561312964 -0.48345115295463392
+		2.6897381824645996 4.261153403176662 -0.68370317725335272
+		2.6897381824645996 3.7777022502220277 -0.48345115295463376
+		2.6897381824645992 3.5774502259233087 3.0527691396626668e-16
+		2.6897381824645996 3.7777022502220277 0.48345115295463448
+		2.6897381824645996 4.261153403176662 0.68370317725335372
+		2.6897381824645996 4.7446045561312964 0.48345115295463442
+		2.6897381824646001 4.9448565804300157 4.3395656828962165e-16
+		2.6897381824645996 4.7446045561312964 -0.48345115295463392
+		2.6897381824645996 4.261153403176662 -0.68370317725335272
+		2.6897381824645996 3.7777022502220277 -0.48345115295463376
+		;
+createNode ikHandle -n "L_ikHandle2" -p "l_hand_ctrl";
+	rename -uid "FA116BEF-4935-20B1-A802-C5A467B341D0";
+	setAttr ".t" -type "double3" 2.689735452709034 4.2611533895441038 -3.9973233056933566e-14 ;
+	setAttr ".roc" yes;
+createNode poleVectorConstraint -n "L_ikHandle2_poleVectorConstraint1" -p "L_ikHandle2";
+	rename -uid "5A8F542D-467D-694A-BC37-9B8693787260";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "l_elbow_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 1.070515036582947 0 -2.7950195509860638 ;
+	setAttr -k on ".w0";
+createNode transform -n "r_hand_IK_ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl";
+	rename -uid "9EF2CE3C-4995-BCB4-AFA3-FF8DD68351E0";
+	setAttr ".t" -type "double3" 0 2.2204460492503131e-16 1.7763568394002505e-15 ;
+	setAttr ".rp" -type "double3" -3.1023408428276187 4.3077835596166532 8.5431562072950706e-16 ;
+	setAttr ".sp" -type "double3" -3.1023408428276187 4.3077835596166532 8.5431562072950706e-16 ;
+createNode transform -n "r_hand_ctrl" -p "r_hand_IK_ctrl_grp";
+	rename -uid "D034776E-4851-4EB9-E02D-AA8FC246E658";
+	setAttr ".rp" -type "double3" -2.7716568305273834 4.2569090961858471 8.5431562072950706e-16 ;
+	setAttr ".sp" -type "double3" -2.7716568305273834 4.2569090961858471 8.5431562072950706e-16 ;
+	setAttr ".oclr" -type "float3" 1 0 0 ;
+createNode nurbsCurve -n "r_hand_ctrlShape" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|r_hand_IK_ctrl_grp|r_hand_ctrl";
+	rename -uid "B52A0AE3-4545-3C82-1EB4-02B27603F0C8";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-2.7716568305273834 4.7403602491404815 -0.48345115295463342
+		-2.7716568305273834 4.2569090961858471 -0.68370317725335217
+		-2.7716568305273834 3.7734579432312128 -0.48345115295463326
+		-2.7716568305273839 3.5732059189324938 8.1887232728775954e-16
+		-2.7716568305273834 3.7734579432312128 0.48345115295463498
+		-2.7716568305273834 4.2569090961858471 0.68370317725335428
+		-2.7716568305273834 4.7403602491404815 0.48345115295463492
+		-2.771656830527383 4.9406122734392008 9.4755198161111451e-16
+		-2.7716568305273834 4.7403602491404815 -0.48345115295463342
+		-2.7716568305273834 4.2569090961858471 -0.68370317725335217
+		-2.7716568305273834 3.7734579432312128 -0.48345115295463326
+		;
+createNode ikHandle -n "R_ikHandle1" -p "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|r_hand_IK_ctrl_grp|r_hand_ctrl";
+	rename -uid "2435D9B6-47C7-3CE1-1AC5-85BEB6203A33";
+	setAttr ".t" -type "double3" -2.7716711659644258 4.2569091294816568 -3.0687439893893609e-13 ;
+	setAttr ".roc" yes;
+createNode poleVectorConstraint -n "R_ikHandle1_poleVectorConstraint1" -p "R_ikHandle1";
+	rename -uid "A76DC1B5-4F95-9809-AEF9-AAA836798082";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "r_elbow_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" -1.070515049591064 -1.3381957941760447e-07 -2.7746781002304846 ;
+	setAttr -k on ".w0";
+createNode transform -n "l_foot_IK_ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp";
+	rename -uid "C6948820-4E34-27FD-D109-C5B5A2BB2649";
+	setAttr ".t" -type "double3" 5.5511151231257827e-17 2.2204460492503131e-16 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 0.99999999999999989 ;
+	setAttr ".rp" -type "double3" 0.50976235114496637 0.31576281785965049 -3.114373470225472e-08 ;
+	setAttr ".sp" -type "double3" 0.50976235114496649 0.31576281785965055 -3.1143734702254726e-08 ;
+	setAttr ".spt" -type "double3" -1.1102230246251564e-16 -5.5511151231257821e-17 6.6174449004242207e-24 ;
+createNode transform -n "l_foot_ctrl" -p "l_foot_IK_ctrl_grp";
+	rename -uid "445AA279-4529-50BF-0E95-78B86A788F97";
+	setAttr ".rp" -type "double3" 0.5247684401597017 0.31576281785965055 -3.1143734702254726e-08 ;
+	setAttr ".sp" -type "double3" 0.5247684401597017 0.31576281785965055 -3.1143734702254726e-08 ;
+createNode nurbsCurve -n "l_foot_ctrlShape" -p "l_foot_ctrl";
+	rename -uid "B1DF48A9-4060-216D-1BCB-E39AEAC08EC6";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		1.3083800650509261 0.3157628178596506 -0.78361165603495919
+		0.52476844015970181 0.3157628178596506 -1.1081942186981222
+		-0.25884318473152268 0.3157628178596506 -0.78361165603495897
+		-0.58342574739468622 0.31576281785965055 -3.114373475970371e-08
+		-0.25884318473152268 0.31576281785965049 0.78361159374748968
+		0.52476844015970159 0.31576281785965049 1.1081941564106534
+		1.3083800650509261 0.31576281785965049 0.78361159374748957
+		1.6329626277140896 0.31576281785965055 -3.1143734551130675e-08
+		1.3083800650509261 0.3157628178596506 -0.78361165603495919
+		0.52476844015970181 0.3157628178596506 -1.1081942186981222
+		-0.25884318473152268 0.3157628178596506 -0.78361165603495897
+		;
+createNode ikHandle -n "L_Leg_IK_handle" -p "l_foot_ctrl";
+	rename -uid "8A7B169E-4851-4D01-8AF7-238FEC67BA48";
+	setAttr ".t" -type "double3" 0.5247681602198625 0.31577038699948701 -3.1143691271717788e-08 ;
+	setAttr ".roc" yes;
+createNode poleVectorConstraint -n "L_Leg_IK_handle_poleVectorConstraint1" -p "L_Leg_IK_handle";
+	rename -uid "50044377-4516-6B0C-F0D4-5DBA1D87C908";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "l_knee_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 0.040529780908314661 -1.1143767833709721 2.5289844843552305 ;
+	setAttr -k on ".w0";
+createNode transform -n "r_foot_IK_ctrl_grp" -p "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp";
+	rename -uid "6AD1D2C5-48F9-D1D8-A709-76A149F91E2A";
+	setAttr ".t" -type "double3" 0 2.2204460492503131e-16 4.4408920985006262e-16 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 0.99999999999999989 ;
+	setAttr ".rp" -type "double3" -0.59827992292094667 0.31576299667358482 -3.1143699175117932e-08 ;
+	setAttr ".sp" -type "double3" -0.59827992292094689 0.31576299667358487 -3.1143699175117938e-08 ;
+	setAttr ".spt" -type "double3" 1.1102230246251564e-16 -5.5511151231257821e-17 6.6174449004242207e-24 ;
 createNode transform -n "r_foot_ctrl" -p "r_foot_IK_ctrl_grp";
 	rename -uid "E865B299-4CF9-5B12-3AA4-D2BBE4AB5C44";
 	setAttr ".rp" -type "double3" -0.59827992292094689 0.31576299667358487 -3.1143699175117938e-08 ;
@@ -1786,38 +1750,24 @@ createNode ikHandle -n "R_Leg_IK_handle" -p "r_foot_ctrl";
 	rename -uid "49703FA2-4009-D0EA-5051-AA868C2E71A6";
 	setAttr ".t" -type "double3" -0.59827938852364804 0.31544398624102493 2.4192928273236197e-12 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
-	setAttr ".pv" -type "double3" -0.047995389503887639 -1.3687993008264712 1.4574240689117672 ;
 	setAttr ".roc" yes;
-createNode transform -n "IK_Switch_legs" -p "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl";
-	rename -uid "6602AC94-42EA-CE33-D984-43A63072ACAE";
-	addAttr -ci true -sn "IK_Switch" -ln "IK_Switch" -min 0 -max 1 -at "double";
-	setAttr ".t" -type "double3" 4.4968734237638985 0 0 ;
-	setAttr ".s" -type "double3" 1.5718643012088669 2.2805143124433083 2.2805143124433083 ;
-	setAttr -k on ".IK_Switch" 1;
-createNode transform -n "topnurbsSquare1" -p "IK_Switch_legs";
-	rename -uid "806EA486-4C97-771B-73B0-B3B32434DB25";
-createNode nurbsCurve -n "topnurbsSquareShape1" -p "topnurbsSquare1";
-	rename -uid "E307FDC0-4933-86D0-EF81-9EAAAB93A845";
+createNode poleVectorConstraint -n "R_Leg_IK_handle_poleVectorConstraint1" -p "R_Leg_IK_handle";
+	rename -uid "55F03E3F-43E7-1373-9848-54ACB7650A1F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "r_knee_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
 	setAttr -k off ".v";
-	setAttr ".tw" yes;
-createNode transform -n "leftnurbsSquare1" -p "IK_Switch_legs";
-	rename -uid "F9CF4C0C-4BE5-E248-0072-959D08C5E32C";
-createNode nurbsCurve -n "leftnurbsSquareShape1" -p "leftnurbsSquare1";
-	rename -uid "33511B99-4C53-F8EB-D7DE-229096BFD915";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
-createNode transform -n "bottomnurbsSquare1" -p "IK_Switch_legs";
-	rename -uid "E91FB617-4829-70E7-7111-D5890932E0BB";
-createNode nurbsCurve -n "bottomnurbsSquareShape1" -p "bottomnurbsSquare1";
-	rename -uid "A42CFA36-4760-9010-E8CC-17BD9E6945CC";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
-createNode transform -n "rightnurbsSquare1" -p "IK_Switch_legs";
-	rename -uid "BE4BBFC2-42B9-34E6-CCE3-45AB4FC96A07";
-createNode nurbsCurve -n "rightnurbsSquareShape1" -p "rightnurbsSquare1";
-	rename -uid "EB941538-48C3-3B10-F402-70BB281467CC";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" -0.01618398005676247 -1.1143799802398684 2.5353287909481139 ;
+	setAttr -k on ".w0";
 createNode transform -n "R_Arm_IK_Switch" -p "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl";
 	rename -uid "A09F061B-4932-08A4-BAE4-8D9807C0734E";
 createNode transform -n "R_Arm_Ik_Switch_ctrl" -p "R_Arm_IK_Switch";
@@ -1826,7 +1776,7 @@ createNode transform -n "R_Arm_Ik_Switch_ctrl" -p "R_Arm_IK_Switch";
 	setAttr ".t" -type "double3" -2.6490611030040392 6.1230185661744141 0 ;
 	setAttr ".r" -type "double3" -90.000000000000028 0 0 ;
 	setAttr ".s" -type "double3" 0.36869630969781803 0.36869630969781803 0.36869630969781803 ;
-	setAttr -k on ".IK_Switch" 1;
+	setAttr -k on ".IK_Switch";
 createNode nurbsCurve -n "R_Arm_Ik_Switch_ctrlShape" -p "R_Arm_Ik_Switch_ctrl";
 	rename -uid "627310AC-4D90-05EE-EE25-F1BC7BE34D67";
 	setAttr -k off ".v";
@@ -1861,6 +1811,17 @@ createNode nurbsCurve -n "L_Arm_IK_Switch_ctrlShape" -p "L_Arm_IK_Switch_ctrl";
 	rename -uid "52767ECA-41F8-98D6-76C5-AE804F603CC7";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+createNode transform -n "IK_Switch_legs" -p "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl";
+	rename -uid "8AD83FDF-42E8-BC4B-64EA-308FFFB5A3F6";
+createNode transform -n "IK_Switch_legs_ctrl" -p "IK_Switch_legs";
+	rename -uid "08DDB8D4-41C1-A21B-306E-39B381905331";
+	addAttr -ci true -sn "IK_Switch" -ln "IK_Switch" -min 0 -max 1 -at "double";
+	setAttr ".t" -type "double3" 4.7039612651724951 0 0 ;
+	setAttr -k on ".IK_Switch" 1;
+createNode nurbsCurve -n "IK_Switch_legs_ctrlShape" -p "IK_Switch_legs_ctrl";
+	rename -uid "171CE297-4D96-E8D0-D6B3-11903578CF3D";
+	setAttr -k off ".v";
+	setAttr ".tw" yes;
 createNode transform -n "R_Arm_IK_Master_jnt_grp" -p "Raccoon_Rig:Rig";
 	rename -uid "23C08A30-40FD-C6EF-5850-3FAA826DAF50";
 	setAttr ".t" -type "double3" -0.07699695201564305 3.1057937145233154 0 ;
@@ -1886,7 +1847,7 @@ createNode joint -n "r_elbow_jnt_IK" -p "r_shoulder_jnt_IK";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
 	setAttr ".t" -type "double3" -1.2188988516731833 0 3.2183847982006635e-16 ;
-	setAttr ".r" -type "double3" 0.20360576204683714 0.010454727568464927 0.42644611247701791 ;
+	setAttr ".r" -type "double3" 0.20360895248494731 0.010376594280248822 0.42643818273521011 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -1902,7 +1863,7 @@ createNode joint -n "r_hand_jnt_IK" -p "r_elbow_jnt_IK";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
 	setAttr ".t" -type "double3" -0.85383984917002476 -0.034842198361968002 8.3574915758411028e-09 ;
-	setAttr ".r" -type "double3" 6.9468389284776492e-08 4.3397870498586087e-22 8.7033679385842148e-16 ;
+	setAttr ".r" -type "double3" 6.9468389284776492e-08 4.3397870498586097e-22 8.7033679385842148e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 0.99883136964287067 -0.048331097828895386 -2.5115727538539035e-08 0
@@ -1992,13 +1953,13 @@ createNode parentConstraint -n "r_hand_jnt_FK_parentConstraint1" -p "r_hand_jnt_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 3.9138793983539699e-08 -1.12915072847386e-08 
-		3.3087224502121107e-24 ;
-	setAttr ".tg[0].tor" -type "double3" -6.9468389284776506e-08 1.4356637761849763e-06 
-		-2.7702471405618065 ;
-	setAttr ".lr" -type "double3" 6.9468389284776492e-08 4.3360843968903006e-22 8.7033679385842158e-16 ;
-	setAttr ".rst" -type "double3" -0.85383984917002431 -0.03484219836196889 8.3574915758411161e-09 ;
-	setAttr ".rsrr" -type "double3" 6.9468389284776492e-08 4.3360843968903006e-22 8.7033679385842158e-16 ;
+	setAttr ".tg[0].tot" -type "double3" 3.9138794427628909e-08 -1.1291509949273859e-08 
+		2.6469779601696886e-23 ;
+	setAttr ".tg[0].tor" -type "double3" -6.9468389284776519e-08 1.4356637761849763e-06 
+		-2.770247140561807 ;
+	setAttr ".lr" -type "double3" 6.9468389284776519e-08 4.3397870498586087e-22 8.7033679385842178e-16 ;
+	setAttr ".rst" -type "double3" -0.85383984917002431 -0.034842198361971555 8.3574915758411425e-09 ;
+	setAttr ".rsrr" -type "double3" 6.9468389284776519e-08 4.3397870498586087e-22 8.7033679385842178e-16 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "r_elbow_jnt_FK_parentConstraint1" -p "r_elbow_jnt_FK";
 	rename -uid "338AADFC-4B3A-A84F-1E13-39BFA9E9F73F";
@@ -2015,12 +1976,13 @@ createNode parentConstraint -n "r_elbow_jnt_FK_parentConstraint1" -p "r_elbow_jn
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 4.95910636999497e-08 1.3381958030578289e-07 
-		-4.4721774258435863e-16 ;
-	setAttr ".tg[0].tor" -type "double3" 0 1.4390251975041751e-06 -2.7702471405617741 ;
-	setAttr ".lr" -type "double3" -1.1848489498583661e-23 1.8976096462575396e-22 3.975693351829395e-16 ;
-	setAttr ".rst" -type "double3" -1.2188988516731833 0 3.218384765113439e-16 ;
-	setAttr ".rsrr" -type "double3" -1.1848489498583661e-23 1.8976096462575396e-22 3.975693351829395e-16 ;
+	setAttr ".tg[0].tot" -type "double3" 4.9591063921994305e-08 1.3381958030578289e-07 
+		-4.4721774589308108e-16 ;
+	setAttr ".tg[0].tor" -type "double3" -5.9242447492918341e-24 1.4390251975041751e-06 
+		-2.7702471405617746 ;
+	setAttr ".lr" -type "double3" -5.9242447492918305e-24 1.895758319773386e-22 3.975693351829395e-16 ;
+	setAttr ".rst" -type "double3" -1.2188988516731833 0 3.2183847320262145e-16 ;
+	setAttr ".rsrr" -type "double3" -5.9242447492918305e-24 1.895758319773386e-22 3.975693351829395e-16 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "r_shoulder_jnt_FK_parentConstraint1" -p "r_shoulder_jnt_FK";
 	rename -uid "D3C726D3-4855-A820-1530-EA89300E4DF7";
@@ -2037,12 +1999,12 @@ createNode parentConstraint -n "r_shoulder_jnt_FK_parentConstraint1" -p "r_shoul
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 1.300811758309095e-08 1.3381957941760447e-07 
+	setAttr ".tg[0].tot" -type "double3" 1.3008117694113253e-08 1.3381957941760447e-07 
 		-5.6606878014909665e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 2.0385748866634425e-45 3.1805546814635247e-15 
 		-3.1805546814635174e-14 ;
 	setAttr ".lr" -type "double3" -3.1805546814635168e-15 7.9450313364902864e-31 2.8624992133171654e-14 ;
-	setAttr ".rst" -type "double3" -1.1446498338018323 2.9802299723183297e-08 -0.62123499999999976 ;
+	setAttr ".rst" -type "double3" -1.1446498338018323 2.9802299723183297e-08 -0.62123499999999965 ;
 	setAttr ".rsrr" -type "double3" -3.1805546814635168e-15 7.9450313364902864e-31 2.8624992133171654e-14 ;
 	setAttr -k on ".w0";
 createNode transform -n "L_Arm_IK_Master_grp" -p "Raccoon_Rig:Rig";
@@ -2175,7 +2137,7 @@ createNode parentConstraint -n "l_hand_jnt_FK_parentConstraint1" -p "l_hand_jnt_
 	setAttr ".tg[0].tot" -type "double3" 4.4408920985006262e-16 8.8817841970012523e-16 
 		-1.1909920498339374e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 180 -1.4390251747021505e-06 2.7702471405619091 ;
-	setAttr ".lr" -type "double3" 5.2582649641160919e-15 3.7915166397292054e-22 -3.9756933518293969e-16 ;
+	setAttr ".lr" -type "double3" 5.2582649759645815e-15 1.8957583199558192e-22 -3.9756933518293969e-16 ;
 	setAttr ".rst" -type "double3" 0.8328756213512376 0.029573596695021465 -8.8840456603383821e-09 ;
 	setAttr ".rsrr" -type "double3" 5.2582649641160919e-15 3.7915166397292054e-22 -3.9756933518293969e-16 ;
 	setAttr -k on ".w0";
@@ -2201,7 +2163,7 @@ createNode parentConstraint -n "l_elbow_jnt_FK_parentConstraint1" -p "l_elbow_jn
 	setAttr ".tg[0].tor" -type "double3" 180 -1.4390251622198782e-06 2.7702471405619087 ;
 	setAttr ".tg[1].tot" -type "double3" -0.8333316220114324 -0.010714757042675771 -2.9802322780944248e-08 ;
 	setAttr ".tg[1].tor" -type "double3" 180 -1.4390251622198782e-06 2.7702471405619087 ;
-	setAttr ".lr" -type "double3" -8.1999248848373002e-18 5.1985247675032955e-22 -3.9756933528591311e-16 ;
+	setAttr ".lr" -type "double3" -8.1999248848373002e-18 3.3009151212457574e-22 -3.9756933528591301e-16 ;
 	setAttr ".rst" -type "double3" 1.3121687378792719 0 6.7072366794058326e-17 ;
 	setAttr ".rsrr" -type "double3" -8.1999248848373002e-18 5.1985247675032955e-22 -3.9756933528591311e-16 ;
 	setAttr -k on ".w0";
@@ -2227,6 +2189,118 @@ createNode parentConstraint -n "l_shoulder_jnt_FK_parentConstraint1" -p "l_shoul
 	setAttr ".rst" -type "double3" -1.1446449316106708 2.9802322802453492e-08 0.62123477458953857 ;
 	setAttr ".rsrr" -type "double3" 6.3611093629270335e-15 -1.2722218725854067e-14 3.180554681463516e-15 ;
 	setAttr -k on ".w0";
+createNode transform -n "L_Leg_FK_Master_grp" -p "Raccoon_Rig:Rig";
+	rename -uid "AFFC80C6-4516-9610-D4D9-9F9E181EA6F1";
+	setAttr ".t" -type "double3" -0.076996952015643022 2.9237499237060542 2.0210920805536849e-17 ;
+	setAttr ".r" -type "double3" -89.999999999999986 0 -89.999999999999986 ;
+createNode joint -n "l_hip_jnt_FK" -p "L_Leg_FK_Master_grp";
+	rename -uid "A5C1473B-492F-F608-F00B-1D993F7156BB";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 2;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 5.2746958712112796e-05 -0.83206943254144672 0 ;
+	setAttr ".bps" -type "matrix" 0.01452184075097135 -0.99989455251101522 3.2244963923336042e-18 0
+		 9.2051102434931298e-07 1.336892422137931e-08 -0.99999999999957623 0 0.99989455251059156 0.014521840750965196 9.2060810016176728e-07 0
+		 0.44795575765919227 2.3926587104797368 -1.4901161281610599e-08 1;
+	setAttr ".radi" 0.5029122253357915;
+createNode joint -n "l_knee_jnt_FK" -p "l_hip_jnt_FK";
+	rename -uid "2B31C579-4EB2-CEFA-CA73-E29B7A415F50";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 3;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" -8.9958602208790154e-05 2.8458224702766159 -2.6220437717589361e-06 ;
+	setAttr ".pa" -type "double3" -1.176275274502536 1.2972856753727333 95.600449314966156 ;
+	setAttr ".bps" -type "matrix" -0.020622807533637218 -0.99978732728987385 -3.2349602703794515e-08 0
+		 2.7231994879405841e-07 2.6739287528989116e-08 -0.99999999999996259 0 0.99978732728983744 -0.020622807533645253 2.7171059459223027e-07 0
+		 0.52961641990107011 1.2782819271087651 -8.4169445592978111e-17 1;
+	setAttr ".radi" 0.5;
+createNode joint -n "l_foot_jnt_FK" -p "l_knee_jnt_FK";
+	rename -uid "DE128FF9-43AD-52E0-FFC8-11A10CD71490";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 4;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -1.5571181871854115e-05 -1.1816836051945385 -1.5323742167754794e-06 ;
+	setAttr ".pa" -type "double3" 0.63780725601542387 0.18686392621378331 -32.660140045464466 ;
+	setAttr ".bps" -type "matrix" -0.020622807533637218 -0.99978732728987385 -3.2349602703794515e-08 0
+		 2.7231994879405841e-07 2.6739287528989116e-08 -0.99999999999996259 0 0.99978732728983744 -0.020622807533645253 2.7171059459223027e-07 0
+		 0.52476844015970281 0.31576281785964988 -3.1143734285545486e-08 1;
+	setAttr ".radi" 0.5;
+createNode parentConstraint -n "l_foot_jnt_FK_parentConstraint1" -p "l_foot_jnt_FK";
+	rename -uid "6E54A544-4248-D427-F769-EC88F4F8111E";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "l_foot_ctrl_FKW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 7.7715611723760958e-16 1.1102230246251565e-16 
+		3.0738013033624787e-16 ;
+	setAttr ".tg[0].tor" -type "double3" -89.999984432129693 1.8534957120552298e-06 
+		-91.181683605194067 ;
+	setAttr ".lr" -type "double3" 1.560610272255669e-05 1.1816836051940776 1.8538899753953983e-06 ;
+	setAttr ".rst" -type "double3" 0.96241438665473844 4.086457392092363e-09 0.015002897629114775 ;
+	setAttr ".rsrr" -type "double3" 1.560610272255669e-05 1.1816836051940776 1.8538899753953983e-06 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "l_knee_jnt_FK_parentConstraint1" -p "l_knee_jnt_FK";
+	rename -uid "70BF5973-455E-B11F-4E22-1BAC1A631C98";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "l_knee_ctrl_FKW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 6.6613381477509392e-16 -3.4576149604716557e-22 ;
+	setAttr ".tg[0].tor" -type "double3" -89.999984432129693 1.8534957147689596e-06 
+		-91.181683605194067 ;
+	setAttr ".lr" -type "double3" 5.2691381713625898e-05 -0.83206943254331633 1.3141985428188063e-06 ;
+	setAttr ".rst" -type "double3" 1.1154451382700772 4.5370359880928473e-08 0.065469249145388486 ;
+	setAttr ".rsrr" -type "double3" 5.2691381713625898e-05 -0.83206943254331633 1.3141985428188063e-06 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "l_hip_jnt_FK_parentConstraint1" -p "l_hip_jnt_FK";
+	rename -uid "192E2FCC-47EF-BE07-A357-07BABC808B24";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "l_hip_ctrl_FKW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 1.6653345369377348e-16 4.4408920985006262e-16 
+		-8.7762948130118753e-17 ;
+	setAttr ".tg[0].tor" -type "double3" -89.999947253041285 1.2720877199835112e-14 
+		-89.167930567458541 ;
+	setAttr ".lr" -type "double3" -3.3480411337962034e-15 7.8519873314224579e-15 -1.529085461261638e-14 ;
+	setAttr ".rst" -type "double3" 0.53109121322631658 1.4901161418384437e-08 0.52495270967483521 ;
+	setAttr ".rsrr" -type "double3" -3.3480411337962034e-15 7.8519873314224579e-15 -1.529085461261638e-14 ;
+	setAttr -k on ".w0";
 createNode transform -n "L_Leg_IK_Master_grp" -p "Raccoon_Rig:Rig";
 	rename -uid "DA7AD890-4D4E-3B57-1B9C-35B6B44306B1";
 	setAttr ".t" -type "double3" -0.076996952015643022 2.9237499237060542 2.0210920805536849e-17 ;
@@ -2236,8 +2310,6 @@ createNode joint -n "l_hip_jnt_Ik" -p "L_Leg_IK_Master_grp";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" 0.53109121322631747 1.4901161418384437e-08 0.52495270967483521 ;
-	setAttr ".r" -type "double3" -1.888547559778863 1.882696157387634 -2.1823277813860464 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -2251,12 +2323,12 @@ createNode joint -n "l_knee_jnt_Ik" -p "l_hip_jnt_Ik";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" 1.1154451382700779 4.537035988092842e-08 0.065469249145388597 ;
-	setAttr ".r" -type "double3" 0.248648563364263 -4.2057980097158927 4.5082841281940143 ;
+	setAttr ".t" -type "double3" 1.1154451382700779 4.5370359880928414e-08 0.065469249145388597 ;
+	setAttr ".r" -type "double3" 0.24827331212703319 -4.2059494710448702 4.5083486563258761 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" -3.7146512996959589e-05 2.0137530377363757 0 ;
+	setAttr ".jo" -type "double3" -3.7146512996959589e-05 2.0137530377363762 0 ;
 	setAttr ".pa" -type "double3" -1.176275274502536 1.2972856753727333 95.600449314966156 ;
 	setAttr ".bps" -type "matrix" -0.020622807533637218 -0.99978732728987385 -3.2349602703794515e-08 0
 		 2.7231994879405841e-07 2.6739287528989116e-08 -0.99999999999996259 0 0.99978732728983744 -0.020622807533645253 2.7171059459223027e-07 0
@@ -2280,56 +2352,28 @@ createNode ikEffector -n "effector4" -p "l_knee_jnt_Ik";
 	rename -uid "BC7C4C94-43F1-6EE9-3619-DE96191EA85B";
 	setAttr ".v" no;
 	setAttr ".hd" yes;
-createNode transform -n "L_Leg_FK_Master_grp" -p "Raccoon_Rig:Rig";
-	rename -uid "AFFC80C6-4516-9610-D4D9-9F9E181EA6F1";
-	setAttr ".t" -type "double3" -0.076996952015643022 2.9237499237060542 2.0210920805536849e-17 ;
-	setAttr ".r" -type "double3" -89.999999999999986 0 -89.999999999999986 ;
-createNode joint -n "l_hip_jnt_FK" -p "L_Leg_FK_Master_grp";
-	rename -uid "A5C1473B-492F-F608-F00B-1D993F7156BB";
-	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".uoc" 1;
-	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" 0.53109121322631747 1.4901161418384437e-08 0.52495270967483521 ;
-	setAttr ".r" -type "double3" -3.3480411337962034e-15 7.6532026638310337e-15 -1.5290854423040549e-14 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" 5.2746958712112796e-05 -0.83206943254144672 0 ;
-	setAttr ".bps" -type "matrix" 0.01452184075097135 -0.99989455251101522 3.2244963923336042e-18 0
-		 9.2051102434931298e-07 1.336892422137931e-08 -0.99999999999957623 0 0.99989455251059156 0.014521840750965196 9.2060810016176728e-07 0
-		 0.44795575765919227 2.3926587104797368 -1.4901161281610599e-08 1;
-	setAttr ".radi" 0.5029122253357915;
-createNode joint -n "l_knee_jnt_FK" -p "l_hip_jnt_FK";
-	rename -uid "2B31C579-4EB2-CEFA-CA73-E29B7A415F50";
-	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".uoc" 1;
-	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" 1.1154451382700774 4.5370359880928526e-08 0.065469249145388597 ;
-	setAttr ".r" -type "double3" 5.2691381714985311e-05 -0.83206943254332444 1.31419853632911e-06 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" -8.9958602208790154e-05 2.8458224702766159 -2.6220437717589361e-06 ;
-	setAttr ".pa" -type "double3" -1.176275274502536 1.2972856753727333 95.600449314966156 ;
-	setAttr ".bps" -type "matrix" -0.020622807533637218 -0.99978732728987385 -3.2349602703794515e-08 0
-		 2.7231994879405841e-07 2.6739287528989116e-08 -0.99999999999996259 0 0.99978732728983744 -0.020622807533645253 2.7171059459223027e-07 0
-		 0.52961641990107011 1.2782819271087651 -8.4169445592978111e-17 1;
-	setAttr ".radi" 0.5;
-createNode joint -n "l_foot_jnt_FK" -p "l_knee_jnt_FK";
-	rename -uid "DE128FF9-43AD-52E0-FFC8-11A10CD71490";
-	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".uoc" 1;
-	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" 0.96241438665473833 4.0864573920923895e-09 0.015002897629114775 ;
-	setAttr ".r" -type "double3" 1.5606102722556697e-05 1.1816836051940764 1.8538899753953983e-06 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -1.5571181871854115e-05 -1.1816836051945383 -1.5323742167754794e-06 ;
-	setAttr ".pa" -type "double3" 0.63780725601542387 0.18686392621378331 -32.660140045464466 ;
-	setAttr ".bps" -type "matrix" -0.020622807533637218 -0.99978732728987385 -3.2349602703794515e-08 0
-		 2.7231994879405841e-07 2.6739287528989116e-08 -0.99999999999996259 0 0.99978732728983744 -0.020622807533645253 2.7171059459223027e-07 0
-		 0.52476844015970281 0.31576281785964988 -3.1143734285545486e-08 1;
-	setAttr ".radi" 0.5;
+createNode parentConstraint -n "l_hip_jnt_Ik_parentConstraint1" -p "l_hip_jnt_Ik";
+	rename -uid "363A1A2E-4C39-4E29-326B-2AAF147F3D3D";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "l_hip_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 1.6653345369377348e-16 4.4408920985006262e-16 
+		-8.7762948130118753e-17 ;
+	setAttr ".tg[0].tor" -type "double3" -91.816761437820389 -2.181181673209506 -91.0520635870418 ;
+	setAttr ".lr" -type "double3" -1.8885493599431116 1.8827654095959649 -2.1823621387710586 ;
+	setAttr ".rst" -type "double3" 0.53109121322631658 1.4901161418384437e-08 0.52495270967483521 ;
+	setAttr ".rsrr" -type "double3" -1.8885493599431116 1.8827654095959649 -2.1823621387710586 ;
+	setAttr -k on ".w0";
 createNode transform -n "R_Leg_Fk_master_grp" -p "Raccoon_Rig:Rig";
 	rename -uid "264B73D1-4E16-BA75-9723-7099B0A756E5";
 	setAttr ".t" -type "double3" -0.076996952015643022 2.9237499237060542 2.0210920805536849e-17 ;
@@ -2339,12 +2383,10 @@ createNode joint -n "r_hip_jnt_FK1" -p "R_Leg_Fk_master_grp";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" 0.53108992370605401 1.4901199874847861e-08 -0.524953 ;
-	setAttr ".r" -type "double3" -0.048156360296975988 0.56907268984555903 -0.90517838945304152 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" -5.2740826051913226e-05 -0.83206943254176158 180 ;
+	setAttr ".jo" -type "double3" -5.2740826051913232e-05 -0.83206943254176136 180 ;
 	setAttr ".bps" -type "matrix" 0.014521840750976416 0.99989455251101522 -1.1922726995937511e-16 0
 		 -9.2040400052350788e-07 1.3367369996991779e-08 0.99999999999957634 0 0.99989455251059156 -0.014521840750970265 9.2050106505115673e-07 0
 		 -0.60194995201564294 2.3926600000000002 -1.490119997119992e-08 1;
@@ -2354,8 +2396,6 @@ createNode joint -n "r_knee_jnt_FK" -p "r_hip_jnt_FK1";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" -1.1144975128979389 1.4900688571906073e-08 5.5545824872993421e-07 ;
-	setAttr ".r" -type "double3" 0.061636315700302494 2.5361436853052588 -178.9511271483575 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -2370,8 +2410,6 @@ createNode joint -n "r_foot_jnt_FK" -p "r_knee_jnt_FK";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" -0.96272174412184064 -4.0990648375593963e-14 -2.5242840262507116e-08 ;
-	setAttr ".r" -type "double3" 0.024711742360921468 0.52272892690868178 -178.95211032999725 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0.015148652087669993 0.52309340371509494 178.95229220942724 ;
@@ -2379,6 +2417,72 @@ createNode joint -n "r_foot_jnt_FK" -p "r_knee_jnt_FK";
 		 2.7219132652177483e-07 -2.6741940650178807e-08 0.99999999999996259 0 0.99978732728983744 0.020622807533644788 -2.7158194495958585e-07 0
 		 -0.59827995201564277 0.31576300000000057 -3.114370008689823e-08 1;
 	setAttr ".radi" 0.5;
+createNode parentConstraint -n "r_foot_jnt_FK_parentConstraint1" -p "r_foot_jnt_FK";
+	rename -uid "EA02A6B7-4BA6-88F3-67FD-A1BE797493AA";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "r_foot_FK_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -8.163403397709601e-08 2.9609136830921479e-05 
+		3.1143619072526712e-08 ;
+	setAttr ".tg[0].tor" -type "double3" 90.015150554349688 -1.0478460547114639 90.522816358587718 ;
+	setAttr ".lr" -type "double3" 0.024711742360927897 0.52272892690866857 -178.95211032999725 ;
+	setAttr ".rst" -type "double3" -0.96272174412184075 -4.0990648375593963e-14 -2.5242840373529418e-08 ;
+	setAttr ".rsrr" -type "double3" 0.024711742360927897 0.52272892690866857 -178.95211032999725 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "r_knee_jnt_FK_parentConstraint1" -p "r_knee_jnt_FK";
+	rename -uid "4B7EDA9B-4861-CF6F-088E-CEBA01C024F0";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "r_FK_knee_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.011070835970134474 3.326422456995104e-05 
+		0.017605623953182856 ;
+	setAttr ".tg[0].tor" -type "double3" 90.015150554349702 -1.0478460547114348 90.522816358587747 ;
+	setAttr ".lr" -type "double3" 0.061636315700290642 2.5361436853052521 -178.9511271483575 ;
+	setAttr ".rst" -type "double3" -1.1144975128979391 1.4900688564967179e-08 5.5545824861891191e-07 ;
+	setAttr ".rsrr" -type "double3" 0.061636315700290642 2.5361436853052521 -178.9511271483575 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "r_hip_jnt_FK1_parentConstraint1" -p "r_hip_jnt_FK1";
+	rename -uid "1536E27F-4563-DAF7-6684-DEB620E698FA";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "r_hip_FK_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 7.6980589680530898e-09 9.7427367951041788e-08 
+		3.0249819638774361e-16 ;
+	setAttr ".tg[0].tor" -type "double3" 89.960781900704504 0.90513426277575826 89.737073443570381 ;
+	setAttr ".lr" -type "double3" -0.048156360296981927 0.56907268984556769 -0.90517838945304874 ;
+	setAttr ".rst" -type "double3" 0.53108992370605357 1.4901199874847864e-08 -0.52495300000000011 ;
+	setAttr ".rsrr" -type "double3" -0.048156360296981927 0.56907268984556769 -0.90517838945304874 ;
+	setAttr -k on ".w0";
 createNode transform -n "R_Leg_IKMaster_grp" -p "Raccoon_Rig:Rig";
 	rename -uid "F0BF687A-4BD5-6A51-F2E4-358BA83CD402";
 	setAttr ".t" -type "double3" -0.076996952015643022 2.9237499237060542 2.0210920805536849e-17 ;
@@ -2395,14 +2499,14 @@ createNode joint -n "r_hip_jnt_IK" -p "R_Leg_IKMaster_grp";
 	setAttr ".bps" -type "matrix" 0.014521840750976416 0.99989455251101522 -1.1922726995937511e-16 0
 		 -9.2040400052350788e-07 1.3367369996991779e-08 0.99999999999957634 0 0.99989455251059156 -0.014521840750970265 9.2050106505115673e-07 0
 		 -0.60194995201564294 2.3926600000000002 -1.490119997119992e-08 1;
-	setAttr ".radi" 0.5029122253357915;
+	setAttr ".radi" 0.3;
 createNode joint -n "r_knee_jnt_IK" -p "r_hip_jnt_IK";
 	rename -uid "C4784EF2-47B2-8765-BFEE-9FAC6A597B83";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
 	setAttr ".t" -type "double3" -1.1144975128979386 1.4900688574405456e-08 5.5545824884095651e-07 ;
-	setAttr ".r" -type "double3" -1.1759999999999426 -2.0137223541142228 -4.8729819706062988e-06 ;
+	setAttr ".r" -type "double3" -1.1759999999999422 -2.01372230872146 -4.8694164142321141e-06 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -2411,7 +2515,7 @@ createNode joint -n "r_knee_jnt_IK" -p "r_hip_jnt_IK";
 	setAttr ".bps" -type "matrix" -0.020622807533636756 0.99978732728987396 3.2349602708371749e-08 0
 		 2.7219132652177483e-07 -2.6741940650178807e-08 0.99999999999996259 0 0.99978732728983744 0.020622807533644788 -2.7158194495958585e-07 0
 		 -0.6181339520156427 1.2782800000000003 3.5987366051846325e-17 1;
-	setAttr ".radi" 0.5;
+	setAttr ".radi" 0.3;
 createNode joint -n "r_foot_jnt_IK" -p "r_knee_jnt_IK";
 	rename -uid "9F958E03-4288-08A5-6A51-4FA9C9BC6865";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -2423,7 +2527,7 @@ createNode joint -n "r_foot_jnt_IK" -p "r_knee_jnt_IK";
 	setAttr ".bps" -type "matrix" -0.020622807533636756 0.99978732728987396 3.2349602708371749e-08 0
 		 2.7219132652177483e-07 -2.6741940650178807e-08 0.99999999999996259 0 0.99978732728983744 0.020622807533644788 -2.7158194495958585e-07 0
 		 -0.59827995201564277 0.31576300000000057 -3.114370008689823e-08 1;
-	setAttr ".radi" 0.5;
+	setAttr ".radi" 0.3;
 createNode ikEffector -n "effector5" -p "r_knee_jnt_IK";
 	rename -uid "3A7A3E9F-4043-1224-6450-8EB912071B48";
 	setAttr ".v" no;
@@ -2443,13 +2547,13 @@ createNode parentConstraint -n "r_hip_jnt_IK_parentConstraint1" -p "r_hip_jnt_IK
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 7.6980589680530898e-09 9.7427367951041788e-08 
-		3.0249819638774361e-16 ;
-	setAttr ".tg[0].tor" -type "double3" 89.123885467431791 -2.1033851442151552e-06 
-		90.101215417093144 ;
-	setAttr ".lr" -type "double3" -0.87606175047972912 0.93328484963255898 2.9628298945514952e-06 ;
-	setAttr ".rst" -type "double3" 0.53108992370605357 1.4901199874847864e-08 -0.52495300000000011 ;
-	setAttr ".rsrr" -type "double3" -0.87606175047972912 0.93328484963255898 2.9628298945514952e-06 ;
+	setAttr ".tg[0].tot" -type "double3" 7.6980588570307873e-09 9.7427368395130998e-08 
+		3.0249819307902116e-16 ;
+	setAttr ".tg[0].tor" -type "double3" 89.123884915773814 -2.1020260896084416e-06 
+		90.101215396027484 ;
+	setAttr ".lr" -type "double3" -0.87606230215984204 0.93328482856688955 2.9614706408023953e-06 ;
+	setAttr ".rst" -type "double3" 0.53108992370605312 1.4901199874847868e-08 -0.52495300000000023 ;
+	setAttr ".rsrr" -type "double3" -0.87606230215984204 0.93328482856688955 2.9614706408023953e-06 ;
 	setAttr -k on ".w0";
 createNode transform -n "Cat_GEO";
 	rename -uid "10E8E413-40DA-21E0-03F1-67B851BABFC4";
@@ -7021,23 +7125,23 @@ createNode mesh -n "Cat_GEOShapeOrig1" -p "Cat_GEO";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C5154C19-47E3-C4FC-0684-28A89CDCD85A";
+	rename -uid "B9832268-4DBE-151A-D3AC-A69E8330488E";
 	setAttr -s 12 ".lnk";
 	setAttr -s 12 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "DE09A55D-496F-30E9-B232-DD81E008EDD5";
+	rename -uid "8AF1579E-4FE0-4F6D-5C02-CAA946FC368D";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A3B4FE8F-417A-EA37-85B8-CE8132FD578C";
+	rename -uid "6C5E4553-4F63-19E6-11F9-BAA3903F0400";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7E79A009-4BA8-EAD7-8467-61B88D74E838";
-	setAttr ".cdl" 17;
-	setAttr -s 20 ".dli[1:19]"  2 3 4 1 6 9 7 8 
-		5 10 11 12 13 14 15 16 17 18 19;
-	setAttr -s 20 ".dli";
+	rename -uid "92C8D1C6-4D61-E3E0-DDC7-29A3D5170E22";
+	setAttr ".cdl" 9;
+	setAttr -s 21 ".dli[1:20]"  2 3 4 1 6 9 7 8 
+		5 10 11 12 13 14 15 16 17 18 19 20;
+	setAttr -s 21 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "FF433613-4717-9867-1B2A-C59FA3B80ECC";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8433C9A7-46A7-0261-A43F-53A647615D82";
+	rename -uid "C8F2A13D-4178-27F7-A4EC-659312ED6A03";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BD1967EE-48FA-FF1D-6E56-50B199402332";
 	setAttr ".g" yes;
@@ -7053,40 +7157,40 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1179\n            -height 578\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 490\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1585\n            -height 505\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 977\n            -height 599\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n"
 		+ "            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n"
-		+ "                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n"
-		+ "                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n"
-		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n"
-		+ "                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
-		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n"
-		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
-		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
-		+ "                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab 0\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n"
-		+ "\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Front View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1179\\n    -height 578\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1179\\n    -height 578\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n"
+		+ "                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n"
+		+ "                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -clipTime \"on\" \n                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
+		+ "                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n"
+		+ "                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
+		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n"
+		+ "                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab 0\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
+		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 977\\n    -height 599\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 977\\n    -height 599\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "B6695419-4012-E354-4E64-0AB8F4C2532D";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 77 -ast -394 -aet 327 ";
+	setAttr ".b" -type "string" "playbackOptions -min 15 -max 64 -ast -394 -aet 327 ";
 	setAttr ".st" 6;
 createNode shapeEditorManager -n "Base_Rig:shapeEditorManager";
 	rename -uid "2FF643BA-44FE-00D7-E03A-719B7D324824";
@@ -7199,7 +7303,7 @@ createNode gameFbxExporter -n "Base_Rig1:gameExporterPreset3";
 createNode displayLayer -n "Base_Rig1:layer1";
 	rename -uid "A1995E9A-4CE5-C47B-62F6-0C8D58A679FF";
 	setAttr ".dt" 2;
-	setAttr ".do" 2;
+	setAttr ".do" 6;
 createNode gameFbxExporter -n "gameExporterPreset1";
 	rename -uid "C70D39E3-478F-20DB-4149-8D948B7AB61F";
 	setAttr ".pn" -type "string" "Model Default";
@@ -7384,7 +7488,7 @@ createNode gameFbxExporter -n "Cat_Character:Base_Rig:gameExporterPreset3";
 	setAttr ".fv" -type "string" "FBX201800";
 createNode displayLayer -n "Cat_Character:Base_Rig:layer1";
 	rename -uid "D3D3F0EB-4C56-7E8C-3EFB-2AA8CFA2EF8A";
-	setAttr ".do" 3;
+	setAttr ".do" 9;
 createNode groupId -n "Cat_Character:groupId27";
 	rename -uid "86B747DA-4102-3B68-3FCD-9581EBF48342";
 	setAttr ".ihi" 0;
@@ -7444,7 +7548,7 @@ createNode gameFbxExporter -n "Cat_Character:Base_Rig1:gameExporterPreset3";
 	setAttr ".fv" -type "string" "FBX201800";
 createNode displayLayer -n "Cat_Character:Base_Rig1:layer1";
 	rename -uid "714FD8ED-42E1-E405-76BC-AC8E179CC156";
-	setAttr ".do" 4;
+	setAttr ".do" 11;
 createNode lambert -n "lambert5";
 	rename -uid "23201731-400B-4FC0-9BB3-868E8EE25ABB";
 createNode shadingEngine -n "lambert5SG";
@@ -7456,19 +7560,19 @@ createNode materialInfo -n "materialInfo4";
 createNode displayLayer -n "Base_Rig1:layer2";
 	rename -uid "D9378C7A-4D48-BD42-14AE-CF9E8EB9612F";
 	setAttr ".dt" 1;
-	setAttr ".do" 5;
+	setAttr ".do" 13;
 createNode displayLayer -n "layer1";
 	rename -uid "1537E61C-479F-EF95-4AB6-0AB030B4AE5B";
 	setAttr ".dt" 2;
-	setAttr ".do" 6;
+	setAttr ".do" 14;
 createNode displayLayer -n "Base_Rig:layer1";
 	rename -uid "79B95854-43CF-E032-A45E-FDA49D17003C";
 	setAttr ".dt" 1;
-	setAttr ".do" 1;
+	setAttr ".do" 3;
 createNode displayLayer -n "Cat_Character_Geo";
 	rename -uid "15A8520C-48E4-E461-6D62-E6AB9B007564";
 	setAttr ".dt" 2;
-	setAttr ".do" 7;
+	setAttr ".do" 15;
 createNode groupId -n "groupId193";
 	rename -uid "BF1C20D3-469B-F4FD-263E-45BC3397C72C";
 	setAttr ".ihi" 0;
@@ -7686,9 +7790,10 @@ createNode gameFbxExporter -n "Raccoon_Rig:Racoon:gameExporterPreset3";
 	setAttr ".eti" 3;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-createNode displayLayer -n "Raccoon_Rig:Joints";
+createNode displayLayer -n "Joints_layer";
 	rename -uid "BEF62B7D-4B63-6D49-7EEA-048552738D0E";
-	setAttr ".do" 1;
+	setAttr ".v" no;
+	setAttr ".do" 16;
 createNode shapeEditorManager -n "Raccoon_Rig:Raccoon_Model:shapeEditorManager";
 	rename -uid "D86FFBBB-46A1-5EAF-B129-D69E44DAE2EA";
 createNode poseInterpolatorManager -n "Raccoon_Rig:Raccoon_Model:poseInterpolatorManager";
@@ -7754,7 +7859,7 @@ createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPr
 	setAttr ".fv" -type "string" "FBX201800";
 createNode displayLayer -n "Raccoon_Rig:Raccoon_Model:Base_Rig:layer1";
 	rename -uid "F7E856E0-4C38-BF59-8293-B3ACBD3B0BCD";
-	setAttr ".do" 1;
+	setAttr ".do" 4;
 createNode shapeEditorManager -n "Raccoon_Rig:Raccoon_Model:Base_Rig1:shapeEditorManager";
 	rename -uid "3B7CD42A-4A0D-9276-642E-FCABB0B53FC3";
 createNode poseInterpolatorManager -n "Raccoon_Rig:Raccoon_Model:Base_Rig1:poseInterpolatorManager";
@@ -7811,16 +7916,16 @@ createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterP
 	setAttr ".fv" -type "string" "FBX201800";
 createNode displayLayer -n "Raccoon_Rig:Raccoon_Model:Base_Rig1:layer1";
 	rename -uid "C254757D-4A4B-5C44-F2A9-38A7F6624579";
-	setAttr ".do" 2;
+	setAttr ".do" 7;
 createNode displayLayer -n "Raccoon_Rig:Raccoon_Model:Base_Rig1:layer2";
 	rename -uid "89BD08FB-4B60-E909-FE26-BB902AF39AA6";
-	setAttr ".do" 2;
+	setAttr ".do" 8;
 createNode displayLayer -n "Raccoon_Rig:Raccoon_Model:layer1";
 	rename -uid "C7F67D90-43EE-30AF-1655-47BE4A4EEDEE";
-	setAttr ".do" 3;
+	setAttr ".do" 10;
 createNode displayLayer -n "Raccoon_Rig:Raccoon_Model:layer2";
 	rename -uid "4398D23D-4421-9F46-876D-DF8E3C59B0E9";
-	setAttr ".do" 4;
+	setAttr ".do" 12;
 createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:gameExporterPreset1";
 	rename -uid "013C39AD-49CF-EDAF-F4EF-658FDD090106";
 	setAttr ".pn" -type "string" "Model Default";
@@ -10155,7 +10260,7 @@ createNode renderLayer -n "Base_Animation:defaultRenderLayer";
 createNode displayLayer -n "Base_Animation:layer1";
 	rename -uid "2A58C9CB-4A1F-0979-9759-E98C0AD9AC08";
 	setAttr ".dt" 1;
-	setAttr ".do" 1;
+	setAttr ".do" 2;
 createNode gameFbxExporter -n "Base_Animation:gameExporterPreset1";
 	rename -uid "D719CBC7-413D-A43B-55BC-3FB395D99AFB";
 	setAttr ".pn" -type "string" "Model Default";
@@ -10260,7 +10365,7 @@ createNode displayLayer -n "Base_Animation:Rig:layer2";
 	rename -uid "1D21EB39-495C-0BE5-4784-7EAF9789ED58";
 	setAttr ".dt" 1;
 	setAttr ".v" no;
-	setAttr ".do" 2;
+	setAttr ".do" 5;
 createNode animCurveTA -n "l_foot_ctrl_rotateX";
 	rename -uid "1CB93701-4A95-F305-5279-2F946105BDED";
 	setAttr ".tan" 18;
@@ -11431,24 +11536,21 @@ createNode animCurveTU -n "l_hand_ctrl_scaleZ";
 	setAttr -s 7 ".ktv[0:6]"  0 1 5 1 10 1 15 1 20 1 44 1 45 1;
 createNode ikRPsolver -n "ikRPsolver";
 	rename -uid "97C49959-4D2B-F442-92B1-30AC278A0DD5";
-createNode makeNurbsSquare -n "makeNurbsSquare1";
-	rename -uid "D5C760D5-457E-D79E-A170-84A3901EB919";
-	setAttr ".nr" -type "double3" 0 1 0 ;
 createNode displayLayer -n "IK_Layer";
 	rename -uid "C2FFB6BD-4E21-1D23-FC2C-2B80F13F748D";
 	setAttr ".c" 13;
-	setAttr ".do" 8;
+	setAttr ".do" 17;
 createNode makeNurbCircle -n "makeNurbCircle1";
 	rename -uid "ED331E69-4B68-5DC7-ED46-AD8521ADC376";
 	setAttr ".nr" -type "double3" 0 1 0 ;
 createNode displayLayer -n "IK_Switches";
 	rename -uid "D05D0133-489F-68D8-36F9-22A4C96AB171";
 	setAttr ".c" 17;
-	setAttr ".do" 9;
+	setAttr ".do" 18;
 createNode displayLayer -n "FK_layer";
 	rename -uid "5136EAF3-4F7D-E388-0B4A-5AB36338419E";
 	setAttr ".c" 9;
-	setAttr ".do" 10;
+	setAttr ".do" 19;
 createNode reverse -n "reverse1";
 	rename -uid "1600AAB4-41A0-3680-424F-2E88F7D95A01";
 createNode reverse -n "reverse2";
@@ -11457,60 +11559,51 @@ createNode reverse -n "reverse3";
 	rename -uid "CF785AA7-4A64-43BF-F5A1-A2BA39F26554";
 createNode reverse -n "reverse4";
 	rename -uid "AE244F1E-44A5-8EBC-03D7-288B64197CBC";
+createNode makeNurbCircle -n "makeNurbCircle2";
+	rename -uid "7024FE89-49B3-5920-C236-B6AED1ABAD9E";
+	setAttr ".nr" -type "double3" 0 1 0 ;
+createNode reverse -n "reverse5";
+	rename -uid "68A3E887-4C61-351D-031F-BF932DA1B610";
+createNode displayLayer -n "IKHandles";
+	rename -uid "107EA5BC-4B9E-6C30-88ED-12AE8759EA39";
+	setAttr ".v" no;
+	setAttr ".do" 20;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "9E16EEA9-470C-A30A-2B69-83AE72E85469";
+	rename -uid "AC72E396-4337-F1C2-4838-B3A31D535251";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -1881.693152675713 -1368.5326224190358 ;
-	setAttr ".tgi[0].vh" -type "double2" -274.13114480229723 -611.74564832524857 ;
-	setAttr -s 16 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -1215.7142333984375;
-	setAttr ".tgi[0].ni[0].y" -1251.4285888671875;
-	setAttr ".tgi[0].ni[0].nvs" 18304;
-	setAttr ".tgi[0].ni[1].x" -1830;
-	setAttr ".tgi[0].ni[1].y" -547.14288330078125;
+	setAttr ".tgi[0].vl" -type "double2" -4206.3197470140849 -1673.1423328752169 ;
+	setAttr ".tgi[0].vh" -type "double2" -987.27225587992257 -54.224479843736461 ;
+	setAttr -s 10 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -2352.49853515625;
+	setAttr ".tgi[0].ni[0].y" -753.666748046875;
+	setAttr ".tgi[0].ni[0].nvs" 18306;
+	setAttr ".tgi[0].ni[1].x" -2878.950927734375;
+	setAttr ".tgi[0].ni[1].y" -1142.249755859375;
 	setAttr ".tgi[0].ni[1].nvs" 18306;
-	setAttr ".tgi[0].ni[2].x" -850;
-	setAttr ".tgi[0].ni[2].y" -1894.2857666015625;
-	setAttr ".tgi[0].ni[2].nvs" 18304;
-	setAttr ".tgi[0].ni[3].x" -1203.026123046875;
-	setAttr ".tgi[0].ni[3].y" -693.5274658203125;
+	setAttr ".tgi[0].ni[2].x" -2625.022216796875;
+	setAttr ".tgi[0].ni[2].y" -281.51901245117188;
+	setAttr ".tgi[0].ni[2].nvs" 18306;
+	setAttr ".tgi[0].ni[3].x" -2131.070068359375;
+	setAttr ".tgi[0].ni[3].y" -753.666748046875;
 	setAttr ".tgi[0].ni[3].nvs" 18306;
-	setAttr ".tgi[0].ni[4].x" -1215.7142333984375;
-	setAttr ".tgi[0].ni[4].y" -1352.857177734375;
-	setAttr ".tgi[0].ni[4].nvs" 18304;
-	setAttr ".tgi[0].ni[5].x" -850;
-	setAttr ".tgi[0].ni[5].y" -1267.142822265625;
-	setAttr ".tgi[0].ni[5].nvs" 18304;
-	setAttr ".tgi[0].ni[6].x" -850;
-	setAttr ".tgi[0].ni[6].y" -1368.5714111328125;
-	setAttr ".tgi[0].ni[6].nvs" 18304;
-	setAttr ".tgi[0].ni[7].x" -1533.2144775390625;
-	setAttr ".tgi[0].ni[7].y" -776.5428466796875;
+	setAttr ".tgi[0].ni[4].x" -2658.419677734375;
+	setAttr ".tgi[0].ni[4].y" -1133.7681884765625;
+	setAttr ".tgi[0].ni[4].nvs" 18306;
+	setAttr ".tgi[0].ni[5].x" -2384.850830078125;
+	setAttr ".tgi[0].ni[5].y" -299.15170288085938;
+	setAttr ".tgi[0].ni[5].nvs" 18306;
+	setAttr ".tgi[0].ni[6].x" -1909.6414794921875;
+	setAttr ".tgi[0].ni[6].y" -753.666748046875;
+	setAttr ".tgi[0].ni[6].nvs" 18306;
+	setAttr ".tgi[0].ni[7].x" -2868.48046875;
+	setAttr ".tgi[0].ni[7].y" -543.5087890625;
 	setAttr ".tgi[0].ni[7].nvs" 18306;
-	setAttr ".tgi[0].ni[8].x" -850;
-	setAttr ".tgi[0].ni[8].y" -1534.2857666015625;
-	setAttr ".tgi[0].ni[8].nvs" 18304;
-	setAttr ".tgi[0].ni[9].x" -1215.7142333984375;
-	setAttr ".tgi[0].ni[9].y" -1454.2857666015625;
+	setAttr ".tgi[0].ni[8].x" -3162.162109375;
+	setAttr ".tgi[0].ni[8].y" -688.46893310546875;
+	setAttr ".tgi[0].ni[8].nvs" 18306;
+	setAttr ".tgi[0].ni[9].x" -3780;
+	setAttr ".tgi[0].ni[9].y" -832.85711669921875;
 	setAttr ".tgi[0].ni[9].nvs" 18304;
-	setAttr ".tgi[0].ni[10].x" -850;
-	setAttr ".tgi[0].ni[10].y" -1700;
-	setAttr ".tgi[0].ni[10].nvs" 18304;
-	setAttr ".tgi[0].ni[11].x" -947.14288330078125;
-	setAttr ".tgi[0].ni[11].y" -1162.857177734375;
-	setAttr ".tgi[0].ni[11].nvs" 18304;
-	setAttr ".tgi[0].ni[12].x" -744.28570556640625;
-	setAttr ".tgi[0].ni[12].y" -1074.2857666015625;
-	setAttr ".tgi[0].ni[12].nvs" 18304;
-	setAttr ".tgi[0].ni[13].x" -508.57144165039063;
-	setAttr ".tgi[0].ni[13].y" -955.71429443359375;
-	setAttr ".tgi[0].ni[13].nvs" 18304;
-	setAttr ".tgi[0].ni[14].x" -988.5714111328125;
-	setAttr ".tgi[0].ni[14].y" -895.71429443359375;
-	setAttr ".tgi[0].ni[14].nvs" 18304;
-	setAttr ".tgi[0].ni[15].x" -742.85711669921875;
-	setAttr ".tgi[0].ni[15].y" -895.71429443359375;
-	setAttr ".tgi[0].ni[15].nvs" 18304;
 select -ne :time1;
 	setAttr ".o" 45;
 	setAttr ".unw" 45;
@@ -11528,7 +11621,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 4 ".u";
+	setAttr -s 5 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 16 ".r";
 select -ne :initialShadingGroup;
@@ -11543,8 +11636,7 @@ select -ne :hardwareRenderGlobals;
 select -ne :defaultHideFaceDataSet;
 	setAttr -s 2 ".dnsm";
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
-connectAttr "Raccoon_Rig:Joints.di" "Raccoon_Rig:Racoon:Base_Rig1:Joints.do";
+connectAttr "Joints_layer.di" "Base_Rig_Master_jnt_grp.do";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:Root_parentConstraint1.ctx" "Raccoon_Rig:Racoon:Base_Rig1:Root.tx"
 		;
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:Root_parentConstraint1.cty" "Raccoon_Rig:Racoon:Base_Rig1:Root.ty"
@@ -11793,9 +11885,9 @@ connectAttr "l_hand_jnt_FK.ssc" "l_hand_jnt_RK_parentConstraint1.tg[1].tsc";
 connectAttr "l_hand_jnt_FK.is" "l_hand_jnt_RK_parentConstraint1.tg[1].tis";
 connectAttr "l_hand_jnt_RK_parentConstraint1.w1" "l_hand_jnt_RK_parentConstraint1.tg[1].tw"
 		;
-connectAttr "reverse3.ox" "l_hand_jnt_RK_parentConstraint1.w1";
 connectAttr "L_Arm_IK_Switch_ctrl.IK_Switch" "l_hand_jnt_RK_parentConstraint1.w0"
 		;
+connectAttr "reverse3.ox" "l_hand_jnt_RK_parentConstraint1.w1";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_elbow_jnt_RK.ro" "l_elbow_jnt_RK_parentConstraint1.cro"
 		;
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_elbow_jnt_RK.pim" "l_elbow_jnt_RK_parentConstraint1.cpim"
@@ -11830,9 +11922,9 @@ connectAttr "l_elbow_jnt_FK.ssc" "l_elbow_jnt_RK_parentConstraint1.tg[1].tsc";
 connectAttr "l_elbow_jnt_FK.is" "l_elbow_jnt_RK_parentConstraint1.tg[1].tis";
 connectAttr "l_elbow_jnt_RK_parentConstraint1.w1" "l_elbow_jnt_RK_parentConstraint1.tg[1].tw"
 		;
-connectAttr "reverse3.ox" "l_elbow_jnt_RK_parentConstraint1.w1";
 connectAttr "L_Arm_IK_Switch_ctrl.IK_Switch" "l_elbow_jnt_RK_parentConstraint1.w0"
 		;
+connectAttr "reverse3.ox" "l_elbow_jnt_RK_parentConstraint1.w1";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_shoulder_jnt_RK.ro" "l_shoulder_jnt_RK_parentConstraint1.cro"
 		;
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_shoulder_jnt_RK.pim" "l_shoulder_jnt_RK_parentConstraint1.cpim"
@@ -11887,9 +11979,9 @@ connectAttr "l_shoulder_jnt_FK.is" "l_shoulder_jnt_RK_parentConstraint1.tg[1].ti
 		;
 connectAttr "l_shoulder_jnt_RK_parentConstraint1.w1" "l_shoulder_jnt_RK_parentConstraint1.tg[1].tw"
 		;
-connectAttr "reverse3.ox" "l_shoulder_jnt_RK_parentConstraint1.w1";
 connectAttr "L_Arm_IK_Switch_ctrl.IK_Switch" "l_shoulder_jnt_RK_parentConstraint1.w0"
 		;
+connectAttr "reverse3.ox" "l_shoulder_jnt_RK_parentConstraint1.w1";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.s" "Raccoon_Rig:Racoon:Base_Rig1:r_shoulder_jnt_RK.is"
 		;
 connectAttr "r_shoulder_jnt_RK_parentConstraint1.ctx" "Raccoon_Rig:Racoon:Base_Rig1:r_shoulder_jnt_RK.tx"
@@ -12179,6 +12271,9 @@ connectAttr "l_foot_jnt_FK.ssc" "l_foot_jnt_RK_parentConstraint1.tg[1].tsc";
 connectAttr "l_foot_jnt_FK.is" "l_foot_jnt_RK_parentConstraint1.tg[1].tis";
 connectAttr "l_foot_jnt_RK_parentConstraint1.w1" "l_foot_jnt_RK_parentConstraint1.tg[1].tw"
 		;
+connectAttr "IK_Switch_legs_ctrl.IK_Switch" "l_foot_jnt_RK_parentConstraint1.w0"
+		;
+connectAttr "reverse5.ox" "l_foot_jnt_RK_parentConstraint1.w1";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_knee_jnt_RK.ro" "l_knee_jnt_RK_parentConstraint1.cro"
 		;
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_knee_jnt_RK.pim" "l_knee_jnt_RK_parentConstraint1.cpim"
@@ -12213,6 +12308,9 @@ connectAttr "l_knee_jnt_FK.ssc" "l_knee_jnt_RK_parentConstraint1.tg[1].tsc";
 connectAttr "l_knee_jnt_FK.is" "l_knee_jnt_RK_parentConstraint1.tg[1].tis";
 connectAttr "l_knee_jnt_RK_parentConstraint1.w1" "l_knee_jnt_RK_parentConstraint1.tg[1].tw"
 		;
+connectAttr "IK_Switch_legs_ctrl.IK_Switch" "l_knee_jnt_RK_parentConstraint1.w0"
+		;
+connectAttr "reverse5.ox" "l_knee_jnt_RK_parentConstraint1.w1";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_hip_jnt_RK.ro" "l_hip_jnt_RK_parentConstraint1.cro"
 		;
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_hip_jnt_RK.pim" "l_hip_jnt_RK_parentConstraint1.cpim"
@@ -12247,11 +12345,151 @@ connectAttr "l_hip_jnt_FK.ssc" "l_hip_jnt_RK_parentConstraint1.tg[1].tsc";
 connectAttr "l_hip_jnt_FK.is" "l_hip_jnt_RK_parentConstraint1.tg[1].tis";
 connectAttr "l_hip_jnt_RK_parentConstraint1.w1" "l_hip_jnt_RK_parentConstraint1.tg[1].tw"
 		;
+connectAttr "IK_Switch_legs_ctrl.IK_Switch" "l_hip_jnt_RK_parentConstraint1.w0";
+connectAttr "reverse5.ox" "l_hip_jnt_RK_parentConstraint1.w1";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:waist_jnt.s" "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.is"
+		;
+connectAttr "r_hip_jnt_RK_parentConstraint1.ctx" "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.tx"
+		;
+connectAttr "r_hip_jnt_RK_parentConstraint1.cty" "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.ty"
+		;
+connectAttr "r_hip_jnt_RK_parentConstraint1.ctz" "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.tz"
+		;
+connectAttr "r_hip_jnt_RK_parentConstraint1.crx" "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.rx"
+		;
+connectAttr "r_hip_jnt_RK_parentConstraint1.cry" "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.ry"
+		;
+connectAttr "r_hip_jnt_RK_parentConstraint1.crz" "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.rz"
 		;
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.s" "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.is"
 		;
+connectAttr "r_knee_jnt_RK_parentConstraint1.ctx" "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.tx"
+		;
+connectAttr "r_knee_jnt_RK_parentConstraint1.cty" "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.ty"
+		;
+connectAttr "r_knee_jnt_RK_parentConstraint1.ctz" "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.tz"
+		;
+connectAttr "r_knee_jnt_RK_parentConstraint1.crx" "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.rx"
+		;
+connectAttr "r_knee_jnt_RK_parentConstraint1.cry" "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.ry"
+		;
+connectAttr "r_knee_jnt_RK_parentConstraint1.crz" "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.rz"
+		;
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.s" "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.is"
+		;
+connectAttr "r_foot_jnt_RK_parentConstraint1.ctx" "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.tx"
+		;
+connectAttr "r_foot_jnt_RK_parentConstraint1.cty" "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.ty"
+		;
+connectAttr "r_foot_jnt_RK_parentConstraint1.ctz" "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.tz"
+		;
+connectAttr "r_foot_jnt_RK_parentConstraint1.crx" "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.rx"
+		;
+connectAttr "r_foot_jnt_RK_parentConstraint1.cry" "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.ry"
+		;
+connectAttr "r_foot_jnt_RK_parentConstraint1.crz" "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.rz"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.ro" "r_foot_jnt_RK_parentConstraint1.cro"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.pim" "r_foot_jnt_RK_parentConstraint1.cpim"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.rp" "r_foot_jnt_RK_parentConstraint1.crp"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.rpt" "r_foot_jnt_RK_parentConstraint1.crt"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.jo" "r_foot_jnt_RK_parentConstraint1.cjo"
+		;
+connectAttr "r_foot_jnt_IK.t" "r_foot_jnt_RK_parentConstraint1.tg[0].tt";
+connectAttr "r_foot_jnt_IK.rp" "r_foot_jnt_RK_parentConstraint1.tg[0].trp";
+connectAttr "r_foot_jnt_IK.rpt" "r_foot_jnt_RK_parentConstraint1.tg[0].trt";
+connectAttr "r_foot_jnt_IK.r" "r_foot_jnt_RK_parentConstraint1.tg[0].tr";
+connectAttr "r_foot_jnt_IK.ro" "r_foot_jnt_RK_parentConstraint1.tg[0].tro";
+connectAttr "r_foot_jnt_IK.s" "r_foot_jnt_RK_parentConstraint1.tg[0].ts";
+connectAttr "r_foot_jnt_IK.pm" "r_foot_jnt_RK_parentConstraint1.tg[0].tpm";
+connectAttr "r_foot_jnt_IK.jo" "r_foot_jnt_RK_parentConstraint1.tg[0].tjo";
+connectAttr "r_foot_jnt_IK.ssc" "r_foot_jnt_RK_parentConstraint1.tg[0].tsc";
+connectAttr "r_foot_jnt_IK.is" "r_foot_jnt_RK_parentConstraint1.tg[0].tis";
+connectAttr "r_foot_jnt_RK_parentConstraint1.w0" "r_foot_jnt_RK_parentConstraint1.tg[0].tw"
+		;
+connectAttr "r_foot_jnt_FK.t" "r_foot_jnt_RK_parentConstraint1.tg[1].tt";
+connectAttr "r_foot_jnt_FK.rp" "r_foot_jnt_RK_parentConstraint1.tg[1].trp";
+connectAttr "r_foot_jnt_FK.rpt" "r_foot_jnt_RK_parentConstraint1.tg[1].trt";
+connectAttr "r_foot_jnt_FK.r" "r_foot_jnt_RK_parentConstraint1.tg[1].tr";
+connectAttr "r_foot_jnt_FK.ro" "r_foot_jnt_RK_parentConstraint1.tg[1].tro";
+connectAttr "r_foot_jnt_FK.s" "r_foot_jnt_RK_parentConstraint1.tg[1].ts";
+connectAttr "r_foot_jnt_FK.pm" "r_foot_jnt_RK_parentConstraint1.tg[1].tpm";
+connectAttr "r_foot_jnt_FK.jo" "r_foot_jnt_RK_parentConstraint1.tg[1].tjo";
+connectAttr "r_foot_jnt_FK.ssc" "r_foot_jnt_RK_parentConstraint1.tg[1].tsc";
+connectAttr "r_foot_jnt_FK.is" "r_foot_jnt_RK_parentConstraint1.tg[1].tis";
+connectAttr "r_foot_jnt_RK_parentConstraint1.w1" "r_foot_jnt_RK_parentConstraint1.tg[1].tw"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.ro" "r_knee_jnt_RK_parentConstraint1.cro"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.pim" "r_knee_jnt_RK_parentConstraint1.cpim"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.rp" "r_knee_jnt_RK_parentConstraint1.crp"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.rpt" "r_knee_jnt_RK_parentConstraint1.crt"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.jo" "r_knee_jnt_RK_parentConstraint1.cjo"
+		;
+connectAttr "r_knee_jnt_IK.t" "r_knee_jnt_RK_parentConstraint1.tg[0].tt";
+connectAttr "r_knee_jnt_IK.rp" "r_knee_jnt_RK_parentConstraint1.tg[0].trp";
+connectAttr "r_knee_jnt_IK.rpt" "r_knee_jnt_RK_parentConstraint1.tg[0].trt";
+connectAttr "r_knee_jnt_IK.r" "r_knee_jnt_RK_parentConstraint1.tg[0].tr";
+connectAttr "r_knee_jnt_IK.ro" "r_knee_jnt_RK_parentConstraint1.tg[0].tro";
+connectAttr "r_knee_jnt_IK.s" "r_knee_jnt_RK_parentConstraint1.tg[0].ts";
+connectAttr "r_knee_jnt_IK.pm" "r_knee_jnt_RK_parentConstraint1.tg[0].tpm";
+connectAttr "r_knee_jnt_IK.jo" "r_knee_jnt_RK_parentConstraint1.tg[0].tjo";
+connectAttr "r_knee_jnt_IK.ssc" "r_knee_jnt_RK_parentConstraint1.tg[0].tsc";
+connectAttr "r_knee_jnt_IK.is" "r_knee_jnt_RK_parentConstraint1.tg[0].tis";
+connectAttr "r_knee_jnt_RK_parentConstraint1.w0" "r_knee_jnt_RK_parentConstraint1.tg[0].tw"
+		;
+connectAttr "r_knee_jnt_FK.t" "r_knee_jnt_RK_parentConstraint1.tg[1].tt";
+connectAttr "r_knee_jnt_FK.rp" "r_knee_jnt_RK_parentConstraint1.tg[1].trp";
+connectAttr "r_knee_jnt_FK.rpt" "r_knee_jnt_RK_parentConstraint1.tg[1].trt";
+connectAttr "r_knee_jnt_FK.r" "r_knee_jnt_RK_parentConstraint1.tg[1].tr";
+connectAttr "r_knee_jnt_FK.ro" "r_knee_jnt_RK_parentConstraint1.tg[1].tro";
+connectAttr "r_knee_jnt_FK.s" "r_knee_jnt_RK_parentConstraint1.tg[1].ts";
+connectAttr "r_knee_jnt_FK.pm" "r_knee_jnt_RK_parentConstraint1.tg[1].tpm";
+connectAttr "r_knee_jnt_FK.jo" "r_knee_jnt_RK_parentConstraint1.tg[1].tjo";
+connectAttr "r_knee_jnt_FK.ssc" "r_knee_jnt_RK_parentConstraint1.tg[1].tsc";
+connectAttr "r_knee_jnt_FK.is" "r_knee_jnt_RK_parentConstraint1.tg[1].tis";
+connectAttr "r_knee_jnt_RK_parentConstraint1.w1" "r_knee_jnt_RK_parentConstraint1.tg[1].tw"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.ro" "r_hip_jnt_RK_parentConstraint1.cro"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.pim" "r_hip_jnt_RK_parentConstraint1.cpim"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.rp" "r_hip_jnt_RK_parentConstraint1.crp"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.rpt" "r_hip_jnt_RK_parentConstraint1.crt"
+		;
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_hip_jnt_RK.jo" "r_hip_jnt_RK_parentConstraint1.cjo"
+		;
+connectAttr "r_hip_jnt_IK.t" "r_hip_jnt_RK_parentConstraint1.tg[0].tt";
+connectAttr "r_hip_jnt_IK.rp" "r_hip_jnt_RK_parentConstraint1.tg[0].trp";
+connectAttr "r_hip_jnt_IK.rpt" "r_hip_jnt_RK_parentConstraint1.tg[0].trt";
+connectAttr "r_hip_jnt_IK.r" "r_hip_jnt_RK_parentConstraint1.tg[0].tr";
+connectAttr "r_hip_jnt_IK.ro" "r_hip_jnt_RK_parentConstraint1.tg[0].tro";
+connectAttr "r_hip_jnt_IK.s" "r_hip_jnt_RK_parentConstraint1.tg[0].ts";
+connectAttr "r_hip_jnt_IK.pm" "r_hip_jnt_RK_parentConstraint1.tg[0].tpm";
+connectAttr "r_hip_jnt_IK.jo" "r_hip_jnt_RK_parentConstraint1.tg[0].tjo";
+connectAttr "r_hip_jnt_IK.ssc" "r_hip_jnt_RK_parentConstraint1.tg[0].tsc";
+connectAttr "r_hip_jnt_IK.is" "r_hip_jnt_RK_parentConstraint1.tg[0].tis";
+connectAttr "r_hip_jnt_RK_parentConstraint1.w0" "r_hip_jnt_RK_parentConstraint1.tg[0].tw"
+		;
+connectAttr "r_hip_jnt_FK1.t" "r_hip_jnt_RK_parentConstraint1.tg[1].tt";
+connectAttr "r_hip_jnt_FK1.rp" "r_hip_jnt_RK_parentConstraint1.tg[1].trp";
+connectAttr "r_hip_jnt_FK1.rpt" "r_hip_jnt_RK_parentConstraint1.tg[1].trt";
+connectAttr "r_hip_jnt_FK1.r" "r_hip_jnt_RK_parentConstraint1.tg[1].tr";
+connectAttr "r_hip_jnt_FK1.ro" "r_hip_jnt_RK_parentConstraint1.tg[1].tro";
+connectAttr "r_hip_jnt_FK1.s" "r_hip_jnt_RK_parentConstraint1.tg[1].ts";
+connectAttr "r_hip_jnt_FK1.pm" "r_hip_jnt_RK_parentConstraint1.tg[1].tpm";
+connectAttr "r_hip_jnt_FK1.jo" "r_hip_jnt_RK_parentConstraint1.tg[1].tjo";
+connectAttr "r_hip_jnt_FK1.ssc" "r_hip_jnt_RK_parentConstraint1.tg[1].tsc";
+connectAttr "r_hip_jnt_FK1.is" "r_hip_jnt_RK_parentConstraint1.tg[1].tis";
+connectAttr "r_hip_jnt_RK_parentConstraint1.w1" "r_hip_jnt_RK_parentConstraint1.tg[1].tw"
 		;
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:Root.ro" "Raccoon_Rig:Racoon:Base_Rig1:Root_parentConstraint1.cro"
 		;
@@ -12279,6 +12517,12 @@ connectAttr "Raccoon_Rig:Racoon:Base_Rig1:root_ctrl.pm" "Raccoon_Rig:Racoon:Base
 		;
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:Root_parentConstraint1.w0" "Raccoon_Rig:Racoon:Base_Rig1:Root_parentConstraint1.tg[0].tw"
 		;
+connectAttr "transform_ctrl_translateX.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.tx"
+		;
+connectAttr "transform_ctrl_translateY.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.ty"
+		;
+connectAttr "transform_ctrl_translateZ.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.tz"
+		;
 connectAttr "transform_ctrl_rotateX.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.rx"
 		;
 connectAttr "transform_ctrl_rotateY.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.ry"
@@ -12287,25 +12531,19 @@ connectAttr "transform_ctrl_rotateZ.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_c
 		;
 connectAttr "transform_ctrl_visibility.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.v"
 		;
-connectAttr "transform_ctrl_translateX.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.tx"
-		;
-connectAttr "transform_ctrl_translateY.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.ty"
-		;
-connectAttr "transform_ctrl_translateZ.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.tz"
-		;
 connectAttr "transform_ctrl_scaleX.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.sx"
 		;
 connectAttr "transform_ctrl_scaleY.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.sy"
 		;
 connectAttr "transform_ctrl_scaleZ.o" "Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl.sz"
 		;
+connectAttr "cog_ctrl_translateX.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.tx";
+connectAttr "cog_ctrl_translateY.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.ty";
+connectAttr "cog_ctrl_translateZ.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.tz";
 connectAttr "cog_ctrl_rotateX.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.rx";
 connectAttr "cog_ctrl_rotateY.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.ry";
 connectAttr "cog_ctrl_rotateZ.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.rz";
 connectAttr "cog_ctrl_visibility.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.v";
-connectAttr "cog_ctrl_translateX.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.tx";
-connectAttr "cog_ctrl_translateY.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.ty";
-connectAttr "cog_ctrl_translateZ.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.tz";
 connectAttr "cog_ctrl_scaleX.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.sx";
 connectAttr "cog_ctrl_scaleY.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.sy";
 connectAttr "cog_ctrl_scaleZ.o" "Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl.sz";
@@ -12445,56 +12683,17 @@ connectAttr "IK_Layer.di" "l_shoulder_IK_ctrl_grp.do";
 connectAttr "IK_Layer.di" "l_shoulder_ctrl.do";
 connectAttr "IK_Layer.di" "l_elbow_IK_ctrl_grp.do";
 connectAttr "IK_Layer.di" "l_elbow_ctrl.do";
-connectAttr "IK_Layer.di" "l_hand_IK_ctrl_grp.do";
-connectAttr "IK_Layer.di" "l_hand_ctrl.do";
-connectAttr "l_shoulder_jnt_IK.msg" "L_ikHandle2.hsj";
-connectAttr "effector2.hp" "L_ikHandle2.hee";
-connectAttr "ikRPsolver.msg" "L_ikHandle2.hsv";
-connectAttr "L_ikHandle2_poleVectorConstraint1.ctx" "L_ikHandle2.pvx";
-connectAttr "L_ikHandle2_poleVectorConstraint1.cty" "L_ikHandle2.pvy";
-connectAttr "L_ikHandle2_poleVectorConstraint1.ctz" "L_ikHandle2.pvz";
-connectAttr "L_ikHandle2.pim" "L_ikHandle2_poleVectorConstraint1.cpim";
-connectAttr "l_shoulder_jnt_IK.pm" "L_ikHandle2_poleVectorConstraint1.ps";
-connectAttr "l_shoulder_jnt_IK.t" "L_ikHandle2_poleVectorConstraint1.crp";
-connectAttr "l_elbow_ctrl.t" "L_ikHandle2_poleVectorConstraint1.tg[0].tt";
-connectAttr "l_elbow_ctrl.rp" "L_ikHandle2_poleVectorConstraint1.tg[0].trp";
-connectAttr "l_elbow_ctrl.rpt" "L_ikHandle2_poleVectorConstraint1.tg[0].trt";
-connectAttr "l_elbow_ctrl.pm" "L_ikHandle2_poleVectorConstraint1.tg[0].tpm";
-connectAttr "L_ikHandle2_poleVectorConstraint1.w0" "L_ikHandle2_poleVectorConstraint1.tg[0].tw"
-		;
 connectAttr "reverse4.ox" "R_Arm_Fk_Master_CTRl_grp.v";
 connectAttr "FK_layer.di" "r_shoulder_FK_ctrl_grp.do";
 connectAttr "FK_layer.di" "r_elbow_FK_ctrl_grp.do";
 connectAttr "FK_layer.di" "r_hand_FK_ctrl_grp.do";
 connectAttr "R_Arm_Ik_Switch_ctrl.IK_Switch" "R_Arm_IK_Master_Grp.v";
 connectAttr "IK_Layer.di" "r_shoulder_IK_ctrl_grp.do";
-connectAttr "IK_Layer.di" "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.do"
+connectAttr "IK_Layer.di" "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.do"
 		;
-connectAttr "IK_Layer.di" "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp.do"
+connectAttr "IK_Layer.di" "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp.do"
 		;
-connectAttr "IK_Layer.di" "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl.do"
-		;
-connectAttr "IK_Layer.di" "r_hand_IK_ctrl_grp.do";
-connectAttr "IK_Layer.di" "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl|r_hand_IK_ctrl_grp|r_hand_ctrl.do"
-		;
-connectAttr "r_shoulder_jnt_IK.msg" "R_ikHandle1.hsj";
-connectAttr "effector1.hp" "R_ikHandle1.hee";
-connectAttr "ikRPsolver.msg" "R_ikHandle1.hsv";
-connectAttr "R_ikHandle1_poleVectorConstraint1.ctx" "R_ikHandle1.pvx";
-connectAttr "R_ikHandle1_poleVectorConstraint1.cty" "R_ikHandle1.pvy";
-connectAttr "R_ikHandle1_poleVectorConstraint1.ctz" "R_ikHandle1.pvz";
-connectAttr "R_ikHandle1.pim" "R_ikHandle1_poleVectorConstraint1.cpim";
-connectAttr "r_shoulder_jnt_IK.pm" "R_ikHandle1_poleVectorConstraint1.ps";
-connectAttr "r_shoulder_jnt_IK.t" "R_ikHandle1_poleVectorConstraint1.crp";
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl.t" "R_ikHandle1_poleVectorConstraint1.tg[0].tt"
-		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl.rp" "R_ikHandle1_poleVectorConstraint1.tg[0].trp"
-		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl.rpt" "R_ikHandle1_poleVectorConstraint1.tg[0].trt"
-		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl.pm" "R_ikHandle1_poleVectorConstraint1.tg[0].tpm"
-		;
-connectAttr "R_ikHandle1_poleVectorConstraint1.w0" "R_ikHandle1_poleVectorConstraint1.tg[0].tw"
+connectAttr "IK_Layer.di" "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl.do"
 		;
 connectAttr "waist_ctrl_translateX.o" "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl.tx"
 		;
@@ -12510,40 +12709,8 @@ connectAttr "waist_ctrl_scaleY.o" "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl.sy";
 connectAttr "waist_ctrl_scaleZ.o" "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl.sz";
 connectAttr "waist_ctrl_visibility.o" "Raccoon_Rig:Racoon:Base_Rig1:waist_ctrl.v"
 		;
-connectAttr "FK_layer.di" "r_hip_FK_ctrl_grp.do";
-connectAttr "r_hip_ctrl_translateX.o" "r_hip_FK_ctrl.tx";
-connectAttr "r_hip_ctrl_translateY.o" "r_hip_FK_ctrl.ty";
-connectAttr "r_hip_ctrl_translateZ.o" "r_hip_FK_ctrl.tz";
-connectAttr "r_hip_ctrl_rotateX.o" "r_hip_FK_ctrl.rx";
-connectAttr "r_hip_ctrl_rotateY.o" "r_hip_FK_ctrl.ry";
-connectAttr "r_hip_ctrl_rotateZ.o" "r_hip_FK_ctrl.rz";
-connectAttr "r_hip_ctrl_scaleX.o" "r_hip_FK_ctrl.sx";
-connectAttr "r_hip_ctrl_scaleY.o" "r_hip_FK_ctrl.sy";
-connectAttr "r_hip_ctrl_scaleZ.o" "r_hip_FK_ctrl.sz";
-connectAttr "r_hip_ctrl_visibility.o" "r_hip_FK_ctrl.v";
-connectAttr "FK_layer.di" "r_knee_FK_ctrl_grp.do";
-connectAttr "r_knee_ctrl_translateX.o" "r_FK_knee_ctrl.tx";
-connectAttr "r_knee_ctrl_translateY.o" "r_FK_knee_ctrl.ty";
-connectAttr "r_knee_ctrl_translateZ.o" "r_FK_knee_ctrl.tz";
-connectAttr "r_knee_ctrl_rotateX.o" "r_FK_knee_ctrl.rx";
-connectAttr "r_knee_ctrl_rotateY.o" "r_FK_knee_ctrl.ry";
-connectAttr "r_knee_ctrl_rotateZ.o" "r_FK_knee_ctrl.rz";
-connectAttr "r_knee_ctrl_scaleX.o" "r_FK_knee_ctrl.sx";
-connectAttr "r_knee_ctrl_scaleY.o" "r_FK_knee_ctrl.sy";
-connectAttr "r_knee_ctrl_scaleZ.o" "r_FK_knee_ctrl.sz";
-connectAttr "r_knee_ctrl_visibility.o" "r_FK_knee_ctrl.v";
-connectAttr "FK_layer.di" "r_foot_FK_ctrl_grp.do";
-connectAttr "r_foot_ctrl_translateX.o" "r_foot_FK_ctrl.tx";
-connectAttr "r_foot_ctrl_translateY.o" "r_foot_FK_ctrl.ty";
-connectAttr "r_foot_ctrl_translateZ.o" "r_foot_FK_ctrl.tz";
-connectAttr "r_foot_ctrl_rotateX.o" "r_foot_FK_ctrl.rx";
-connectAttr "r_foot_ctrl_rotateY.o" "r_foot_FK_ctrl.ry";
-connectAttr "r_foot_ctrl_rotateZ.o" "r_foot_FK_ctrl.rz";
-connectAttr "r_foot_ctrl_scaleX.o" "r_foot_FK_ctrl.sx";
-connectAttr "r_foot_ctrl_scaleY.o" "r_foot_FK_ctrl.sy";
-connectAttr "r_foot_ctrl_scaleZ.o" "r_foot_FK_ctrl.sz";
-connectAttr "r_foot_ctrl_visibility.o" "r_foot_FK_ctrl.v";
 connectAttr "FK_layer.di" "l_hip_ctrl_grp_FK.do";
+connectAttr "reverse5.ox" "l_hip_ctrl_grp_FK.v";
 connectAttr "l_hip_ctrl_translateX.o" "l_hip_ctrl_FK.tx";
 connectAttr "l_hip_ctrl_translateY.o" "l_hip_ctrl_FK.ty";
 connectAttr "l_hip_ctrl_translateZ.o" "l_hip_ctrl_FK.tz";
@@ -12577,33 +12744,135 @@ connectAttr "l_foot_ctrl_scaleY.o" "l_foot_ctrl_FK.sy";
 connectAttr "l_foot_ctrl_scaleZ.o" "l_foot_ctrl_FK.sz";
 connectAttr "l_foot_ctrl_visibility.o" "l_foot_ctrl_FK.v";
 connectAttr "FK_layer.di" "l_hip_IK_ctrl_grp.do";
+connectAttr "IK_Switch_legs_ctrl.IK_Switch" "l_hip_IK_ctrl_grp.v";
+connectAttr "IK_Layer.di" "l_hip_ctrl.do";
 connectAttr "IK_Layer.di" "l_PoleVector_IK_ctrl_grp.do";
 connectAttr "IK_Layer.di" "l_knee_ctrl.do";
+connectAttr "IK_Switch_legs_ctrl.IK_Switch" "R_Leg_IK_master_Ctrl_grp.v";
+connectAttr "IK_Layer.di" "r_hip_ctrl.do";
+connectAttr "IK_Layer.di" "r_knee_ctrl.do";
+connectAttr "reverse5.ox" "R_Leg_FK_Master_Ctrl_grp.v";
+connectAttr "FK_layer.di" "r_hip_FK_ctrl_grp.do";
+connectAttr "r_hip_ctrl_translateX.o" "r_hip_FK_ctrl.tx";
+connectAttr "r_hip_ctrl_translateY.o" "r_hip_FK_ctrl.ty";
+connectAttr "r_hip_ctrl_translateZ.o" "r_hip_FK_ctrl.tz";
+connectAttr "r_hip_ctrl_rotateX.o" "r_hip_FK_ctrl.rx";
+connectAttr "r_hip_ctrl_rotateY.o" "r_hip_FK_ctrl.ry";
+connectAttr "r_hip_ctrl_rotateZ.o" "r_hip_FK_ctrl.rz";
+connectAttr "r_hip_ctrl_scaleX.o" "r_hip_FK_ctrl.sx";
+connectAttr "r_hip_ctrl_scaleY.o" "r_hip_FK_ctrl.sy";
+connectAttr "r_hip_ctrl_scaleZ.o" "r_hip_FK_ctrl.sz";
+connectAttr "r_hip_ctrl_visibility.o" "r_hip_FK_ctrl.v";
+connectAttr "FK_layer.di" "r_knee_FK_ctrl_grp.do";
+connectAttr "r_knee_ctrl_translateX.o" "r_FK_knee_ctrl.tx";
+connectAttr "r_knee_ctrl_translateY.o" "r_FK_knee_ctrl.ty";
+connectAttr "r_knee_ctrl_translateZ.o" "r_FK_knee_ctrl.tz";
+connectAttr "r_knee_ctrl_rotateX.o" "r_FK_knee_ctrl.rx";
+connectAttr "r_knee_ctrl_rotateY.o" "r_FK_knee_ctrl.ry";
+connectAttr "r_knee_ctrl_rotateZ.o" "r_FK_knee_ctrl.rz";
+connectAttr "r_knee_ctrl_scaleX.o" "r_FK_knee_ctrl.sx";
+connectAttr "r_knee_ctrl_scaleY.o" "r_FK_knee_ctrl.sy";
+connectAttr "r_knee_ctrl_scaleZ.o" "r_FK_knee_ctrl.sz";
+connectAttr "r_knee_ctrl_visibility.o" "r_FK_knee_ctrl.v";
+connectAttr "FK_layer.di" "r_foot_FK_ctrl_grp.do";
+connectAttr "r_foot_ctrl_translateX.o" "r_foot_FK_ctrl.tx";
+connectAttr "r_foot_ctrl_translateY.o" "r_foot_FK_ctrl.ty";
+connectAttr "r_foot_ctrl_translateZ.o" "r_foot_FK_ctrl.tz";
+connectAttr "r_foot_ctrl_rotateX.o" "r_foot_FK_ctrl.rx";
+connectAttr "r_foot_ctrl_rotateY.o" "r_foot_FK_ctrl.ry";
+connectAttr "r_foot_ctrl_rotateZ.o" "r_foot_FK_ctrl.rz";
+connectAttr "r_foot_ctrl_scaleX.o" "r_foot_FK_ctrl.sx";
+connectAttr "r_foot_ctrl_scaleY.o" "r_foot_FK_ctrl.sy";
+connectAttr "r_foot_ctrl_scaleZ.o" "r_foot_FK_ctrl.sz";
+connectAttr "r_foot_ctrl_visibility.o" "r_foot_FK_ctrl.v";
+connectAttr "IK_Layer.di" "l_hand_IK_ctrl_grp.do";
+connectAttr "IK_Layer.di" "l_hand_ctrl.do";
+connectAttr "l_shoulder_jnt_IK.msg" "L_ikHandle2.hsj";
+connectAttr "effector2.hp" "L_ikHandle2.hee";
+connectAttr "ikRPsolver.msg" "L_ikHandle2.hsv";
+connectAttr "L_ikHandle2_poleVectorConstraint1.ctx" "L_ikHandle2.pvx";
+connectAttr "L_ikHandle2_poleVectorConstraint1.cty" "L_ikHandle2.pvy";
+connectAttr "L_ikHandle2_poleVectorConstraint1.ctz" "L_ikHandle2.pvz";
+connectAttr "IKHandles.di" "L_ikHandle2.do";
+connectAttr "L_ikHandle2.pim" "L_ikHandle2_poleVectorConstraint1.cpim";
+connectAttr "l_shoulder_jnt_IK.pm" "L_ikHandle2_poleVectorConstraint1.ps";
+connectAttr "l_shoulder_jnt_IK.t" "L_ikHandle2_poleVectorConstraint1.crp";
+connectAttr "l_elbow_ctrl.t" "L_ikHandle2_poleVectorConstraint1.tg[0].tt";
+connectAttr "l_elbow_ctrl.rp" "L_ikHandle2_poleVectorConstraint1.tg[0].trp";
+connectAttr "l_elbow_ctrl.rpt" "L_ikHandle2_poleVectorConstraint1.tg[0].trt";
+connectAttr "l_elbow_ctrl.pm" "L_ikHandle2_poleVectorConstraint1.tg[0].tpm";
+connectAttr "L_ikHandle2_poleVectorConstraint1.w0" "L_ikHandle2_poleVectorConstraint1.tg[0].tw"
+		;
+connectAttr "IK_Layer.di" "r_hand_IK_ctrl_grp.do";
+connectAttr "IK_Layer.di" "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|r_hand_IK_ctrl_grp|r_hand_ctrl.do"
+		;
+connectAttr "r_shoulder_jnt_IK.msg" "R_ikHandle1.hsj";
+connectAttr "effector1.hp" "R_ikHandle1.hee";
+connectAttr "ikRPsolver.msg" "R_ikHandle1.hsv";
+connectAttr "R_ikHandle1_poleVectorConstraint1.ctx" "R_ikHandle1.pvx";
+connectAttr "R_ikHandle1_poleVectorConstraint1.cty" "R_ikHandle1.pvy";
+connectAttr "R_ikHandle1_poleVectorConstraint1.ctz" "R_ikHandle1.pvz";
+connectAttr "IKHandles.di" "R_ikHandle1.do";
+connectAttr "R_ikHandle1.pim" "R_ikHandle1_poleVectorConstraint1.cpim";
+connectAttr "r_shoulder_jnt_IK.pm" "R_ikHandle1_poleVectorConstraint1.ps";
+connectAttr "r_shoulder_jnt_IK.t" "R_ikHandle1_poleVectorConstraint1.crp";
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl.t" "R_ikHandle1_poleVectorConstraint1.tg[0].tt"
+		;
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl.rp" "R_ikHandle1_poleVectorConstraint1.tg[0].trp"
+		;
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl.rpt" "R_ikHandle1_poleVectorConstraint1.tg[0].trt"
+		;
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl|r_PoleVector_IK_ctrl_grp|r_elbow_ctrl.pm" "R_ikHandle1_poleVectorConstraint1.tg[0].tpm"
+		;
+connectAttr "R_ikHandle1_poleVectorConstraint1.w0" "R_ikHandle1_poleVectorConstraint1.tg[0].tw"
+		;
 connectAttr "IK_Layer.di" "l_foot_IK_ctrl_grp.do";
 connectAttr "l_hip_jnt_Ik.msg" "L_Leg_IK_handle.hsj";
 connectAttr "effector4.hp" "L_Leg_IK_handle.hee";
 connectAttr "ikRPsolver.msg" "L_Leg_IK_handle.hsv";
-connectAttr "IK_Layer.di" "r_hip_ctrl.do";
-connectAttr "IK_Layer.di" "r_knee_ctrl.do";
+connectAttr "L_Leg_IK_handle_poleVectorConstraint1.ctx" "L_Leg_IK_handle.pvx";
+connectAttr "L_Leg_IK_handle_poleVectorConstraint1.cty" "L_Leg_IK_handle.pvy";
+connectAttr "L_Leg_IK_handle_poleVectorConstraint1.ctz" "L_Leg_IK_handle.pvz";
+connectAttr "IKHandles.di" "L_Leg_IK_handle.do";
+connectAttr "L_Leg_IK_handle.pim" "L_Leg_IK_handle_poleVectorConstraint1.cpim";
+connectAttr "l_hip_jnt_Ik.pm" "L_Leg_IK_handle_poleVectorConstraint1.ps";
+connectAttr "l_hip_jnt_Ik.t" "L_Leg_IK_handle_poleVectorConstraint1.crp";
+connectAttr "l_knee_ctrl.t" "L_Leg_IK_handle_poleVectorConstraint1.tg[0].tt";
+connectAttr "l_knee_ctrl.rp" "L_Leg_IK_handle_poleVectorConstraint1.tg[0].trp";
+connectAttr "l_knee_ctrl.rpt" "L_Leg_IK_handle_poleVectorConstraint1.tg[0].trt";
+connectAttr "l_knee_ctrl.pm" "L_Leg_IK_handle_poleVectorConstraint1.tg[0].tpm";
+connectAttr "L_Leg_IK_handle_poleVectorConstraint1.w0" "L_Leg_IK_handle_poleVectorConstraint1.tg[0].tw"
+		;
 connectAttr "IK_Layer.di" "r_foot_ctrl.do";
 connectAttr "r_hip_jnt_IK.msg" "R_Leg_IK_handle.hsj";
 connectAttr "effector5.hp" "R_Leg_IK_handle.hee";
 connectAttr "ikRPsolver.msg" "R_Leg_IK_handle.hsv";
-connectAttr "IK_Switches.di" "IK_Switch_legs.do";
-connectAttr "makeNurbsSquare1.oc1" "topnurbsSquareShape1.cr";
-connectAttr "makeNurbsSquare1.oc2" "leftnurbsSquareShape1.cr";
-connectAttr "makeNurbsSquare1.oc3" "bottomnurbsSquareShape1.cr";
-connectAttr "makeNurbsSquare1.oc4" "rightnurbsSquareShape1.cr";
+connectAttr "R_Leg_IK_handle_poleVectorConstraint1.ctx" "R_Leg_IK_handle.pvx";
+connectAttr "R_Leg_IK_handle_poleVectorConstraint1.cty" "R_Leg_IK_handle.pvy";
+connectAttr "R_Leg_IK_handle_poleVectorConstraint1.ctz" "R_Leg_IK_handle.pvz";
+connectAttr "IKHandles.di" "R_Leg_IK_handle.do";
+connectAttr "R_Leg_IK_handle.pim" "R_Leg_IK_handle_poleVectorConstraint1.cpim";
+connectAttr "r_hip_jnt_IK.pm" "R_Leg_IK_handle_poleVectorConstraint1.ps";
+connectAttr "r_hip_jnt_IK.t" "R_Leg_IK_handle_poleVectorConstraint1.crp";
+connectAttr "r_knee_ctrl.t" "R_Leg_IK_handle_poleVectorConstraint1.tg[0].tt";
+connectAttr "r_knee_ctrl.rp" "R_Leg_IK_handle_poleVectorConstraint1.tg[0].trp";
+connectAttr "r_knee_ctrl.rpt" "R_Leg_IK_handle_poleVectorConstraint1.tg[0].trt";
+connectAttr "r_knee_ctrl.pm" "R_Leg_IK_handle_poleVectorConstraint1.tg[0].tpm";
+connectAttr "R_Leg_IK_handle_poleVectorConstraint1.w0" "R_Leg_IK_handle_poleVectorConstraint1.tg[0].tw"
+		;
 connectAttr "IK_Switches.di" "R_Arm_IK_Switch.do";
 connectAttr "IK_Switches.di" "L_Arm_IK_Switch.do";
 connectAttr "makeNurbCircle1.oc" "L_Arm_IK_Switch_ctrlShape.cr";
-connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.s" "r_shoulder_jnt_IK.is";
+connectAttr "IK_Switches.di" "IK_Switch_legs_ctrl.do";
+connectAttr "makeNurbCircle2.oc" "IK_Switch_legs_ctrlShape.cr";
+connectAttr "Joints_layer.di" "R_Arm_IK_Master_jnt_grp.do";
 connectAttr "r_shoulder_jnt_IK_parentConstraint1.ctx" "r_shoulder_jnt_IK.tx";
 connectAttr "r_shoulder_jnt_IK_parentConstraint1.cty" "r_shoulder_jnt_IK.ty";
 connectAttr "r_shoulder_jnt_IK_parentConstraint1.ctz" "r_shoulder_jnt_IK.tz";
 connectAttr "r_shoulder_jnt_IK_parentConstraint1.crx" "r_shoulder_jnt_IK.rx";
 connectAttr "r_shoulder_jnt_IK_parentConstraint1.cry" "r_shoulder_jnt_IK.ry";
 connectAttr "r_shoulder_jnt_IK_parentConstraint1.crz" "r_shoulder_jnt_IK.rz";
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.s" "r_shoulder_jnt_IK.is";
 connectAttr "r_shoulder_jnt_IK.s" "r_elbow_jnt_IK.is";
 connectAttr "r_elbow_jnt_IK.s" "r_hand_jnt_IK.is";
 connectAttr "r_hand_jnt_IK.tx" "effector1.tx";
@@ -12614,61 +12883,62 @@ connectAttr "r_shoulder_jnt_IK.pim" "r_shoulder_jnt_IK_parentConstraint1.cpim";
 connectAttr "r_shoulder_jnt_IK.rp" "r_shoulder_jnt_IK_parentConstraint1.crp";
 connectAttr "r_shoulder_jnt_IK.rpt" "r_shoulder_jnt_IK_parentConstraint1.crt";
 connectAttr "r_shoulder_jnt_IK.jo" "r_shoulder_jnt_IK_parentConstraint1.cjo";
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.t" "r_shoulder_jnt_IK_parentConstraint1.tg[0].tt"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.t" "r_shoulder_jnt_IK_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.rp" "r_shoulder_jnt_IK_parentConstraint1.tg[0].trp"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.rp" "r_shoulder_jnt_IK_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.rpt" "r_shoulder_jnt_IK_parentConstraint1.tg[0].trt"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.rpt" "r_shoulder_jnt_IK_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.r" "r_shoulder_jnt_IK_parentConstraint1.tg[0].tr"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.r" "r_shoulder_jnt_IK_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.ro" "r_shoulder_jnt_IK_parentConstraint1.tg[0].tro"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.ro" "r_shoulder_jnt_IK_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.s" "r_shoulder_jnt_IK_parentConstraint1.tg[0].ts"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.s" "r_shoulder_jnt_IK_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.pm" "r_shoulder_jnt_IK_parentConstraint1.tg[0].tpm"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_IK_Master_Grp|r_shoulder_IK_ctrl_grp|r_shoulder_ctrl.pm" "r_shoulder_jnt_IK_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "r_shoulder_jnt_IK_parentConstraint1.w0" "r_shoulder_jnt_IK_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.s" "r_shoulder_jnt_FK.is";
+connectAttr "Joints_layer.di" "R_Arm_FK_Master_jnt_grp.do";
 connectAttr "r_shoulder_jnt_FK_parentConstraint1.ctx" "r_shoulder_jnt_FK.tx";
 connectAttr "r_shoulder_jnt_FK_parentConstraint1.cty" "r_shoulder_jnt_FK.ty";
 connectAttr "r_shoulder_jnt_FK_parentConstraint1.ctz" "r_shoulder_jnt_FK.tz";
 connectAttr "r_shoulder_jnt_FK_parentConstraint1.crx" "r_shoulder_jnt_FK.rx";
 connectAttr "r_shoulder_jnt_FK_parentConstraint1.cry" "r_shoulder_jnt_FK.ry";
 connectAttr "r_shoulder_jnt_FK_parentConstraint1.crz" "r_shoulder_jnt_FK.rz";
-connectAttr "r_shoulder_jnt_FK.s" "r_elbow_jnt_FK.is";
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.s" "r_shoulder_jnt_FK.is";
 connectAttr "r_elbow_jnt_FK_parentConstraint1.ctx" "r_elbow_jnt_FK.tx";
 connectAttr "r_elbow_jnt_FK_parentConstraint1.cty" "r_elbow_jnt_FK.ty";
 connectAttr "r_elbow_jnt_FK_parentConstraint1.ctz" "r_elbow_jnt_FK.tz";
 connectAttr "r_elbow_jnt_FK_parentConstraint1.crx" "r_elbow_jnt_FK.rx";
 connectAttr "r_elbow_jnt_FK_parentConstraint1.cry" "r_elbow_jnt_FK.ry";
 connectAttr "r_elbow_jnt_FK_parentConstraint1.crz" "r_elbow_jnt_FK.rz";
-connectAttr "r_elbow_jnt_FK.s" "r_hand_jnt_FK.is";
+connectAttr "r_shoulder_jnt_FK.s" "r_elbow_jnt_FK.is";
 connectAttr "r_hand_jnt_FK_parentConstraint1.ctx" "r_hand_jnt_FK.tx";
 connectAttr "r_hand_jnt_FK_parentConstraint1.cty" "r_hand_jnt_FK.ty";
 connectAttr "r_hand_jnt_FK_parentConstraint1.ctz" "r_hand_jnt_FK.tz";
 connectAttr "r_hand_jnt_FK_parentConstraint1.crx" "r_hand_jnt_FK.rx";
 connectAttr "r_hand_jnt_FK_parentConstraint1.cry" "r_hand_jnt_FK.ry";
 connectAttr "r_hand_jnt_FK_parentConstraint1.crz" "r_hand_jnt_FK.rz";
+connectAttr "r_elbow_jnt_FK.s" "r_hand_jnt_FK.is";
 connectAttr "r_hand_jnt_FK.ro" "r_hand_jnt_FK_parentConstraint1.cro";
 connectAttr "r_hand_jnt_FK.pim" "r_hand_jnt_FK_parentConstraint1.cpim";
 connectAttr "r_hand_jnt_FK.rp" "r_hand_jnt_FK_parentConstraint1.crp";
 connectAttr "r_hand_jnt_FK.rpt" "r_hand_jnt_FK_parentConstraint1.crt";
 connectAttr "r_hand_jnt_FK.jo" "r_hand_jnt_FK_parentConstraint1.cjo";
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.t" "r_hand_jnt_FK_parentConstraint1.tg[0].tt"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.t" "r_hand_jnt_FK_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.rp" "r_hand_jnt_FK_parentConstraint1.tg[0].trp"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.rp" "r_hand_jnt_FK_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.rpt" "r_hand_jnt_FK_parentConstraint1.tg[0].trt"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.rpt" "r_hand_jnt_FK_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.r" "r_hand_jnt_FK_parentConstraint1.tg[0].tr"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.r" "r_hand_jnt_FK_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.ro" "r_hand_jnt_FK_parentConstraint1.tg[0].tro"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.ro" "r_hand_jnt_FK_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.s" "r_hand_jnt_FK_parentConstraint1.tg[0].ts"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.s" "r_hand_jnt_FK_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.pm" "r_hand_jnt_FK_parentConstraint1.tg[0].tpm"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl|r_hand_FK_ctrl_grp|r_hand_ctrl.pm" "r_hand_jnt_FK_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "r_hand_jnt_FK_parentConstraint1.w0" "r_hand_jnt_FK_parentConstraint1.tg[0].tw"
 		;
@@ -12677,19 +12947,19 @@ connectAttr "r_elbow_jnt_FK.pim" "r_elbow_jnt_FK_parentConstraint1.cpim";
 connectAttr "r_elbow_jnt_FK.rp" "r_elbow_jnt_FK_parentConstraint1.crp";
 connectAttr "r_elbow_jnt_FK.rpt" "r_elbow_jnt_FK_parentConstraint1.crt";
 connectAttr "r_elbow_jnt_FK.jo" "r_elbow_jnt_FK_parentConstraint1.cjo";
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.t" "r_elbow_jnt_FK_parentConstraint1.tg[0].tt"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.t" "r_elbow_jnt_FK_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.rp" "r_elbow_jnt_FK_parentConstraint1.tg[0].trp"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.rp" "r_elbow_jnt_FK_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.rpt" "r_elbow_jnt_FK_parentConstraint1.tg[0].trt"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.rpt" "r_elbow_jnt_FK_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.r" "r_elbow_jnt_FK_parentConstraint1.tg[0].tr"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.r" "r_elbow_jnt_FK_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.ro" "r_elbow_jnt_FK_parentConstraint1.tg[0].tro"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.ro" "r_elbow_jnt_FK_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.s" "r_elbow_jnt_FK_parentConstraint1.tg[0].ts"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.s" "r_elbow_jnt_FK_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.pm" "r_elbow_jnt_FK_parentConstraint1.tg[0].tpm"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl|r_elbow_FK_ctrl_grp|r_elbow_ctrl.pm" "r_elbow_jnt_FK_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "r_elbow_jnt_FK_parentConstraint1.w0" "r_elbow_jnt_FK_parentConstraint1.tg[0].tw"
 		;
@@ -12698,29 +12968,30 @@ connectAttr "r_shoulder_jnt_FK.pim" "r_shoulder_jnt_FK_parentConstraint1.cpim";
 connectAttr "r_shoulder_jnt_FK.rp" "r_shoulder_jnt_FK_parentConstraint1.crp";
 connectAttr "r_shoulder_jnt_FK.rpt" "r_shoulder_jnt_FK_parentConstraint1.crt";
 connectAttr "r_shoulder_jnt_FK.jo" "r_shoulder_jnt_FK_parentConstraint1.cjo";
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.t" "r_shoulder_jnt_FK_parentConstraint1.tg[0].tt"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.t" "r_shoulder_jnt_FK_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.rp" "r_shoulder_jnt_FK_parentConstraint1.tg[0].trp"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.rp" "r_shoulder_jnt_FK_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.rpt" "r_shoulder_jnt_FK_parentConstraint1.tg[0].trt"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.rpt" "r_shoulder_jnt_FK_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.r" "r_shoulder_jnt_FK_parentConstraint1.tg[0].tr"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.r" "r_shoulder_jnt_FK_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.ro" "r_shoulder_jnt_FK_parentConstraint1.tg[0].tro"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.ro" "r_shoulder_jnt_FK_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.s" "r_shoulder_jnt_FK_parentConstraint1.tg[0].ts"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.s" "r_shoulder_jnt_FK_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|Raccoon_Rig:Racoon:Base_Rig1:Controls|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.pm" "r_shoulder_jnt_FK_parentConstraint1.tg[0].tpm"
+connectAttr "|Raccoon_Rig:Rig|Raccoon_Rig:Racoon:Base_Rig1:prototype_rig|BaseRig_Master_Ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:transform_ctrl|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:cog_ctrl|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:root_ctrl|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl_grp|Raccoon_Rig:Racoon:Base_Rig1:torso_ctrl|R_Arm_Fk_Master_CTRl_grp|r_shoulder_FK_ctrl_grp|r_shoulder_ctrl.pm" "r_shoulder_jnt_FK_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "r_shoulder_jnt_FK_parentConstraint1.w0" "r_shoulder_jnt_FK_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.s" "l_shoulder_jnt_IK.is";
+connectAttr "Joints_layer.di" "L_Arm_IK_Master_grp.do";
 connectAttr "l_shoulder_jnt_IK_parentConstraint1.ctx" "l_shoulder_jnt_IK.tx";
 connectAttr "l_shoulder_jnt_IK_parentConstraint1.cty" "l_shoulder_jnt_IK.ty";
 connectAttr "l_shoulder_jnt_IK_parentConstraint1.ctz" "l_shoulder_jnt_IK.tz";
 connectAttr "l_shoulder_jnt_IK_parentConstraint1.crx" "l_shoulder_jnt_IK.rx";
 connectAttr "l_shoulder_jnt_IK_parentConstraint1.cry" "l_shoulder_jnt_IK.ry";
 connectAttr "l_shoulder_jnt_IK_parentConstraint1.crz" "l_shoulder_jnt_IK.rz";
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.s" "l_shoulder_jnt_IK.is";
 connectAttr "l_shoulder_jnt_IK.s" "l_elbow_jnt_IK.is";
 connectAttr "l_elbow_jnt_IK.s" "l_hand_jnt_IK.is";
 connectAttr "l_hand_jnt_IK.tx" "effector2.tx";
@@ -12744,27 +13015,28 @@ connectAttr "l_shoulder_ctrl.pm" "l_shoulder_jnt_IK_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "l_shoulder_jnt_IK_parentConstraint1.w0" "l_shoulder_jnt_IK_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.s" "l_shoulder_jnt_FK.is";
+connectAttr "Joints_layer.di" "L_Arm_FK_Master_jnt_grp.do";
 connectAttr "l_shoulder_jnt_FK_parentConstraint1.ctx" "l_shoulder_jnt_FK.tx";
 connectAttr "l_shoulder_jnt_FK_parentConstraint1.cty" "l_shoulder_jnt_FK.ty";
 connectAttr "l_shoulder_jnt_FK_parentConstraint1.ctz" "l_shoulder_jnt_FK.tz";
 connectAttr "l_shoulder_jnt_FK_parentConstraint1.crx" "l_shoulder_jnt_FK.rx";
 connectAttr "l_shoulder_jnt_FK_parentConstraint1.cry" "l_shoulder_jnt_FK.ry";
 connectAttr "l_shoulder_jnt_FK_parentConstraint1.crz" "l_shoulder_jnt_FK.rz";
-connectAttr "l_shoulder_jnt_FK.s" "l_elbow_jnt_FK.is";
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.s" "l_shoulder_jnt_FK.is";
 connectAttr "l_elbow_jnt_FK_parentConstraint1.ctx" "l_elbow_jnt_FK.tx";
 connectAttr "l_elbow_jnt_FK_parentConstraint1.cty" "l_elbow_jnt_FK.ty";
 connectAttr "l_elbow_jnt_FK_parentConstraint1.ctz" "l_elbow_jnt_FK.tz";
 connectAttr "l_elbow_jnt_FK_parentConstraint1.crx" "l_elbow_jnt_FK.rx";
 connectAttr "l_elbow_jnt_FK_parentConstraint1.cry" "l_elbow_jnt_FK.ry";
 connectAttr "l_elbow_jnt_FK_parentConstraint1.crz" "l_elbow_jnt_FK.rz";
-connectAttr "l_elbow_jnt_FK.s" "l_hand_jnt_FK.is";
+connectAttr "l_shoulder_jnt_FK.s" "l_elbow_jnt_FK.is";
 connectAttr "l_hand_jnt_FK_parentConstraint1.ctx" "l_hand_jnt_FK.tx";
 connectAttr "l_hand_jnt_FK_parentConstraint1.cty" "l_hand_jnt_FK.ty";
 connectAttr "l_hand_jnt_FK_parentConstraint1.ctz" "l_hand_jnt_FK.tz";
 connectAttr "l_hand_jnt_FK_parentConstraint1.crx" "l_hand_jnt_FK.rx";
 connectAttr "l_hand_jnt_FK_parentConstraint1.cry" "l_hand_jnt_FK.ry";
 connectAttr "l_hand_jnt_FK_parentConstraint1.crz" "l_hand_jnt_FK.rz";
+connectAttr "l_elbow_jnt_FK.s" "l_hand_jnt_FK.is";
 connectAttr "l_hand_jnt_FK.ro" "l_hand_jnt_FK_parentConstraint1.cro";
 connectAttr "l_hand_jnt_FK.pim" "l_hand_jnt_FK_parentConstraint1.cpim";
 connectAttr "l_hand_jnt_FK.rp" "l_hand_jnt_FK_parentConstraint1.crp";
@@ -12844,18 +13116,162 @@ connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_shoulder_ctrl.pm" "l_shoulder_jnt_FK
 		;
 connectAttr "l_shoulder_jnt_FK_parentConstraint1.w0" "l_shoulder_jnt_FK_parentConstraint1.tg[0].tw"
 		;
+connectAttr "Joints_layer.di" "L_Leg_FK_Master_grp.do";
+connectAttr "l_hip_jnt_FK_parentConstraint1.ctx" "l_hip_jnt_FK.tx";
+connectAttr "l_hip_jnt_FK_parentConstraint1.cty" "l_hip_jnt_FK.ty";
+connectAttr "l_hip_jnt_FK_parentConstraint1.ctz" "l_hip_jnt_FK.tz";
+connectAttr "l_hip_jnt_FK_parentConstraint1.crx" "l_hip_jnt_FK.rx";
+connectAttr "l_hip_jnt_FK_parentConstraint1.cry" "l_hip_jnt_FK.ry";
+connectAttr "l_hip_jnt_FK_parentConstraint1.crz" "l_hip_jnt_FK.rz";
+connectAttr "Raccoon_Rig:Racoon:Base_Rig1:waist_jnt.s" "l_hip_jnt_FK.is";
+connectAttr "l_knee_jnt_FK_parentConstraint1.ctx" "l_knee_jnt_FK.tx";
+connectAttr "l_knee_jnt_FK_parentConstraint1.cty" "l_knee_jnt_FK.ty";
+connectAttr "l_knee_jnt_FK_parentConstraint1.ctz" "l_knee_jnt_FK.tz";
+connectAttr "l_knee_jnt_FK_parentConstraint1.crx" "l_knee_jnt_FK.rx";
+connectAttr "l_knee_jnt_FK_parentConstraint1.cry" "l_knee_jnt_FK.ry";
+connectAttr "l_knee_jnt_FK_parentConstraint1.crz" "l_knee_jnt_FK.rz";
+connectAttr "l_hip_jnt_FK.s" "l_knee_jnt_FK.is";
+connectAttr "l_foot_jnt_FK_parentConstraint1.ctx" "l_foot_jnt_FK.tx";
+connectAttr "l_foot_jnt_FK_parentConstraint1.cty" "l_foot_jnt_FK.ty";
+connectAttr "l_foot_jnt_FK_parentConstraint1.ctz" "l_foot_jnt_FK.tz";
+connectAttr "l_foot_jnt_FK_parentConstraint1.crx" "l_foot_jnt_FK.rx";
+connectAttr "l_foot_jnt_FK_parentConstraint1.cry" "l_foot_jnt_FK.ry";
+connectAttr "l_foot_jnt_FK_parentConstraint1.crz" "l_foot_jnt_FK.rz";
+connectAttr "l_knee_jnt_FK.s" "l_foot_jnt_FK.is";
+connectAttr "l_foot_jnt_FK.ro" "l_foot_jnt_FK_parentConstraint1.cro";
+connectAttr "l_foot_jnt_FK.pim" "l_foot_jnt_FK_parentConstraint1.cpim";
+connectAttr "l_foot_jnt_FK.rp" "l_foot_jnt_FK_parentConstraint1.crp";
+connectAttr "l_foot_jnt_FK.rpt" "l_foot_jnt_FK_parentConstraint1.crt";
+connectAttr "l_foot_jnt_FK.jo" "l_foot_jnt_FK_parentConstraint1.cjo";
+connectAttr "l_foot_ctrl_FK.t" "l_foot_jnt_FK_parentConstraint1.tg[0].tt";
+connectAttr "l_foot_ctrl_FK.rp" "l_foot_jnt_FK_parentConstraint1.tg[0].trp";
+connectAttr "l_foot_ctrl_FK.rpt" "l_foot_jnt_FK_parentConstraint1.tg[0].trt";
+connectAttr "l_foot_ctrl_FK.r" "l_foot_jnt_FK_parentConstraint1.tg[0].tr";
+connectAttr "l_foot_ctrl_FK.ro" "l_foot_jnt_FK_parentConstraint1.tg[0].tro";
+connectAttr "l_foot_ctrl_FK.s" "l_foot_jnt_FK_parentConstraint1.tg[0].ts";
+connectAttr "l_foot_ctrl_FK.pm" "l_foot_jnt_FK_parentConstraint1.tg[0].tpm";
+connectAttr "l_foot_jnt_FK_parentConstraint1.w0" "l_foot_jnt_FK_parentConstraint1.tg[0].tw"
+		;
+connectAttr "l_knee_jnt_FK.ro" "l_knee_jnt_FK_parentConstraint1.cro";
+connectAttr "l_knee_jnt_FK.pim" "l_knee_jnt_FK_parentConstraint1.cpim";
+connectAttr "l_knee_jnt_FK.rp" "l_knee_jnt_FK_parentConstraint1.crp";
+connectAttr "l_knee_jnt_FK.rpt" "l_knee_jnt_FK_parentConstraint1.crt";
+connectAttr "l_knee_jnt_FK.jo" "l_knee_jnt_FK_parentConstraint1.cjo";
+connectAttr "l_knee_ctrl_FK.t" "l_knee_jnt_FK_parentConstraint1.tg[0].tt";
+connectAttr "l_knee_ctrl_FK.rp" "l_knee_jnt_FK_parentConstraint1.tg[0].trp";
+connectAttr "l_knee_ctrl_FK.rpt" "l_knee_jnt_FK_parentConstraint1.tg[0].trt";
+connectAttr "l_knee_ctrl_FK.r" "l_knee_jnt_FK_parentConstraint1.tg[0].tr";
+connectAttr "l_knee_ctrl_FK.ro" "l_knee_jnt_FK_parentConstraint1.tg[0].tro";
+connectAttr "l_knee_ctrl_FK.s" "l_knee_jnt_FK_parentConstraint1.tg[0].ts";
+connectAttr "l_knee_ctrl_FK.pm" "l_knee_jnt_FK_parentConstraint1.tg[0].tpm";
+connectAttr "l_knee_jnt_FK_parentConstraint1.w0" "l_knee_jnt_FK_parentConstraint1.tg[0].tw"
+		;
+connectAttr "l_hip_jnt_FK.ro" "l_hip_jnt_FK_parentConstraint1.cro";
+connectAttr "l_hip_jnt_FK.pim" "l_hip_jnt_FK_parentConstraint1.cpim";
+connectAttr "l_hip_jnt_FK.rp" "l_hip_jnt_FK_parentConstraint1.crp";
+connectAttr "l_hip_jnt_FK.rpt" "l_hip_jnt_FK_parentConstraint1.crt";
+connectAttr "l_hip_jnt_FK.jo" "l_hip_jnt_FK_parentConstraint1.cjo";
+connectAttr "l_hip_ctrl_FK.t" "l_hip_jnt_FK_parentConstraint1.tg[0].tt";
+connectAttr "l_hip_ctrl_FK.rp" "l_hip_jnt_FK_parentConstraint1.tg[0].trp";
+connectAttr "l_hip_ctrl_FK.rpt" "l_hip_jnt_FK_parentConstraint1.tg[0].trt";
+connectAttr "l_hip_ctrl_FK.r" "l_hip_jnt_FK_parentConstraint1.tg[0].tr";
+connectAttr "l_hip_ctrl_FK.ro" "l_hip_jnt_FK_parentConstraint1.tg[0].tro";
+connectAttr "l_hip_ctrl_FK.s" "l_hip_jnt_FK_parentConstraint1.tg[0].ts";
+connectAttr "l_hip_ctrl_FK.pm" "l_hip_jnt_FK_parentConstraint1.tg[0].tpm";
+connectAttr "l_hip_jnt_FK_parentConstraint1.w0" "l_hip_jnt_FK_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Joints_layer.di" "L_Leg_IK_Master_grp.do";
+connectAttr "l_hip_jnt_Ik_parentConstraint1.ctx" "l_hip_jnt_Ik.tx";
+connectAttr "l_hip_jnt_Ik_parentConstraint1.cty" "l_hip_jnt_Ik.ty";
+connectAttr "l_hip_jnt_Ik_parentConstraint1.ctz" "l_hip_jnt_Ik.tz";
+connectAttr "l_hip_jnt_Ik_parentConstraint1.crx" "l_hip_jnt_Ik.rx";
+connectAttr "l_hip_jnt_Ik_parentConstraint1.cry" "l_hip_jnt_Ik.ry";
+connectAttr "l_hip_jnt_Ik_parentConstraint1.crz" "l_hip_jnt_Ik.rz";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:waist_jnt.s" "l_hip_jnt_Ik.is";
 connectAttr "l_hip_jnt_Ik.s" "l_knee_jnt_Ik.is";
 connectAttr "l_knee_jnt_Ik.s" "l_foot_jnt_Ik.is";
 connectAttr "l_foot_jnt_Ik.tx" "effector4.tx";
 connectAttr "l_foot_jnt_Ik.ty" "effector4.ty";
 connectAttr "l_foot_jnt_Ik.tz" "effector4.tz";
-connectAttr "Raccoon_Rig:Racoon:Base_Rig1:waist_jnt.s" "l_hip_jnt_FK.is";
-connectAttr "l_hip_jnt_FK.s" "l_knee_jnt_FK.is";
-connectAttr "l_knee_jnt_FK.s" "l_foot_jnt_FK.is";
+connectAttr "l_hip_jnt_Ik.ro" "l_hip_jnt_Ik_parentConstraint1.cro";
+connectAttr "l_hip_jnt_Ik.pim" "l_hip_jnt_Ik_parentConstraint1.cpim";
+connectAttr "l_hip_jnt_Ik.rp" "l_hip_jnt_Ik_parentConstraint1.crp";
+connectAttr "l_hip_jnt_Ik.rpt" "l_hip_jnt_Ik_parentConstraint1.crt";
+connectAttr "l_hip_jnt_Ik.jo" "l_hip_jnt_Ik_parentConstraint1.cjo";
+connectAttr "l_hip_ctrl.t" "l_hip_jnt_Ik_parentConstraint1.tg[0].tt";
+connectAttr "l_hip_ctrl.rp" "l_hip_jnt_Ik_parentConstraint1.tg[0].trp";
+connectAttr "l_hip_ctrl.rpt" "l_hip_jnt_Ik_parentConstraint1.tg[0].trt";
+connectAttr "l_hip_ctrl.r" "l_hip_jnt_Ik_parentConstraint1.tg[0].tr";
+connectAttr "l_hip_ctrl.ro" "l_hip_jnt_Ik_parentConstraint1.tg[0].tro";
+connectAttr "l_hip_ctrl.s" "l_hip_jnt_Ik_parentConstraint1.tg[0].ts";
+connectAttr "l_hip_ctrl.pm" "l_hip_jnt_Ik_parentConstraint1.tg[0].tpm";
+connectAttr "l_hip_jnt_Ik_parentConstraint1.w0" "l_hip_jnt_Ik_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Joints_layer.di" "R_Leg_Fk_master_grp.do";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:waist_jnt.s" "r_hip_jnt_FK1.is";
+connectAttr "r_hip_jnt_FK1_parentConstraint1.ctx" "r_hip_jnt_FK1.tx";
+connectAttr "r_hip_jnt_FK1_parentConstraint1.cty" "r_hip_jnt_FK1.ty";
+connectAttr "r_hip_jnt_FK1_parentConstraint1.ctz" "r_hip_jnt_FK1.tz";
+connectAttr "r_hip_jnt_FK1_parentConstraint1.crx" "r_hip_jnt_FK1.rx";
+connectAttr "r_hip_jnt_FK1_parentConstraint1.cry" "r_hip_jnt_FK1.ry";
+connectAttr "r_hip_jnt_FK1_parentConstraint1.crz" "r_hip_jnt_FK1.rz";
 connectAttr "r_hip_jnt_FK1.s" "r_knee_jnt_FK.is";
+connectAttr "r_knee_jnt_FK_parentConstraint1.ctx" "r_knee_jnt_FK.tx";
+connectAttr "r_knee_jnt_FK_parentConstraint1.cty" "r_knee_jnt_FK.ty";
+connectAttr "r_knee_jnt_FK_parentConstraint1.ctz" "r_knee_jnt_FK.tz";
+connectAttr "r_knee_jnt_FK_parentConstraint1.crx" "r_knee_jnt_FK.rx";
+connectAttr "r_knee_jnt_FK_parentConstraint1.cry" "r_knee_jnt_FK.ry";
+connectAttr "r_knee_jnt_FK_parentConstraint1.crz" "r_knee_jnt_FK.rz";
 connectAttr "r_knee_jnt_FK.s" "r_foot_jnt_FK.is";
+connectAttr "r_foot_jnt_FK_parentConstraint1.ctx" "r_foot_jnt_FK.tx";
+connectAttr "r_foot_jnt_FK_parentConstraint1.cty" "r_foot_jnt_FK.ty";
+connectAttr "r_foot_jnt_FK_parentConstraint1.ctz" "r_foot_jnt_FK.tz";
+connectAttr "r_foot_jnt_FK_parentConstraint1.crx" "r_foot_jnt_FK.rx";
+connectAttr "r_foot_jnt_FK_parentConstraint1.cry" "r_foot_jnt_FK.ry";
+connectAttr "r_foot_jnt_FK_parentConstraint1.crz" "r_foot_jnt_FK.rz";
+connectAttr "r_foot_jnt_FK.ro" "r_foot_jnt_FK_parentConstraint1.cro";
+connectAttr "r_foot_jnt_FK.pim" "r_foot_jnt_FK_parentConstraint1.cpim";
+connectAttr "r_foot_jnt_FK.rp" "r_foot_jnt_FK_parentConstraint1.crp";
+connectAttr "r_foot_jnt_FK.rpt" "r_foot_jnt_FK_parentConstraint1.crt";
+connectAttr "r_foot_jnt_FK.jo" "r_foot_jnt_FK_parentConstraint1.cjo";
+connectAttr "r_foot_FK_ctrl.t" "r_foot_jnt_FK_parentConstraint1.tg[0].tt";
+connectAttr "r_foot_FK_ctrl.rp" "r_foot_jnt_FK_parentConstraint1.tg[0].trp";
+connectAttr "r_foot_FK_ctrl.rpt" "r_foot_jnt_FK_parentConstraint1.tg[0].trt";
+connectAttr "r_foot_FK_ctrl.r" "r_foot_jnt_FK_parentConstraint1.tg[0].tr";
+connectAttr "r_foot_FK_ctrl.ro" "r_foot_jnt_FK_parentConstraint1.tg[0].tro";
+connectAttr "r_foot_FK_ctrl.s" "r_foot_jnt_FK_parentConstraint1.tg[0].ts";
+connectAttr "r_foot_FK_ctrl.pm" "r_foot_jnt_FK_parentConstraint1.tg[0].tpm";
+connectAttr "r_foot_jnt_FK_parentConstraint1.w0" "r_foot_jnt_FK_parentConstraint1.tg[0].tw"
+		;
+connectAttr "r_knee_jnt_FK.ro" "r_knee_jnt_FK_parentConstraint1.cro";
+connectAttr "r_knee_jnt_FK.pim" "r_knee_jnt_FK_parentConstraint1.cpim";
+connectAttr "r_knee_jnt_FK.rp" "r_knee_jnt_FK_parentConstraint1.crp";
+connectAttr "r_knee_jnt_FK.rpt" "r_knee_jnt_FK_parentConstraint1.crt";
+connectAttr "r_knee_jnt_FK.jo" "r_knee_jnt_FK_parentConstraint1.cjo";
+connectAttr "r_FK_knee_ctrl.t" "r_knee_jnt_FK_parentConstraint1.tg[0].tt";
+connectAttr "r_FK_knee_ctrl.rp" "r_knee_jnt_FK_parentConstraint1.tg[0].trp";
+connectAttr "r_FK_knee_ctrl.rpt" "r_knee_jnt_FK_parentConstraint1.tg[0].trt";
+connectAttr "r_FK_knee_ctrl.r" "r_knee_jnt_FK_parentConstraint1.tg[0].tr";
+connectAttr "r_FK_knee_ctrl.ro" "r_knee_jnt_FK_parentConstraint1.tg[0].tro";
+connectAttr "r_FK_knee_ctrl.s" "r_knee_jnt_FK_parentConstraint1.tg[0].ts";
+connectAttr "r_FK_knee_ctrl.pm" "r_knee_jnt_FK_parentConstraint1.tg[0].tpm";
+connectAttr "r_knee_jnt_FK_parentConstraint1.w0" "r_knee_jnt_FK_parentConstraint1.tg[0].tw"
+		;
+connectAttr "r_hip_jnt_FK1.ro" "r_hip_jnt_FK1_parentConstraint1.cro";
+connectAttr "r_hip_jnt_FK1.pim" "r_hip_jnt_FK1_parentConstraint1.cpim";
+connectAttr "r_hip_jnt_FK1.rp" "r_hip_jnt_FK1_parentConstraint1.crp";
+connectAttr "r_hip_jnt_FK1.rpt" "r_hip_jnt_FK1_parentConstraint1.crt";
+connectAttr "r_hip_jnt_FK1.jo" "r_hip_jnt_FK1_parentConstraint1.cjo";
+connectAttr "r_hip_FK_ctrl.t" "r_hip_jnt_FK1_parentConstraint1.tg[0].tt";
+connectAttr "r_hip_FK_ctrl.rp" "r_hip_jnt_FK1_parentConstraint1.tg[0].trp";
+connectAttr "r_hip_FK_ctrl.rpt" "r_hip_jnt_FK1_parentConstraint1.tg[0].trt";
+connectAttr "r_hip_FK_ctrl.r" "r_hip_jnt_FK1_parentConstraint1.tg[0].tr";
+connectAttr "r_hip_FK_ctrl.ro" "r_hip_jnt_FK1_parentConstraint1.tg[0].tro";
+connectAttr "r_hip_FK_ctrl.s" "r_hip_jnt_FK1_parentConstraint1.tg[0].ts";
+connectAttr "r_hip_FK_ctrl.pm" "r_hip_jnt_FK1_parentConstraint1.tg[0].tpm";
+connectAttr "r_hip_jnt_FK1_parentConstraint1.w0" "r_hip_jnt_FK1_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Joints_layer.di" "R_Leg_IKMaster_grp.do";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:waist_jnt.s" "r_hip_jnt_IK.is";
 connectAttr "r_hip_jnt_IK_parentConstraint1.ctx" "r_hip_jnt_IK.tx";
 connectAttr "r_hip_jnt_IK_parentConstraint1.cty" "r_hip_jnt_IK.ty";
@@ -12999,7 +13415,7 @@ connectAttr "Raccoon_Rig:Racoon:Base_Rig:renderLayerManager.rlmi[0]" "Raccoon_Ri
 		;
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:renderLayerManager.rlmi[0]" "Raccoon_Rig:Racoon:Base_Rig1:defaultRenderLayer.rlid"
 		;
-connectAttr "layerManager.dli[6]" "Raccoon_Rig:Joints.id";
+connectAttr "layerManager.dli[6]" "Joints_layer.id";
 connectAttr "Raccoon_Rig:Raccoon_Model:renderLayerManager.rlmi[0]" "Raccoon_Rig:Raccoon_Model:defaultRenderLayer.rlid"
 		;
 connectAttr "Raccoon_Rig:Raccoon_Model:Base_Rig:renderLayerManager.rlmi[0]" "Raccoon_Rig:Raccoon_Model:Base_Rig:defaultRenderLayer.rlid"
@@ -13233,7 +13649,7 @@ connectAttr "Cat_GEOShapeOrig1.w" "groupParts18.ig";
 connectAttr "groupId201.id" "groupParts18.gi";
 connectAttr "Raccoon_Rig:Rig.msg" "bindPose1.m[0]";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:prototype_rig.msg" "bindPose1.m[1]";
-connectAttr "Raccoon_Rig:Racoon:Base_Rig1:Joints.msg" "bindPose1.m[2]";
+connectAttr "Base_Rig_Master_jnt_grp.msg" "bindPose1.m[2]";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:Root.msg" "bindPose1.m[3]";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:spine_jnt.msg" "bindPose1.m[4]";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.msg" "bindPose1.m[5]";
@@ -13322,37 +13738,26 @@ connectAttr "L_Arm_IK_Switch.IK_Switch" "reverse1.ix";
 connectAttr "L_Arm_IK_Switch.IK_Switch" "reverse2.ix";
 connectAttr "L_Arm_IK_Switch_ctrl.IK_Switch" "reverse3.ix";
 connectAttr "R_Arm_Ik_Switch_ctrl.IK_Switch" "reverse4.ix";
-connectAttr "l_shoulder_jnt_RK_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "IK_Switch_legs_ctrl.IK_Switch" "reverse5.ix";
+connectAttr "layerManager.dli[20]" "IKHandles.id";
+connectAttr "l_foot_jnt_RK_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "L_Arm_IK_Switch_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "R_Leg_IK_master_Ctrl_grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "L_Arm_IK_Switch_ctrlShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "R_Leg_FK_Master_Ctrl_grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "L_Arm_FK_master_Grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "l_knee_jnt_RK_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "l_elbow_jnt_RK_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "l_hip_IK_ctrl_grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "L_IK_Master_CTRL_grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "l_hip_ctrl_grp_FK.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_shoulder_jnt_RK.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "l_hip_jnt_RK_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "reverse3.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn";
-connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_hand_jnt_RK.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "reverse5.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn";
+connectAttr "IK_Switch_legs_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
-connectAttr "l_hand_jnt_RK_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
-		;
-connectAttr "Raccoon_Rig:Racoon:Base_Rig1:l_elbow_jnt_RK.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
-		;
-connectAttr "R_Leg_IK_master_Ctrl_grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
-		;
-connectAttr "l_hip_jnt_RK_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
-		;
-connectAttr "l_knee_jnt_RK_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
-		;
-connectAttr "l_foot_jnt_RK_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
-		;
-connectAttr "r_hip_jnt_IK_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
-		;
+connectAttr "IKHandles.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
@@ -13379,6 +13784,7 @@ connectAttr "reverse1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "reverse2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "reverse3.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "reverse4.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "reverse5.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Base_Rig:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Base_Rig1:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
