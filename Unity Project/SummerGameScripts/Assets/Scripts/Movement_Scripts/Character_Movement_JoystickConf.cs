@@ -33,8 +33,11 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     private void FixedUpdate()
     {
             _current = player.Current;
+            if(!_controller.isGrounded)
+                _current.Movement.y -= _current.Gravity.Value * Time.deltaTime;
             _current.Move(transform, _controller, MainCamera);
     }
+
 
     public void DisableCC()
     {
@@ -107,7 +110,7 @@ public class Character_Movement_JoystickConf : MonoBehaviour
         yield return new WaitUntil( () => CRRunning == false);
         StartCoroutine(Walk());
         yield return new WaitUntil( () => CRRunning == false);
-        //Reach_Destination.Invoke();
+        Debug.Log("Reach_Dest");
         ReachDestAct.Action.Invoke();
         
     }
@@ -129,12 +132,14 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     {
         CRRunning = true;
         _destination = target.trans.position;
-        _destination.y = transform.position.y;
         while (!ReachedDestination.value && 
                (((transform.position.x > _destination.x + .1f) || (transform.position.x < _destination.x - .1f)) 
                 || ((transform.position.z > _destination.z + .1f) || (transform.position.z < _destination.z - .1f))))
         {
             transform.position = Vector3.Lerp(transform.position, _destination, walkspeed * Time.deltaTime);
+            if(!_controller.isGrounded)
+                _current.Movement.y -= _current.Gravity.Value * Time.deltaTime;
+            _current.Move(transform, _controller, MainCamera);
             yield return new WaitForFixedUpdate();
         }
         SetPosition();

@@ -206,8 +206,8 @@ public class dialouge_script : MonoBehaviour
 
     private void RunReaction()
     {
-        Debug.Log("Reaction");
-        Debug.Log(character.Script.Reactions[_conNum][paragraph][line][1]);
+        //Debug.Log("Reaction");
+        //Debug.Log(character.Script.Reactions[_conNum][paragraph][line][1]);
         if (line >= character.Script.Reactions[_conNum][paragraph].Count)
             return;
         switch (character.Script.Reactions[_conNum][paragraph][line][1])
@@ -225,7 +225,7 @@ public class dialouge_script : MonoBehaviour
                 Happy.Invoke();
                 break;
             default:
-                Debug.Log("None");
+                //Debug.Log("None");
                 break;
             
         }
