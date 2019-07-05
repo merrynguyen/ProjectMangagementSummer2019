@@ -28,8 +28,9 @@ public class AnimationScript : MonoBehaviour
                 anim.SetTrigger("Walk");
             }
         }
-        else
+        else if(Forward.KeyUp())
         {
+            Debug.Log("Idle");
             anim.ResetTrigger("Run");
             anim.ResetTrigger("Walk");
             anim.SetTrigger("Idle");

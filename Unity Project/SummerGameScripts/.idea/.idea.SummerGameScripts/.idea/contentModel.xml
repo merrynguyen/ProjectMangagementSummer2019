@@ -180,6 +180,7 @@
           <e p="Scriptable_Object_Saving.cs" t="Include" />
           <e p="Show_Text.cs" t="Include" />
           <e p="UnityEvent_List_Script.cs" t="Include" />
+          <e p="Wait_Event.cs" t="Include" />
         </e>
         <e p="Test.cs" t="Include" />
       </e>
