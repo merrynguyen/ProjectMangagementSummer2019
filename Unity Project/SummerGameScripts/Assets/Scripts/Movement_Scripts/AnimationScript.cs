@@ -30,7 +30,6 @@ public class AnimationScript : MonoBehaviour
         }
         else if(Forward.KeyUp())
         {
-            Debug.Log("Idle");
             anim.ResetTrigger("Run");
             anim.ResetTrigger("Walk");
             anim.SetTrigger("Idle");

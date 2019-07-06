@@ -41,12 +41,16 @@ public class Character_Movement_JoystickConf : MonoBehaviour
 
     public void DisableCC()
     {
+        if(_controller == null)
+            _controller = GetComponent<CharacterController> ();
         _controller.enabled = false;
         enabled = false;
     }
 
     public void EnableCC()
     {
+        if(_controller == null)
+            _controller = GetComponent<CharacterController> ();
         _controller.enabled = true;
         enabled = true;
     }
@@ -152,9 +156,7 @@ public class Character_Movement_JoystickConf : MonoBehaviour
         }
         SetPosition();
         CRRunning = false;
-    }
-    
-        
+    }    
     
     private bool CheckRot(float offset)
     {

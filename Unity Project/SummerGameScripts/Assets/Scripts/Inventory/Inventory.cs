@@ -44,6 +44,16 @@ public class Inventory : ScriptableObject
             Keys.objList.Add(item);
         }
     }
+
+    public void RemoveItem(Item item)
+    {
+        if(item.itemType== "Object")
+            Objects.objList.Remove(item);
+        if (item.itemType == "Note")
+            Notes.objList.Remove(item);
+        if (item.itemType == "Key")
+            Keys.objList.Remove(item);
+    }
     
     
     

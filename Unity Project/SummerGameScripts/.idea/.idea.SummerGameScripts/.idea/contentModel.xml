@@ -52,13 +52,15 @@
         </e>
         <e p="Resources" t="Include">
           <e p="NPC" t="Include">
+            <e p="Carl" t="Include">
+              <e p="Carl_Dialogue.txt" t="Include" />
+            </e>
             <e p="Rose" t="Include">
               <e p="Rose_Script.txt" t="Include" />
             </e>
           </e>
           <e p="Text_Files" t="Include">
             <e p="Captain_Al_Dialogue.txt" t="Include" />
-            <e p="Carl_Dialogue.txt" t="Include" />
             <e p="Get_Item_01.txt" t="Include" />
             <e p="Group_Dialogues.txt" t="Include" />
             <e p="Kim_Dialogue.txt" t="Include" />
