@@ -56,7 +56,7 @@ public class dialouge_script : MonoBehaviour
         if (inRange && !ConvStart && Interact.KeyDown() && !choiceselection.value)
         {
             OnInteract.Invoke();
-            StartConv();
+            //StartConv();
         }
     }
 

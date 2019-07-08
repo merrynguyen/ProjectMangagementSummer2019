@@ -151,6 +151,7 @@
             <e p="TestMovementScript.cs" t="Include" />
             <e p="Transform_Controller.cs" t="Include" />
           </e>
+          <e p="Mutiple_Action_Modifier.cs" t="Include" />
           <e p="NPC_Scripts" t="Include">
             <e p="NPC_Controller.cs" t="Include" />
           </e>

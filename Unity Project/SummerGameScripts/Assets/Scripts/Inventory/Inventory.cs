@@ -7,6 +7,7 @@ public class Inventory : ScriptableObject
 {
     public ListData Objects, Notes, Keys;
     private Item item;
+    public BoolData hasItem;
 
     public void AddObj(GameObject obj)
     {
@@ -53,6 +54,53 @@ public class Inventory : ScriptableObject
             Notes.objList.Remove(item);
         if (item.itemType == "Key")
             Keys.objList.Remove(item);
+    }
+
+    public void HasItem(Item item)
+    {
+        if (item.itemType == "Object")
+        {
+            foreach (var OBJ in Objects.objList)
+            {
+                if (OBJ == item)
+                {
+                    Debug.Log("HasItem");
+                    hasItem.value = true;
+                    return;
+                }
+                hasItem.value = false;
+            }
+        }
+        else if (item.itemType == "Note")
+        {
+            foreach (var note in Notes.objList)
+            {
+                if (note == item)
+                {
+                    Debug.Log("HasItem");
+                    hasItem.value = true;
+                    return;
+                }
+                hasItem.value = false;
+            }
+        }
+        else if (item.itemType == "Key")
+        {
+            foreach (var key in Keys.objList)
+            {
+                if (key == item)
+                {
+                    Debug.Log("HasItem");
+                    hasItem.value = true;
+                    return;
+                }
+            }
+        }
+        else
+        {
+            hasItem.value = false;
+        }
+       
     }
     
     
