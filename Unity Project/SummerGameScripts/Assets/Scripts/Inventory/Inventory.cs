@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Inventory/Inventory")]
 public class Inventory : ScriptableObject
 {
-    public ListData Objects, Notes, Keys;
+    public ListData Objects, Notes, Keys, DetectiveNotes;
     private Item item;
     public BoolData hasItem;
 
@@ -44,6 +44,15 @@ public class Inventory : ScriptableObject
             }
             Keys.objList.Add(item);
         }
+        else if (item.itemType == "Hint")
+        {
+            foreach (var hint in DetectiveNotes.objList)
+            {
+                if (hint == item)
+                    return;
+            }
+            DetectiveNotes.objList.Add(item);
+        }
     }
 
     public void RemoveItem(Item item)
@@ -54,6 +63,8 @@ public class Inventory : ScriptableObject
             Notes.objList.Remove(item);
         if (item.itemType == "Key")
             Keys.objList.Remove(item);
+        if (item.itemType == "Hint")
+            DetectiveNotes.objList.Remove(item);
     }
 
     public void HasItem(Item item)
@@ -94,6 +105,19 @@ public class Inventory : ScriptableObject
                     hasItem.value = true;
                     return;
                 }
+                hasItem.value = false;
+            }
+        }
+        else if (item.itemType == "Hint")
+        {
+            foreach (var hint in DetectiveNotes.objList)
+            {
+                if (hint == item)
+                {
+                    hasItem.value = true;
+                    return;
+                }
+                hasItem.value = false;
             }
         }
         else
