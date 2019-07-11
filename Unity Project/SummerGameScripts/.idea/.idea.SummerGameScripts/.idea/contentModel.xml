@@ -52,19 +52,34 @@
         </e>
         <e p="Resources" t="Include">
           <e p="NPC" t="Include">
+            <e p="Captain_Al" t="Include">
+              <e p="Captain_Al_Dialogue.txt" t="Include" />
+            </e>
             <e p="Carl" t="Include">
               <e p="Carl_Dialogue.txt" t="Include" />
+            </e>
+            <e p="Kim" t="Include">
+              <e p="Kim_Dialogue.txt" t="Include" />
+            </e>
+            <e p="Kirk" t="Include">
+              <e p="Kirk_Dialogue.txt" t="Include" />
+            </e>
+            <e p="Luther" t="Include">
+              <e p="Luther_Script.txt" t="Include" />
+            </e>
+            <e p="Multiple_Characters" t="Include">
+              <e p="Checking_on_Carl.txt" t="Include" />
             </e>
             <e p="Rose" t="Include">
               <e p="Rose_Script.txt" t="Include" />
             </e>
+            <e p="Scruffles" t="Include">
+              <e p="Scruff_Script.txt" t="Include" />
+            </e>
           </e>
           <e p="Text_Files" t="Include">
-            <e p="Captain_Al_Dialogue.txt" t="Include" />
             <e p="Get_Item_01.txt" t="Include" />
             <e p="Group_Dialogues.txt" t="Include" />
-            <e p="Kim_Dialogue.txt" t="Include" />
-            <e p="Kirk_Dialogue.txt" t="Include" />
             <e p="NPC_01.txt" t="Include" />
             <e p="Test.txt" t="Include" />
           </e>

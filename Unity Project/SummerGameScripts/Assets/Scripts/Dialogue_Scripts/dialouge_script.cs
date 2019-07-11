@@ -16,7 +16,7 @@ public class dialouge_script : MonoBehaviour
     private string _text_to_display;
     public ActionObject EndDialouge;
     public UnityEvent OnInteract, OnChoiceSelectStart;
-    public UnityEvent Mad, Happy, Surprised, Upset, Normal, HandOverItem, GetItem;
+    public UnityEvent Mad, Happy, Surprised, Upset, Scared, Normal, HandOverItem, GetItem;
     private char _choice_char;
     public BoolData choiceselection;
     public List<StringData> ChoiceOptions;
@@ -223,6 +223,9 @@ public class dialouge_script : MonoBehaviour
                 break;
             case 'H':
                 Happy.Invoke();
+                break;
+            case 'F':
+                Scared.Invoke();
                 break;
             case 'U':
                 Upset.Invoke();
