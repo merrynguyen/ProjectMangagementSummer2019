@@ -77,16 +77,14 @@ Me@
 ~...>
 
 
-
-
 2 - Conv after getting ingredient list before recieving all ingredients#
 Scruffles@
  ^
 You're back! And since you don't have all the ingredients yet, it must mean you came to just visit me.{<
 
-~Do you like being alone?
-Do you ever leave?
-Yeah, let's talk?
+~Do you like being alone?+
+Do you ever leave?+
+Yeah, let's talk?+
 Leave>
 
 
