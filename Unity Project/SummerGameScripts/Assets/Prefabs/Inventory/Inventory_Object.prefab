@@ -9001,7 +9001,7 @@ MonoBehaviour:
   ObjectListUI: {fileID: 3742488032493648522}
   NoteListUI: {fileID: 3742488031944663352}
   KeyListUI: {fileID: 3742488030841175821}
-  DetectiveNoteUI: {fileID: 0}
+  DetectiveNoteUI: {fileID: 8855801078178556456}
   InformationDisplay: {fileID: 3742488030718307759}
   ObjectButtons:
   - {fileID: 3742488030593864100}
@@ -9051,7 +9051,22 @@ MonoBehaviour:
   - {fileID: 3742488031193532643}
   - {fileID: 3742488030841881088}
   - {fileID: 3742488032371252246}
-  DetectiveNoteButtons: []
+  DetectiveNoteButtons:
+  - {fileID: 2886833529037088242}
+  - {fileID: 5569324732080985566}
+  - {fileID: 3126860665631247598}
+  - {fileID: 8072934743932779666}
+  - {fileID: 2510364943391972840}
+  - {fileID: 4032269131265844288}
+  - {fileID: 8315848842496195778}
+  - {fileID: 2192388421689912360}
+  - {fileID: 6434832257913874709}
+  - {fileID: 2990477898794568294}
+  - {fileID: 975274547617230286}
+  - {fileID: 7146943503640552216}
+  - {fileID: 4628799247183726140}
+  - {fileID: 5388246169481528778}
+  - {fileID: 8590062571449924887}
 --- !u!114 &3742488031297739244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15922,6 +15937,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Objects
       m_Image: {fileID: 0}
+    - m_Text: Detective Notes
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -15985,6 +16002,21 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3742488032328423565}
         m_MethodName: SetObjList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3742488032328423565}
+        m_MethodName: SetHintList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
