@@ -33,7 +33,7 @@
         }
     },
     "texturesets": {
-        "Plaque_Piece": {
+        "lambert1": {
             "shader": "Main shader"
         }
     }
