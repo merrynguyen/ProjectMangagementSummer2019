@@ -13,7 +13,7 @@ public class Inventory_Dialouge : MonoBehaviour
     private bool ConvStart, SpeedUp, inRange;
     private int _char;
     private string _text_to_display;
-    public UnityEvent OnInteract;
+    public UnityEvent OnInteract, OnEnd;
     
 
     private void Start()
@@ -27,7 +27,9 @@ public class Inventory_Dialouge : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             inRange = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -41,7 +43,6 @@ public class Inventory_Dialouge : MonoBehaviour
         if (inRange && !ConvStart && Interact.KeyDown())
         {
             OnInteract.Invoke();
-            StartConv();
         }
     }
 
@@ -92,10 +93,13 @@ public class Inventory_Dialouge : MonoBehaviour
             }    
         }
         yield return new WaitUntil(Interact.KeyDown);
+        ConvStart = false;
         SpeedUp = false;
         Dialouge_Text.text = "";
         Character_Text.text = "";
-        Dialouge_Object.SetActive(false);
-        Destroy(gameObject);
+        OnEnd.Invoke();
+        //Dialouge_Object.SetActive(false);
+        //Destroy(gameObject);
     }
+
 }
