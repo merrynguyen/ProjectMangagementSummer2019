@@ -62,6 +62,7 @@ public class dialouge_script : MonoBehaviour
 
     public void StartConv()
     {
+        Debug.Log("Start");
         if (!ConvStart && !choiceselection.value){
             ConvStart = true;
         Dialouge_Object.SetActive(true);

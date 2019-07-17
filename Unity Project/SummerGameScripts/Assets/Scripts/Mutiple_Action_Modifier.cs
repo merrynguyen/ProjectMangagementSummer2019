@@ -11,6 +11,7 @@ public class Mutiple_Action_Modifier : MonoBehaviour
     
         public void Add(int val)
         {
+            Debug.Log("Add Action" + gameObject.name);
             EventNum = val;
             ReachDestAct.Action += CallEvent;
             

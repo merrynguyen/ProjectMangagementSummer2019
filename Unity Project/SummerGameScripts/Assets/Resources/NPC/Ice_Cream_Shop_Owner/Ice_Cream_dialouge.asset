@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18a9e4362b53bcc44ba18ae7dfe3a2d3, type: 3}
-  m_Name: Back_Room_Key
+  m_Script: {fileID: 11500000, guid: 7d8d1e4b870b4cf4bb5a4d5baf949547, type: 3}
+  m_Name: Ice_Cream_dialouge
   m_EditorClassIdentifier: 
-  itemName: Ice Cream Shop Key
-  itemDescription: key to the back room of the Ice Cream Shop
-  itemType: Key
-  inventoryImage: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  File: {fileID: 11400000, guid: d2cb56c1174a34d488ffdf66bf8fc70a, type: 2}

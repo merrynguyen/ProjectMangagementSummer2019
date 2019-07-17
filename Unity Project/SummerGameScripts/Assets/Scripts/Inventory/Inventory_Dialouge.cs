@@ -63,7 +63,6 @@ public class Inventory_Dialouge : MonoBehaviour
         {
             if (Interact.KeyDown())
             {
-                Debug.Log("Speed");
                 SpeedUp = true;
             }
             yield return new WaitForFixedUpdate();
@@ -75,6 +74,8 @@ public class Inventory_Dialouge : MonoBehaviour
     {
         _char = 0;
         Character_Text.text = "";
+        Dialouge_Text.text = "";
+        _text_to_display = "";
         while (_char < dialouge.Length)
         {
             _text_to_display += dialouge[_char];

@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18a9e4362b53bcc44ba18ae7dfe3a2d3, type: 3}
-  m_Name: Back_Room_Key
+  m_Script: {fileID: 11500000, guid: dd1f3286ef9bc7840b5b02dadb925f6b, type: 3}
+  m_Name: Ice_Cream_Movement
   m_EditorClassIdentifier: 
-  itemName: Ice Cream Shop Key
-  itemDescription: key to the back room of the Ice Cream Shop
-  itemType: Key
-  inventoryImage: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  value: GoToDest
+  prevvalue: RandomWalkBetween
+  LengthMax: 1000

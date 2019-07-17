@@ -69,8 +69,10 @@ public class Inventory : ScriptableObject
 
     public void HasItem(Item item)
     {
+        
         if (item.itemType == "Object")
         {
+            Debug.Log("Check Object");
             foreach (var OBJ in Objects.objList)
             {
                 if (OBJ == item)
@@ -79,11 +81,14 @@ public class Inventory : ScriptableObject
                     hasItem.value = true;
                     return;
                 }
-                hasItem.value = false;
+                
             }
+            hasItem.value = false;
+            return;
         }
         else if (item.itemType == "Note")
         {
+            Debug.Log("Check Note");
             foreach (var note in Notes.objList)
             {
                 if (note == item)
@@ -92,8 +97,10 @@ public class Inventory : ScriptableObject
                     hasItem.value = true;
                     return;
                 }
-                hasItem.value = false;
+                
             }
+            hasItem.value = false;
+            return;
         }
         else if (item.itemType == "Key")
         {
@@ -105,11 +112,13 @@ public class Inventory : ScriptableObject
                     hasItem.value = true;
                     return;
                 }
-                hasItem.value = false;
             }
+            hasItem.value = false;
+            return;
         }
         else if (item.itemType == "Hint")
         {
+            Debug.Log("Check Hint");
             foreach (var hint in DetectiveNotes.objList)
             {
                 if (hint == item)
@@ -117,8 +126,10 @@ public class Inventory : ScriptableObject
                     hasItem.value = true;
                     return;
                 }
-                hasItem.value = false;
+                
             }
+            hasItem.value = false;
+            return;
         }
         else
         {

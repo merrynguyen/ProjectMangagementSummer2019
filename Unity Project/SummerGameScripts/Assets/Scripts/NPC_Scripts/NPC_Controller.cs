@@ -15,12 +15,13 @@ public class NPC_Controller : MonoBehaviour
     private bool reached_dest, rotate_dest;
     public ActionObject Reach_Dest;
     private Quaternion FacingDirection;
-    public float rotateSpeed;
+    public float rotateSpeed, walkspeed;
 
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _agent.destination = transform.position;
+        _agent.speed = walkspeed;
         anim = GetComponentInChildren<Animator>();
     }
 
@@ -219,5 +220,9 @@ public class NPC_Controller : MonoBehaviour
             return false;
         }
     }
-    
+
+    private void ResetTarget()
+    {
+        target = Destination01.trans.position;
+    }
 }
