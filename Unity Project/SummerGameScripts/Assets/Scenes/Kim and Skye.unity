@@ -125,6 +125,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 379038950}
     m_Modifications:
+    - target: {fileID: 7615886023902535495, guid: c86e24d15521e8d438d48ffa37866a75,
+        type: 3}
+      propertyPath: m_Name
+      value: Close_Up_Cam
+      objectReference: {fileID: 0}
     - target: {fileID: 7615886023902535489, guid: c86e24d15521e8d438d48ffa37866a75,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -179,11 +184,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7615886023902535495, guid: c86e24d15521e8d438d48ffa37866a75,
-        type: 3}
-      propertyPath: m_Name
-      value: Close_Up_Cam
       objectReference: {fileID: 0}
     - target: {fileID: 7615886023902535494, guid: c86e24d15521e8d438d48ffa37866a75,
         type: 3}
@@ -589,6 +589,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293126996151244404, guid: cc946ba95ef3a1645b68c436f8f62273,
+        type: 3}
+      propertyPath: newSceneName
+      value: Island
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc946ba95ef3a1645b68c436f8f62273, type: 3}
@@ -1611,6 +1616,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 462082504}
     m_Modifications:
+    - target: {fileID: 100002, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
+      propertyPath: m_Name
+      value: Door_rectangular_open_And_close_Animations
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.12
@@ -1666,18 +1683,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.37198386
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
-      propertyPath: m_Name
-      value: Door_rectangular_open_And_close_Animations
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
       propertyPath: m_Controller
@@ -1976,11 +1981,44 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1728553034}
+        m_MethodName: StartConv
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1728553034}
+        m_MethodName: EndDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1728553033}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!65 &1728553035
@@ -2078,6 +2116,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 379038950}
     m_Modifications:
+    - target: {fileID: 4316159358230926789, guid: 99feebe8d3dfdb74ab609f949a297518,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_inside
+      objectReference: {fileID: 0}
     - target: {fileID: 4316159358230926786, guid: 99feebe8d3dfdb74ab609f949a297518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2132,11 +2175,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4316159358230926789, guid: 99feebe8d3dfdb74ab609f949a297518,
-        type: 3}
-      propertyPath: m_Name
-      value: Door_inside
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99feebe8d3dfdb74ab609f949a297518, type: 3}
@@ -2227,6 +2265,27 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 950029797492104200, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 637176630, guid: 23dc72362010a5b4d94cd71e6c8fb8ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878709456359698264, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: isGrabbing
+      value: 
+      objectReference: {fileID: 11400000, guid: 76683ea1eda3ae7449b22656c4c243df,
+        type: 2}
+    - target: {fileID: 6953026306408994957, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: Can_Run
+      value: 
+      objectReference: {fileID: 11400000, guid: 47f68316034de6d4c95b47c727dc2434,
+        type: 2}
     - target: {fileID: 2128149161769896946, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
         type: 3}
       propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.size
@@ -2687,9 +2746,15 @@ PrefabInstance:
       propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[10].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 637176630, guid: 23dc72362010a5b4d94cd71e6c8fb8ad, type: 3}
-      propertyPath: m_LocalPosition.z
+    - target: {fileID: 8697772735977208492, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970746179094145586, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6953026306408994956, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
         type: 3}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -342,6 +342,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 637176630, guid: 23dc72362010a5b4d94cd71e6c8fb8ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878709456359698264, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: isGrabbing
+      value: 
+      objectReference: {fileID: 11400000, guid: 76683ea1eda3ae7449b22656c4c243df,
+        type: 2}
+    - target: {fileID: 6953026306408994957, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: Can_Run
+      value: 
+      objectReference: {fileID: 11400000, guid: 47f68316034de6d4c95b47c727dc2434,
+        type: 2}
     - target: {fileID: 2128149161769896946, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
         type: 3}
       propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.size
@@ -451,9 +467,15 @@ PrefabInstance:
       propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[10].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 637176630, guid: 23dc72362010a5b4d94cd71e6c8fb8ad, type: 3}
-      propertyPath: m_LocalPosition.z
+    - target: {fileID: 8697772735977208492, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970746179094145586, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6953026306408994956, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
         type: 3}
@@ -888,6 +910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293126996151244404, guid: cc946ba95ef3a1645b68c436f8f62273,
+        type: 3}
+      propertyPath: newSceneName
+      value: Island
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc946ba95ef3a1645b68c436f8f62273, type: 3}
