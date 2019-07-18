@@ -1,6 +1,6 @@
 0 - First entrance#
 Cafe Owner@
- ^
+Happy^
 ~Hey bud, what can I get for you today?{<
 
 ~Suspisions+
@@ -14,11 +14,11 @@ Me@
 ~Have you noticed or heard anything about what happened to Carl and who may have done it?<
 
 Cafe Owner@
- ^
+N^
 ~I don't know much about what's been happening, but something that's always suspicious is Scruffles+
  ^
 I haven't seen him around for a few months, probably stuck in his lighthouse trying to invent some new synthetic food.+
- ^
+M^
 Maybe he's been creating whatever infected Carl...+
  ^
 In fact, if I had to guess whose been behind it, it would be Scruffles.<

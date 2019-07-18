@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\10689129\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\10689129\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_SummerGameScripts.-1801867007.00" t="ExcludeRecursive" />
-    <e p="C:\Users\10689129\Documents\MyRepos\Summer2019\ProjectMangagementSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
+    <e p="C:\Users\10802160\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.1860553405.00" t="ExcludeRecursive" />
+    <e p="C:\Users\10802160\Documents\Repos\Summer2019\ProjectMangagementSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Material" t="Include">
+          <e p="Cafe_owner" t="Include">
+            <e p="Face_Swap.cs" t="Include" />
+          </e>
+        </e>
         <e p="packages" t="Include">
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">
