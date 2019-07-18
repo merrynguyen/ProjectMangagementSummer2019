@@ -7,6 +7,7 @@ public class Sprint_script : MonoBehaviour
     public KeyCodeData Sprint_Keys;
     public BoolData inControl, Can_Run;
     private Animator Anim;
+    
 
     private void Start()
     {
