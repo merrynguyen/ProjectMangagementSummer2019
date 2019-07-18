@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41151c1ae3c39a3488f11a8d99b55a8f, type: 3}
-  m_Name: Picked_Up_Kims_Book
+  m_Script: {fileID: 11500000, guid: 7d8d1e4b870b4cf4bb5a4d5baf949547, type: 3}
+  m_Name: Saving_Dialogue
   m_EditorClassIdentifier: 
-  value: 0
+  File: {fileID: 11400000, guid: 66313f213a81bf9438dda8e5f312de32, type: 2}

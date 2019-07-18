@@ -103,4 +103,9 @@ public class Inventory_Dialouge : MonoBehaviour
         //Destroy(gameObject);
     }
 
+    public void EndDialogue()
+    {
+        Dialouge_Object.SetActive(false);
+    }
+
 }

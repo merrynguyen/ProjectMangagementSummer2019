@@ -53,7 +53,7 @@
         <e p="Resources" t="Include">
           <e p="NPC" t="Include">
             <e p="Cafe_owner" t="Include">
-              <e p="NPC_01.txt" t="Include" />
+              <e p="Cafe_Owner_Script.txt" t="Include" />
             </e>
             <e p="Captain_Al" t="Include">
               <e p="Captain_Al_Dialogue.txt" t="Include" />
@@ -86,6 +86,11 @@
             </e>
             <e p="Scruffles" t="Include">
               <e p="Scruff_Script.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Saving_Data" t="Include">
+            <e p="Saving_Dialogue" t="Include">
+              <e p="Saving_Txt.txt" t="Include" />
             </e>
           </e>
           <e p="Text_Files" t="Include">

@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a2508cbc09288644879f9e74276397a, type: 3}
-  m_Name: NPC_01_Dest02
+  m_Name: Cafe_Owner_Dest02
   m_EditorClassIdentifier: 
   trans: {fileID: 0}
