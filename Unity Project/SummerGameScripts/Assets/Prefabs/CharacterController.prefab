@@ -117,7 +117,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905507340366712268}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: ded6f01c56453ca488de67c49676aa4c, type: 3}
+  m_Avatar: {fileID: 9000000, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}
   m_Controller: {fileID: 9100000, guid: 7436e5dbb0fd16c41bcdca3828b49317, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   Push_Keys: {fileID: 11400000, guid: 35545110aeacf6e4fb555641ca19315c, type: 2}
   pushAmount: 1
   pushSpeed: 1
-  isGrabbing: {fileID: 0}
+  isGrabbing: {fileID: 11400000, guid: 76683ea1eda3ae7449b22656c4c243df, type: 2}
 --- !u!195 &4801860133104781732
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -375,10 +375,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1905507340724257266}
     m_Modifications:
-    - target: {fileID: 100100, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}
-      propertyPath: m_Name
-      value: New_Walk_Run_01
-      objectReference: {fileID: 0}
     - target: {fileID: 400100, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -422,6 +418,10 @@ PrefabInstance:
     - target: {fileID: 400100, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100100, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}
+      propertyPath: m_Name
+      value: New_Walk_Run_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}

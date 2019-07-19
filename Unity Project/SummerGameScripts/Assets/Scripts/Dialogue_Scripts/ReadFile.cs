@@ -47,7 +47,6 @@ public class ReadFile : ScriptableObject
           case '%':
             //end script
             _ignore = true;
-            Debug.Log(_conversation.Count);
             return;
           case '~':
             //begin charline
@@ -97,7 +96,6 @@ public class ReadFile : ScriptableObject
             _line = "";
             break;
           case '^':
-            Debug.Log(_line);
             reactionsline.Add(_line);
             _line = "";
             break;
