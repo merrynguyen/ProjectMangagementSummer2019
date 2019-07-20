@@ -18,8 +18,8 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     private bool CRRunning = false;
     public TransformData target;
     public BoolData ReachedDestination;
-    public Vector3Data Load_Destination;
-    public QuaternionData Rotation_Destination;
+    public Vector3Data Load_Destination, Room_Load_Pos;
+    public QuaternionData Rotation_Destination, Room_Load_Rot;
     private Vector3 _destination;
  
     void Start()
@@ -75,6 +75,12 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     {
         transform.position = Load_Destination.vector;
         transform.rotation = Rotation_Destination.rotation;
+    }
+
+    public void LoadRoomDest()
+    {
+        transform.position = Room_Load_Pos.vector;
+        transform.rotation = Room_Load_Rot.rotation;
     }
 
     public IEnumerator Walk_Towards(float speed)

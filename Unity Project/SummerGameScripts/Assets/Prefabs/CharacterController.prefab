@@ -252,8 +252,10 @@ MonoBehaviour:
   target: {fileID: 11400000, guid: bcedaaf3423737845a5716eefff7598f, type: 2}
   ReachedDestination: {fileID: 11400000, guid: a64146d323fa3c847b81c5995cd24b16, type: 2}
   Load_Destination: {fileID: 11400000, guid: 8f829c32d4b74e4498b3ba325b6b76f6, type: 2}
+  Room_Load_Pos: {fileID: 11400000, guid: 51e66777a7b7b294c840eb98bde4eab7, type: 2}
   Rotation_Destination: {fileID: 11400000, guid: 26ea7c11006172645929d5a3dfa286d3,
     type: 2}
+  Room_Load_Rot: {fileID: 11400000, guid: 4571ede4f884a9d4193490ee183fa7bc, type: 2}
 --- !u!114 &5664269905655548442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +377,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1905507340724257266}
     m_Modifications:
+    - target: {fileID: 100100, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}
+      propertyPath: m_Name
+      value: New_Walk_Run_01
+      objectReference: {fileID: 0}
     - target: {fileID: 400100, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -418,10 +424,6 @@ PrefabInstance:
     - target: {fileID: 400100, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100100, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}
-      propertyPath: m_Name
-      value: New_Walk_Run_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1a7b58ca675b9c4eb7c2526a0204392, type: 3}
@@ -950,6 +952,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1905507340724257266}
     m_Modifications:
+    - target: {fileID: 100004, guid: 9ad4871c3863f7d438c71aab6eb04d02, type: 3}
+      propertyPath: m_Name
+      value: EmotionAnims
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 9ad4871c3863f7d438c71aab6eb04d02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -993,10 +999,6 @@ PrefabInstance:
     - target: {fileID: 400004, guid: 9ad4871c3863f7d438c71aab6eb04d02, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 9ad4871c3863f7d438c71aab6eb04d02, type: 3}
-      propertyPath: m_Name
-      value: EmotionAnims
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ad4871c3863f7d438c71aab6eb04d02, type: 3}
