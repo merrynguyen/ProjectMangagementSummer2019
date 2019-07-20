@@ -262,11 +262,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1703573209}
     m_Modifications:
-    - target: {fileID: 950029798369820358, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+    - target: {fileID: 2614798977217375102, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
         type: 3}
-      propertyPath: m_Name
-      value: Required_Objects
-      objectReference: {fileID: 0}
+      propertyPath: Dialouge_Text
+      value: 
+      objectReference: {fileID: 562037335}
+    - target: {fileID: 2614798977217375102, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: Character_Text
+      value: 
+      objectReference: {fileID: 488141672}
+    - target: {fileID: 2614798977217375102, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: Dialouge_Object
+      value: 
+      objectReference: {fileID: 1594152537}
     - target: {fileID: 1683950187260228941, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -336,6 +346,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950029798369820358, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_Name
+      value: Required_Objects
       objectReference: {fileID: 0}
     - target: {fileID: 950029797492104201, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
         type: 3}
@@ -454,6 +469,11 @@ PrefabInstance:
     - target: {fileID: 637176630, guid: 23dc72362010a5b4d94cd71e6c8fb8ad, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950029797492104200, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6953026306408994957, guid: 23dc72362010a5b4d94cd71e6c8fb8ad,
         type: 3}
@@ -669,6 +689,7 @@ GameObject:
   - component: {fileID: 593344546}
   - component: {fileID: 593344545}
   - component: {fileID: 593344544}
+  - component: {fileID: 593344547}
   - component: {fileID: 593344543}
   m_Layer: 0
   m_Name: Quad
@@ -677,8 +698,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &593344543
-MeshCollider:
+--- !u!65 &593344543
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -687,10 +708,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.47948125, y: 0.9999999, z: 0.017381528}
+  m_Center: {x: 0.28437573, y: 0, z: -0.008690645}
 --- !u!23 &593344544
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -750,6 +770,19 @@ Transform:
   m_Father: {fileID: 305887865}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &593344547
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593344542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38844854, y: 0.9999999, z: 0.017381528}
+  m_Center: {x: -0.3057759, y: 0, z: -0.008690645}
 --- !u!1 &636249644 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 97cfdbdb5bd00fd4584f63ce01924397,
@@ -851,11 +884,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1703573209}
     m_Modifications:
-    - target: {fileID: 293126995449467860, guid: cc946ba95ef3a1645b68c436f8f62273,
-        type: 3}
-      propertyPath: m_Name
-      value: Interior_Door
-      objectReference: {fileID: 0}
     - target: {fileID: 293126995449467859, guid: cc946ba95ef3a1645b68c436f8f62273,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -911,7 +939,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 293126995449467860, guid: cc946ba95ef3a1645b68c436f8f62273,
+        type: 3}
+      propertyPath: m_Name
+      value: Interior_Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 293126996025458458, guid: cc946ba95ef3a1645b68c436f8f62273,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3267881
+      objectReference: {fileID: 0}
     - target: {fileID: 293126996151244404, guid: cc946ba95ef3a1645b68c436f8f62273,
+        type: 3}
+      propertyPath: newSceneName
+      value: Island
+      objectReference: {fileID: 0}
+    - target: {fileID: 293126997321335442, guid: cc946ba95ef3a1645b68c436f8f62273,
         type: 3}
       propertyPath: newSceneName
       value: Island
@@ -1942,11 +1985,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1703573209}
     m_Modifications:
-    - target: {fileID: 7615886023902535495, guid: c86e24d15521e8d438d48ffa37866a75,
-        type: 3}
-      propertyPath: m_Name
-      value: Close_Up_Cam
-      objectReference: {fileID: 0}
     - target: {fileID: 7615886023902535489, guid: c86e24d15521e8d438d48ffa37866a75,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2001,6 +2039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615886023902535495, guid: c86e24d15521e8d438d48ffa37866a75,
+        type: 3}
+      propertyPath: m_Name
+      value: Close_Up_Cam
       objectReference: {fileID: 0}
     - target: {fileID: 7615886023902535494, guid: c86e24d15521e8d438d48ffa37866a75,
         type: 3}
@@ -2837,8 +2880,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8804098, y: 1.0839596, z: 2.3943768}
-  m_Center: {x: -0.65966666, y: -0.07459183, z: 0.19346794}
+  m_Size: {x: 2.53174, y: 1.0839596, z: 2.3943768}
+  m_Center: {x: -0.98533183, y: -0.07459183, z: 0.19346794}
 --- !u!1 &2316937031481816442
 GameObject:
   m_ObjectHideFlags: 0

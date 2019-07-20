@@ -20,7 +20,7 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     public BoolData ReachedDestination;
     public Vector3Data Load_Destination, Room_Load_Pos;
     public QuaternionData Rotation_Destination, Room_Load_Rot;
-    private Vector3 _destination;
+    private Vector3 _destination, ypos;
  
     void Start()
     {
@@ -33,10 +33,9 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     private void FixedUpdate()
     {
             _current = player.Current;
-            if(!_controller.isGrounded)
-                _current.Movement.y -= _current.Gravity.Value * Time.deltaTime;
-            _current.Move(transform, _controller, MainCamera);
+        _current.Move(transform, _controller, MainCamera);
     }
+
 
 
     public void DisableCC()

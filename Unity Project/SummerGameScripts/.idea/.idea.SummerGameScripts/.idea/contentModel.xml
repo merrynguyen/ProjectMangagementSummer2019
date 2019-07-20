@@ -10,6 +10,18 @@
             <e p="Alpha_Change.cs" t="Include" />
           </e>
         </e>
+        <e p="Michael_Stuff" t="Include">
+          <e p="Assets" t="Include">
+            <e p="Buildings" t="Include">
+              <e p="Skybox_import" t="Include">
+                <e p="Fantasy Skybox FREE" t="Include">
+                  <e p="Fog and Ambient references.txt" t="Include" />
+                  <e p="Readme.txt" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="packages" t="Include">
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">

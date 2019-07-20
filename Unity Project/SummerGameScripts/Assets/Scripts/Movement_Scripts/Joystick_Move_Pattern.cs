@@ -29,6 +29,7 @@ public class Joystick_Move_Pattern : ScriptableObject
             Movement.y -= Gravity.Value * Time.deltaTime;
         controller.Move(Movement);
     }
+    
 
     public void AutomaticMove(Transform trans, CharacterController controller, Transform MainCam, float angle)
     {
