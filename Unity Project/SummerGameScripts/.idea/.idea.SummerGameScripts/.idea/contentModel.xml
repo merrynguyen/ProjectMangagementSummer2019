@@ -117,6 +117,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Book_Animator.cs" t="Include" />
           <e p="Camera" t="Include">
             <e p="Camera_Controller.cs" t="Include" />
             <e p="Camera_Switch.cs" t="Include" />
@@ -230,6 +231,7 @@
             </e>
             <e p="Sliding_Game.cs" t="Include" />
           </e>
+          <e p="Reset_Game.cs" t="Include" />
           <e p="Scriptable_Object_Holder.cs" t="Include" />
           <e p="Scriptable_Object_Saving.cs" t="Include" />
           <e p="Show_Text.cs" t="Include" />

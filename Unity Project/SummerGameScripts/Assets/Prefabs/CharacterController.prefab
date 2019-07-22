@@ -143,6 +143,9 @@ MonoBehaviour:
   Run: {fileID: 11400000, guid: 6848dc88e2a625443ab97dc727414765, type: 2}
   isGrabbing: {fileID: 11400000, guid: 76683ea1eda3ae7449b22656c4c243df, type: 2}
   Push_Keys: {fileID: 11400000, guid: 35545110aeacf6e4fb555641ca19315c, type: 2}
+  TriggerNames: []
+  in_control: {fileID: 0}
+  Can_Run: {fileID: 11400000, guid: 47f68316034de6d4c95b47c727dc2434, type: 2}
 --- !u!1 &1905507340724257265
 GameObject:
   m_ObjectHideFlags: 0

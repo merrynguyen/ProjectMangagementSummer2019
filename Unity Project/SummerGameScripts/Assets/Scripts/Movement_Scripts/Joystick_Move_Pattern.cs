@@ -5,7 +5,7 @@ using UnityEngine;
 public class Joystick_Move_Pattern : ScriptableObject
 {
     public FloatData TurnSpeed, MoveSpeed, Gravity;
-    float GravityEffect;
+    private float GravityEffect;
     public string HorizontalAxis, VerticalAxis;
     Vector2 InputAxes;
     float Angle;
@@ -20,14 +20,35 @@ public class Joystick_Move_Pattern : ScriptableObject
         transform = trans;
         cam = MainCam;     
         GetInput ();
-        if (Mathf.Abs (InputAxes.x) < 1 && Mathf.Abs (InputAxes.y) < 1) return;
-        CalculateDirection (InputAxes.x, InputAxes.y);
-        Rotate ();
-        Movement = transform.forward * MoveSpeed.Value * Time.deltaTime;
-        //controller.Move(Movement);
-        if (!controller.isGrounded)
-            Movement.y -= Gravity.Value * Time.deltaTime;
-        controller.Move(Movement);
+        if (Mathf.Abs(InputAxes.x) < 1 && Mathf.Abs(InputAxes.y) < 1)
+        {
+            Movement = Vector3.zero;
+            if (!controller.isGrounded)
+            {
+                Movement.y -= GravityEffect * Time.deltaTime;
+                GravityEffect++;
+            }
+
+            controller.Move(Movement); 
+        }
+        else
+        {
+            CalculateDirection(InputAxes.x, InputAxes.y);
+            Rotate();
+            Movement = transform.forward * MoveSpeed.Value * Time.deltaTime;
+            if (!controller.isGrounded)
+            {
+                Movement.y -= GravityEffect * Time.deltaTime;
+                GravityEffect++;
+            }
+
+            controller.Move(Movement);
+        }
+
+        if (controller.isGrounded)
+        {
+            GravityEffect = Gravity.value;
+        }
     }
     
 
@@ -39,8 +60,11 @@ public class Joystick_Move_Pattern : ScriptableObject
         //Rotate ();
         Movement = transform.forward * MoveSpeed.Value * Time.deltaTime;
         //controller.Move(Movement);
-        if(!controller.isGrounded)
-            Movement.y -= Gravity.Value * Time.deltaTime;
+        if (!controller.isGrounded)
+        {
+            Movement.y -= GravityEffect * Time.deltaTime;
+            GravityEffect++;
+        }
         controller.Move(Movement);
     }
  

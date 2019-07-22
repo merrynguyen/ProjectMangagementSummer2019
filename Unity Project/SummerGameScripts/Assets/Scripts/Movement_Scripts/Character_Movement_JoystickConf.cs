@@ -32,7 +32,7 @@ public class Character_Movement_JoystickConf : MonoBehaviour
 
     private void FixedUpdate()
     {
-            _current = player.Current;
+        _current = player.Current;
         _current.Move(transform, _controller, MainCamera);
     }
 
