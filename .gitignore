@@ -36,3 +36,5 @@ sysinfo.txt
 *.unitypackage
 
 Unity Project/SummerGameScripts/Assets/Packages/Plugins/Editor/JetBrains/
+
+\.DS_Store

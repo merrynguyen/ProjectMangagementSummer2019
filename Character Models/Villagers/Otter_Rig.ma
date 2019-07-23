@@ -1,34 +1,33 @@
-//Maya ASCII 2018 scene
+//Maya ASCII 2019 scene
 //Name: Otter_Rig.ma
-//Last modified: Fri, May 31, 2019 08:35:07 PM
-//Codeset: 1252
+//Last modified: Mon, Jul 01, 2019 07:28:31 PM
+//Codeset: UTF-8
 file -rdi 1 -ns "Otter" -rfn "OtterRN" -op "v=0;" -typ "mayaAscii" "E:/School/Summer2019/ProjectMangagementSummer2019/Character Models/Villagers/Otter.ma";
 file -r -ns "Otter" -dr 1 -rfn "OtterRN" -op "v=0;" -typ "mayaAscii" "E:/School/Summer2019/ProjectMangagementSummer2019/Character Models/Villagers/Otter.ma";
-requires maya "2018";
+requires maya "2019";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2018";
-fileInfo "version" "2018";
-fileInfo "cutIdentifier" "201706261615-f9658c4cfc";
-fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
+fileInfo "product" "Maya 2019";
+fileInfo "version" "2019";
+fileInfo "cutIdentifier" "201812112215-434d8d9c04";
+fileInfo "osv" "Mac OS X 10.14.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "5631A017-46D5-C7FD-55E6-F5A942A20FD4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -8.8669393749708068 0.0019615358359064139 13.218794819854503 ;
-	setAttr ".r" -type "double3" 8.6616472704044796 -33.800000000003614 4.7843172752691865e-16 ;
+	setAttr ".t" -type "double3" 2.6905157902718559 5.0950880034896553 8.2399223296800912 ;
+	setAttr ".r" -type "double3" -2.7383527295986352 25.399999999998002 1.1002817512054633e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E26A1E2F-423F-7023-147A-F2A714BD12C9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 15.477131190892695;
+	setAttr ".coi" 9.1540775473802896;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
-	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
 	rename -uid "FF6686B6-4E97-A445-50A8-8DA92FC2EA5F";
 	setAttr ".v" no;
@@ -45,7 +44,6 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".man" -type "string" "top_mask";
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
 	rename -uid "149D38F5-43EF-F824-D7CE-6D9460533105";
 	setAttr ".v" no;
@@ -61,7 +59,6 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".man" -type "string" "front_mask";
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
 	rename -uid "3E1B7B28-4919-0DDE-D5AF-8AB733DE3262";
 	setAttr ".v" no;
@@ -78,11 +75,11 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "Rig";
 	rename -uid "4806BDFE-4FAD-AEF4-ACCD-E188C415E5E5";
 createNode transform -n "Joints" -p "Rig";
 	rename -uid "47C9048A-429B-03CE-C7B7-35BD0C0DC896";
+	setAttr ".v" no;
 createNode joint -n "root_jnt" -p "Joints";
 	rename -uid "6473125E-4F8E-8DCB-4974-B38FE047046B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -187,7 +184,7 @@ createNode parentConstraint -n "l_hand_jnt_parentConstraint1" -p "l_hand_jnt";
 	setAttr ".tg[0].tot" -type "double3" 8.8817841970012523e-16 1.7763568394002505e-15 
 		6.617444949728028e-24 ;
 	setAttr ".tg[0].tor" -type "double3" 180 -1.4390251778789873e-06 2.770247140561902 ;
-	setAttr ".lr" -type "double3" 5.4119844587787053e-15 3.7915166397345384e-22 -3.9756933518293969e-16 ;
+	setAttr ".lr" -type "double3" 6.026863243126444e-15 -1.2707351051655416e-14 5.9635400277440943e-15 ;
 	setAttr ".rst" -type "double3" 1.1866000242179084 -8.8817841970012523e-16 -1.9852334701272664e-22 ;
 	setAttr ".rsrr" -type "double3" 5.4119844587787053e-15 3.7915166397345384e-22 -3.9756933518293969e-16 ;
 	setAttr -k on ".w0";
@@ -209,7 +206,7 @@ createNode parentConstraint -n "l_elbow_jnt_parentConstraint1" -p "l_elbow_jnt";
 	setAttr ".tg[0].tot" -type "double3" -4.4408920985006262e-16 8.8817841970012523e-16 
 		2.0311264431284435e-17 ;
 	setAttr ".tg[0].tor" -type "double3" 180 -1.4390251622198774e-06 2.7702471405619078 ;
-	setAttr ".lr" -type "double3" -8.1999308090820508e-18 3.3009151212457578e-22 -3.9756933528591321e-16 ;
+	setAttr ".lr" -type "double3" 2.540650237985031e-14 1.2297579121165407e-15 -3.9756901613154923e-16 ;
 	setAttr ".rst" -type "double3" 1.0705150365829468 -8.8817841970012523e-16 -3.3087224502121107e-24 ;
 	setAttr ".rsrr" -type "double3" -8.1999308090820508e-18 3.3009151212457578e-22 -3.9756933528591321e-16 ;
 	setAttr -k on ".w0";
@@ -230,7 +227,7 @@ createNode parentConstraint -n "l_shoulder_jnt_parentConstraint1" -p "l_shoulder
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -4.4408920985006262e-16 0 -2.7681634933289533e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -180 -3.1805546814635152e-15 -6.3611093629270304e-15 ;
-	setAttr ".lr" -type "double3" -3.1805546814635152e-15 -6.361109362927032e-15 -1.2722218725854064e-14 ;
+	setAttr ".lr" -type "double3" 6.361109362927032e-15 -1.2722218725854064e-14 -7.0622500768802503e-31 ;
 	setAttr ".rst" -type "double3" -1.2592713832855225 2.9802322802453492e-08 0.62123477458953846 ;
 	setAttr ".rsrr" -type "double3" -3.1805546814635152e-15 -6.361109362927032e-15 -1.2722218725854064e-14 ;
 	setAttr -k on ".w0";
@@ -276,7 +273,7 @@ createNode parentConstraint -n "head_jnt_parentConstraint1" -p "head_jnt";
 	setAttr ".tg[0].tot" -type "double3" 1.166399343043547e-07 8.8817841970012523e-16 
 		1.4757006196670264e-08 ;
 	setAttr ".tg[0].tor" -type "double3" 89.999999999999204 2.3981240699939202e-06 89.999981045161505 ;
-	setAttr ".lr" -type "double3" -3.459372268369401 0.025079284270640913 -3.1307341690659438 ;
+	setAttr ".lr" -type "double3" -3.4593722683693855 0.025079284270664186 -3.1307341690659256 ;
 	setAttr ".rst" -type "double3" 1.1344652175903969 6.2170372828962035e-14 -4.3142987893687347e-17 ;
 	setAttr ".rsrr" -type "double3" -9.5416640443905487e-15 -3.1805546814635152e-15 
 		9.5416640443905487e-15 ;
@@ -299,7 +296,7 @@ createNode parentConstraint -n "neck_jnt_parentConstraint1" -p "neck_jnt";
 	setAttr ".tg[0].tot" -type "double3" -3.5108298053829071e-16 -8.8817841970012523e-16 
 		8.7770705429903275e-17 ;
 	setAttr ".tg[0].tor" -type "double3" 90.000000000000796 2.3981240770106277e-06 90.000018954838538 ;
-	setAttr ".lr" -type "double3" 4.0709783731844761e-15 3.1803089911852741e-15 6.5556792897859089e-16 ;
+	setAttr ".lr" -type "double3" -1.501234957608566e-14 -2.8625237823449893e-14 3.8361194538274977e-15 ;
 	setAttr ".rst" -type "double3" -1.5811369419097892 2.9802322299924673e-08 2.9802322387695307e-07 ;
 	setAttr ".rsrr" -type "double3" 4.0709783731844761e-15 3.1803089911852741e-15 6.5556792897859089e-16 ;
 	setAttr -k on ".w0";
@@ -359,7 +356,7 @@ createNode parentConstraint -n "r_hand_jnt_parentConstraint1" -p "r_hand_jnt";
 		-6.6174449004242214e-24 ;
 	setAttr ".tg[0].tor" -type "double3" -6.9468389284776506e-08 1.4356637761849759e-06 
 		-2.7702471405618074 ;
-	setAttr ".lr" -type "double3" 6.9468389284776492e-08 4.3397870498586087e-22 8.7033679385842148e-16 ;
+	setAttr ".lr" -type "double3" 6.9468388823617425e-08 9.5305137141411321e-15 -1.1851881931995648e-14 ;
 	setAttr ".rst" -type "double3" -1.1865962327639359 -9.5097224637186173e-06 7.2916231856227364e-14 ;
 	setAttr ".rsrr" -type "double3" 6.9468389284776492e-08 4.3397870498586097e-22 8.7033679385842148e-16 ;
 	setAttr -k on ".w0";
@@ -404,7 +401,7 @@ createNode parentConstraint -n "r_shoulder_jnt_parentConstraint1" -p "r_shoulder
 		-5.6606878014909665e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 2.0385748866634425e-45 3.1805546814635247e-15 
 		-3.1805546814635174e-14 ;
-	setAttr ".lr" -type "double3" -3.1805546814635168e-15 7.9450313364902864e-31 2.8624992133171654e-14 ;
+	setAttr ".lr" -type "double3" 1.5902773407317584e-14 -9.5416640443905519e-15 1.2722218725854065e-14 ;
 	setAttr ".rst" -type "double3" -1.2592762854766839 2.9802299723183297e-08 -0.62123499999999987 ;
 	setAttr ".rsrr" -type "double3" -3.1805546814635168e-15 7.9450313364902864e-31 2.8624992133171654e-14 ;
 	setAttr -k on ".w0";
@@ -494,7 +491,7 @@ createNode parentConstraint -n "l_foot_jnt_parentConstraint1" -p "l_foot_jnt";
 		4.1670925364187158e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -89.999984432129693 1.8534956866162005e-06 
 		-91.181683605194053 ;
-	setAttr ".lr" -type "double3" -1.2722218725854067e-14 1.2722218725854067e-14 -1.4124500153760511e-30 ;
+	setAttr ".lr" -type "double3" -1.9083328088781034e-14 -2.5444437451708185e-14 -3.0851380410196113e-13 ;
 	setAttr ".rst" -type "double3" 0.9627238543403206 8.9997250645769411e-22 -6.6613381477509392e-16 ;
 	setAttr ".rsrr" -type "double3" 0 1.2722218725854067e-14 0 ;
 	setAttr -k on ".w0";
@@ -517,7 +514,7 @@ createNode parentConstraint -n "l_knee_jnt_parentConstraint1" -p "l_knee_jnt";
 		-9.4298589831045155e-23 ;
 	setAttr ".tg[0].tor" -type "double3" -89.999984432129693 1.8534957147689586e-06 
 		-91.181683605194053 ;
-	setAttr ".lr" -type "double3" -1.3985460777539461e-14 1.1927078024454579e-14 6.2654453222308783e-15 ;
+	setAttr ".lr" -type "double3" -4.0555106462411296e-14 -3.9758334098871092e-15 4.3205862031993472e-13 ;
 	setAttr ".rst" -type "double3" 1.1144943039968158 -1.4901161193840986e-08 1.4099832412739488e-14 ;
 	setAttr ".rsrr" -type "double3" -1.2652015074847143e-15 1.1529508616801426e-14 6.4890051813638863e-15 ;
 	setAttr -k on ".w0";
@@ -540,7 +537,7 @@ createNode parentConstraint -n "l_hip_jnt_parentConstraint1" -p "l_hip_jnt";
 		-8.7762944821396302e-17 ;
 	setAttr ".tg[0].tor" -type "double3" -89.999947253041285 1.2720877199835112e-14 
 		-89.167930567458541 ;
-	setAttr ".lr" -type "double3" -3.3480411337962034e-15 7.6532026638310337e-15 -1.5290854423040549e-14 ;
+	setAttr ".lr" -type "double3" 1.9007618555413517e-14 2.047481950500223e-14 -2.7306374400389648e-15 ;
 	setAttr ".rst" -type "double3" 0.53109121322631747 1.4901161418384437e-08 0.52495270967483521 ;
 	setAttr ".rsrr" -type "double3" -3.3480411337962034e-15 7.6532026638310337e-15 -1.5290854423040549e-14 ;
 	setAttr -k on ".w0";
@@ -601,7 +598,7 @@ createNode parentConstraint -n "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_parentCo
 		-9.1178027147387217e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 90.000015560499236 -1.8534957046676176e-06 
 		91.181683605194038 ;
-	setAttr ".lr" -type "double3" -6.361109362927032e-15 3.180554681463516e-15 -3.180554681463516e-15 ;
+	setAttr ".lr" -type "double3" 6.3611093629270501e-15 6.361109362927017e-15 3.0851380410196113e-13 ;
 	setAttr ".rst" -type "double3" -0.96272174412184142 -4.1037333072937917e-14 -2.5242840373529418e-08 ;
 	setAttr ".rsrr" -type "double3" -6.361109362927032e-15 3.180554681463516e-15 -3.180554681463516e-15 ;
 	setAttr -k on ".w0";
@@ -624,7 +621,7 @@ createNode parentConstraint -n "r_knee_jnt_parentConstraint1" -p "r_knee_jnt";
 		-3.6395946952333218e-23 ;
 	setAttr ".tg[0].tor" -type "double3" 90.000015560499236 -1.8534957108941943e-06 
 		91.181683605194053 ;
-	setAttr ".lr" -type "double3" -5.4176353292540088e-17 9.1440969312638469e-15 3.7268544085934525e-15 ;
+	setAttr ".lr" -type "double3" 1.4018769896960532e-14 5.9632804138211121e-15 -4.3501013867563096e-13 ;
 	setAttr ".rst" -type "double3" -1.1144975128979384 1.4900688574405456e-08 5.5545824895197882e-07 ;
 	setAttr ".rsrr" -type "double3" -5.4176353292540088e-17 9.1440969312638469e-15 3.7268544085934525e-15 ;
 	setAttr -k on ".w0";
@@ -646,7 +643,7 @@ createNode parentConstraint -n "r_hip_jnt_parentConstraint1" -p "r_hip_jnt";
 	setAttr ".tg[0].tot" -type "double3" 7.6980590790753922e-09 9.7427367506952578e-08 
 		3.0249819969646606e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 89.99994725917395 -5.7049077939600654e-15 89.167930567458257 ;
-	setAttr ".lr" -type "double3" 5.3544283297809373e-15 8.7465253740246703e-15 -5.3177913310386187e-15 ;
+	setAttr ".lr" -type "double3" -9.141376950080392e-16 -1.3517357396219947e-14 7.4502705277162928e-15 ;
 	setAttr ".rst" -type "double3" 0.53108992370605401 1.4901199874847861e-08 -0.524953 ;
 	setAttr ".rsrr" -type "double3" 5.3544283297809373e-15 8.7465253740246703e-15 -5.3177913310386187e-15 ;
 	setAttr -k on ".w0";
@@ -689,6 +686,7 @@ createNode parentConstraint -n "Root_parentConstraint1" -p "root_jnt";
 	setAttr -k on ".w0";
 createNode transform -n "Controls" -p "Rig";
 	rename -uid "DBAF53C9-4E68-F22E-BF9D-86A431FE4A52";
+	setAttr ".v" no;
 createNode transform -n "transform_ctrl_grp" -p "Controls";
 	rename -uid "D961BDE9-464C-310E-8178-8E973E4F4DD3";
 createNode transform -n "transform_ctrl" -p "transform_ctrl_grp";
@@ -818,12 +816,12 @@ createNode nurbsCurve -n "torso_ctrlShape" -p "torso_ctrl";
 		;
 createNode transform -n "neck_ctrl_grp" -p "torso_ctrl";
 	rename -uid "5A4CD795-4247-602E-E69A-C69EEE37B143";
-	setAttr ".rp" -type "double3" 2.9802322387695313e-07 4.6869306564331055 -2.9802322387695313e-08 ;
-	setAttr ".sp" -type "double3" 2.9802322387695313e-07 4.6869306564331055 -2.9802322387695313e-08 ;
+	setAttr ".rp" -type "double3" 2.9802322387695312e-07 4.6869306564331055 -2.9802322387695312e-08 ;
+	setAttr ".sp" -type "double3" 2.9802322387695312e-07 4.6869306564331055 -2.9802322387695312e-08 ;
 createNode transform -n "neck_ctrl" -p "neck_ctrl_grp";
 	rename -uid "675A1032-4527-C273-C7EC-DF9368634441";
-	setAttr ".rp" -type "double3" 2.9802322387695313e-07 4.6869306564331055 -2.9802322387695313e-08 ;
-	setAttr ".sp" -type "double3" 2.9802322387695313e-07 4.6869306564331055 -2.9802322387695313e-08 ;
+	setAttr ".rp" -type "double3" 2.9802322387695312e-07 4.6869306564331055 -2.9802322387695312e-08 ;
+	setAttr ".sp" -type "double3" 2.9802322387695312e-07 4.6869306564331055 -2.9802322387695312e-08 ;
 createNode nurbsCurve -n "neck_ctrlShape" -p "neck_ctrl";
 	rename -uid "241AC764-4CB5-3608-B65B-3281478A2A5D";
 	setAttr -k off ".v";
@@ -954,12 +952,12 @@ createNode nurbsCurve -n "r_hand_ctrlShape" -p "r_hand_ctrl";
 		;
 createNode transform -n "l_shoulder_ctrl_grp" -p "torso_ctrl";
 	rename -uid "1BA0FC3D-4B11-BC2F-A957-88A421D23170";
-	setAttr ".rp" -type "double3" 0.62123477458953857 4.3650650978088379 -2.9802322387695313e-08 ;
-	setAttr ".sp" -type "double3" 0.62123477458953857 4.3650650978088379 -2.9802322387695313e-08 ;
+	setAttr ".rp" -type "double3" 0.62123477458953857 4.3650650978088379 -2.9802322387695312e-08 ;
+	setAttr ".sp" -type "double3" 0.62123477458953857 4.3650650978088379 -2.9802322387695312e-08 ;
 createNode transform -n "l_shoulder_ctrl" -p "l_shoulder_ctrl_grp";
 	rename -uid "9D061743-49D8-F463-635A-C1A2A3F959B7";
-	setAttr ".rp" -type "double3" 0.62123477458953857 4.2504386461339863 -2.9802322387695313e-08 ;
-	setAttr ".sp" -type "double3" 0.62123477458953857 4.2504386461339863 -2.9802322387695313e-08 ;
+	setAttr ".rp" -type "double3" 0.62123477458953857 4.2504386461339863 -2.9802322387695312e-08 ;
+	setAttr ".sp" -type "double3" 0.62123477458953857 4.2504386461339863 -2.9802322387695312e-08 ;
 createNode nurbsCurve -n "l_shoulder_ctrlShape" -p "l_shoulder_ctrl";
 	rename -uid "FB36DEFF-42B9-626A-A631-8D9EECD3405E";
 	setAttr -k off ".v";
@@ -981,12 +979,12 @@ createNode nurbsCurve -n "l_shoulder_ctrlShape" -p "l_shoulder_ctrl";
 		;
 createNode transform -n "l_elbow_ctrl_grp" -p "l_shoulder_ctrl";
 	rename -uid "2993B8D9-4108-74BF-D711-B6885F533B67";
-	setAttr ".rp" -type "double3" 1.6917498111724854 4.2504386461339863 -2.9802322387695313e-08 ;
-	setAttr ".sp" -type "double3" 1.6917498111724854 4.2504386461339863 -2.9802322387695313e-08 ;
+	setAttr ".rp" -type "double3" 1.6917498111724854 4.2504386461339863 -2.9802322387695312e-08 ;
+	setAttr ".sp" -type "double3" 1.6917498111724854 4.2504386461339863 -2.9802322387695312e-08 ;
 createNode transform -n "l_elbow_ctrl" -p "l_elbow_ctrl_grp";
 	rename -uid "218779A5-4AE0-987F-20AD-40A4CE6B919A";
-	setAttr ".rp" -type "double3" 1.9334035124688111 4.2504386461339863 -2.9802322387695313e-08 ;
-	setAttr ".sp" -type "double3" 1.9334035124688111 4.2504386461339863 -2.9802322387695313e-08 ;
+	setAttr ".rp" -type "double3" 1.9334035124688111 4.2504386461339863 -2.9802322387695312e-08 ;
+	setAttr ".sp" -type "double3" 1.9334035124688111 4.2504386461339863 -2.9802322387695312e-08 ;
 createNode nurbsCurve -n "l_elbow_ctrlShape" -p "l_elbow_ctrl";
 	rename -uid "6C1AF0FB-4408-8038-2436-5989D69AA223";
 	setAttr -k off ".v";
@@ -1223,37 +1221,36 @@ createNode nurbsCurve -n "l_foot_ctrlShape" -p "l_foot_ctrl";
 		-0.18184623271587963 0.3157628178596506 -0.78361165603495897
 		;
 createNode fosterParent -n "OtterRNfosterParent1";
-	rename -uid "051124BD-45DE-3CA7-AA27-6EA41929496F";
+	rename -uid "9D0BDCF0-B741-1993-8D3F-9FBEE662F6A0";
 createNode mesh -n "Otter_GeoShapeDeformed" -p "OtterRNfosterParent1";
 	rename -uid "588C03BE-4986-5DAE-D4E0-7DBFF6E3AE1A";
 	setAttr -k off ".v";
 	setAttr -s 8 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.4088275134563446 -0.7605939507484436 ;
+	setAttr ".pv" -type "double2" 0.39680159464478493 0.33965867012739182 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".dmb" yes;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1CD2DBD3-4B49-6187-70E7-97A53DF3F620";
+	rename -uid "B6D66D33-4C43-AD11-66AC-249DA8F99E18";
 	setAttr -s 11 ".lnk";
 	setAttr -s 11 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9FF89615-4F1F-D6C0-A029-3E8DFA9EB91E";
+	rename -uid "2E352B7B-2E4B-18A7-7F02-A982752A5709";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "91D06214-47E6-465C-8860-0AA8988DBE99";
+	rename -uid "A2AC93B1-E04E-58DE-273B-1CBBCBB1AD85";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "A35D9810-4E6C-861B-37C9-82ACC6B9652A";
+	rename -uid "D931E806-2948-5336-3E49-E9B0E1CB206C";
 	setAttr ".cdl" 7;
 	setAttr -s 8 ".dli[1:7]"  6 2 3 4 1 5 7;
 createNode displayLayer -n "defaultLayer";
 	rename -uid "3D804456-4541-F02E-83FF-FEA5BC63BD6C";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "270DC532-4E33-6E99-3963-AC8DD7C1EAC9";
+	rename -uid "0304061E-DE4B-AF1A-0AB8-668CEA91218B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4D4134FE-4A60-A1A8-A362-E0AA1D5A60D0";
 	setAttr ".g" yes;
@@ -1278,47 +1275,48 @@ createNode renderLayer -n "Raccoon_Rig:Racoon:defaultRenderLayer";
 createNode script -n "Raccoon_Rig:Racoon:uiConfigurationScriptNode";
 	rename -uid "23FAB1EB-41FA-C494-372A-0A907CA955F9";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
-		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
-		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 253\n            -height 322\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 252\n            -height 322\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
-		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 253\n            -height 322\n"
-		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
-		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
-		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 712\n            -height 688\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n"
-		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
-		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n"
-		+ "            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n"
-		+ "                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n"
-		+ "                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n"
-		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n"
-		+ "                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
-		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n"
-		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
-		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
-		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
-		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
-		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
-		+ "                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 712\\n    -height 688\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 712\\n    -height 688\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n"
+		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
+		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n"
+		+ "            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n"
+		+ "            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n"
+		+ "            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n"
+		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 457\n            -height 491\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
+		+ "            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n"
+		+ "            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
+		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
+		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n"
+		+ "                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n"
+		+ "                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n"
+		+ "                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n"
+		+ "                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n"
+		+ "                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n"
+		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n"
+		+ "                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n"
+		+ "                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
+		+ "                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
+		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
+		+ "                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 457\\n    -height 491\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 457\\n    -height 491\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "Raccoon_Rig:Racoon:sceneConfigurationScriptNode";
@@ -1872,7 +1870,7 @@ createNode reference -n "OtterRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"OtterRN"
 		"OtterRN" 0
-		"OtterRN" 1135
+		"OtterRN" 33
 		0 "|Otter:Otter_Geo" "|Rig" "-s -r "
 		0 "|OtterRNfosterParent1|Otter_GeoShapeDeformed" "|Rig|Otter:Otter_Geo" "-s -r "
 		
@@ -1883,2224 +1881,46 @@ createNode reference -n "OtterRN";
 		
 		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "intermediateObject" " 1"
 		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts" " -s 1109"
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[0]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[2]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[3]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[4]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[5]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[6]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[7]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[8]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[9]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[10]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[11]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[12]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[13]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[14]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[15]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[16]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[17]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[18]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[19]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[20]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[21]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[22]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[23]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[24]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[25]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[26]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[27]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[28]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[29]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[30]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[31]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[32]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[33]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[34]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[35]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[36]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[37]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[38]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[39]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[40]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[41]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[42]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[43]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[44]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[45]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[46]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[47]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[48]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[49]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[50]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[51]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[52]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[53]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[54]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[55]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[56]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[57]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[58]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[59]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[60]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[61]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[62]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[63]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[64]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[65]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[66]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[67]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[68]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[69]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[70]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[71]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[72]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[73]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[74]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[75]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[76]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[77]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[78]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[79]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[80]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[81]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[82]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[83]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[84]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[85]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[86]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[87]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[88]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[89]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[90]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[91]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[92]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[93]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[94]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[95]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[96]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[97]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[98]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[99]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[100]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[101]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[102]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[103]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[104]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[105]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[106]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[107]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[108]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[109]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[110]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[111]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[112]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[113]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[114]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[115]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[116]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[117]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[118]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[119]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[120]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[121]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[122]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[123]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[124]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[125]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[126]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[127]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[128]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[129]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[130]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[131]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[132]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[133]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[134]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[135]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[136]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[137]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[138]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[139]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[140]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[141]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[142]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[143]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[144]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[145]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[146]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[147]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[148]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[149]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[150]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[151]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[152]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[153]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[154]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[155]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[156]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[157]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[158]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[159]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[160]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[161]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[162]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[163]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[164]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[165]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[166]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[167]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[168]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[169]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[170]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[171]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[172]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[173]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[174]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[175]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[176]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[177]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[178]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[179]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[180]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[181]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[182]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[183]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[184]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[185]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[186]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[187]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[188]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[189]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[190]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[191]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[192]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[193]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[194]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[195]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[196]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[197]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[198]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[199]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[200]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[201]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[202]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[203]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[204]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[205]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[206]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[207]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[208]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[209]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[210]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[211]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[212]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[213]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[214]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[215]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[216]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[217]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[218]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[219]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[220]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[221]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[222]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[223]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[224]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[225]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[226]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[227]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[228]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[229]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[230]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[231]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[232]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[233]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[234]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[235]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[236]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[237]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[238]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[239]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[240]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[241]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[242]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[243]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[244]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[245]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[246]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[247]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[248]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[249]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[250]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[251]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[252]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[253]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[254]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[255]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[256]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[257]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[258]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[259]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[260]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[261]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[262]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[263]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[264]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[265]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[266]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[267]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[268]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[269]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[270]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[271]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[272]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[273]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[274]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[275]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[276]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[277]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[278]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[279]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[280]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[281]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[282]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[283]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[284]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[285]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[286]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[287]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[288]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[289]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[290]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[291]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[292]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[293]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[294]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[295]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[296]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[297]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[298]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[299]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[300]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[301]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[302]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[303]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[304]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[305]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[306]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[307]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[308]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[309]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[310]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[311]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[312]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[313]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[314]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[315]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[316]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[317]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[318]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[319]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[320]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[321]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[322]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[323]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[324]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[325]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[326]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[327]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[328]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[329]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[330]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[331]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[332]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[333]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[334]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[335]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[336]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[337]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[338]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[339]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[340]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[341]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[342]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[343]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[344]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[345]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[346]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[347]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[348]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[349]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[350]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[351]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[352]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[353]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[354]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[355]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[356]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[357]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[358]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[359]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[360]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[361]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[362]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[363]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[364]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[365]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[366]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[367]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[368]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[369]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[370]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[371]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[372]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[373]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[374]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[375]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[376]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[377]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[378]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[379]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[380]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[381]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[382]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[383]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[384]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[385]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[386]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[387]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[388]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[389]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[390]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[391]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[392]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[393]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[394]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[395]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[396]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[397]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[398]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[399]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[400]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[401]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[402]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[403]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[404]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[405]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[406]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[407]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[408]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[409]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[410]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[411]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[412]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[413]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[414]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[415]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[416]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[417]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[418]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[419]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[420]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[421]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[422]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[423]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[424]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[425]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[426]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[427]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[428]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[429]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[430]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[431]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[432]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[433]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[434]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[435]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[436]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[437]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[438]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[439]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[440]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[441]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[442]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[443]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[444]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[445]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[446]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[447]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[448]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[449]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[450]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[451]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[452]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[453]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[454]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[455]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[456]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[457]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[458]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[459]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[460]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[461]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[462]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[463]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[464]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[465]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[466]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[467]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[468]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[469]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[470]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[471]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[472]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[473]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[474]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[475]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[476]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[477]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[478]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[479]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[480]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[481]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[482]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[483]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[484]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[485]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[486]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[487]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[488]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[489]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[490]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[491]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[492]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[493]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[494]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[495]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[496]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[497]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[498]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[499]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[500]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[501]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[502]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[503]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[504]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[505]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[506]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[507]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[508]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[509]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[510]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[511]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[512]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[513]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[514]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[515]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[516]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[517]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[518]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[519]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[520]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[521]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[522]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[523]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[524]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[525]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[526]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[527]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[528]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[529]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[530]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[531]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[532]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[533]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[534]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[535]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[536]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[537]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[538]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[539]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[540]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[541]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[542]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[543]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[544]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[545]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[546]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[547]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[548]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[549]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[550]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[551]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[552]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[553]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[554]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[555]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[556]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[557]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[558]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[559]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[560]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[561]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[562]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[563]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[564]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[565]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[566]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[567]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[568]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[569]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[570]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[571]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[572]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[573]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[574]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[575]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[576]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[577]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[578]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[579]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[580]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[581]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[582]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[583]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[584]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[585]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[586]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[587]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[588]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[589]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[590]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[591]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[592]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[593]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[594]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[595]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[596]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[597]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[598]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[599]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[600]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[601]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[602]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[603]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[604]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[605]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[606]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[607]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[608]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[609]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[610]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[611]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[612]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[613]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[614]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[615]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[616]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[617]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[618]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[619]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[620]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[621]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[622]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[623]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[624]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[625]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[626]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[627]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[628]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[629]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[630]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[631]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[632]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[633]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[634]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[635]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[636]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[637]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[638]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[639]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[640]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[641]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[642]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[643]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[644]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[645]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[646]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[647]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[648]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[649]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[650]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[651]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[652]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[653]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[654]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[655]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[656]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[657]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[658]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[659]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[660]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[661]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[662]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[663]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[664]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[665]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[666]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[667]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[668]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[669]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[670]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[671]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[672]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[673]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[674]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[675]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[676]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[677]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[678]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[679]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[680]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[681]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[682]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[683]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[684]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[685]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[686]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[687]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[688]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[689]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[690]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[691]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[692]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[693]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[694]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[695]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[696]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[697]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[698]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[699]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[700]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[701]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[702]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[703]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[704]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[705]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[706]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[707]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[708]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[709]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[710]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[711]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[712]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[713]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[714]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[715]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[716]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[717]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[718]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[719]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[720]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[721]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[722]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[723]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[724]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[725]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[726]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[727]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[728]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[729]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[730]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[731]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[732]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[733]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[734]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[735]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[736]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[737]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[738]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[739]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[740]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[741]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[742]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[743]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[744]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[745]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[746]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[747]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[748]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[749]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[750]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[751]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[752]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[753]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[754]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[755]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[756]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[757]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[758]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[759]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[760]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[761]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[762]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[763]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[764]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[765]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[766]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[767]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[768]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[769]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[770]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[771]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[772]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[773]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[774]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[775]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[776]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[777]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[778]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[779]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[780]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[781]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[782]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[783]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[784]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[785]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[786]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[787]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[788]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[789]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[790]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[791]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[792]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[793]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[794]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[795]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[796]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[797]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[798]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[799]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[800]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[801]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[802]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[803]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[804]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[805]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[806]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[807]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[808]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[809]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[810]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[811]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[812]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[813]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[814]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[815]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[816]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[817]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[818]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[819]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[820]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[821]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[822]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[823]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[824]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[825]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[826]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[827]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[828]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[829]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[830]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[831]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[832]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[833]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[834]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[835]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[836]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[837]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[838]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[839]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[840]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[841]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[842]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[843]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[844]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[845]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[846]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[847]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[848]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[849]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[850]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[851]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[852]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[853]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[854]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[855]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[856]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[857]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[858]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[859]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[860]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[861]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[862]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[863]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[864]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[865]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[866]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[867]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[868]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[869]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[870]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[871]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[872]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[873]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[874]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[875]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[876]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[877]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[878]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[879]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[880]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[881]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[882]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[883]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[884]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[885]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[886]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[887]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[888]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[889]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[890]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[891]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[892]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[893]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[894]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[895]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[896]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[897]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[898]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[899]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[900]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[901]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[902]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[903]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[904]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[905]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[906]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[907]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[908]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[909]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[910]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[911]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[912]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[913]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[914]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[915]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[916]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[917]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[918]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[919]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[920]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[921]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[922]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[923]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[924]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[925]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[926]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[927]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[928]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[929]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[930]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[931]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[932]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[933]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[934]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[935]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[936]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[937]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[938]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[939]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[940]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[941]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[942]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[943]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[944]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[945]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[946]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[947]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[948]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[949]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[950]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[951]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[952]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[953]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[954]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[955]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[956]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[957]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[958]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[959]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[960]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[961]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[962]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[963]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[964]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[965]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[966]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[967]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[968]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[969]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[970]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[971]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[972]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[973]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[974]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[975]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[976]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[977]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[978]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[979]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[980]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[981]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[982]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[983]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[984]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[985]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[986]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[987]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[988]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[989]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[990]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[991]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[992]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[993]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[994]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[995]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[996]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[997]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[998]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[999]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1000]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1001]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1002]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1003]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1004]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1005]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1006]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1007]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1008]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1009]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1010]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1011]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1012]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1013]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1014]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1015]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1016]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1017]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1018]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1019]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1020]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1021]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1022]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1023]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1024]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1025]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1026]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1027]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1028]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1029]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1030]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1031]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1032]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1033]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1034]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1035]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1036]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1037]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1038]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1039]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1040]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1041]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1042]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1043]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1044]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1045]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1046]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1047]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1048]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1049]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1050]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1051]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1052]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1053]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1054]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1055]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1056]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1057]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1058]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1059]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1060]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1061]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1062]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1063]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1064]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1065]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1066]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1067]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1068]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1069]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1070]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1071]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1072]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1073]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1074]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1075]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1076]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1077]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1078]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1079]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1080]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1081]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1082]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1083]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1084]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1085]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1086]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1087]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1088]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1089]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1090]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1091]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1092]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1093]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1094]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1095]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1096]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1097]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1098]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1099]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1100]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1101]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1102]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1103]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1104]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1105]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1106]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1107]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
-		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pnts[1108]" " -type \"float3\" 2.2047625000000003e-07 0 0"
-		
+		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pt[0:165]" (" -type \"float3\" 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625"
+		+ "000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.20476"
+		+ "25000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.204"
+		+ "7625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2"
+		+ "047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0"
+		)
+		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pt[166:331]" (" 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0"
+		+ " 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07"
+		+ " 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-"
+		+ "07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003"
+		+ "e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0"
+		)
+		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pt[332:497]" (" 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0"
+		+ " 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07"
+		+ " 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-"
+		+ "07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003"
+		+ "e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0"
+		)
+		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pt[498:663]" (" 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0"
+		+ " 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07"
+		+ " 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-"
+		+ "07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003"
+		+ "e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0"
+		)
+		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pt[664:829]" (" 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0"
+		+ " 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07"
+		+ " 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-"
+		+ "07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003"
+		+ "e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0"
+		)
+		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pt[830:995]" (" 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0"
+		+ " 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07"
+		+ " 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-"
+		+ "07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003"
+		+ "e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0"
+		)
+		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "pt[996:1108]" (" 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0"
+		+ " 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07"
+		+ " 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0 2.2047625000000003e-07 0 0"
+		)
 		2 "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape" "vertexColorSource" " 2"
 		5 3 "OtterRN" "|Rig|Otter:Otter_Geo|Otter:Otter_GeoShape.worldMesh" 
 		"OtterRN.placeHolderList[1]" ""
@@ -5247,56 +3067,56 @@ createNode skinCluster -n "skinCluster1";
 		1 7 1
 		1 7 1;
 	setAttr -s 18 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 -2.9949727058410645 -0 1;
-	setAttr ".pm[1]" -type "matrix" 2.2204460492503131e-16 -0 1 -0 -0 1 -0 0 -1 -0 2.2204460492503131e-16 -0
-		 -0 -2.9949727058410645 -0 1;
-	setAttr ".pm[2]" -type "matrix" 2.2204460492503131e-16 2.2204460492503131e-16 1 -0
-		 -1 4.9303806576313238e-32 2.2204460492503131e-16 0 4.9303806576313238e-32 -1 2.2204460492503131e-16 -0
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 -2.9949727058410645 0 1;
+	setAttr ".pm[1]" -type "matrix" 2.2204460492503131e-16 0 1 0 0 1 0 0 -1 0 2.2204460492503131e-16 0
+		 0 -2.9949727058410645 0 1;
+	setAttr ".pm[2]" -type "matrix" 2.2204460492503131e-16 2.2204460492503131e-16 1 0
+		 -1 4.9303806576313238e-32 2.2204460492503131e-16 0 4.9303806576313238e-32 -1 2.2204460492503131e-16 0
 		 3.1057937145233154 -1.5312745256678696e-31 -6.8962473831997505e-16 1;
-	setAttr ".pm[3]" -type "matrix" 0.99999999999999978 -1.1102230246251557e-16 2.7755575615628904e-16 -0
-		 -2.7755575615628904e-16 -0.99999999999999978 -2.2204460492503116e-16 0 2.2204460492503126e-16 5.551115123125779e-17 -0.99999999999999978 -0
+	setAttr ".pm[3]" -type "matrix" 0.99999999999999978 -1.1102230246251557e-16 2.7755575615628904e-16 0
+		 -2.7755575615628904e-16 -0.99999999999999978 -2.2204460492503116e-16 0 2.2204460492503126e-16 5.551115123125779e-17 -0.99999999999999978 0
 		 -0.6212347745895368 4.2504386461339854 -2.9802321893151973e-08 1;
-	setAttr ".pm[4]" -type "matrix" 0.99883136964287045 0.048331097828897038 2.5086376382119884e-08 -0
-		 0.048331097828896857 -0.99883136964287078 1.213870441744918e-09 0 2.511572732480342e-08 6.6177939086041679e-17 -0.99999999999999933 -0
-		 -2.1365724444535839 4.1520279401971365 -8.346389241668157e-08 1;
-	setAttr ".pm[5]" -type "matrix" 0.99883136964287045 0.048331097828897038 2.5086376382119884e-08 -0
-		 0.048331097828896857 -0.99883136964287078 1.213870441744918e-09 0 2.511572732480342e-08 6.6177939086041679e-17 -0.99999999999999933 -0
+	setAttr ".pm[4]" -type "matrix" 0.99883136964287045 0.048331097828897038 2.5086376382119884e-08 0
+		 0.048331097828896857 -0.99883136964287078 1.213870441744918e-09 0 2.511572732480342e-08 6.6177939086041679e-17 -0.99999999999999933 0
+		 -2.1365724444535839 4.1520279401971365 -8.3463892416681584e-08 1;
+	setAttr ".pm[5]" -type "matrix" 0.99883136964287045 0.048331097828897038 2.5086376382119884e-08 0
+		 0.048331097828896857 -0.99883136964287078 1.213870441744918e-09 0 2.511572732480342e-08 6.6177939086041679e-17 -0.99999999999999933 0
 		 -2.9694480658048206 4.1224543435021159 -7.4579846756343162e-08 1;
-	setAttr ".pm[6]" -type "matrix" -3.3082434164333186e-07 -2.2204461421874047e-16 0.99999999999994538 -0
-		 0.99999999999994438 4.1855161237232397e-08 3.308243416433316e-07 -0 -4.185516123723018e-08 0.99999999999999922 -1.3624661546464182e-14 -0
+	setAttr ".pm[6]" -type "matrix" -3.3082434164333186e-07 -2.2204461421874047e-16 0.99999999999994538 0
+		 0.99999999999994438 4.1855161237232397e-08 3.308243416433316e-07 0 -4.185516123723018e-08 0.99999999999999922 -1.3624661546464182e-14 0
 		 -4.6869306564327458 -1.6636991603281042e-07 -1.8485739722682841e-06 1;
-	setAttr ".pm[7]" -type "matrix" -3.3082434164333181e-07 -0.055422152901367767 0.99846301131672766 -0
-		 0.99999999999994427 2.3455833082024535e-08 3.3263557151989428e-07 -0 -4.185516123723018e-08 0.99846301131678217 0.055422152901356936 -0
+	setAttr ".pm[7]" -type "matrix" -3.3082434164333181e-07 -0.055422152901367767 0.99846301131672766 0
+		 0.99999999999994427 2.3455833082024535e-08 3.3263557151989428e-07 0 -4.185516123723018e-08 0.99846301131678217 0.055422152901356936 0
 		 -5.8213958740231426 -7.0149437716246546e-08 -1.8543147265251537e-06 1;
-	setAttr ".pm[8]" -type "matrix" 1.0000000000000002 5.5511151231257837e-16 -1.6653345369377336e-16 -0
-		 -4.9960036108132054e-16 1 2.2204460492503126e-16 0 1.1102230246251573e-16 -1.1102230246251562e-16 1 -0
+	setAttr ".pm[8]" -type "matrix" 1.0000000000000002 5.5511151231257837e-16 -1.6653345369377336e-16 0
+		 -4.9960036108132054e-16 1 2.2204460492503126e-16 0 1.1102230246251573e-16 -1.1102230246251562e-16 1 0
 		 0.62123500000000231 -4.2504435483251477 2.9802298813880713e-08 1;
-	setAttr ".pm[9]" -type "matrix" 0.998831369642871 0.048331097828895414 2.5086376547226239e-08 -0
-		 -0.048331097828895338 0.99883136964287123 -1.2138704712224175e-09 0 -2.511572759935115e-08 -1.0552672871249201e-16 0.99999999999999978 -0
+	setAttr ".pm[9]" -type "matrix" 0.998831369642871 0.048331097828895414 2.5086376547226239e-08 0
+		 -0.048331097828895338 0.99883136964287123 -1.2138704712224175e-09 0 -2.511572759935115e-08 -1.0552672871249201e-16 0.99999999999999978 0
 		 2.0434120183432363 -4.1565406617598342 8.1124078355555087e-08 1;
-	setAttr ".pm[10]" -type "matrix" 0.998831369642871 0.048331097828895414 2.5086376547226239e-08 -0
-		 -0.048331097828895338 0.99883136964287123 -1.2138704712224175e-09 0 -2.511572759935115e-08 -1.0552672871249201e-16 0.99999999999999978 -0
+	setAttr ".pm[10]" -type "matrix" 0.998831369642871 0.048331097828895414 2.5086376547226239e-08 0
+		 -0.048331097828895338 0.99883136964287123 -1.2138704712224175e-09 0 -2.511572759935115e-08 -1.0552672871249201e-16 0.99999999999999978 0
 		 2.897251867513261 -4.1216984633978671 7.2766586779713984e-08 1;
-	setAttr ".pm[11]" -type "matrix" 2.2204460492503131e-16 2.2204460492503131e-16 1 -0
-		 -1 4.9303806576313238e-32 2.2204460492503131e-16 0 4.9303806576313238e-32 -1 2.2204460492503131e-16 -0
+	setAttr ".pm[11]" -type "matrix" 2.2204460492503131e-16 2.2204460492503131e-16 1 0
+		 -1 4.9303806576313238e-32 2.2204460492503131e-16 0 4.9303806576313238e-32 -1 2.2204460492503131e-16 0
 		 2.9237499237060542 2.0210920805536698e-17 -6.7951927791720652e-16 1;
-	setAttr ".pm[12]" -type "matrix" 0.014521840750971352 9.205110243493132e-07 0.99989455251059167 -0
-		 -0.99989455251101544 1.3368924221379313e-08 0.014521840750965199 0 3.224495611519512e-18 -0.99999999999957656 9.2060810016176749e-07 -0
+	setAttr ".pm[12]" -type "matrix" 0.014521840750971352 9.205110243493132e-07 0.99989455251059167 0
+		 -0.99989455251101544 1.3368924221379313e-08 0.014521840750965199 0 3.224495611519512e-18 -0.99999999999957656 9.2060810016176749e-07 0
 		 2.3847831309750305 -5.3011319078736128e-07 -0.5596431634945247 1;
-	setAttr ".pm[13]" -type "matrix" -0.020622807533637221 2.7231994879405862e-07 0.99978732728983755 -0
-		 -0.99978732728987418 2.673928752898913e-08 -0.02062280753364526 0 -3.2349602703794515e-08 -0.99999999999996281 2.7171059459223011e-07 -0
+	setAttr ".pm[13]" -type "matrix" -0.020622807533637221 2.7231994879405862e-07 0.99978732728983755 0
+		 -0.99978732728987418 2.673928752898913e-08 -0.02062280753364526 0 -3.2349602703794515e-08 -0.99999999999996281 2.7171059459223011e-07 0
 		 1.2905201422433912 -1.9937327045439151e-07 -0.58012259965038571 1;
-	setAttr ".pm[14]" -type "matrix" -0.020622807533637221 2.7231994879405862e-07 0.99978732728983755 -0
-		 -0.99978732728987418 2.673928752898913e-08 -0.02062280753364526 0 -3.2349602703794515e-08 -0.99999999999996281 2.7171059459223011e-07 -0
+	setAttr ".pm[14]" -type "matrix" -0.020622807533637221 2.7231994879405862e-07 0.99978732728983755 0
+		 -0.99978732728987418 2.673928752898913e-08 -0.02062280753364526 0 -3.2349602703794515e-08 -0.99999999999996281 2.7171059459223011e-07 0
 		 0.32810575558865357 -2.0345972784648408e-07 -0.59512549727950048 1;
-	setAttr ".pm[15]" -type "matrix" 0.014521840750976416 -9.2040400052350788e-07 0.99989455251059156 -0
-		 0.99989455251101511 1.3367369996991778e-08 -0.014521840750970263 0 -1.192272690858292e-16 0.99999999999957645 9.2050106505115684e-07 -0
+	setAttr ".pm[15]" -type "matrix" 0.014521840750976416 -9.2040400052350788e-07 0.99989455251059156 0
+		 0.99989455251101511 1.3367369996991778e-08 -0.014521840750970263 0 -1.192272690858292e-16 0.99999999999957645 9.2050106505115684e-07 0
 		 -2.3847844161432583 -5.0025121281262567e-07 0.55964347251532276 1;
-	setAttr ".pm[16]" -type "matrix" -0.020622807533636756 2.7219132652177462e-07 0.99978732728983744 -0
-		 0.99978732728987396 -2.6741940650178807e-08 0.020622807533644791 -0 3.2349602708371755e-08 0.9999999999999627 -2.7158194495958606e-07 -0
+	setAttr ".pm[16]" -type "matrix" -0.020622807533636756 2.7219132652177462e-07 0.99978732728983744 0
+		 0.99978732728987396 -2.6741940650178807e-08 0.020622807533644791 0 3.2349602708371755e-08 0.9999999999999627 -2.7158194495958606e-07 0
 		 -1.2891679089284303 1.8147648571833658e-07 0.5146601925135329 1;
-	setAttr ".pm[17]" -type "matrix" -0.020622807533636756 2.7219132652177462e-07 0.99978732728983744 -0
-		 0.99978732728987396 -2.6741940650178807e-08 0.020622807533644791 -0 3.2349602708371755e-08 0.9999999999999627 -2.7158194495958606e-07 -0
+	setAttr ".pm[17]" -type "matrix" -0.020622807533636756 2.7219132652177462e-07 0.99978732728983744 0
+		 0.99978732728987396 -2.6741940650178807e-08 0.020622807533644791 0 3.2349602708371755e-08 0.9999999999999627 -2.7158194495958606e-07 0
 		 -0.32644616480658878 1.814765267556696e-07 0.51466021775637327 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 18 ".ma";
@@ -5311,6 +3131,118 @@ createNode skinCluster -n "skinCluster1";
 	setAttr -s 18 ".ifcl";
 createNode tweak -n "tweak1";
 	rename -uid "636564B5-4238-1A33-60C1-9B952B41065D";
+	setAttr -s 111 ".vl[0].vt";
+	setAttr ".vl[0].vt[197]" -type "float3" 0 -0.0003354536 0 ;
+	setAttr ".vl[0].vt[206]" -type "float3" 0 -0.031483207 0 ;
+	setAttr ".vl[0].vt[207]" -type "float3" 0 -0.094854377 0 ;
+	setAttr ".vl[0].vt[216]" -type "float3" 0 -0.066628233 0 ;
+	setAttr ".vl[0].vt[217]" -type "float3" 0 -0.090845674 0 ;
+	setAttr ".vl[0].vt[226]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[227]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[236]" -type "float3" 0 -0.027392266 0 ;
+	setAttr ".vl[0].vt[237]" -type "float3" 0 -0.048534196 0 ;
+	setAttr ".vl[0].vt[251]" -type "float3" 0 -0.14504349 -0.047034033 ;
+	setAttr ".vl[0].vt[252]" -type "float3" 0 -0.14504349 -0.047034033 ;
+	setAttr ".vl[0].vt[253]" -type "float3" 0 -0.14504349 -0.047034033 ;
+	setAttr ".vl[0].vt[254]" -type "float3" 0 -0.14504349 -0.047034033 ;
+	setAttr ".vl[0].vt[255]" -type "float3" 0 -0.14504349 -0.047034033 ;
+	setAttr ".vl[0].vt[256]" -type "float3" 0 -0.14504349 -0.047034033 ;
+	setAttr ".vl[0].vt[257]" -type "float3" 0 -0.14504349 -0.047034033 ;
+	setAttr ".vl[0].vt[258]" -type "float3" 0 -0.14504349 -0.047034033 ;
+	setAttr ".vl[0].vt[259]" -type "float3" 0 -0.14504349 -0.047034033 ;
+	setAttr ".vl[0].vt[260]" -type "float3" 0 -0.14504349 -0.047034033 ;
+	setAttr ".vl[0].vt[262]" -type "float3" 0 -0.14504349 -0.037307762 ;
+	setAttr ".vl[0].vt[263]" -type "float3" 0 -0.14504349 -0.037068088 ;
+	setAttr ".vl[0].vt[264]" -type "float3" 0 -0.14504349 -0.037307762 ;
+	setAttr ".vl[0].vt[265]" -type "float3" 0 -0.14504349 -0.037697967 ;
+	setAttr ".vl[0].vt[266]" -type "float3" 0 -0.14504349 -0.037697967 ;
+	setAttr ".vl[0].vt[267]" -type "float3" 0 -0.14504349 -0.037307762 ;
+	setAttr ".vl[0].vt[268]" -type "float3" 0 -0.14504349 -0.037068088 ;
+	setAttr ".vl[0].vt[269]" -type "float3" 0 -0.14504349 -0.037307762 ;
+	setAttr ".vl[0].vt[270]" -type "float3" 0 -0.14504349 -0.037697967 ;
+	setAttr ".vl[0].vt[271]" -type "float3" 0 -0.14504349 -0.037698321 ;
+	setAttr ".vl[0].vt[272]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[273]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[274]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[275]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[276]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[277]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[278]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[279]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[280]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[281]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[282]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[283]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[284]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[285]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[286]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[287]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[288]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[289]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[290]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[291]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[292]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[293]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[294]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[295]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[296]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[297]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[298]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[299]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[300]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[301]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[302]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[303]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[304]" -type "float3" 0 -0.14504351 0 ;
+	setAttr ".vl[0].vt[305]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[306]" -type "float3" 0 -0.14504351 0 ;
+	setAttr ".vl[0].vt[307]" -type "float3" 0 -0.14504348 0 ;
+	setAttr ".vl[0].vt[308]" -type "float3" 0 -0.14504348 0 ;
+	setAttr ".vl[0].vt[309]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[310]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[311]" -type "float3" 0 -0.14504348 0 ;
+	setAttr ".vl[0].vt[312]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[313]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[314]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[315]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[316]" -type "float3" 0 -0.14504348 0 ;
+	setAttr ".vl[0].vt[317]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[318]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[319]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[320]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[321]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[322]" -type "float3" 0 -0.13518278 0 ;
+	setAttr ".vl[0].vt[323]" -type "float3" 0 -0.13742605 0 ;
+	setAttr ".vl[0].vt[324]" -type "float3" 0 -0.13742603 0 ;
+	setAttr ".vl[0].vt[325]" -type "float3" 0 -0.13518278 0 ;
+	setAttr ".vl[0].vt[326]" -type "float3" 0 -0.13068368 0 ;
+	setAttr ".vl[0].vt[327]" -type "float3" 0 -0.12517615 0 ;
+	setAttr ".vl[0].vt[328]" -type "float3" 0 -0.12130808 0 ;
+	setAttr ".vl[0].vt[329]" -type "float3" 0 -0.12130808 0 ;
+	setAttr ".vl[0].vt[330]" -type "float3" 0 -0.12517615 0 ;
+	setAttr ".vl[0].vt[331]" -type "float3" 0 -0.13068368 0 ;
+	setAttr ".vl[0].vt[720]" -type "float3" 0 -0.015942739 0 ;
+	setAttr ".vl[0].vt[721]" -type "float3" 0 -0.054411169 0 ;
+	setAttr ".vl[0].vt[722]" -type "float3" 0 -0.0049424544 0 ;
+	setAttr ".vl[0].vt[730]" -type "float3" 0 -0.021495368 0 ;
+	setAttr ".vl[0].vt[731]" -type "float3" 0 -0.063155793 0 ;
+	setAttr ".vl[0].vt[732]" -type "float3" 0 -0.0092732403 0 ;
+	setAttr ".vl[0].vt[870]" -type "float3" 0 -0.044475816 0 ;
+	setAttr ".vl[0].vt[871]" -type "float3" 0 -0.072765723 0 ;
+	setAttr ".vl[0].vt[900]" -type "float3" 0 -0.092405647 0 ;
+	setAttr ".vl[0].vt[901]" -type "float3" 0 -0.11800951 0 ;
+	setAttr ".vl[0].vt[902]" -type "float3" 0 -0.007508344 0 ;
+	setAttr ".vl[0].vt[972]" -type "float3" 0 -0.092405647 0 ;
+	setAttr ".vl[0].vt[973]" -type "float3" 0 -0.11800951 0 ;
+	setAttr ".vl[0].vt[974]" -type "float3" 0 -0.007508344 0 ;
+	setAttr ".vl[0].vt[981]" -type "float3" 0 -0.0033105225 0 ;
+	setAttr ".vl[0].vt[982]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[983]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[984]" -type "float3" 0 -0.023669306 0 ;
+	setAttr ".vl[0].vt[991]" -type "float3" 0 -0.0003354536 0 ;
+	setAttr ".vl[0].vt[992]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[993]" -type "float3" 0 -0.14504349 0 ;
+	setAttr ".vl[0].vt[994]" -type "float3" 0 -0.14504349 0 ;
 createNode objectSet -n "skinCluster1Set";
 	rename -uid "8386340C-4FEC-6B48-63D8-2792A6127824";
 	setAttr ".ihi" 0;
@@ -5372,7 +3304,7 @@ createNode dagPose -n "bindPose1";
 		 4.9960036108132044e-16 0 -1.1446498338018323 2.9802299723183297e-08 -0.62123499999999987 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.50000000000000011 -0.49999999999999983 0.49999999999999978 0.50000000000000022 1
 		 1 1 yes;
-	setAttr ".xm[11]" -type "matrix" "xform" 1 1 1 -2.067951531382569e-25 3.311953624479896e-24
+	setAttr ".xm[11]" -type "matrix" "xform" 1 1 1 -2.0679515313825692e-25 3.311953624479896e-24
 		 6.9388939039072284e-18 0 -1.2188988516731833 0 3.2183847982006635e-16 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 3.0355637257374879e-10 1.2554194446472028e-08 -0.02417261215848324 0.99970779972021595 1
 		 1 1 yes;
@@ -5387,7 +3319,7 @@ createNode dagPose -n "bindPose1";
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 4.602919153334141e-07 -0.0072611117945094016 3.342319166297398e-09 0.99997363778016457 1
 		 1 1 yes;
 	setAttr ".xm[15]" -type "matrix" "xform" 1 1 1 -2.4409233797658983e-16 2.0816678166899317e-16
-		 1.0935264997660589e-16 0 1.1154451382700779 4.537035988092842e-08 0.065469249145388764 0
+		 1.0935264997660589e-16 0 1.1154451382700779 4.5370359880928414e-08 0.065469249145388764 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -3.2411442556607214e-07 0.017572405927318298 5.6963498072136229e-09 0.99984559335420409 1
 		 1 1 yes;
 	setAttr ".xm[16]" -type "matrix" "xform" 1 1 1 -2.2204460492503131e-16 2.2204460492503131e-16
@@ -5431,8 +3363,6 @@ select -ne :initialShadingGroup;
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
-select -ne :defaultRenderGlobals;
-	setAttr ".ren" -type "string" "arnold";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
 select -ne :hardwareRenderGlobals;
@@ -5440,8 +3370,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :defaultHideFaceDataSet;
 	setAttr -s 3 ".dnsm";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "OtterRN.phl[1]" "groupParts2.ig";
 connectAttr "OtterRN.phl[2]" "Otter_GeoShapeDeformed.iog.og[2].gco";
 connectAttr "Otter_GeoShapeDeformed.iog.og[2]" "OtterRN.phl[3]";
