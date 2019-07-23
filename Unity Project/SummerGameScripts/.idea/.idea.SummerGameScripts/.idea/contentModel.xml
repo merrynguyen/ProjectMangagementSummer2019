@@ -160,7 +160,6 @@
           </e>
           <e p="Face_Swap.cs" t="Include" />
           <e p="Game_Manager_Cafe.cs" t="Include" />
-          <e p="GameObject_List.cs" t="Include" />
           <e p="Input_Text.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="DropDown_Script.cs" t="Include" />
