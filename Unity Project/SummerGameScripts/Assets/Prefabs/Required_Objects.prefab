@@ -1057,6 +1057,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   Pause_Keys: {fileID: 11400000, guid: e584906872d5b4d48b4e8b07e4e25a1f, type: 2}
   Inventory_Keys: {fileID: 11400000, guid: 35545110aeacf6e4fb555641ca19315c, type: 2}
+  In_Control: {fileID: 11400000, guid: af5ae53fd4011044f9cd7686627ea32d, type: 2}
 --- !u!1001 &950029796897744194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1674,11 +1675,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 950029798369820359}
     m_Modifications:
-    - target: {fileID: 3742488031297739245, guid: 5a30875cbcf0b38468a615c35582f205,
-        type: 3}
-      propertyPath: m_Name
-      value: Inventory_Object
-      objectReference: {fileID: 0}
     - target: {fileID: 3742488031297739247, guid: 5a30875cbcf0b38468a615c35582f205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1728,6 +1724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742488031297739245, guid: 5a30875cbcf0b38468a615c35582f205,
+        type: 3}
+      propertyPath: m_Name
+      value: Inventory_Object
       objectReference: {fileID: 0}
     - target: {fileID: 3742488031203425354, guid: 5a30875cbcf0b38468a615c35582f205,
         type: 3}

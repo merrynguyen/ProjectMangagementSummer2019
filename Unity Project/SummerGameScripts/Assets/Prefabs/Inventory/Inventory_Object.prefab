@@ -9159,12 +9159,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  OnPause:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnUnPause:
+  OnUnPauseConv:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -9214,6 +9209,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   Pause_Keys: {fileID: 11400000, guid: e584906872d5b4d48b4e8b07e4e25a1f, type: 2}
   Inventory_Keys: {fileID: 11400000, guid: e584906872d5b4d48b4e8b07e4e25a1f, type: 2}
+  In_Control: {fileID: 11400000, guid: af5ae53fd4011044f9cd7686627ea32d, type: 2}
 --- !u!1 &3742488031340787371
 GameObject:
   m_ObjectHideFlags: 0
