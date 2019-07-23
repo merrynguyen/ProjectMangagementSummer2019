@@ -15,7 +15,11 @@ I am going to make an apple pie today but my hips don't work like they use to...
 
 Me@
  ^
-~Sure Rose!>
+~Sure Rose!<
+
+Rose@
+ ^
+~Thanks, I'll be waiting at my house.>
 
 2 - Give Rose Apples#
 Me@
@@ -25,4 +29,17 @@ Me@
 Rose@
  ^
 ~Thanks Sonny.>
+
+3 - Commotion at Docks#
+ @
+ ^
+~Carl is fine. There is nothing to worry about!<
+
+Rose@
+ ^
+I think somethings happening outside. You should check it out.<
+
+Me@
+ ^
+~I will, see you later Rose.>
 %

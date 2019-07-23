@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Owner\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.179902281.00" t="ExcludeRecursive" />
-    <e p="E:\School\College\Summer2019\ProjectMangagementSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
+    <e p="C:\Users\10802160\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.1860553405.00" t="ExcludeRecursive" />
+    <e p="C:\Users\10802160\Documents\Repos\Summer2019\ProjectMangagementSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Material" t="Include">
@@ -97,6 +97,9 @@
               <e p="Check on carl" t="Include">
                 <e p="Checking_on_Carl.txt" t="Include" />
               </e>
+              <e p="Commotion" t="Include">
+                <e p="Group_Dialogues.txt" t="Include" />
+              </e>
             </e>
             <e p="Rose" t="Include">
               <e p="Rose_Script.txt" t="Include" />
@@ -112,7 +115,6 @@
           </e>
           <e p="Text_Files" t="Include">
             <e p="Get_Item_01.txt" t="Include" />
-            <e p="Group_Dialogues.txt" t="Include" />
             <e p="Test.txt" t="Include" />
           </e>
         </e>
