@@ -10,7 +10,17 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Ice_Cream_geo
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Detail_
+    second: {fileID: 2100000, guid: d195c6625fefe9c4a87fa17e31e149c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 3b95941b2fc19b042a6d4fb04fc03d39, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

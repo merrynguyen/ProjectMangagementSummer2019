@@ -750,6 +750,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.689
       objectReference: {fileID: 0}
+    - target: {fileID: 7074652046079084833, guid: 5dd73b12cf2aaf540a22d9e44840e8a2,
+        type: 3}
+      propertyPath: newSceneName
+      value: Island
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074652047601999303, guid: 5dd73b12cf2aaf540a22d9e44840e8a2,
+        type: 3}
+      propertyPath: newSceneName
+      value: Island
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dd73b12cf2aaf540a22d9e44840e8a2, type: 3}
 --- !u!4 &7367699868778391012 stripped

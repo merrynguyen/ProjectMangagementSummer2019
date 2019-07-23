@@ -160,6 +160,7 @@
           </e>
           <e p="Face_Swap.cs" t="Include" />
           <e p="Game_Manager_Cafe.cs" t="Include" />
+          <e p="GameObject_List.cs" t="Include" />
           <e p="Input_Text.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="DropDown_Script.cs" t="Include" />
@@ -204,6 +205,7 @@
           <e p="Mutiple_Action_Modifier.cs" t="Include" />
           <e p="NPC_Scripts" t="Include">
             <e p="NPC_Controller.cs" t="Include" />
+            <e p="StandardShaderUtils.cs" t="Include" />
           </e>
           <e p="Puzzles" t="Include">
             <e p="Antidote_Game_Manager.cs" t="Include" />

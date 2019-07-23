@@ -827,6 +827,16 @@ PrefabInstance:
       propertyPath: events.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6382882361637714797, guid: ad447fec2db6781478f32efe69a0aef3,
+        type: 3}
+      propertyPath: newSceneName
+      value: Island
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382882363143352203, guid: ad447fec2db6781478f32efe69a0aef3,
+        type: 3}
+      propertyPath: newSceneName
+      value: Island
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad447fec2db6781478f32efe69a0aef3, type: 3}
 --- !u!1 &6382882362736108881 stripped
