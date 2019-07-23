@@ -630,8 +630,8 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.060358286
-  m_TransitionOffset: 0.17926593
-  m_ExitTime: 0.7816498
+  m_TransitionOffset: 0.4659394
+  m_ExitTime: 0.6926793
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -723,9 +723,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_TransitionDuration: 0.073272705
+  m_TransitionOffset: 0.5952928
+  m_ExitTime: 0.93981797
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -952,7 +952,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400012, guid: ded6f01c56453ca488de67c49676aa4c, type: 3}
+  m_Motion: {fileID: 7400008, guid: 1905348784c1d5a4bad0dfaf2734d17d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -979,7 +979,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400002, guid: ded6f01c56453ca488de67c49676aa4c, type: 3}
+  m_Motion: {fileID: 7400006, guid: 1905348784c1d5a4bad0dfaf2734d17d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1033,7 +1033,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400008, guid: ded6f01c56453ca488de67c49676aa4c, type: 3}
+  m_Motion: {fileID: 7400020, guid: 1905348784c1d5a4bad0dfaf2734d17d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1088,7 +1088,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400002, guid: 8e18550eaa21277438b3992634d1b51c, type: 3}
+  m_Motion: {fileID: 7400002, guid: 1905348784c1d5a4bad0dfaf2734d17d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1142,7 +1142,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400010, guid: ded6f01c56453ca488de67c49676aa4c, type: 3}
+  m_Motion: {fileID: 7400022, guid: 1905348784c1d5a4bad0dfaf2734d17d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1222,7 +1222,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ded6f01c56453ca488de67c49676aa4c, type: 3}
+  m_Motion: {fileID: 7400004, guid: 1905348784c1d5a4bad0dfaf2734d17d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1275,7 +1275,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400004, guid: b3dacf1df4c7a3346938770bc1df6275, type: 3}
+  m_Motion: {fileID: 7400014, guid: 1905348784c1d5a4bad0dfaf2734d17d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1330,7 +1330,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8e18550eaa21277438b3992634d1b51c, type: 3}
+  m_Motion: {fileID: 7400000, guid: 1905348784c1d5a4bad0dfaf2734d17d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1358,7 +1358,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400006, guid: ded6f01c56453ca488de67c49676aa4c, type: 3}
+  m_Motion: {fileID: 7400018, guid: 1905348784c1d5a4bad0dfaf2734d17d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1411,7 +1411,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b3dacf1df4c7a3346938770bc1df6275, type: 3}
+  m_Motion: {fileID: 7400010, guid: 1905348784c1d5a4bad0dfaf2734d17d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
