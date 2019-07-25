@@ -40,7 +40,10 @@ public class dialouge_script : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             inRange = true;
+            Debug.Log("InRange");
+        }
     }
 
     private void OnTriggerExit(Collider other)
