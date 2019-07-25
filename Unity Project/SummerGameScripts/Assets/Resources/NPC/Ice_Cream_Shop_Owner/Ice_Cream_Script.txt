@@ -85,4 +85,31 @@ Ice Cream Worker@
  ^
 ~Hey, it's running again! Whatever you did fixed it. I'm going to open the shop, you're welcome to come in.>
 
+8 - Ask About Cafe#
+Me@
+ ^
+~Aren't you also working at the Cafe?<
+
+Cafe Owner@
+ ^
+~Nope, my brother Esteban runs the Cafe.<
+
+Me@
+ ^
+~I see...>
+
+9 - Ask About Library#
+Me@
+ ^
+~How did you get here from the library so quickly?<
+
+Cafe Owner@
+ ^
+~I wasn't at the library... wait you must be talking about my brother Elron.<
+
+Me@
+ ^
+~Yeah, sure...>
+
+
 %

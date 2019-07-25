@@ -7,6 +7,7 @@ public class Reset_Game : MonoBehaviour
     public List<BoolData> setTrue;
     public List<BoolData> setFalse;
     public Inventory inven;
+    public IntData Daylight;
 
     public void ResetGame()
     {
@@ -24,5 +25,6 @@ public class Reset_Game : MonoBehaviour
         inven.Objects.objList = new List<Object>();
         inven.Notes.objList = new List<Object>();
         inven.DetectiveNotes.objList = new List<Object>();
+        Daylight.value = 0;
     }
 }

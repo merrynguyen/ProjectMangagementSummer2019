@@ -72,6 +72,9 @@
             <e p="Bope" t="Include">
               <e p="Bope_Dialogue.txt" t="Include" />
             </e>
+            <e p="Brad" t="Include">
+              <e p="Brad_Dialogue.txt" t="Include" />
+            </e>
             <e p="Bunny" t="Include">
               <e p="Bunny_Dialogue.txt" t="Include" />
             </e>
@@ -96,22 +99,31 @@
             <e p="Kirk" t="Include">
               <e p="Kirk_Dialogue.txt" t="Include" />
             </e>
+            <e p="Librarian" t="Include">
+              <e p="Librarian_Script.txt" t="Include" />
+            </e>
             <e p="Luther" t="Include">
               <e p="Luther_Script.txt" t="Include" />
             </e>
             <e p="Merry" t="Include">
               <e p="Merry_Script.txt" t="Include" />
             </e>
-            <e p="Mouse" t="Include">
-              <e p="Mouse_Dialogue.txt" t="Include" />
-            </e>
-            <e p="Multiple_Characters" t="Include">
+            <e p="Misc" t="Include">
               <e p="Check on carl" t="Include">
                 <e p="Checking_on_Carl.txt" t="Include" />
               </e>
               <e p="Commotion" t="Include">
                 <e p="Group_Dialogues.txt" t="Include" />
               </e>
+              <e p="Michael_Door" t="Include">
+                <e p="Door_Dialogues.txt" t="Include" />
+              </e>
+              <e p="Steve_Diary" t="Include">
+                <e p="Diary_Dialogues.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Mouse" t="Include">
+              <e p="Mouse_Dialogue.txt" t="Include" />
             </e>
             <e p="Rose" t="Include">
               <e p="Rose_Script.txt" t="Include" />
@@ -167,6 +179,7 @@
             <e p="UnityKeyCodeObject.cs" t="Include" />
             <e p="Vector3Data.cs" t="Include" />
           </e>
+          <e p="Daylight_Change.cs" t="Include" />
           <e p="Dialogue_Scripts" t="Include">
             <e p="Choice_Selection.cs" t="Include" />
             <e p="dialouge_objects.cs" t="Include" />
@@ -265,6 +278,7 @@
           <e p="Scriptable_Object_Saving.cs" t="Include" />
           <e p="Show_Text.cs" t="Include" />
           <e p="Timer_Display.cs" t="Include" />
+          <e p="Transport_Object.cs" t="Include" />
         </e>
         <e p="Test.cs" t="Include" />
         <e p="TriggerReset.cs" t="Include" />
