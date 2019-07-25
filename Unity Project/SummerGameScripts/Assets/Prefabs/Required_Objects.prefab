@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &950029797492104201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1235,6 +1235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Choice_Box
       objectReference: {fileID: 0}
+    - target: {fileID: 3240964553799127331, guid: f0c3502b8299e9146bdc61bc6bf928b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3240964553799127340, guid: f0c3502b8299e9146bdc61bc6bf928b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1321,6 +1326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: dialouge_box
+      objectReference: {fileID: 0}
+    - target: {fileID: 2389682549502340812, guid: 009a535002633e04cb05028a89059553,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2389682549502340803, guid: 009a535002633e04cb05028a89059553,
         type: 3}

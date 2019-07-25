@@ -1708,7 +1708,7 @@ PrefabInstance:
     - target: {fileID: 8914848652463239960, guid: 5dd73b12cf2aaf540a22d9e44840e8a2,
         type: 3}
       propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.size
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8914848652463239960, guid: 5dd73b12cf2aaf540a22d9e44840e8a2,
         type: 3}
@@ -1895,6 +1895,32 @@ PrefabInstance:
       propertyPath: events.Array.data[3].m_TypeName
       value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914848652463239960, guid: 5dd73b12cf2aaf540a22d9e44840e8a2,
+        type: 3}
+      propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[16].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914848652463239960, guid: 5dd73b12cf2aaf540a22d9e44840e8a2,
+        type: 3}
+      propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[16].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914848652463239960, guid: 5dd73b12cf2aaf540a22d9e44840e8a2,
+        type: 3}
+      propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[16].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 9730f1b0ddcbf1a4ca177fff14f13495,
+        type: 2}
+    - target: {fileID: 8914848652463239960, guid: 5dd73b12cf2aaf540a22d9e44840e8a2,
+        type: 3}
+      propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[16].m_MethodName
+      value: setTrue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914848652463239960, guid: 5dd73b12cf2aaf540a22d9e44840e8a2,
+        type: 3}
+      propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[16].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7367699869373945463, guid: 5dd73b12cf2aaf540a22d9e44840e8a2,
         type: 3}
