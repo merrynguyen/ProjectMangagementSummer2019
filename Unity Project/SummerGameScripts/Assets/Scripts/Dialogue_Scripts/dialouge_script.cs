@@ -42,7 +42,7 @@ public class dialouge_script : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inRange = true;
-            Debug.Log("InRange");
+            //Debug.Log("InRange");
         }
     }
 

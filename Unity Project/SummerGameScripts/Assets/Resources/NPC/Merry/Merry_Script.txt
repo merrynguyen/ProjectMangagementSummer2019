@@ -200,4 +200,30 @@ Mayor Merryann@
  ^
 ~Of course, I'll be here if you need help.>
 
+16 - In church#
+Mayor Merryann@
+ ^
+~Why, hello detective, how are you?<
+
+Me@
+ ^
+~I'm doing fine, but the island, not so much.<
+
+Mayor Merryann@
+ ^
+~Yeah, I know. That's why I'm in here, praying that things start to get better<
+
+Me@
+ ^
+~Well I'm going to leave you to it. I need to look around some more.>
+
+17 - leaving church#
+Mayor Merryann@
+ ^
+~What in the moon's name is that?! The church has a secret set of stairs. I must be seeing things.+
+ ^
+I think it's time for me to head home and take a rest. Detective, feel free to stop by.>
+
+
+
 %

@@ -250,6 +250,7 @@
           </e>
           <e p="Puzzles" t="Include">
             <e p="Antidote_Game_Manager.cs" t="Include" />
+            <e p="Block_Puzzle.cs" t="Include" />
             <e p="Geometry_Puzzle" t="Include">
               <e p="Match_Script.cs" t="Include" />
               <e p="Name_ID.cs" t="Include" />

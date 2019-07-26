@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d8d1e4b870b4cf4bb5a4d5baf949547, type: 3}
   m_Name: Bope_Dialogue
   m_EditorClassIdentifier: 
-  File: {fileID: 11400000, guid: 54eed20903efe8743b1f6e5f6a8ed53b, type: 2}
+  File: {fileID: 11400000, guid: 80c624e523700364c9e4327b524be82f, type: 2}
