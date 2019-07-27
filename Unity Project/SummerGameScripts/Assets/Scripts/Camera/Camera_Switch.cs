@@ -34,6 +34,11 @@ public class Camera_Switch : MonoBehaviour
     {
         StartCoroutine(ChangeCamera(CamActive, 2));
     }
+
+    public void ToCam(int camnum)
+    {
+        StartCoroutine(ChangeCamera(CamActive, camnum));
+    }
     
     private IEnumerator ChangeCamera(int StartCam, int EndCam)
     {

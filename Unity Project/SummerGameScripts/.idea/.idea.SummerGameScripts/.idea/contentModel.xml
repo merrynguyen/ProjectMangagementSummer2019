@@ -134,6 +134,9 @@
             <e p="Scruffles" t="Include">
               <e p="Scruff_Script.txt" t="Include" />
             </e>
+            <e p="Slade" t="Include">
+              <e p="Slade_Script.txt" t="Include" />
+            </e>
             <e p="Squirrel" t="Include">
               <e p="Squirrel_Dialogue.txt" t="Include" />
             </e>
