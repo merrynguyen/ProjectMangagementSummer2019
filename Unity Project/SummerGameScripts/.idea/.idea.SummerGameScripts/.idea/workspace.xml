@@ -5,26 +5,215 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d183136a-9d8b-4f4a-944d-74955dadf713" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Assets/Skye_Assets/Ingredient_Assets.ma" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assets/Skye_Assets/Ingredient_Assets.ma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SummerGameScripts/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SummerGameScripts/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SummerGameScripts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SummerGameScripts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Move.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Move.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Rotate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Rotate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Building/Cafe/Cafe.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Building/Cafe/Cafe.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Building/Cafe/Cafe_Trans.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Building/Cafe/Cafe_Trans.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Angry.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Angry/Fox_FBX_HeadandTail_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Angry/Fox_FBX_HeadandTail_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Angry/Fox_FBX_HeadandTail_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Angry/Fox_FBX_HeadandTail_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Angry/Fox_FBX_HeadandTail_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Angry/Fox_FBX_HeadandTail_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Angry/Moon_Island_Fox.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Angry/Moon_Island_Fox.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Body.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Body.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Body_Zombie.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Body_Zombie.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Clothes1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Clothes1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Clothes_Zombie.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Clothes_Zombie.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Hat_And_Apron.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Hat_And_Apron.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Hat_And_Apron_Zombie.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_Hat_And_Apron_Zombie.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_HeadandTail.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_HeadandTail.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_HeadandTail_Zombie.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Fox_Model1_HeadandTail_Zombie.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Happy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Happy/Fox_FBX_HeadandTail_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Happy/Fox_FBX_HeadandTail_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Happy/Fox_FBX_HeadandTail_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Happy/Fox_FBX_HeadandTail_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Happy/Fox_FBX_HeadandTail_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Happy/Fox_FBX_HeadandTail_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Happy/Moon_Island_Fox.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Happy/Moon_Island_Fox.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Body_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Body_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Body_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Body_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Body_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Body_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Clothes1_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Clothes1_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Clothes1_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Clothes1_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Clothes1_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Clothes1_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Hat_And_Apron_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Hat_And_Apron_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Hat_And_Apron_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Hat_And_Apron_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Hat_And_Apron_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_Hat_And_Apron_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_HeadandTail_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_HeadandTail_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_HeadandTail_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_HeadandTail_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_HeadandTail_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Normal/Fox_FBX_HeadandTail_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_Emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_Emissive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_Height.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_Height.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Fox_FBX_HeadandTail_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Moon_Island_Fox.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Cafe_Owner/Zombie/Moon_Island_Fox.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Body.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Body.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Body_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Body_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Body_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Body_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Body_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Body_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Clothes1_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Clothes1_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Clothes1_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Clothes1_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Clothes1_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Clothes1_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_HeadandTail_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_HeadandTail_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_HeadandTail_Height.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_HeadandTail_Height.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_HeadandTail_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_HeadandTail_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_HeadandTail_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_HeadandTail_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shirt_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shirt_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shirt_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shirt_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shirt_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shirt_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shoes_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shoes_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shoes_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shoes_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shoes_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_Shoes_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_pants_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_pants_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_pants_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_pants_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_pants_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Cat_Detective_pants_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Clothes1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Clothes1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/HeadandTail.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/HeadandTail.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Shirt.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Shirt.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Shoes.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/Shoes.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/pants.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Detective_Cat/pants.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Maze/Wall_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Maze/Wall_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Maze/Wall_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Maze/Wall_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Maze/Wall_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Maze/Wall_03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Maze/Wall_04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Maze/Wall_04.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Maze/Wall_05.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Maze/Wall_05.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Maze/Wall_06.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Maze/Wall_06.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Maze/Wall_07.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Maze/Wall_07.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Maze/Wall_08.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Maze/Wall_08.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Secret_Lab/Materials/Lights.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Secret_Lab/Materials/Lights.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Secret_Lab/Materials/Lights_dimmer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Secret_Lab/Materials/Lights_dimmer.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Secret_Lab/Materials/Liquid.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Secret_Lab/Materials/Liquid.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Secret_Lab/Materials/Liquid_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Secret_Lab/Materials/Liquid_2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Objects/Buildings/Scruffle's House.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Objects/Buildings/Scruffle's House.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Ice_Cream_Shop_prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Ice_Cream_Shop_prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Sewer_Maze_Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Sewer_Maze_Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Inventory/Inventory_Object.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Inventory/Inventory_Object.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Items/Keys.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Items/Keys.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Carl/Cal_Movement_Type.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Carl/Cal_Movement_Type.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Mansion.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Mansion.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Mansion_Time.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Mansion_Time.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Mansion/Got_Mansion_Ing.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Mansion/Got_Mansion_Ing.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Saving_Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Saving_Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Church/Merry_Left_Church.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Church/Merry_Left_Church.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Michael/Got_Lantern.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Michael/Got_Lantern.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Outdoors/Given_Merry_Keys.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Outdoors/Given_Merry_Keys.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Outdoors/Solved_Pipe_Puzzle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Outdoors/Solved_Pipe_Puzzle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Time_Set.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Time_Set.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Brad_Steve_House.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Brad_Steve_House.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cafe_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cafe_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Clinic.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Clinic.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ice_Cream_Shop.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ice_Cream_Shop.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Island.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Island/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Island/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kim and Skye.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Kim and Skye.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Library.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lighthouse.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lighthouse.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luther_Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luther_Home.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mansion.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mansion.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Police Station.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Police Station.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rose and Kirk.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rose and Kirk.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Secret_Lab.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Secret_Lab.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/LightingData.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-0_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-0_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-0_comp_dir.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-0_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-0_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-0_comp_light.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-1_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-1_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-1_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-1_comp_dir.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-1_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-1_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-1_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-1_comp_light.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-2_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-2_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-2_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-2_comp_dir.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-2_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-2_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-2_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-2_comp_light.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-3_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-3_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-3_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-3_comp_dir.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-3_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-3_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-3_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-3_comp_light.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-4_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-4_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-4_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-4_comp_dir.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-4_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-4_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-4_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-4_comp_light.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-5_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-5_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-5_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-5_comp_dir.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-5_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-5_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-5_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-5_comp_light.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-6_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-6_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-6_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-6_comp_dir.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-6_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-6_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-6_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-6_comp_light.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-7_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-7_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-7_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-7_comp_dir.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-7_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-7_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-7_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/Lightmap-7_comp_light.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze/NavMesh.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/Camera_Switch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/Camera_Switch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DataObjects/BoolData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DataObjects/BoolData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DataObjects/StringData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DataObjects/StringData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,8 +257,17 @@
       <file leaf-file-name="Merry_Script.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="139" column="73" selection-start-line="139" selection-start-column="73" selection-end-line="139" selection-end-column="73" />
+            <state relative-caret-position="315">
+              <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ice_Cream_Script.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1695">
+              <caret line="113" column="15" selection-start-line="113" selection-start-column="15" selection-end-line="113" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -90,22 +288,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Camera_Switch.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Camera_Switch.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Camera_Switch.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+            <state relative-caret-position="615">
+              <caret line="44" column="66" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
               <folding>
-                <marker date="1564200564340" expanded="false" signature="6:97" ph="..." />
-                <marker date="1564200564340" expanded="true" signature="141:1340" ph="{...}" />
-                <marker date="1564200564340" expanded="true" signature="291:546" ph="{...}" />
-                <marker date="1564200564340" expanded="true" signature="446:502" ph="{...}" />
-                <marker date="1564200564340" expanded="true" signature="572:636" ph="{...}" />
-                <marker date="1564200564340" expanded="true" signature="666:730" ph="{...}" />
-                <marker date="1564200564340" expanded="true" signature="760:824" ph="{...}" />
-                <marker date="1564200564340" expanded="true" signature="859:928" ph="{...}" />
-                <marker date="1564200564340" expanded="true" signature="996:1337" ph="{...}" />
-                <marker date="1564200564340" expanded="true" signature="1047:1302" ph="{...}" />
+                <marker date="1564255417936" expanded="false" signature="6:97" ph="..." />
+                <marker date="1564255417936" expanded="true" signature="141:1510" ph="{...}" />
+                <marker date="1564255417936" expanded="true" signature="291:546" ph="{...}" />
+                <marker date="1564255417936" expanded="true" signature="446:502" ph="{...}" />
+                <marker date="1564255417936" expanded="true" signature="572:646" ph="{...}" />
+                <marker date="1564255417936" expanded="true" signature="676:750" ph="{...}" />
+                <marker date="1564255417936" expanded="true" signature="780:854" ph="{...}" />
+                <marker date="1564255417936" expanded="true" signature="889:968" ph="{...}" />
+                <marker date="1564255417936" expanded="true" signature="1007:1091" ph="{...}" />
+                <marker date="1564255417936" expanded="true" signature="1172:1507" ph="{...}" />
+                <marker date="1564255417936" expanded="true" signature="1223:1472" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NPC_Controller.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="243" selection-start-line="243" selection-end-line="243" />
+              <folding>
+                <marker date="1564187634799" expanded="false" signature="6:171" ph="..." />
+                <marker date="1564187634799" expanded="true" signature="216:9673" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="715:874" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="916:1014" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="1042:1571" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="1178:1258" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="1621:2951" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="1690:2841" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="2246:2691" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="2549:2677" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="2995:4303" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="3059:4254" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="3575:3816" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="3894:4104" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="4340:4957" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="4503:4912" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="4683:4850" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="4994:5681" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="5157:5636" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="5407:5574" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="5721:6014" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="5848:6008" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="6054:6738" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="6390:6584" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="6776:7546" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="7021:7133" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="7200:7394" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="7582:8462" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="7830:7943" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="8008:8276" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="8514:8632" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="8667:8748" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="8779:8888" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="8930:9259" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="9207:9253" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="9300:9580" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="9528:9574" ph="{...}" />
+                <marker date="1564187634799" expanded="true" signature="9612:9671" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringData.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/DataObjects/StringData.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+              <folding>
+                <marker date="1564333266257" expanded="false" signature="6:78" ph="..." />
+                <marker date="1564333266257" expanded="true" signature="172:975" ph="{...}" />
+                <marker date="1564333266257" expanded="true" signature="388:491" ph="{...}" />
+                <marker date="1564333266257" expanded="true" signature="532:595" ph="{...}" />
+                <marker date="1564333266257" expanded="true" signature="626:658" ph="{...}" />
+                <marker date="1564333266257" expanded="true" signature="689:969" ph="{...}" />
+                <marker date="1564333266257" expanded="true" signature="757:940" ph="{...}" />
+                <marker date="1564333266257" expanded="true" signature="868:930" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -135,7 +402,7 @@
       <file leaf-file-name="Cafe_Owner_Script.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Cafe_owner/Cafe_Owner_Script.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1586">
+            <state relative-caret-position="2790">
               <caret line="186" selection-start-line="186" selection-end-line="186" selection-end-column="1" />
             </state>
           </provider>
@@ -144,8 +411,8 @@
       <file leaf-file-name="dialouge_script.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/dialouge_script.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+            <state relative-caret-position="960">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <marker date="1564101942018" expanded="false" signature="6:126" ph="..." />
                 <marker date="1564101942018" expanded="true" signature="172:7631" ph="{...}" />
@@ -275,7 +542,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Nav_Mesh_Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/Choice_Selection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Event_Scripts/OnTriggerWIthPLayerEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mutiple_Action_Modifier.cs" />
@@ -312,7 +578,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Daylight_Change.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MiscScripts/Reset_Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Cafe_owner/Cafe_Owner_Script.txt" />
-        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Librarian/Librarian_Script.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Transport_Object.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Michael_Door/Door_Dialogues.txt" />
@@ -323,9 +588,11 @@
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Bope/Bope_Dialogue.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataObjects/KeyBoard_StringData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataObjects/BoolData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Camera_Switch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DataObjects/StringData.cs" />
       </list>
     </option>
   </component>
@@ -518,11 +785,13 @@
       <workItem from="1564084275998" duration="5878000" />
       <workItem from="1564114208836" duration="1543000" />
       <workItem from="1564181587246" duration="6483000" />
+      <workItem from="1564249998879" duration="3505000" />
+      <workItem from="1564332935130" duration="928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="410067000" />
+    <option name="totallyTimeSpent" value="414500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,9 +812,9 @@
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22586873" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23552124" />
       <window_info anchor="bottom" id="Unity" order="9" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -596,13 +865,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Cafe_owner/Cafe_Owner_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="154" selection-start-line="154" selection-end-line="154" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1305">
@@ -790,13 +1052,6 @@
     <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Bope/Bope_Dialogue.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Kim/Kim_Dialogue.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -812,10 +1067,106 @@
         <state relative-caret-position="-844" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Cafe_owner/Cafe_Owner_Script.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2790">
+          <caret line="186" selection-start-line="186" selection-end-line="186" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DataObjects/BoolData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding>
+            <marker date="1564194254496" expanded="false" signature="6:78" ph="..." />
+            <marker date="1564194254496" expanded="true" signature="161:379" ph="{...}" />
+            <marker date="1564194254496" expanded="true" signature="213:247" ph="{...}" />
+            <marker date="1564194254496" expanded="true" signature="275:310" ph="{...}" />
+            <marker date="1564194254496" expanded="true" signature="341:377" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/dialouge_script.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <marker date="1564101942018" expanded="false" signature="6:126" ph="..." />
+            <marker date="1564101942018" expanded="true" signature="172:7631" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="863:1162" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="1212:1348" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="1258:1342" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="1396:1477" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="1509:1693" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="1607:1687" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="1722:1934" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="1778:1932" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="1969:2024" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="2062:2361" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="2141:2308" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="2187:2247" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="2398:5389" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="2661:5106" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="2968:5049" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="3143:4889" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="3282:3504" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="3529:3836" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="3870:4867" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="3991:4783" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="4125:4440" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="4473:4757" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="5143:5383" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="5420:5509" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="5549:6447" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="5893:6266" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="5977:6050" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="6067:6256" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="6479:7629" ph="{...}" />
+            <marker date="1564101942018" expanded="true" signature="6685:7623" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="113" column="15" selection-start-line="113" selection-start-column="15" selection-end-line="113" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Camera_Switch.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="44" column="66" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
+          <folding>
+            <marker date="1564255417936" expanded="false" signature="6:97" ph="..." />
+            <marker date="1564255417936" expanded="true" signature="141:1510" ph="{...}" />
+            <marker date="1564255417936" expanded="true" signature="291:546" ph="{...}" />
+            <marker date="1564255417936" expanded="true" signature="446:502" ph="{...}" />
+            <marker date="1564255417936" expanded="true" signature="572:646" ph="{...}" />
+            <marker date="1564255417936" expanded="true" signature="676:750" ph="{...}" />
+            <marker date="1564255417936" expanded="true" signature="780:854" ph="{...}" />
+            <marker date="1564255417936" expanded="true" signature="889:968" ph="{...}" />
+            <marker date="1564255417936" expanded="true" signature="1007:1091" ph="{...}" />
+            <marker date="1564255417936" expanded="true" signature="1172:1507" ph="{...}" />
+            <marker date="1564255417936" expanded="true" signature="1223:1472" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        <state relative-caret-position="223">
+          <caret line="243" selection-start-line="243" selection-end-line="243" />
           <folding>
             <marker date="1564187634799" expanded="false" signature="6:171" ph="..." />
             <marker date="1564187634799" expanded="true" signature="216:9673" ph="{...}" />
@@ -859,90 +1210,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/dialouge_script.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DataObjects/StringData.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+        <state relative-caret-position="221">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding>
-            <marker date="1564101942018" expanded="false" signature="6:126" ph="..." />
-            <marker date="1564101942018" expanded="true" signature="172:7631" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="863:1162" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="1212:1348" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="1258:1342" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="1396:1477" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="1509:1693" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="1607:1687" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="1722:1934" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="1778:1932" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="1969:2024" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="2062:2361" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="2141:2308" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="2187:2247" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="2398:5389" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="2661:5106" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="2968:5049" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="3143:4889" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="3282:3504" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="3529:3836" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="3870:4867" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="3991:4783" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="4125:4440" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="4473:4757" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="5143:5383" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="5420:5509" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="5549:6447" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="5893:6266" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="5977:6050" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="6067:6256" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="6479:7629" ph="{...}" />
-            <marker date="1564101942018" expanded="true" signature="6685:7623" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Cafe_owner/Cafe_Owner_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1586">
-          <caret line="186" selection-start-line="186" selection-end-line="186" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="139" column="73" selection-start-line="139" selection-start-column="73" selection-end-line="139" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DataObjects/BoolData.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <marker date="1564194254496" expanded="false" signature="6:78" ph="..." />
-            <marker date="1564194254496" expanded="true" signature="161:379" ph="{...}" />
-            <marker date="1564194254496" expanded="true" signature="213:247" ph="{...}" />
-            <marker date="1564194254496" expanded="true" signature="275:310" ph="{...}" />
-            <marker date="1564194254496" expanded="true" signature="341:377" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Camera_Switch.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
-          <folding>
-            <marker date="1564200564340" expanded="false" signature="6:97" ph="..." />
-            <marker date="1564200564340" expanded="true" signature="141:1340" ph="{...}" />
-            <marker date="1564200564340" expanded="true" signature="291:546" ph="{...}" />
-            <marker date="1564200564340" expanded="true" signature="446:502" ph="{...}" />
-            <marker date="1564200564340" expanded="true" signature="572:636" ph="{...}" />
-            <marker date="1564200564340" expanded="true" signature="666:730" ph="{...}" />
-            <marker date="1564200564340" expanded="true" signature="760:824" ph="{...}" />
-            <marker date="1564200564340" expanded="true" signature="859:928" ph="{...}" />
-            <marker date="1564200564340" expanded="true" signature="996:1337" ph="{...}" />
-            <marker date="1564200564340" expanded="true" signature="1047:1302" ph="{...}" />
+            <marker date="1564333266257" expanded="false" signature="6:78" ph="..." />
+            <marker date="1564333266257" expanded="true" signature="172:975" ph="{...}" />
+            <marker date="1564333266257" expanded="true" signature="388:491" ph="{...}" />
+            <marker date="1564333266257" expanded="true" signature="532:595" ph="{...}" />
+            <marker date="1564333266257" expanded="true" signature="626:658" ph="{...}" />
+            <marker date="1564333266257" expanded="true" signature="689:969" ph="{...}" />
+            <marker date="1564333266257" expanded="true" signature="757:940" ph="{...}" />
+            <marker date="1564333266257" expanded="true" signature="868:930" ph="{...}" />
           </folding>
         </state>
       </provider>

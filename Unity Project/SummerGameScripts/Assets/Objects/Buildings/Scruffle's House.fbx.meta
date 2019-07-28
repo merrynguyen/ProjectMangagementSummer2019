@@ -583,7 +583,317 @@ ModelImporter:
     4300190: pasted__pCube53
     4300192: pCube52
     4300194: pCube53
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Broken_Lamp_light
+    second: {fileID: 2100000, guid: 70345479d3517dc4aaa243cbb0c80f3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_handle
+    second: {fileID: 2100000, guid: dd3db5377ddfeee4e866da5900847593, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 75be3cbe346af0544b656f85eb18e9f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ladder_wood
+    second: {fileID: 2100000, guid: b54231109cf93ce498862143b42a5788, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Papers
+    second: {fileID: 2100000, guid: 113a7d9f964b5a649b62765c7918ac8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls
+    second: {fileID: 2100000, guid: f210b5fc4b764044f9b5eccaff6de7b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 477515010b764d745a4e8eb0d5a2e9de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Bed_Frame
+    second: {fileID: 2100000, guid: 7b790617575c56245999142f30211000, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Bed_Sheet_pattern
+    second: {fileID: 2100000, guid: 9cbfde82a7c4a9f42add89686ed4b316, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Bed_Sheets_inside
+    second: {fileID: 2100000, guid: 878bbfebf2392d9459cb0a77bbca63d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Book
+    second: {fileID: 2100000, guid: 1c34e2632e4f4974b818bfba5b9c1b82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Book_Pages
+    second: {fileID: 2100000, guid: 1ecdec08b5a873344a73881e9ecf5e97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Bookshelf
+    second: {fileID: 2100000, guid: 4cbe77c0f13ff8b4cba9331d0f09fab1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Counter656
+    second: {fileID: 2100000, guid: 59f7efcd7e7675d46836798a87436f26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Counter_Knob
+    second: {fileID: 2100000, guid: 10a9dabac45ea234ba3b6fe317963e59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Counter_Top
+    second: {fileID: 2100000, guid: 5fe8c539debe0214baffed06d0f997aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Cupboard_Hinges
+    second: {fileID: 2100000, guid: 23656187c63cc204187bb8bc7b726777, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Cupnoard_Door
+    second: {fileID: 2100000, guid: ea5ce04b79334764889cd9b361fc1229, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Fridge
+    second: {fileID: 2100000, guid: b2e36e4b0ab81ed4b8d49af333baec64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__FridgeHandle
+    second: {fileID: 2100000, guid: d4562bcc6455bdc4facc480d45a71b18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Mattress
+    second: {fileID: 2100000, guid: 8c6d7cc709bcabf47aff901ba46cc531, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Microwave
+    second: {fileID: 2100000, guid: ca44a4bf17a80104e9e8d78d90febdc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Microwave_Spinny_thing
+    second: {fileID: 2100000, guid: 052ef0803515a474dab9709bb1750e23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Microwave_Window
+    second: {fileID: 2100000, guid: dd0e8868bd1d9cd449d59efdf57b86d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__PictureFrame_Photo
+    second: {fileID: 2100000, guid: fb34b6b9a5cc56f4885b952d8990f09c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Picture_Frames
+    second: {fileID: 2100000, guid: 2128601cf6aa1ab418e81cda625ab9f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Pillow
+    second: {fileID: 2100000, guid: 4ef7507ec45708b4ea5a94280c7cab2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Side_Table
+    second: {fileID: 2100000, guid: 8810699db63eeb84e80acd3ab1c5b19e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Side_Table_Handle
+    second: {fileID: 2100000, guid: caaa3ea5adf0e89438d61eedca872e17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Sink
+    second: {fileID: 2100000, guid: a6adc24872872fa43aaa6d49cbd60d7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Sink_Drain
+    second: {fileID: 2100000, guid: 0d464fbf2ffe66b429d115141ef826f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Sink_Faucet
+    second: {fileID: 2100000, guid: c1fbb87210ea78844bb2a0bef28288d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Soap_Dispenser
+    second: {fileID: 2100000, guid: fddabcd6a7541ab43ac2233eff1af48c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__lambert28
+    second: {fileID: 2100000, guid: ffbc331aa0878eb48b466ba6b067fb68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Alchemy_Cloth
+    second: {fileID: 2100000, guid: d4a58dcbc8360cf4c8b34bd9592c939f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Alchemy_Table
+    second: {fileID: 2100000, guid: c5767defd8079744496504d4575e0457, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Beaker1
+    second: {fileID: 2100000, guid: 3eb194310b0c0cb4e9755386d36792c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__BookSpine
+    second: {fileID: 2100000, guid: 4e1d0a967fa9582469df71b2f9ca4e85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__BookStand
+    second: {fileID: 2100000, guid: 4717fdac2ff887045bda08a7624c8622, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Book_Pages
+    second: {fileID: 2100000, guid: 43af054d5ece60e489ae554490a02814, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__BottleLid
+    second: {fileID: 2100000, guid: 4f8f214fb925385428b1dc469547f8a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Cauldron
+    second: {fileID: 2100000, guid: 61d0e2187c076ef47b124510188d8402, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Cork
+    second: {fileID: 2100000, guid: fc637a56b3472854ab47bacc0ccbc06a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Counter656
+    second: {fileID: 2100000, guid: 5c4e004a893c8a94c85ce1c682192b79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__CounterDrawers
+    second: {fileID: 2100000, guid: 11ed7cbe55a696e43bd58faaab234743, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Counter_Knob
+    second: {fileID: 2100000, guid: 43d9c256dfb5d5d4d8149d668eda508f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Counter_Top
+    second: {fileID: 2100000, guid: a6eee4d4dc807a648be42dfe1ed614bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Hourglass_Glass
+    second: {fileID: 2100000, guid: 848ee9957ff36664588c05b249fd1560, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Hourglass_Sand
+    second: {fileID: 2100000, guid: 7f2b70ae258787444a8dbdb57aa9ba62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Hourglass_Wood6
+    second: {fileID: 2100000, guid: 622b847f4eedfc64492a7cf32134be43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Lantern
+    second: {fileID: 2100000, guid: 1549aabee55d2b94ab671d27353c044e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Lantern_light
+    second: {fileID: 2100000, guid: 68c198049132fa84d8780af4c9178ed6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Liquid
+    second: {fileID: 2100000, guid: 80f3dce6cd0c8814fac774bc2c476a54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Liquid_2
+    second: {fileID: 2100000, guid: 6fe99531afb2b4a4ba920f9b7a1308e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Mortar_and_Pestel
+    second: {fileID: 2100000, guid: b641d5777d0c9cf44954539c60cf7b13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Round_jar_lable
+    second: {fileID: 2100000, guid: a4d4dbf8971e58c43b9a36d7bc1d0609, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__Weird_Pot
+    second: {fileID: 2100000, guid: 548d8fb3680c4e84aad811553196c5a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__cauldron_spoon
+    second: {fileID: 2100000, guid: 82d7ee819a6dbdf43a621d1b5440721b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__rOUND_Jar
+    second: {fileID: 2100000, guid: 0db6f27915390fe4487181e57b6275cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__sTOOL
+    second: {fileID: 2100000, guid: 5ad1d404d89728e4db34b7f46cfa5d06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__sTOOLWOD
+    second: {fileID: 2100000, guid: 911bd7c2e4a3a464c8998fc7bb4707ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table
+    second: {fileID: 2100000, guid: 71ce5ac4d4bed0446803660a6d56c152, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
