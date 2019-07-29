@@ -146,7 +146,7 @@ public class Inventory : ScriptableObject
             {
                 if (OBJ == item)
                 {
-                    //Debug.Log("HasItem");
+                    Debug.Log("HasItem");
                     return true;
                 }
                 
@@ -160,7 +160,7 @@ public class Inventory : ScriptableObject
             {
                 if (note == item)
                 {
-                    //Debug.Log("HasItem");
+                    Debug.Log("HasItem");
                     return true;
                 }
                 
@@ -174,7 +174,7 @@ public class Inventory : ScriptableObject
             {
                 if (key == item)
                 {
-                    //Debug.Log("HasItem");
+                    Debug.Log("HasItem");
                     return true;
                 }
             }
