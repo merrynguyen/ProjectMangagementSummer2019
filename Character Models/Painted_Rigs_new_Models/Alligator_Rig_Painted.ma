@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Alligator_Rig_Painted.ma
-//Last modified: Tue, Jul 30, 2019 02:29:59 PM
+//Last modified: Tue, Jul 30, 2019 02:31:20 PM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -16,8 +16,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "1B75453E-45A8-3EB3-EAD6-50943BD2327F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.4110984631390817 7.2393364574261065 24.668855355803483 ;
-	setAttr ".r" -type "double3" 351.86164726394901 -1090.9999999995291 1.0125262978811471e-16 ;
+	setAttr ".t" -type "double3" -6.0168305860019196 2.987790401111067 24.558234527112141 ;
+	setAttr ".r" -type "double3" 361.4616472639479 -1094.5999999995238 2.5677222255219783e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C4BF2BB8-4404-F568-805C-D695B9EDE817";
 	setAttr -k off ".v" no;
