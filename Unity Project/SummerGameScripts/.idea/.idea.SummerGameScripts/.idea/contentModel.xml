@@ -134,6 +134,9 @@
             <e p="Scruffles" t="Include">
               <e p="Scruff_Script.txt" t="Include" />
             </e>
+            <e p="Slade" t="Include">
+              <e p="Slade_Script.txt" t="Include" />
+            </e>
             <e p="Squirrel" t="Include">
               <e p="Squirrel_Dialogue.txt" t="Include" />
             </e>
@@ -250,6 +253,7 @@
           </e>
           <e p="Puzzles" t="Include">
             <e p="Antidote_Game_Manager.cs" t="Include" />
+            <e p="Block_Puzzle.cs" t="Include" />
             <e p="Geometry_Puzzle" t="Include">
               <e p="Match_Script.cs" t="Include" />
               <e p="Name_ID.cs" t="Include" />

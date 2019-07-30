@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe3cb88f9a89cdb439ca7da9f79d88fe, type: 3}
   m_Name: Bope_NPC
   m_EditorClassIdentifier: 
-  Script: {fileID: 11400000, guid: b97479c86c66a174d9017f0033548e3f, type: 2}
+  Script: {fileID: 11400000, guid: c19f78b161f84874a9e24b602006d64a, type: 2}

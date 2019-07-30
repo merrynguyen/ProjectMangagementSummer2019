@@ -38,7 +38,7 @@ public class NPC_Controller : MonoBehaviour
     {
         Debug.Log("Start Move: " + gameObject.name);
         anim.ResetTrigger("Idle");
-        if (Destination01 != null )
+        if (Destination01.trans != null )
         {
             FacingDirection = Destination01.trans.rotation;
         }

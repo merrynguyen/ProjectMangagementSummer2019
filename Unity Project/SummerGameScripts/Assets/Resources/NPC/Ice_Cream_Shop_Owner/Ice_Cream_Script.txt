@@ -111,5 +111,10 @@ Me@
  ^
 ~Yeah, sure...>
 
+10 - Fixed Air#
+Ice Cream Worker@
+ ^
+~Hey, it's working now. Thanks, I'll be inside if you need to talk to me.>
+
 
 %
