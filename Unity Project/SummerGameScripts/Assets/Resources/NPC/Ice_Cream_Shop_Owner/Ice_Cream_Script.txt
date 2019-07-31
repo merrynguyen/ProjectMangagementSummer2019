@@ -90,7 +90,7 @@ Me@
  ^
 ~Aren't you also working at the Cafe?<
 
-Cafe Owner@
+Ice Cream Worker@
  ^
 ~Nope, my brother Esteban runs the Cafe.<
 
@@ -103,7 +103,7 @@ Me@
  ^
 ~How did you get here from the library so quickly?<
 
-Cafe Owner@
+Ice Cream Worker@
  ^
 ~I wasn't at the library... wait you must be talking about my brother Elron.<
 
@@ -111,10 +111,10 @@ Me@
  ^
 ~Yeah, sure...>
 
-10 - Fixed Air#
+10 - Fixed Air Conditioning#
 Ice Cream Worker@
  ^
-~Hey, it's working now. Thanks, I'll be inside if you need to talk to me.>
+~Hey, it's running again! Whatever you did fixed it. I'm going to open the shop, you're welcome to come in.>
 
 
 %
