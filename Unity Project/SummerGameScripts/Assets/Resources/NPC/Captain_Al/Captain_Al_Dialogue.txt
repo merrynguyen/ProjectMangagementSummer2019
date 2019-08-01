@@ -1,8 +1,3 @@
-Captain: "Hey there! What are you doing here?"
-Me: "I need to get some apples for Rose!"
-Captain: "Oh great timing Carl is slowly unloading the boat, he sure does need to hurry up!” Angry Emotion
-Me: “Sure, I will wait for him to finish”
-
 0#
 Captain Al@
  ^
@@ -19,5 +14,11 @@ M^
 Me@
  ^
 ~I'll go talk to him.>
+
+1 - in Cafe#
+Captain Al@
+ ^
+~Hi-Ho Detective! This place makes the best waffles on the island!>
+
 %
 
