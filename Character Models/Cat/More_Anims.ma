@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: More_Anims.ma
-//Last modified: Thu, Aug 01, 2019 02:11:41 PM
+//Last modified: Thu, Aug 01, 2019 02:21:31 PM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "A872CABA-4237-299E-5272-D682FDDBAC1B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.2440351068628903 3.3022343053503111 1.1453211873130922 ;
+	setAttr ".t" -type "double3" 17.569201151868626 3.0897453874688789 1.3487838626217139 ;
 	setAttr ".r" -type "double3" 721.46164574592262 -7111.3999999976531 4.0680914055742473e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "241B4FCA-4DDA-B91E-8ECD-CDA67CDB0DD7";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 9.482499102907882;
+	setAttr ".coi" 17.812861536642846;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
