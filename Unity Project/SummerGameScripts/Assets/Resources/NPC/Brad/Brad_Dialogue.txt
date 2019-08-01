@@ -1,67 +1,81 @@
-0 - Library#
+0 - Clinic with Kirk#
+Dr. Brad@
+ ^
+~I have some very bad news...<
 Kirk@
  ^
-~Steve was making fun of me for following Brad around. He even took some papers of mine… + 
- ^
-So now I’m just studying here, so I don’t bother him with my presence...{<
-
-~What you studying?+
-Stolen papers+
-Brad+
-Leave>
-
-1 - Studying#
+~So bad!<
 Me@
  ^
-~What are you studying? Isn't school out right now?<
-
+~Give it to me straight, Doctor.<
+Dr. Brad@
+ ^
+~Carl has a very rare, man-made, virus.<
+Me@
+ ^
+~!!!<
 Kirk@
- ^
-~Yeah, but I'm just studying some medical conditions, nothing big.+
- ^
-I just want to be able to help out Brad whenever I can.>
-
-2 - Stolen Papers#
+U^
+~Ahhh! The truth it hurts!<
 Me@
  ^
-~What were on the papers that Steve took?<
-
+~What you're saying is that someone DID this to Carl?<
 Kirk@
+U^
+~Who would do such a thing?<
+Dr. Brad@
  ^
-~Just some of the notes I've taken while shadowing Brad.+
- ^
-Nothing Steve would be interested in.<
-
-Me@
- ^
-~Well, if I find them, I'll let you know.>
-
-3 - Brad#
-Me@
- ^
-~Have you found out anything about the virus from Brad?<
-
+~Unfortunately, it looks that way.<
 Kirk@
- ^
-~Not much, he said something about injection.+
- ^
-And when he began to take blood samples I left. I can't stand blood.<
-
+U^
+~I am so spooked!<
 Me@
  ^
-~Thanks Kirk>
-
-4 - Leave#
-Me@
+~I have seen a shift on the island, I knew something was not right.<
+Dr. Brad@
  ^
-~Well, have a good study session, and try to stay away from Steve. I don't need more people hurt.<
-
+~Well, I have to stay here and run more tests on Carl.<
 Kirk@
+N^
+~I will help! I'm here to assist.<
+Dr. Brad@
  ^
-~Don't worry, I should be safe in here,+
- ^ 
-Steve doesn't dare show his face near the librarian since he 'accidentally' burnt all the new textbooks.>
+~Will you investigate around the island.<
+ @
+4^
+~ >
 
-%
+1 - Clinic without Kirk#
+Dr. Brad@
+ ^
+~I have some very bad news...<
+Me@
+ ^
+~Give it to me straight, Doctor.<
+Dr. Brad@
+ ^
+~Carl has a very rare, man-made, virus.<
+Me@
+ ^
+~!!!<
+Me@
+ ^
+~What you're saying is that someone DID this to Carl?<
+Dr. Brad@
+ ^
+~Unfortunately, it looks that way.<
+Me@
+ ^
+~I have seen a shift on the island, I knew something was not right.<
+Dr. Brad@
+ ^
+~Well, I have to stay here and run more tests on Carl.<
+Dr. Brad@
+ ^
+~Will you investigate around the island.<
+ @
+4^
+~ >
+
 
 

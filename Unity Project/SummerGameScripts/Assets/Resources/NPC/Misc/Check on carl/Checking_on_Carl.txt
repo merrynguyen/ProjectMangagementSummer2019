@@ -4,7 +4,7 @@ Dr. Brad@
 ~Hey! Come on in, I am almost finished checking on Carl.< 
 
 Kirk@
- ^
+H^
 ~HI! And I was helping!<
 
 Me@
@@ -42,12 +42,14 @@ Dr. Brad@
 Come back and let me know what you find. I am worried for the town…<
 
 Kirk@
-Fear^
+U^
 ~I'm SCARED!<
 
 Me@
-M^
+1^
 Turn towards Kirk#
 ~Don't worry Kirk, I am going to get to the bottom of this.>
 %
+
+
 

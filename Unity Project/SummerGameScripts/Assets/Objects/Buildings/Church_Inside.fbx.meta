@@ -227,7 +227,62 @@ ModelImporter:
     4300072: pCube33
     4300074: pCube35
     4300076: pCube36
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elementblocks
+    second: {fileID: 2100000, guid: 71b1049c88c8cbf45b3eea2ccc472f56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SmallStained
+    second: {fileID: 2100000, guid: 128f9c2b636ca394c86201c2a2888cdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bigstained
+    second: {fileID: 2100000, guid: 18f47937d2d026540b1876bd846d735d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: churchfloor
+    second: {fileID: 2100000, guid: 21d07d2b0db198349ba834e8063d0831, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: churchpuzzle
+    second: {fileID: 2100000, guid: 65d13330f7d14d54482a04b392192495, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: churchwalls1
+    second: {fileID: 2100000, guid: 5ab0ab28bb26e9e45b25f292b522099e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elementblock2
+    second: {fileID: 2100000, guid: a45e53e765b93c9439efb655c4a6ff8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elementblock3
+    second: {fileID: 2100000, guid: 84e78c4a1326a10429e98dd5c27f8de7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elementblock4
+    second: {fileID: 2100000, guid: d2064a5c923f78a48a1c753cc661265a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pillars
+    second: {fileID: 2100000, guid: 226d7a32ea6f497459e8241348daa64e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stainglass1
+    second: {fileID: 2100000, guid: 8cb43e545e0b2dd4a9af8bba151b782c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

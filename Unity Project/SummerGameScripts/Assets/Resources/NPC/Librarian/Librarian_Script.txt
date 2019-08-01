@@ -12,7 +12,7 @@ Me@
  ^
 ~Hey, weren't you just at the Ice Cream Shop?<
 
-Cafe Owner@
+Librarian@
  ^
 ~No that was my brother Leroy.<
 
@@ -20,7 +20,7 @@ Me@
  ^
 ~Hmmm...<
 
-Cafe Owner@
+Librarian@
  ^
 ~Yeah, I get that a lot.>
 
@@ -30,7 +30,7 @@ Me@
  ^
 ~Aren't you also working at the Cafe?<
 
-Cafe Owner@
+Librarian@
  ^
 ~Nope, my brother Esteban runs the Cafe.<
 

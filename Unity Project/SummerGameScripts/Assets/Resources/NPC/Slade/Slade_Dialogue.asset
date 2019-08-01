@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d8d1e4b870b4cf4bb5a4d5baf949547, type: 3}
   m_Name: Slade_Dialogue
   m_EditorClassIdentifier: 
-  File: {fileID: 11400000, guid: 24571b8fb6be7324d85ca9ee9ee32313, type: 2}
+  File: {fileID: 11400000, guid: e90a65ffe0bb0734e98f60ca487164cb, type: 2}

@@ -1,3 +1,8 @@
+Captain: "Hey there! What are you doing here?"
+Me: "I need to get some apples for Rose!"
+Captain: "Oh great timing Carl is slowly unloading the boat, he sure does need to hurry up!” Angry Emotion
+Me: “Sure, I will wait for him to finish”
+
 0#
 Captain Al@
  ^
@@ -8,11 +13,11 @@ Me@
 ~I need to get some apples for Rose<
 
 Captain Al@
- ^
-~Oh great timing Carl is unloading the boat now.<
+M^
+~Oh great timing Carl is slowly unloading the boat. He sure does need to hurry up!"<
 
 Me@
  ^
-~Great, I'll go talk to him.>
+~I'll go talk to him.>
 %
 
