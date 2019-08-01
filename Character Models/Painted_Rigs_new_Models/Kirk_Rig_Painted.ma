@@ -1,27 +1,28 @@
 //Maya ASCII 2018 scene
 //Name: Kirk_Rig_Painted.ma
-//Last modified: Tue, Jul 30, 2019 10:56:04 PM
+//Last modified: Thu, Aug 01, 2019 10:47:55 AM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
+requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
 fileInfo "version" "2018";
 fileInfo "cutIdentifier" "201706261615-f9658c4cfc";
-fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
+fileInfo "osv" "Microsoft Windows 8 Enterprise Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "A872CABA-4237-299E-5272-D682FDDBAC1B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.1608493691506786 5.0710810962202055 13.061229579482108 ;
-	setAttr ".r" -type "double3" 714.26164655609148 -2882.9999999994511 -2.4882183616798382e-17 ;
+	setAttr ".t" -type "double3" -8.4821669655935885 9.5381280542706275 9.3005681534534279 ;
+	setAttr ".r" -type "double3" 692.66164655609487 -2926.1999999999193 -2.2976132695735853e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "241B4FCA-4DDA-B91E-8ECD-CDA67CDB0DD7";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 13.891799174649309;
+	setAttr ".coi" 13.891799174649391;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -174,7 +175,7 @@ createNode parentConstraint -n "Raccoon_Rig:Racoon:Base_Rig1:head_jnt_parentCons
 	setAttr ".tg[0].tot" -type "double3" 1.166399343043547e-07 8.8817841970012523e-16 
 		1.4757006196670264e-08 ;
 	setAttr ".tg[0].tor" -type "double3" 89.999999999999204 2.3981240699939202e-06 89.999981045161505 ;
-	setAttr ".lr" -type "double3" 3.1805545642200701e-15 -3.5201169331437372e-07 3.8166656167791906e-14 ;
+	setAttr ".lr" -type "double3" 1.2722218645396375e-14 -2.8987938904258581e-07 3.1805546782452091e-14 ;
 	setAttr ".rst" -type "double3" 1.1344652175903969 6.2170372828962035e-14 -4.3142987893687347e-17 ;
 	setAttr ".rsrr" -type "double3" -9.5416640443905487e-15 -3.1805546814635152e-15 
 		9.5416640443905487e-15 ;
@@ -198,7 +199,7 @@ createNode parentConstraint -n "Raccoon_Rig:Racoon:Base_Rig1:neck_jnt_parentCons
 	setAttr ".tg[0].tot" -type "double3" -3.5108298053829071e-16 -8.8817841970012523e-16 
 		8.7770705429903275e-17 ;
 	setAttr ".tg[0].tor" -type "double3" 90.000000000000796 2.3981240770106277e-06 90.000018954838538 ;
-	setAttr ".lr" -type "double3" -3.6360334984661631e-06 3.5201176347090424e-07 11.059374834898698 ;
+	setAttr ".lr" -type "double3" -3.3023031194020223e-06 2.8987944989003846e-07 10.033242988143588 ;
 	setAttr ".rst" -type "double3" -1.5811369419097892 2.9802322299924673e-08 2.9802322387695307e-07 ;
 	setAttr ".rsrr" -type "double3" 4.0709783731844761e-15 3.1803089911852741e-15 6.5556792897859089e-16 ;
 	setAttr -k on ".w0";
@@ -2232,7 +2233,7 @@ createNode parentConstraint -n "l_foot_jnt_FK_parentConstraint1" -p "l_foot_jnt_
 		3.0738013033624787e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -89.999984432129693 1.8534957120552298e-06 
 		-91.181683605194067 ;
-	setAttr ".lr" -type "double3" 1.5606102729788864e-05 1.1816836051940776 0.1116617649002942 ;
+	setAttr ".lr" -type "double3" 1.5606102707887991e-05 1.1816836051940813 0.6598104189510211 ;
 	setAttr ".rst" -type "double3" 0.96241438665473844 4.086457392092363e-09 0.015002897629114775 ;
 	setAttr ".rsrr" -type "double3" 1.560610272255669e-05 1.1816836051940776 1.8538899753953983e-06 ;
 	setAttr -k on ".w0";
@@ -2415,7 +2416,7 @@ createNode parentConstraint -n "r_foot_jnt_FK_parentConstraint1" -p "r_foot_jnt_
 	setAttr ".tg[0].tot" -type "double3" -8.163403397709601e-08 2.9609136830921479e-05 
 		3.1143619072526712e-08 ;
 	setAttr ".tg[0].tor" -type "double3" 90.015150554349702 -1.0478460547114639 90.522816358587718 ;
-	setAttr ".lr" -type "double3" 0.02471174236092211 0.52272892690864081 -178.84358195399676 ;
+	setAttr ".lr" -type "double3" 0.024711742360922068 0.52272892690864103 -178.31080628999447 ;
 	setAttr ".rst" -type "double3" -0.96272174412184075 -4.0990648375593963e-14 -2.5242840373529418e-08 ;
 	setAttr ".rsrr" -type "double3" 0.024711742360927897 0.52272892690866857 -178.95211032999725 ;
 	setAttr -k on ".w0";
@@ -2535,33 +2536,29 @@ createNode parentConstraint -n "r_hip_jnt_IK_parentConstraint1" -p "r_hip_jnt_IK
 	setAttr ".rst" -type "double3" 0.53108992370605312 1.4901199874847868e-08 -0.52495300000000023 ;
 	setAttr ".rsrr" -type "double3" -0.87606230215984215 0.93328482856688955 2.9614706408023953e-06 ;
 	setAttr -k on ".w0";
-createNode transform -n "body_geo";
+createNode transform -n "body_geo_01";
 	rename -uid "1E73411D-4CA6-BDC9-ADB3-178309612FDF";
 	addAttr -is true -ci true -k true -sn "currentUVSet" -ln "currentUVSet" -dt "string";
 	setAttr ".t" -type "double3" 0.13073880970478058 0 0 ;
-	setAttr -l on ".tx";
-	setAttr -l on ".ty";
-	setAttr -l on ".tz";
-	setAttr -l on ".rx";
-	setAttr -l on ".ry";
-	setAttr -l on ".rz";
-	setAttr -l on ".sx";
-	setAttr -l on ".sy";
-	setAttr -l on ".sz";
 	setAttr ".rp" -type "double3" -0.081033229827880859 3.9123102931381206 -0.29373093515883053 ;
 	setAttr ".sp" -type "double3" -0.081033229827880859 3.9123102931381206 -0.29373093515883053 ;
 	setAttr -k on ".currentUVSet" -type "string" "map1";
-createNode mesh -n "body_geoShape" -p "body_geo";
+createNode mesh -n "body_geo_01Shape" -p "body_geo_01";
 	rename -uid "45A3BC13-42B3-A2AC-9FD4-58BF642D0528";
 	setAttr -k off ".v";
 	setAttr -s 10 ".iog[0].og";
+	setAttr -av ".iog[0].og[0].gco";
+	setAttr -av ".iog[0].og[1].gco";
+	setAttr -av ".iog[0].og[2].gco";
+	setAttr -av ".iog[0].og[5].gco";
+	setAttr -av ".iog[0].og[6].gco";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".vcs" 2;
-createNode mesh -n "body_geoShapeOrig" -p "body_geo";
+createNode mesh -n "body_geo_01ShapeOrig" -p "body_geo_01";
 	rename -uid "A8CF0B33-421D-EB6F-72D4-F2909EAAD359";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -7112,23 +7109,16 @@ createNode mesh -n "body_geoShapeOrig" -p "body_geo";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Glasses" -p "body_geo";
+createNode transform -n "Glasses" -p "body_geo_01";
 	rename -uid "B5DC1C1D-4DF6-466D-A9A4-DE96ED8D6898";
-	setAttr -l on ".tx";
-	setAttr -l on ".ty";
-	setAttr -l on ".tz";
-	setAttr -l on ".rx";
-	setAttr -l on ".ry";
-	setAttr -l on ".rz";
-	setAttr -l on ".sx";
-	setAttr -l on ".sy";
-	setAttr -l on ".sz";
 	setAttr ".rp" -type "double3" -0.032293740407198679 6.1790544986724854 1.3512510061264038 ;
 	setAttr ".sp" -type "double3" -0.032293740407198679 6.1790544986724854 1.3512510061264038 ;
 createNode mesh -n "GlassesShape" -p "Glasses";
 	rename -uid "14F83F37-4B40-61A5-4229-9988A64BD5D6";
 	setAttr -k off ".v";
-	setAttr -s 4 ".iog[0].og";
+	setAttr -s 8 ".iog[0].og";
+	setAttr -av ".iog[0].og[2].gco";
+	setAttr -av ".iog[0].og[3].gco";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.52167144604027271 0.50034433603286743 ;
@@ -7979,7 +7969,7 @@ createNode mesh -n "GlassesShapeOrig1" -p "Glasses";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vcs" 2;
-createNode mesh -n "body_geoShapeOrig1" -p "body_geo";
+createNode mesh -n "body_geo_01ShapeOrig1" -p "body_geo_01";
 	rename -uid "3446A9AF-47B5-BACF-C09D-8C96464A1675";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -12542,19 +12532,19 @@ createNode mesh -n "body_geoShapeOrig1" -p "body_geo";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vcs" 2;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "03BF7B0F-4F06-681F-7E9A-06966F92983F";
-	setAttr -s 138 ".lnk";
-	setAttr -s 138 ".slnk";
+	rename -uid "6380293F-4A83-9793-DF86-D59A95793595";
+	setAttr -s 142 ".lnk";
+	setAttr -s 142 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "51EBD8DD-4620-AE96-2CF5-7189172CE38C";
+	rename -uid "EC705178-408F-3822-27DF-31987EA201C3";
 	setAttr -s 2 ".bsdt";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 -1 ;
 	setAttr ".bsdt[1].bscd" -type "Int32Array" 0 ;
 	setAttr ".bsdt[1].bsdn" -type "string" "Bear_Rig_Painted";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "35CD2E3A-457D-0B1D-5A35-90BE600F59CB";
+	rename -uid "BA10EFDD-4B6D-E881-AA42-D7BF4E566172";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "35F6FF48-49F9-AD7E-7181-D996E0C17D9A";
+	rename -uid "BF060F20-483E-4B72-E3F0-61BBF9AC91F6";
 	setAttr ".cdl" 20;
 	setAttr -s 158 ".dli[1:157]"  2 3 4 1 6 9 7 8 
 		5 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
@@ -12570,7 +12560,7 @@ createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "FF433613-4717-9867-1B2A-C59FA3B80ECC";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "0FD56E2C-4426-EAE5-5AD6-74B3CB40342F";
+	rename -uid "CBF65633-440A-7595-0AF7-B8B83C561BA8";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BD1967EE-48FA-FF1D-6E56-50B199402332";
 	setAttr ".g" yes;
@@ -12578,46 +12568,46 @@ createNode script -n "uiConfigurationScriptNode";
 	rename -uid "23FAB1EB-41FA-C494-372A-0A907CA955F9";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
-		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
+		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
 		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
-		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
+		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
 		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
-		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
+		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 521\n            -height 488\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1119\n            -height 714\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n"
 		+ "            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n"
-		+ "                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n"
-		+ "                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -clipTime \"on\" \n                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n"
-		+ "                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
-		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n"
-		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
-		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
-		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"straight\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
-		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 521\\n    -height 488\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 521\\n    -height 488\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n"
+		+ "                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n"
+		+ "                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n"
+		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n"
+		+ "                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n"
+		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
+		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
+		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
+		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
+		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
+		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
+		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
+		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -12641,7 +12631,7 @@ createNode gameFbxExporter -n "Base_Rig:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Base_Rig:gameExporterPreset2";
 	rename -uid "7AC33E19-4A1F-A7F8-65ED-D58E06BC7978";
@@ -12669,7 +12659,7 @@ createNode gameFbxExporter -n "Base_Rig:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Base_Rig:gameExporterPreset3";
 	rename -uid "3A697C9B-45BC-35C5-A8D4-25A8810F1084";
@@ -12695,7 +12685,7 @@ createNode gameFbxExporter -n "Base_Rig1:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Base_Rig1:gameExporterPreset2";
 	rename -uid "B414A20B-466C-38B8-5B07-AFAE8C22E35C";
@@ -12723,7 +12713,7 @@ createNode gameFbxExporter -n "Base_Rig1:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Base_Rig1:gameExporterPreset3";
 	rename -uid "0F096A27-41B1-CFB5-12E3-0C83DCA1A3DA";
@@ -12778,7 +12768,7 @@ createNode gameFbxExporter -n "gameExporterPreset2";
 	setAttr ".ebm" yes;
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "Kirk_Rig";
 createNode gameFbxExporter -n "gameExporterPreset3";
 	rename -uid "E012DDE5-4B8C-4E1D-8B97-AA84D6C12571";
@@ -12802,9 +12792,6 @@ createNode materialInfo -n "materialInfo1";
 createNode groupId -n "groupId90";
 	rename -uid "7F940119-47BD-6649-503F-16898E8F4464";
 	setAttr ".ihi" 0;
-createNode lambert -n "Body";
-	rename -uid "E65511A8-4B42-E898-393E-B6BE8AB6FA2F";
-	setAttr ".c" -type "float3" 0.22727273 0.22727273 0.22727273 ;
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "D4FD8366-46FB-E851-F3EE-D2BA05A2B5CC";
 	setAttr ".ihi" 0;
@@ -12846,7 +12833,7 @@ createNode gameFbxExporter -n "Cat_Character:Base_Model:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Cat_Character:Base_Model:gameExporterPreset2";
 	rename -uid "8CDE4E0B-4AE6-04B0-A134-ECB57248FE03";
@@ -12874,7 +12861,7 @@ createNode gameFbxExporter -n "Cat_Character:Base_Model:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Cat_Character:Base_Model:gameExporterPreset3";
 	rename -uid "D39327E6-4878-80AA-3192-899F3756D97A";
@@ -12900,7 +12887,7 @@ createNode gameFbxExporter -n "Cat_Character:Base_Rig:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Cat_Character:Base_Rig:gameExporterPreset2";
 	rename -uid "748FDBA2-4592-05CE-5E02-8EA40605CC3E";
@@ -12928,7 +12915,7 @@ createNode gameFbxExporter -n "Cat_Character:Base_Rig:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Cat_Character:Base_Rig:gameExporterPreset3";
 	rename -uid "EF5A0254-4D3C-9916-A4A1-5AA46A345D9B";
@@ -12960,7 +12947,7 @@ createNode gameFbxExporter -n "Cat_Character:Base_Rig1:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Cat_Character:Base_Rig1:gameExporterPreset2";
 	rename -uid "9579BA7E-48CE-4515-4816-559E8D464A4A";
@@ -12988,7 +12975,7 @@ createNode gameFbxExporter -n "Cat_Character:Base_Rig1:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Cat_Character:Base_Rig1:gameExporterPreset3";
 	rename -uid "95ED4926-4962-BA5A-975C-14AD34A1AE83";
@@ -13051,30 +13038,6 @@ createNode shadingEngine -n "lambert8SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo7";
 	rename -uid "656EB6CC-4BB0-7711-128D-E6AC614037EE";
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "3C034959-4FF3-BA08-16C3-4188B1600817";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -539.88355312215958 -101.55757935024158 ;
-	setAttr ".tgi[0].vh" -type "double2" 533.93641679460075 105.12900777975435 ;
-	setAttr -s 6 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 60;
-	setAttr ".tgi[0].ni[0].y" 137.14285278320313;
-	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" -247.14285278320313;
-	setAttr ".tgi[0].ni[1].y" 137.14285278320313;
-	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" -247.14285278320313;
-	setAttr ".tgi[0].ni[2].y" 137.14285278320313;
-	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 60;
-	setAttr ".tgi[0].ni[3].y" 137.14285278320313;
-	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" 60;
-	setAttr ".tgi[0].ni[4].y" 137.14285278320313;
-	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" -247.14285278320313;
-	setAttr ".tgi[0].ni[5].y" 137.14285278320313;
-	setAttr ".tgi[0].ni[5].nvs" 1923;
 createNode shapeEditorManager -n "Raccoon_Rig:shapeEditorManager";
 	rename -uid "241760DA-4C41-21FA-FA6A-239062A3B3C4";
 createNode poseInterpolatorManager -n "Raccoon_Rig:poseInterpolatorManager";
@@ -13110,7 +13073,7 @@ createNode gameFbxExporter -n "Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset2";
 	rename -uid "32F67FB6-478B-658C-40B6-F19F4C2F3D0B";
@@ -13138,7 +13101,7 @@ createNode gameFbxExporter -n "Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset3";
 	rename -uid "293274EC-4547-0F8D-71F3-79B583595D1B";
@@ -13164,7 +13127,7 @@ createNode gameFbxExporter -n "Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset1"
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset2";
 	rename -uid "5019485D-40C9-480B-DD55-0C8C40F82043";
@@ -13192,7 +13155,7 @@ createNode gameFbxExporter -n "Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset2"
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset3";
 	rename -uid "D60882F9-41ED-4742-323D-EFA80F117044";
@@ -13271,7 +13234,7 @@ createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPr
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset2";
 	rename -uid "7DCC9059-4FC4-A414-E5CB-429494145E4A";
@@ -13299,7 +13262,7 @@ createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPr
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset3";
 	rename -uid "C48B8F86-4259-0338-8B8C-0C98007E2DAD";
@@ -13328,7 +13291,7 @@ createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterP
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset2";
 	rename -uid "7DA7E05A-498C-8012-DBD9-CD96B7BB826A";
@@ -13356,7 +13319,7 @@ createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterP
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset3";
 	rename -uid "68198C00-449C-1BD7-E500-708B19B2428B";
@@ -13572,7 +13535,7 @@ createNode gameFbxExporter -n "Base_Animation:gameExporterPreset2";
 	setAttr ".ebm" yes;
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "Rigged_Character_Animated";
 createNode gameFbxExporter -n "Base_Animation:gameExporterPreset3";
 	rename -uid "633C6168-4047-0818-5707-B78D42384F11";
@@ -13598,7 +13561,7 @@ createNode gameFbxExporter -n "Base_Animation:Rig:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Base_Animation:Rig:gameExporterPreset2";
 	rename -uid "AEB9C412-4A1E-FB6E-D69F-06AF6127CCA0";
@@ -13626,7 +13589,7 @@ createNode gameFbxExporter -n "Base_Animation:Rig:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Base_Animation:Rig:gameExporterPreset3";
 	rename -uid "8E2BA238-4AEB-49AF-2071-698D82ED03D2";
@@ -17634,7 +17597,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:Racoon_Model_Seperated:Base
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:Racoon_Model_Seperated:Base_Rig:gameExporterPreset2";
 	rename -uid "ACDD5CD7-4880-2B43-F161-87BEC80603F8";
@@ -17662,7 +17625,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:Racoon_Model_Seperated:Base
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:Racoon_Model_Seperated:Base_Rig:gameExporterPreset3";
 	rename -uid "DE0F91E7-4859-1BD7-85F8-B0B8C3EFC9EA";
@@ -17684,7 +17647,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:Racoon_Model_Seperated:Base
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:Racoon_Model_Seperated:Base_Rig1:gameExporterPreset2";
 	rename -uid "746B7025-42DD-91C1-4EFD-C78A5F6247AD";
@@ -17712,7 +17675,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:Racoon_Model_Seperated:Base
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:Racoon_Model_Seperated:Base_Rig1:gameExporterPreset3";
 	rename -uid "AD653E28-46BD-AAB4-1802-78ADEC2C3F13";
@@ -17764,27 +17727,18 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:Racoon_Model_Seperated:game
 createNode objectSet -n "Alligator_Rig_Painted:Racoon_Model_Seperated:Head_geo7ShapeHiddenFacesSet";
 	rename -uid "15809AA1-4E5C-1C9F-9DDB-4D81DA41D625";
 	setAttr ".ihi" 0;
-createNode lambert -n "Alligator_Rig_Painted:Head_and_Tail";
-	rename -uid "30F7F438-499F-8869-DF96-F8818503D1AD";
-	setAttr ".c" -type "float3" 0.14040567 0.25299999 0.09892299 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:Racoon_Model_Seperated:lambert2SG";
 	rename -uid "2C7707A8-4102-031A-2704-29BC59546DB8";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:Racoon_Model_Seperated:materialInfo1";
 	rename -uid "07A2E8B9-4604-A72D-FC87-A78AC42EFE1A";
-createNode lambert -n "Alligator_Rig_Painted:Body";
-	rename -uid "5F273B47-44C7-E3D3-0C74-F5997EB163CE";
-	setAttr ".c" -type "float3" 0.14040567 0.25299999 0.09892299 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:Racoon_Model_Seperated:lambert3SG";
 	rename -uid "C20D660B-4FA3-D1AA-31A2-96B51B450AC7";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:Racoon_Model_Seperated:materialInfo2";
 	rename -uid "2B8068B1-455C-D6CC-7404-C897BF82345A";
-createNode lambert -n "Alligator_Rig_Painted:Clothes";
-	rename -uid "FDB52D42-42DA-5112-258D-AAB26F3B28EF";
-	setAttr ".c" -type "float3" 0.741 0.741 0.741 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:Racoon_Model_Seperated:lambert4SG";
 	rename -uid "8B23D123-461E-464E-982F-49BC73A8D2BD";
 	setAttr ".ihi" 0;
@@ -17794,17 +17748,12 @@ createNode materialInfo -n "Alligator_Rig_Painted:Racoon_Model_Seperated:materia
 createNode objectSet -n "Alligator_Rig_Painted:head_geoShapeHiddenFacesSet";
 	rename -uid "3C46F057-4F6A-861D-8890-09B124676B46";
 	setAttr ".ihi" 0;
-createNode blinn -n "Alligator_Rig_Painted:blinn1";
-	rename -uid "F9F8813F-4CE7-BB0B-0A3B-ABA6A1498252";
-	setAttr ".c" -type "float3" 0.7101 0 0 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:blinn1SG";
 	rename -uid "D7188CEC-46D1-81B6-30B3-8D86261E7E18";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:materialInfo1";
 	rename -uid "7241B9BE-4F81-8013-6951-8C979BF14E33";
-createNode blinn -n "Alligator_Rig_Painted:teef";
-	rename -uid "7EC79008-4373-5258-333A-00931305AFCE";
 createNode shadingEngine -n "Alligator_Rig_Painted:blinn2SG";
 	rename -uid "E0C39F0F-41E8-572F-BC3C-32946436A421";
 	setAttr ".ihi" 0;
@@ -17842,7 +17791,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig:gameExpo
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterPreset2";
 	rename -uid "500BEB49-453A-F04F-8DAA-07858A19096D";
@@ -17870,7 +17819,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig:gameExpo
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterPreset3";
 	rename -uid "D6424F10-4605-49A3-45E3-11BB7B3C9BF5";
@@ -17892,7 +17841,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExp
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporterPreset2";
 	rename -uid "D1A9E694-4D4B-6462-80C1-F8B85D30D271";
@@ -17920,7 +17869,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExp
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporterPreset3";
 	rename -uid "1B55A850-4AE2-D87C-7B9B-69B708F926F8";
@@ -17975,9 +17924,6 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:gameExporterPrese
 createNode objectSet -n "Alligator_Rig_Painted:IK_FK_Rig:Head_geo7ShapeHiddenFacesSet";
 	rename -uid "33B4DD41-4F27-9972-A25E-E9A0017BCDCA";
 	setAttr ".ihi" 0;
-createNode lambert -n "Alligator_Rig_Painted:IK_FK_Rig:HeadandTail";
-	rename -uid "A7B25830-4443-7B4C-3596-2FB8C2491A4D";
-	setAttr ".c" -type "float3" 0.25301206 0.25301206 0.25301206 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:IK_FK_Rig:lambert2SG";
 	rename -uid "48E135FF-4342-9AC7-7F47-13B42754F63F";
 	setAttr ".ihi" 0;
@@ -17987,18 +17933,12 @@ createNode materialInfo -n "Alligator_Rig_Painted:IK_FK_Rig:materialInfo1";
 createNode groupId -n "Alligator_Rig_Painted:IK_FK_Rig:groupId90";
 	rename -uid "6B0229CA-4914-2B27-8382-A28C3E37A735";
 	setAttr ".ihi" 0;
-createNode lambert -n "Alligator_Rig_Painted:IK_FK_Rig:Body";
-	rename -uid "F6E2D910-40C0-998B-8BBB-5A998CFE46D4";
-	setAttr ".c" -type "float3" 0.22727273 0.22727273 0.22727273 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:IK_FK_Rig:lambert3SG";
 	rename -uid "777D0AEE-49A4-0F3B-5A32-1B9D6E09F933";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:IK_FK_Rig:materialInfo2";
 	rename -uid "F70B15BF-4063-09B6-7F56-F9AEA8CF1629";
-createNode lambert -n "Alligator_Rig_Painted:IK_FK_Rig:Clothes1";
-	rename -uid "AD9B2353-4264-F565-7979-62B6B037A256";
-	setAttr ".c" -type "float3" 0 0.741 0.741 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:IK_FK_Rig:lambert4SG";
 	rename -uid "B276673D-456B-9D26-8739-80844A046E48";
 	setAttr ".ihi" 0;
@@ -18023,7 +17963,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Bas
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset2";
 	rename -uid "1B36B44F-494C-7CA7-6322-C5B03C90AD79";
@@ -18051,7 +17991,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Bas
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset3";
 	rename -uid "439E0E19-4733-1C16-99EE-70B18CF69D37";
@@ -18073,7 +18013,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Bas
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset2";
 	rename -uid "DEE5A8D3-4538-831D-0D66-00A746FC9972";
@@ -18101,7 +18041,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Bas
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset3";
 	rename -uid "0E4A77E9-4D8E-2791-26E9-E7BB4BB00AB8";
@@ -18129,7 +18069,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Bas
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset2";
 	rename -uid "945639A8-4E3F-4E6D-50DB-C9B7565DEEC6";
@@ -18157,7 +18097,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Bas
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset3";
 	rename -uid "0E0723D4-427B-A720-A6BC-B8ABCA1626C1";
@@ -18169,8 +18109,6 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Bas
 createNode displayLayer -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:layer1";
 	rename -uid "976E97EF-4ED8-2357-01D6-CA8A04154B76";
 	setAttr ".do" 11;
-createNode lambert -n "Alligator_Rig_Painted:IK_FK_Rig:lambert5";
-	rename -uid "356F2145-4F9E-CBF9-C3CF-4FAB173C8685";
 createNode shadingEngine -n "Alligator_Rig_Painted:IK_FK_Rig:lambert5SG";
 	rename -uid "F5B6198C-45DA-389C-8A71-45AF2620032C";
 	setAttr ".ihi" 0;
@@ -18196,24 +18134,18 @@ createNode displayLayer -n "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character_Geo";
 createNode groupId -n "Alligator_Rig_Painted:IK_FK_Rig:groupId193";
 	rename -uid "8FD0784D-4D12-AA9C-A994-FA8514AECEBF";
 	setAttr ".ihi" 0;
-createNode lambert -n "Alligator_Rig_Painted:IK_FK_Rig:Shirt";
-	rename -uid "EF21A76F-4BD8-F9BE-BE71-ADBA2E10B3E8";
 createNode shadingEngine -n "Alligator_Rig_Painted:IK_FK_Rig:lambert6SG";
 	rename -uid "AE9E6AD5-41B4-2937-7115-0485B079DBCC";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:IK_FK_Rig:materialInfo5";
 	rename -uid "C34C7484-47CC-C27A-65BD-9FA1AAD07447";
-createNode lambert -n "Alligator_Rig_Painted:IK_FK_Rig:pants";
-	rename -uid "4DEBA436-4546-4003-B1D9-DEAC4FD8E77C";
 createNode shadingEngine -n "Alligator_Rig_Painted:IK_FK_Rig:lambert7SG";
 	rename -uid "A9FAC524-4C35-2635-C9F4-01A9D26B3E45";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:IK_FK_Rig:materialInfo6";
 	rename -uid "71B4E057-4783-34C0-E3B4-47AC66C09C6F";
-createNode lambert -n "Alligator_Rig_Painted:IK_FK_Rig:Shoes";
-	rename -uid "3A690C4D-427F-6D37-5B41-4CB080163387";
 createNode shadingEngine -n "Alligator_Rig_Painted:IK_FK_Rig:lambert8SG";
 	rename -uid "1FBE8F6A-4E5F-D1E3-84C4-4990584C3772";
 	setAttr ".ihi" 0;
@@ -18268,7 +18200,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoo
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset2";
 	rename -uid "1B07C74E-4020-14BA-B83C-3D8776F15B35";
@@ -18296,7 +18228,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoo
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset3";
 	rename -uid "209AC55E-466D-41D3-4567-84BEE1C076C4";
@@ -18318,7 +18250,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoo
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset2";
 	rename -uid "AC5BA8B4-4262-E207-53B1-D3BF104FEA0B";
@@ -18346,7 +18278,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoo
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset3";
 	rename -uid "BA450915-4E5A-5D71-3812-289C806F0C20";
@@ -18417,7 +18349,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racco
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset2";
 	rename -uid "78D0B876-48DE-7443-56B6-B49BC115F9FF";
@@ -18445,7 +18377,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racco
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset3";
 	rename -uid "2D3D8A74-4210-3BC5-13FF-7FB29DB882F3";
@@ -18470,7 +18402,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racco
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset2";
 	rename -uid "C8616540-4558-2D92-AF16-A8A38CF486DB";
@@ -18498,7 +18430,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racco
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset3";
 	rename -uid "A112958C-4D30-7063-C25D-3DAC4BF0B12F";
@@ -18562,27 +18494,18 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racco
 createNode objectSet -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Head_geo7ShapeHiddenFacesSet";
 	rename -uid "8C956E2F-4B79-CB9D-7829-728A4013CB84";
 	setAttr ".ihi" 0;
-createNode lambert -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail";
-	rename -uid "88319633-4D37-C9C5-D6F1-018617113BBE";
-	setAttr ".c" -type "float3" 0.25301206 0.25301206 0.25301206 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert2SG";
 	rename -uid "79C9941E-4507-AEF7-6BD6-7194EA09D567";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo1";
 	rename -uid "9DE923D0-4431-04F0-23B3-D89F94A1FC8D";
-createNode lambert -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body";
-	rename -uid "EF036333-4323-2660-30F4-48AA70A0FDCF";
-	setAttr ".c" -type "float3" 0.22727273 0.22727273 0.22727273 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert3SG";
 	rename -uid "119726A2-40FA-1644-3AA1-31850BF6A873";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo2";
 	rename -uid "C3B886D7-425D-B255-5490-DC9B593E3C44";
-createNode lambert -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1";
-	rename -uid "D2BF2F99-4BD3-06ED-A0F6-14B5653F4D75";
-	setAttr ".c" -type "float3" 0 0.741 0.741 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert4SG";
 	rename -uid "EC554B27-4209-3C51-309F-14B5E7CC6390";
 	setAttr ".ihi" 0;
@@ -18631,7 +18554,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Animation:ga
 	setAttr ".ebm" yes;
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "Rigged_Character_Animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Animation:gameExporterPreset3";
 	rename -uid "D65C53E9-4B81-1501-1AF5-E3B12095DA77";
@@ -18653,7 +18576,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Animation:Ri
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset2";
 	rename -uid "9B454EC8-48A4-006E-C20F-618D4921BA81";
@@ -18681,7 +18604,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Animation:Ri
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset3";
 	rename -uid "83A55D9B-43A0-094E-144D-FC96DAFC3643";
@@ -18719,46 +18642,30 @@ createNode displayLayer -n "Alligator_Rig_Painted:IK_FK_Rig:BaseControls";
 	rename -uid "5FAA36DF-4113-104A-BFB1-1C813391BDCA";
 	setAttr ".c" 6;
 	setAttr ".do" 21;
-createNode lambert -n "Alligator_Rig_Painted:Clothes1";
-	rename -uid "FE0957F9-4BBA-53F8-3624-1485B57DF5FF";
-	setAttr ".c" -type "float3" 0.741 0.741 0.741 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:Alligator_GeoSG";
 	rename -uid "FD75F409-4DFC-2C84-B208-5F92267FEBD0";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:materialInfo3";
 	rename -uid "A945B659-49E3-94EF-1602-5B9C79F7DAD3";
-createNode lambert -n "Alligator_Rig_Painted:Body1";
-	rename -uid "E133951B-4FEE-ABE8-8172-F0803CD1E4C6";
-	setAttr ".c" -type "float3" 0.14040567 0.25299999 0.09892299 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:Alligator_GeoSG1";
 	rename -uid "B0A26C93-4806-4269-81FC-93879BDD370C";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:materialInfo4";
 	rename -uid "C6F870F5-4AF6-1E2D-0DC0-DD8ADFBACCE8";
-createNode phong -n "Alligator_Rig_Painted:blinn3";
-	rename -uid "F965263F-4409-BEB3-03F2-DCA1D4276F0A";
-	setAttr ".c" -type "float3" 0.7101 0 0 ;
-	setAttr ".cp" 6.311790943145752;
 createNode shadingEngine -n "Alligator_Rig_Painted:Alligator_GeoSG2";
 	rename -uid "3FF61946-4113-B9E9-2919-05BB961F8142";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:materialInfo5";
 	rename -uid "85F5E388-4453-AF43-0999-87A115A4D8EC";
-createNode phong -n "Alligator_Rig_Painted:teef1";
-	rename -uid "C63C8644-48B2-5E06-EA81-4B904CCC1DE2";
-	setAttr ".cp" 6.311790943145752;
 createNode shadingEngine -n "Alligator_Rig_Painted:Alligator_GeoSG3";
 	rename -uid "177C1E29-4562-B405-1F4B-C0AB94153A72";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Alligator_Rig_Painted:materialInfo6";
 	rename -uid "15236F00-42B4-8A34-51DC-2C850916DB73";
-createNode lambert -n "Alligator_Rig_Painted:Head_and_Tail1";
-	rename -uid "B6A16067-4E24-FC32-44B2-00AE894087CF";
-	setAttr ".c" -type "float3" 0.14040567 0.25299999 0.09892299 ;
 createNode shadingEngine -n "Alligator_Rig_Painted:Alligator_GeoSG4";
 	rename -uid "913A1B5A-4101-082B-F5E4-108E34F984AD";
 	setAttr ".ihi" 0;
@@ -18810,7 +18717,7 @@ createNode gameFbxExporter -n "Alligator_Rig_Painted:gameExporterPreset2";
 	setAttr ".ebm" yes;
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "Al_Rig";
 createNode gameFbxExporter -n "Alligator_Rig_Painted:gameExporterPreset3";
 	rename -uid "D016E1EC-4E8F-4B3C-9A44-BD9981884D38";
@@ -18980,7 +18887,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:Base_Rig:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:Base_Rig:gameExporterPreset2";
 	rename -uid "776AA9CC-475B-DFCF-9487-04A72A6D7202";
@@ -19008,7 +18915,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:Base_Rig:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:Base_Rig:gameExporterPreset3";
 	rename -uid "8428BC2C-49D5-4321-5A70-C4A00090DE03";
@@ -19030,7 +18937,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:Base_Rig1:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:Base_Rig1:gameExporterPreset2";
 	rename -uid "5560A3EE-4454-3486-CD70-E6A24C3EF873";
@@ -19058,7 +18965,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:Base_Rig1:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:Base_Rig1:gameExporterPreset3";
 	rename -uid "C8B800BF-40F6-58E7-BFDD-748E7A499EEE";
@@ -19116,18 +19023,12 @@ createNode shadingEngine -n "Bear_Rig_Painted:lambert2SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:materialInfo1";
 	rename -uid "B5900C0F-4311-6228-B447-7CA9BE0C40AF";
-createNode lambert -n "Bear_Rig_Painted:Body";
-	rename -uid "428350E4-4B14-7D32-E1A1-AEB66C1A64E5";
-	setAttr ".c" -type "float3" 0.227 0.18334602 0.1135 ;
 createNode shadingEngine -n "Bear_Rig_Painted:lambert3SG";
 	rename -uid "02634E5C-400E-1D2E-841C-B9A7A12892E2";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:materialInfo2";
 	rename -uid "4939C64A-4A50-A3D5-84C6-FBBD3E09C25E";
-createNode lambert -n "Bear_Rig_Painted:Clothes1";
-	rename -uid "F015808D-4683-9C42-520A-25839E04E885";
-	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "Bear_Rig_Painted:lambert4SG";
 	rename -uid "5C729CC6-4B6C-CC9B-90F8-72A16CBC74B9";
 	setAttr ".ihi" 0;
@@ -19158,9 +19059,6 @@ createNode groupId -n "Bear_Rig_Painted:groupId38";
 createNode groupId -n "Bear_Rig_Painted:groupId39";
 	rename -uid "D518E25E-46B1-6D3E-4B80-E194F99CF26D";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bear_Rig_Painted:Hat_And_Shawl1";
-	rename -uid "F1B52D75-49BC-E615-B9CA-F7AC5E04A0F3";
-	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "Bear_Rig_Painted:lambert5SG";
 	rename -uid "87DA5702-4AEE-1453-84FF-669E45728C37";
 	setAttr ".ihi" 0;
@@ -19173,18 +19071,12 @@ createNode nodeGraphEditorInfo -n "Bear_Rig_Painted:hyperShadePrimaryNodeEditorS
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -330.95236780151544 -389.98797052336647 ;
 	setAttr ".tgi[0].vh" -type "double2" 446.4285536890946 403.0832080982467 ;
-createNode lambert -n "Bear_Rig_Painted:Pope_Hat";
-	rename -uid "6FBD1C4F-410D-2AE1-4C36-2B90F56850DE";
-	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "Bear_Rig_Painted:lambert6SG";
 	rename -uid "E0D9F670-4542-FF5D-E794-66BB25F03319";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:materialInfo5";
 	rename -uid "2035FEEB-49C3-DB35-E642-06B84BC8301F";
-createNode lambert -n "Bear_Rig_Painted:Pendant";
-	rename -uid "54CF6E18-4696-D83D-2ECF-82AD81A228B7";
-	setAttr ".c" -type "float3" 0.5 0.43684459 0.08950001 ;
 createNode shadingEngine -n "Bear_Rig_Painted:lambert7SG";
 	rename -uid "64C2D2D8-47A8-7BCB-F1D4-DCA5589B0D18";
 	setAttr ".ihi" 0;
@@ -19209,7 +19101,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterP
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterPreset2";
 	rename -uid "2540C926-41B2-DA8E-AA7A-AC93F44F7C51";
@@ -19237,7 +19129,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterP
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterPreset3";
 	rename -uid "254BEBC2-4DAD-15DD-2116-439C1FC47D7B";
@@ -19259,7 +19151,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporter
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporterPreset2";
 	rename -uid "B3DCFB3E-47E2-F256-D404-CF94B98E0970";
@@ -19287,7 +19179,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporter
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporterPreset3";
 	rename -uid "F116CADF-4589-CA06-C44A-53997A14B32E";
@@ -19342,9 +19234,6 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:gameExporterPreset3";
 createNode objectSet -n "Bear_Rig_Painted:IK_FK_Rig:Head_geo7ShapeHiddenFacesSet";
 	rename -uid "465BF78B-4298-FE01-DC01-A68EC80E68D0";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bear_Rig_Painted:IK_FK_Rig:HeadandTail";
-	rename -uid "C8B3DE9E-43B4-0D3F-54E7-1B8B437B0B59";
-	setAttr ".c" -type "float3" 0.25301206 0.25301206 0.25301206 ;
 createNode shadingEngine -n "Bear_Rig_Painted:IK_FK_Rig:lambert2SG";
 	rename -uid "F07D7AE6-4CB1-04D5-CF8B-F6A75D2F91AF";
 	setAttr ".ihi" 0;
@@ -19354,18 +19243,12 @@ createNode materialInfo -n "Bear_Rig_Painted:IK_FK_Rig:materialInfo1";
 createNode groupId -n "Bear_Rig_Painted:IK_FK_Rig:groupId90";
 	rename -uid "54F191B6-49CB-B65A-0A3A-6F88D08D0F4B";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bear_Rig_Painted:IK_FK_Rig:Body";
-	rename -uid "EE87A6D3-47DC-FB14-CBA2-A2869CC17234";
-	setAttr ".c" -type "float3" 0.22727273 0.22727273 0.22727273 ;
 createNode shadingEngine -n "Bear_Rig_Painted:IK_FK_Rig:lambert3SG";
 	rename -uid "DEACECDD-47E2-A929-320A-2F82583D5056";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:IK_FK_Rig:materialInfo2";
 	rename -uid "A7C4D967-4C84-73DF-268C-34A99DC85FA1";
-createNode lambert -n "Bear_Rig_Painted:IK_FK_Rig:Clothes1";
-	rename -uid "37EE848B-4FE5-DBF6-61ED-B882F0E64545";
-	setAttr ".c" -type "float3" 0 0.741 0.741 ;
 createNode shadingEngine -n "Bear_Rig_Painted:IK_FK_Rig:lambert4SG";
 	rename -uid "E23CC247-4AB3-E645-E63F-D8B9854545E9";
 	setAttr ".ihi" 0;
@@ -19390,7 +19273,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Mod
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset2";
 	rename -uid "590879C9-40D7-1A3F-097D-D49D2C3588A2";
@@ -19418,7 +19301,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Mod
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset3";
 	rename -uid "9144E611-41D4-EDED-6D2C-E39B34147E41";
@@ -19440,7 +19323,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset2";
 	rename -uid "B451F5A0-4374-86F4-1EE0-61997E578FCB";
@@ -19468,7 +19351,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset3";
 	rename -uid "A309CE7A-4C07-D8A4-A5FD-45AEB55FED32";
@@ -19496,7 +19379,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset2";
 	rename -uid "09EC6AD7-4C91-1748-8529-F1A743C934CF";
@@ -19524,7 +19407,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset3";
 	rename -uid "D6E4A9E9-416B-4084-D272-A689B04AC79D";
@@ -19536,8 +19419,6 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig
 createNode displayLayer -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:layer1";
 	rename -uid "D065CEFD-46D9-0BCF-8400-8A95E97F998E";
 	setAttr ".do" 11;
-createNode lambert -n "Bear_Rig_Painted:IK_FK_Rig:lambert5";
-	rename -uid "5B83351C-4BA5-D7A1-440D-A2B301E31C82";
 createNode shadingEngine -n "Bear_Rig_Painted:IK_FK_Rig:lambert5SG";
 	rename -uid "D46C7E73-4B42-81D0-AEC3-E0B82602563B";
 	setAttr ".ihi" 0;
@@ -19563,24 +19444,18 @@ createNode displayLayer -n "Bear_Rig_Painted:IK_FK_Rig:Cat_Character_Geo";
 createNode groupId -n "Bear_Rig_Painted:IK_FK_Rig:groupId193";
 	rename -uid "A906477B-45EB-98EA-9810-6BACE355D263";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bear_Rig_Painted:IK_FK_Rig:Shirt";
-	rename -uid "7ACDD9F7-4CD0-32F5-5277-25B4D8E4AA72";
 createNode shadingEngine -n "Bear_Rig_Painted:IK_FK_Rig:lambert6SG";
 	rename -uid "46D34BC1-4EDC-A57B-873D-EFB19E2F264E";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:IK_FK_Rig:materialInfo5";
 	rename -uid "A3CAD1FA-4142-9874-48D5-EBB17AC7A44A";
-createNode lambert -n "Bear_Rig_Painted:IK_FK_Rig:pants";
-	rename -uid "96BE0449-4501-42D4-9F6B-6D815BF30CDE";
 createNode shadingEngine -n "Bear_Rig_Painted:IK_FK_Rig:lambert7SG";
 	rename -uid "6F3911B2-439C-DAB0-263C-83BE0C73AAF3";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:IK_FK_Rig:materialInfo6";
 	rename -uid "5A5F0290-4BCA-56F2-FBA4-D58580A3FEE6";
-createNode lambert -n "Bear_Rig_Painted:IK_FK_Rig:Shoes";
-	rename -uid "F18F5D42-4402-4740-15E0-58ACC73E7D9C";
 createNode shadingEngine -n "Bear_Rig_Painted:IK_FK_Rig:lambert8SG";
 	rename -uid "4DE83C9A-4657-242B-F091-81BB5DFFFF70";
 	setAttr ".ihi" 0;
@@ -19635,7 +19510,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Bas
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset2";
 	rename -uid "B19D202D-4533-652B-7052-63A5B2851CE4";
@@ -19663,7 +19538,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Bas
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset3";
 	rename -uid "851C4E9E-4611-7308-C96C-B0BEEA5E28A5";
@@ -19685,7 +19560,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Bas
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset2";
 	rename -uid "7AF1AF26-4175-0D48-0FFB-129590FF0E4C";
@@ -19713,7 +19588,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Bas
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset3";
 	rename -uid "32377D70-4163-4E0F-D080-24B3ABE140D9";
@@ -19784,7 +19659,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mo
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset2";
 	rename -uid "987BBD48-4391-E504-D11D-1E8ADBEF5FD2";
@@ -19812,7 +19687,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mo
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset3";
 	rename -uid "E6BAA73B-44D9-FC84-5B40-699B91FF600F";
@@ -19837,7 +19712,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mo
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset2";
 	rename -uid "518CADBF-4F5A-ABF0-E81A-F789A0DBD17D";
@@ -19865,7 +19740,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mo
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset3";
 	rename -uid "509ABA1F-4A75-DEA5-EB4A-A8BF5EE07351";
@@ -19929,27 +19804,18 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mo
 createNode objectSet -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Head_geo7ShapeHiddenFacesSet";
 	rename -uid "EE578C88-4494-0B31-68AA-389887D269E4";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail";
-	rename -uid "208D30DC-4754-8FFE-2D91-8A9577C6A397";
-	setAttr ".c" -type "float3" 0.25301206 0.25301206 0.25301206 ;
 createNode shadingEngine -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert2SG";
 	rename -uid "686CBBCE-44E3-6A90-9C2C-1EAE7464B403";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo1";
 	rename -uid "37931785-4501-F7FA-FFA6-1DBBA82102A9";
-createNode lambert -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body";
-	rename -uid "CB3C8FFC-4891-835F-3CF3-B4873123EC5B";
-	setAttr ".c" -type "float3" 0.22727273 0.22727273 0.22727273 ;
 createNode shadingEngine -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert3SG";
 	rename -uid "B686E0A9-4363-FCD4-0365-AAA78E0BFBEF";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo2";
 	rename -uid "924CD518-48F0-50AD-7A34-BEAEE3109084";
-createNode lambert -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1";
-	rename -uid "715671A0-4C60-60D7-5FDF-C78B04D0AB69";
-	setAttr ".c" -type "float3" 0 0.741 0.741 ;
 createNode shadingEngine -n "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert4SG";
 	rename -uid "7641779F-4A23-E78F-854A-FB84738D9237";
 	setAttr ".ihi" 0;
@@ -19998,7 +19864,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Animation:gameExp
 	setAttr ".ebm" yes;
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "Rigged_Character_Animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Animation:gameExporterPreset3";
 	rename -uid "0542DA76-4561-2B9E-9F5F-C5B1897E8336";
@@ -20020,7 +19886,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gam
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset2";
 	rename -uid "43E609D7-4DB0-74B6-B208-BCB576109E5C";
@@ -20048,7 +19914,7 @@ createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gam
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bear_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset3";
 	rename -uid "F04F4007-4262-C1DC-3921-82AE18F19FE7";
@@ -20086,45 +19952,30 @@ createNode displayLayer -n "Bear_Rig_Painted:IK_FK_Rig:BaseControls";
 	rename -uid "18BB5C8A-417D-F3B9-EBB3-0A974D24180F";
 	setAttr ".c" 6;
 	setAttr ".do" 21;
-createNode lambert -n "Bear_Rig_Painted:Pope_Hat1";
-	rename -uid "04D3684F-43A6-8CBC-2438-0C9D0BB8A53D";
-	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "Bear_Rig_Painted:Pope_Bear_GeoSG";
 	rename -uid "714D6725-4947-8286-5DCA-BD9D9328CDE5";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:materialInfo7";
 	rename -uid "E08DB612-4358-423E-888C-A8A952B1DB57";
-createNode lambert -n "Bear_Rig_Painted:Pendant1";
-	rename -uid "9075AE6F-44FB-2862-4765-7B8A15EDB3E7";
-	setAttr ".c" -type "float3" 0.5 0.43684459 0.08950001 ;
 createNode shadingEngine -n "Bear_Rig_Painted:Pope_Bear_GeoSG1";
 	rename -uid "FA0C4862-4C2F-7D25-5D1F-73B7A024B279";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:materialInfo8";
 	rename -uid "40CE9D6B-4626-1365-3D87-3497839E2EFE";
-createNode lambert -n "Bear_Rig_Painted:Body1";
-	rename -uid "E4563366-4812-BADD-70EF-689E8D6CA185";
-	setAttr ".c" -type "float3" 0.78321677 0.63259757 0.39160839 ;
 createNode shadingEngine -n "Bear_Rig_Painted:Pope_Bear_GeoSG2";
 	rename -uid "94D97C55-4159-142B-BF3F-249E05ADFB2E";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:materialInfo9";
 	rename -uid "78FC9122-4D90-A64E-C493-7EB66FC53CFE";
-createNode lambert -n "Bear_Rig_Painted:Hat_And_Shawl2";
-	rename -uid "4DCE6108-4250-28E5-EF06-0DB5D67501E3";
-	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "Bear_Rig_Painted:Pope_Bear_GeoSG3";
 	rename -uid "49DCF143-4EA2-837C-9807-A79378ADC57B";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bear_Rig_Painted:materialInfo10";
 	rename -uid "203ACD70-4230-34E6-B26D-B692591ECB39";
-createNode lambert -n "Bear_Rig_Painted:Clothes2";
-	rename -uid "DFE563E1-4F2D-3D13-56DD-D1AD83BBDF65";
-	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "Bear_Rig_Painted:Pope_Bear_GeoSG4";
 	rename -uid "FFA75CD0-469D-EE60-0AB9-DFB478D35E82";
 	setAttr ".ihi" 0;
@@ -20149,7 +20000,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:Base_Rig:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:Base_Rig:gameExporterPreset2";
 	rename -uid "7F0082A0-445D-3D8A-02F5-64BCF034234A";
@@ -20177,7 +20028,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:Base_Rig:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:Base_Rig:gameExporterPreset3";
 	rename -uid "85861EAC-4A46-8129-A298-6D94AC69449F";
@@ -20199,7 +20050,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:Base_Rig1:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:Base_Rig1:gameExporterPreset2";
 	rename -uid "789CCB86-4A83-15DE-A62A-25B6D4EC4CB1";
@@ -20227,7 +20078,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:Base_Rig1:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:Base_Rig1:gameExporterPreset3";
 	rename -uid "B729CDF1-4A7A-7EAB-57C0-BEA8CBA53BF0";
@@ -20279,27 +20130,18 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:gameExporterPreset3";
 createNode objectSet -n "Bunny_Rig_Painted:Head_geo7ShapeHiddenFacesSet";
 	rename -uid "D1A877EA-44FA-99E5-C4AE-B9BD50B50086";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bunny_Rig_Painted:HeadandTail";
-	rename -uid "1D0610C4-4816-D17C-8C2C-C3A05C8D3DF9";
-	setAttr ".c" -type "float3" 0.081 0.081 0.081 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:lambert2SG";
 	rename -uid "103C48FB-42E1-D642-DAE3-18A8CF23D76A";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bunny_Rig_Painted:materialInfo1";
 	rename -uid "BF6CAF94-4E1A-9698-4CB4-66B420640B98";
-createNode lambert -n "Bunny_Rig_Painted:Body";
-	rename -uid "086C896A-446A-3709-C95E-EBA5985D8BE4";
-	setAttr ".c" -type "float3" 0.081 0.081 0.081 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:lambert3SG";
 	rename -uid "6079576A-4E64-2D43-8119-54891DE1F91E";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bunny_Rig_Painted:materialInfo2";
 	rename -uid "007C07CD-48ED-D0B6-AF13-B7AB33A5FD58";
-createNode lambert -n "Bunny_Rig_Painted:Clothes1";
-	rename -uid "25D268E2-43E8-EBFB-5B3A-F2AE869C55C3";
-	setAttr ".c" -type "float3" 0 0.741 0.741 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:lambert4SG";
 	rename -uid "B98F4147-4D90-40F4-FB90-E6A353B0F31D";
 	setAttr ".ihi" 0;
@@ -20324,9 +20166,6 @@ createNode groupId -n "Bunny_Rig_Painted:groupId2";
 createNode groupId -n "Bunny_Rig_Painted:groupId50";
 	rename -uid "42329F51-4FEE-585F-9F2C-F2B339C4C93E";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bunny_Rig_Painted:Clothes_02";
-	rename -uid "2F7A386B-4F89-0725-1215-9C99D61997C6";
-	setAttr ".c" -type "float3" 0.64300001 0.061728012 0.55357152 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:lambert5SG";
 	rename -uid "B221A40E-4510-E5DF-0A45-089559561BA8";
 	setAttr ".ihi" 0;
@@ -20351,7 +20190,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporter
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterPreset2";
 	rename -uid "BB11796C-4C12-FFB9-F38D-3AA732540068";
@@ -20379,7 +20218,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporter
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterPreset3";
 	rename -uid "D6E2B856-4B81-1285-78B8-3F9C869F722A";
@@ -20401,7 +20240,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporte
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporterPreset2";
 	rename -uid "734CAFD3-4C38-E446-1A96-0DBF2473BDE8";
@@ -20429,7 +20268,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporte
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporterPreset3";
 	rename -uid "292BD6E1-4A9C-1235-EA41-349BB3065740";
@@ -20484,9 +20323,6 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:gameExporterPreset3";
 createNode objectSet -n "Bunny_Rig_Painted:IK_FK_Rig:Head_geo7ShapeHiddenFacesSet";
 	rename -uid "89C3652A-431F-3DF7-331C-EDB458D1EA77";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bunny_Rig_Painted:IK_FK_Rig:HeadandTail";
-	rename -uid "1BBBE219-47DF-5772-8D93-2A9F0DC6B3FC";
-	setAttr ".c" -type "float3" 0.25301206 0.25301206 0.25301206 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:IK_FK_Rig:lambert2SG";
 	rename -uid "CC6A791D-49DD-A97B-0E0B-AD805312EA79";
 	setAttr ".ihi" 0;
@@ -20496,18 +20332,12 @@ createNode materialInfo -n "Bunny_Rig_Painted:IK_FK_Rig:materialInfo1";
 createNode groupId -n "Bunny_Rig_Painted:IK_FK_Rig:groupId90";
 	rename -uid "0002F1AB-4564-E3CA-8848-24BB81C47CC7";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bunny_Rig_Painted:IK_FK_Rig:Body";
-	rename -uid "BB9D091F-4478-A0BB-E640-7C8AA0A6A4A4";
-	setAttr ".c" -type "float3" 0.22727273 0.22727273 0.22727273 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:IK_FK_Rig:lambert3SG";
 	rename -uid "32D35F9D-4397-3B03-E4C2-2A84B5F01D92";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bunny_Rig_Painted:IK_FK_Rig:materialInfo2";
 	rename -uid "58EB4643-427F-B231-9ED6-33A308267C8C";
-createNode lambert -n "Bunny_Rig_Painted:IK_FK_Rig:Clothes1";
-	rename -uid "0631F9BF-4B33-7302-000F-C897A822866C";
-	setAttr ".c" -type "float3" 0 0.741 0.741 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:IK_FK_Rig:lambert4SG";
 	rename -uid "DC0417A9-4ED5-3727-66DE-54B1403F6962";
 	setAttr ".ihi" 0;
@@ -20532,7 +20362,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Mo
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset2";
 	rename -uid "4E9009B7-4253-7062-4E24-5FA4FB15DBDF";
@@ -20560,7 +20390,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Mo
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset3";
 	rename -uid "E904F13A-4157-8CCC-9CAC-31AFB97CF531";
@@ -20582,7 +20412,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Ri
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset2";
 	rename -uid "53B278A5-4A7C-8ACF-C65F-8297B32985A3";
@@ -20610,7 +20440,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Ri
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset3";
 	rename -uid "18DE2218-4DD4-E5F5-37BC-E5B9A35F6927";
@@ -20638,7 +20468,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Ri
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset2";
 	rename -uid "743A3A9D-4AAD-4A78-6421-2DA314FA6E67";
@@ -20666,7 +20496,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Ri
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset3";
 	rename -uid "FAF96AAA-41D6-B84C-CC96-D98796ADE20D";
@@ -20678,8 +20508,6 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Ri
 createNode displayLayer -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:layer1";
 	rename -uid "E992E65D-4B27-2ADE-9208-2F83AF4D0638";
 	setAttr ".do" 11;
-createNode lambert -n "Bunny_Rig_Painted:IK_FK_Rig:lambert5";
-	rename -uid "C3EAD220-4E38-3367-FB9D-E8835AF44B90";
 createNode shadingEngine -n "Bunny_Rig_Painted:IK_FK_Rig:lambert5SG";
 	rename -uid "BCFF1F50-489A-3F08-E86D-469952C55421";
 	setAttr ".ihi" 0;
@@ -20705,8 +20533,6 @@ createNode displayLayer -n "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character_Geo";
 createNode groupId -n "Bunny_Rig_Painted:IK_FK_Rig:groupId193";
 	rename -uid "EFA3FE07-4293-FFB0-05E8-77B1206A35E4";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bunny_Rig_Painted:IK_FK_Rig:Shirt";
-	rename -uid "ED8F11FD-4F65-CB1D-0D76-299BDDEE6D79";
 createNode shadingEngine -n "Bunny_Rig_Painted:IK_FK_Rig:lambert6SG";
 	rename -uid "A55E7AAE-4D06-5248-0589-0BBBC56E23E7";
 	setAttr ".ihi" 0;
@@ -20721,8 +20547,6 @@ createNode shadingEngine -n "Bunny_Rig_Painted:IK_FK_Rig:lambert7SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bunny_Rig_Painted:IK_FK_Rig:materialInfo6";
 	rename -uid "3395BBA4-416D-31D7-79D3-0EB9C6DB2613";
-createNode lambert -n "Bunny_Rig_Painted:IK_FK_Rig:Shoes";
-	rename -uid "60996F80-46CB-3E88-DFF0-DE86BA28C7E8";
 createNode shadingEngine -n "Bunny_Rig_Painted:IK_FK_Rig:lambert8SG";
 	rename -uid "D8537283-4928-5B96-AC7B-5EBEA1B34B25";
 	setAttr ".ihi" 0;
@@ -20777,7 +20601,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Ba
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset2";
 	rename -uid "097D0298-464D-96A4-6704-2D822DD54507";
@@ -20805,7 +20629,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Ba
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset3";
 	rename -uid "B53E6021-474D-DD30-390F-E8A0629EDEB1";
@@ -20827,7 +20651,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Ba
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset2";
 	rename -uid "98B5A484-4E61-2F89-2C35-B091948989AE";
@@ -20855,7 +20679,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Ba
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset3";
 	rename -uid "292B09C7-4683-30F6-B9B7-F4801E7E0F32";
@@ -20926,7 +20750,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_M
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset2";
 	rename -uid "2F07B528-4566-8836-F70A-0A92E43AA8EF";
@@ -20954,7 +20778,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_M
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset3";
 	rename -uid "EF8B802B-46DE-8551-1F3B-529EF8C66A6C";
@@ -20979,7 +20803,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_M
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset2";
 	rename -uid "5AA75E5E-4DDC-699D-D060-9789A6602D78";
@@ -21007,7 +20831,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_M
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset3";
 	rename -uid "1D630774-4909-68F1-F7DE-318046FAB188";
@@ -21071,27 +20895,18 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_M
 createNode objectSet -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Head_geo7ShapeHiddenFacesSet";
 	rename -uid "09672EAB-4F69-7AD8-4A00-4B8E5DDA206B";
 	setAttr ".ihi" 0;
-createNode lambert -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail";
-	rename -uid "BEFCECF3-425A-493B-D8B5-03BF6D17A6BC";
-	setAttr ".c" -type "float3" 0.25301206 0.25301206 0.25301206 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert2SG";
 	rename -uid "B2F82F64-43B2-7722-9763-7EACDC145FE7";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo1";
 	rename -uid "73184CF1-4919-29C8-79A2-05AB48034DBA";
-createNode lambert -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body";
-	rename -uid "D5484223-4DE4-ABDD-A650-1C9008260E8A";
-	setAttr ".c" -type "float3" 0.22727273 0.22727273 0.22727273 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert3SG";
 	rename -uid "79DA17A2-49D4-6317-8649-F388ECE13A44";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo2";
 	rename -uid "CF3CF12F-413D-53B8-3F8B-41B87A498FAE";
-createNode lambert -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1";
-	rename -uid "EE143DC3-4D72-40BD-4387-32999C429513";
-	setAttr ".c" -type "float3" 0 0.741 0.741 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert4SG";
 	rename -uid "CEDA3772-4071-C36F-864B-C49B307CF56C";
 	setAttr ".ihi" 0;
@@ -21140,7 +20955,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Animation:gameEx
 	setAttr ".ebm" yes;
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "Rigged_Character_Animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Animation:gameExporterPreset3";
 	rename -uid "5CAAC27E-4775-57D8-1B3F-5A93403D7BD4";
@@ -21162,7 +20977,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:ga
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset2";
 	rename -uid "2BCA5D0B-47B7-6B37-5EC9-ED92C78B2091";
@@ -21190,7 +21005,7 @@ createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:ga
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Bunny_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset3";
 	rename -uid "FEC4CACC-4547-0021-2292-DC9751B012FE";
@@ -21228,36 +21043,24 @@ createNode displayLayer -n "Bunny_Rig_Painted:IK_FK_Rig:BaseControls";
 	rename -uid "FCEFB38B-4905-57A8-F29E-A0BD5AD21D88";
 	setAttr ".c" 6;
 	setAttr ".do" 21;
-createNode lambert -n "Bunny_Rig_Painted:Clothes2";
-	rename -uid "A07C630D-4B39-63E6-C98D-ECBF5A20AAB1";
-	setAttr ".c" -type "float3" 0 0.741 0.741 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:Bunny_GeoSG";
 	rename -uid "AB7210DF-4D0D-17AA-E39D-01B076AFB369";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bunny_Rig_Painted:materialInfo5";
 	rename -uid "857EE284-40F2-4A1F-FA82-A987452A388C";
-createNode lambert -n "Bunny_Rig_Painted:Body1";
-	rename -uid "B397F5E6-4620-6235-BE88-A18ED6AD1FAA";
-	setAttr ".c" -type "float3" 0.081 0.081 0.081 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:Bunny_GeoSG1";
 	rename -uid "C2AE81FA-4B8B-BA0C-B8D6-02939A93A500";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bunny_Rig_Painted:materialInfo6";
 	rename -uid "875F0F85-46A5-4F6E-5DD5-7285B23A9C9D";
-createNode lambert -n "Bunny_Rig_Painted:Clothes_03";
-	rename -uid "835CE949-4214-274F-E1D2-3CAB58E3F2A3";
-	setAttr ".c" -type "float3" 0.64300001 0.061728012 0.55357152 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:Bunny_GeoSG2";
 	rename -uid "85305C9C-47A3-FCD2-FA7D-C0BA544D50F0";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Bunny_Rig_Painted:materialInfo7";
 	rename -uid "608226BB-466B-88AC-0E0C-BBB28C6CB862";
-createNode lambert -n "Bunny_Rig_Painted:HeadandTail1";
-	rename -uid "6AB64E94-4E83-F3F2-EDF0-FE827CD9243A";
-	setAttr ".c" -type "float3" 0.081 0.081 0.081 ;
 createNode shadingEngine -n "Bunny_Rig_Painted:Bunny_GeoSG3";
 	rename -uid "4C95C8C3-4B5F-0219-DC5A-C99B81C23188";
 	setAttr ".ihi" 0;
@@ -21282,7 +21085,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:Base_Rig:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:Base_Rig:gameExporterPreset2";
 	rename -uid "A53127EF-4BCC-9409-66E9-2F8EB41654A5";
@@ -21310,7 +21113,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:Base_Rig:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:Base_Rig:gameExporterPreset3";
 	rename -uid "E7D2647D-442A-EB25-B548-BC9BC7C993F0";
@@ -21332,7 +21135,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:Base_Rig1:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:Base_Rig1:gameExporterPreset2";
 	rename -uid "57FB5B10-4F1F-6EA0-1CCD-7284521CF97E";
@@ -21360,7 +21163,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:Base_Rig1:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:Base_Rig1:gameExporterPreset3";
 	rename -uid "E5B96ED5-4FD5-CB2D-EEC5-1F829C2115C0";
@@ -21478,7 +21281,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:Kim_Model:Base_Rig:gameExporterPres
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:Kim_Model:Base_Rig:gameExporterPreset2";
 	rename -uid "7DB23107-4A57-6D03-28E5-5DB87C80E4AC";
@@ -21506,7 +21309,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:Kim_Model:Base_Rig:gameExporterPres
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:Kim_Model:Base_Rig:gameExporterPreset3";
 	rename -uid "F9083996-4637-CBBE-52C0-0892E7029EFC";
@@ -21532,7 +21335,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:Kim_Model:Base_Rig1:gameExporterPre
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:Kim_Model:Base_Rig1:gameExporterPreset2";
 	rename -uid "09967FE7-4D57-53DB-4E57-949AE18ADDEF";
@@ -21560,7 +21363,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:Kim_Model:Base_Rig1:gameExporterPre
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:Kim_Model:Base_Rig1:gameExporterPreset3";
 	rename -uid "F91ECF4A-4C76-A0E6-61A3-928DFD950668";
@@ -21699,7 +21502,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Rig:gameExporterPres
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Rig:gameExporterPreset2";
 	rename -uid "462FF680-4108-E06F-563C-FD84A2092EF8";
@@ -21727,7 +21530,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Rig:gameExporterPres
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Rig:gameExporterPreset3";
 	rename -uid "CBF1AB92-46BB-C8FF-EFE3-0996A6FF8B73";
@@ -21749,7 +21552,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Rig1:gameExporterPre
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Rig1:gameExporterPreset2";
 	rename -uid "6EBA4825-42AB-EE80-CA28-65B2F6207B77";
@@ -21777,7 +21580,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Rig1:gameExporterPre
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Rig1:gameExporterPreset3";
 	rename -uid "ABCA61F0-4C83-A53B-05DF-E5A919403938";
@@ -21880,7 +21683,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Model:
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset2";
 	rename -uid "F7380AC4-459E-B42A-CDA2-8C9EA1A2E8C7";
@@ -21908,7 +21711,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Model:
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset3";
 	rename -uid "B5C8059D-43C7-345F-ADEB-E09337A6BCCA";
@@ -21930,7 +21733,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Rig:ga
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset2";
 	rename -uid "18F5D439-4A8F-9396-3066-37AA8584932A";
@@ -21958,7 +21761,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Rig:ga
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset3";
 	rename -uid "269497C2-4D87-61D2-0E53-9DA3280F5A1F";
@@ -21986,7 +21789,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Rig1:g
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset2";
 	rename -uid "6A9660D5-4AE6-30AD-C5EA-7E906731A50E";
@@ -22014,7 +21817,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Rig1:g
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset3";
 	rename -uid "05BB0089-4F84-4D34-766C-70931F630665";
@@ -22125,7 +21928,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Racoon:Base_R
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset2";
 	rename -uid "E476AE6E-4D5D-8120-90F1-AB9ACC62F6B1";
@@ -22153,7 +21956,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Racoon:Base_R
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset3";
 	rename -uid "07DD8A4E-4FF8-7E3E-A60D-C89E783EEB81";
@@ -22175,7 +21978,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Racoon:Base_R
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset2";
 	rename -uid "BDF9BA1E-4765-D062-E67C-189BF0B63A2E";
@@ -22203,7 +22006,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Racoon:Base_R
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset3";
 	rename -uid "66DC1773-4642-0A94-5513-5A9B724CE748";
@@ -22274,7 +22077,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Raccoon_Model
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset2";
 	rename -uid "DB8EA171-45D7-3037-9B96-67B3AB19FB72";
@@ -22302,7 +22105,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Raccoon_Model
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset3";
 	rename -uid "E44AF4C2-4062-30E7-1C0E-C29FDB8E9997";
@@ -22327,7 +22130,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Raccoon_Model
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset2";
 	rename -uid "E3EBAEA8-46B4-2959-42AC-949AC574F326";
@@ -22355,7 +22158,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Raccoon_Model
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset3";
 	rename -uid "6CAAB2ED-437E-5E8F-01C6-099B424CEC83";
@@ -22488,7 +22291,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Animation:gameExport
 	setAttr ".ebm" yes;
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "Rigged_Character_Animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Animation:gameExporterPreset3";
 	rename -uid "1D35AD3B-49FC-0401-A0FE-0994F1ED2861";
@@ -22510,7 +22313,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Animation:Rig:gameEx
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset2";
 	rename -uid "DE65E393-47B9-CAD8-F9E3-858C9DB05846";
@@ -22538,7 +22341,7 @@ createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Animation:Rig:gameEx
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Girl_Wolf_Rig:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset3";
 	rename -uid "1FD8D888-4131-1BBB-1188-099D378E7DF7";
@@ -22639,7 +22442,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:Base_Rig:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:Base_Rig:gameExporterPreset2";
 	rename -uid "77BFCD6A-485E-450F-1589-C5B54754AC66";
@@ -22667,7 +22470,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:Base_Rig:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:Base_Rig:gameExporterPreset3";
 	rename -uid "4E623445-49E6-E6C8-08D2-ACBF2336D7F8";
@@ -22693,7 +22496,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:Base_Rig1:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:Base_Rig1:gameExporterPreset2";
 	rename -uid "68083D58-4F2F-FE98-73E0-FEB2E8F06FE2";
@@ -22721,7 +22524,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:Base_Rig1:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:Base_Rig1:gameExporterPreset3";
 	rename -uid "487F9FDD-43A7-456B-C4EF-38A73CEA20B5";
@@ -22860,7 +22663,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Rig:gameExporterPr
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Rig:gameExporterPreset2";
 	rename -uid "85DB21AE-48E4-E531-5C3D-6B96257EA6E9";
@@ -22888,7 +22691,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Rig:gameExporterPr
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Rig:gameExporterPreset3";
 	rename -uid "84C1D607-412E-6351-6EF0-FCA797CEFC36";
@@ -22910,7 +22713,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Rig1:gameExporterP
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Rig1:gameExporterPreset2";
 	rename -uid "8BCFC71A-473D-859E-4A37-3397101F2F48";
@@ -22938,7 +22741,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Rig1:gameExporterP
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Rig1:gameExporterPreset3";
 	rename -uid "562FE108-4B28-6517-E69C-D48754BEC907";
@@ -23041,7 +22844,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Mode
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset2";
 	rename -uid "89DF5155-4C5E-256E-AE14-BF8AC6049FDB";
@@ -23069,7 +22872,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Mode
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset3";
 	rename -uid "EE92D973-4BCF-6E28-7D2E-E79D06887BCF";
@@ -23091,7 +22894,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Rig:
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset2";
 	rename -uid "C1C9B023-44C4-D2E0-C04D-1DB732B93165";
@@ -23119,7 +22922,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Rig:
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset3";
 	rename -uid "710CAFF3-4200-3AE6-8A64-A289CEA1BDE2";
@@ -23147,7 +22950,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Rig1
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset2";
 	rename -uid "E8E14051-46C4-C748-8853-958F1857EA80";
@@ -23175,7 +22978,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Rig1
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset3";
 	rename -uid "44D5B893-48F8-CD32-094B-FDB2E656525A";
@@ -23286,7 +23089,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset2";
 	rename -uid "D3E024DE-410A-6C69-AF56-D7BF70A042C4";
@@ -23314,7 +23117,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset3";
 	rename -uid "7FAF90CE-4CC5-B357-DA75-AC8F0B1BC1B5";
@@ -23336,7 +23139,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset2";
 	rename -uid "57EABA3F-4BF1-4534-9C9A-D4BD04D5B671";
@@ -23364,7 +23167,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset3";
 	rename -uid "75B684D1-4356-E1B2-5F6E-BF836BB7AFC3";
@@ -23435,7 +23238,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mod
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset2";
 	rename -uid "45D5BFFD-408E-5658-7978-98A630B0FDE9";
@@ -23463,7 +23266,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mod
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset3";
 	rename -uid "FD1C5A21-4657-6741-3E85-43AF0CD8B5E5";
@@ -23488,7 +23291,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mod
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset2";
 	rename -uid "70686803-4659-BC69-14D6-50A7A30C84A7";
@@ -23516,7 +23319,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mod
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset3";
 	rename -uid "6ACD2809-4E3D-DB82-8B7F-60A2C6269561";
@@ -23649,7 +23452,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Animation:gameExpo
 	setAttr ".ebm" yes;
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "Rigged_Character_Animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Animation:gameExporterPreset3";
 	rename -uid "8AC20346-49C6-FF3D-687B-3581C07605C4";
@@ -23671,7 +23474,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Animation:Rig:game
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset2";
 	rename -uid "1CEEC100-4FA7-9442-B527-35A79AFD7D2A";
@@ -23699,7 +23502,7 @@ createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Animation:Rig:game
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kim_Rig_painted:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset3";
 	rename -uid "80AE5688-47DA-0826-5AC9-49BAB0798103";
@@ -23845,7 +23648,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:Base_Rig:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:Base_Rig:gameExporterPreset2";
 	rename -uid "5FB78268-426C-722B-C851-58B30F8C9975";
@@ -23873,7 +23676,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:Base_Rig:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:Base_Rig:gameExporterPreset3";
 	rename -uid "59BA85A7-4E82-3502-2A0B-958495C908C9";
@@ -23895,7 +23698,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:Base_Rig1:gameExporterPreset1";
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:Base_Rig1:gameExporterPreset2";
 	rename -uid "25212F25-4F94-976D-65AA-8B959C8F84AF";
@@ -23923,7 +23726,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:Base_Rig1:gameExporterPreset2";
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:Base_Rig1:gameExporterPreset3";
 	rename -uid "38295B18-4FAA-BCCF-6245-64B70D8D6DBF";
@@ -23996,7 +23799,9 @@ createNode lambert -n "Kirk_Rig_Painted:Clothes1";
 createNode shadingEngine -n "Kirk_Rig_Painted:lambert4SG";
 	rename -uid "C5E23420-4C7A-4991-944E-B4953D5EBFBA";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
 createNode materialInfo -n "Kirk_Rig_Painted:materialInfo3";
 	rename -uid "00269138-4563-5007-A5E2-C4AFF4F35A7C";
 createNode lambert -n "Kirk_Rig_Painted:Shell1";
@@ -24035,7 +23840,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterP
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterPreset2";
 	rename -uid "5C5604AE-4B3B-CD71-B5E3-5B9F9750FFBD";
@@ -24063,7 +23868,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterP
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Rig:gameExporterPreset3";
 	rename -uid "038CDB5E-4856-AD1B-4DFB-E09338B83211";
@@ -24085,7 +23890,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporter
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporterPreset2";
 	rename -uid "2FD01672-4F1C-9002-F330-069A9DC3228B";
@@ -24113,7 +23918,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporter
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Rig1:gameExporterPreset3";
 	rename -uid "0DA8C417-4E06-7C21-8374-9FA1902C1E8E";
@@ -24216,7 +24021,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Mod
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset2";
 	rename -uid "6B198094-4350-FB96-8E75-21A81F4F7F37";
@@ -24244,7 +24049,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Mod
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Model:gameExporterPreset3";
 	rename -uid "B1FD018B-4A28-6108-232F-A8AB331B09C0";
@@ -24266,7 +24071,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset2";
 	rename -uid "3DC7BA32-4C4E-504E-0799-08A5D9699CE1";
@@ -24294,7 +24099,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig:gameExporterPreset3";
 	rename -uid "126DF17C-4281-D441-A031-A19C4A750516";
@@ -24322,7 +24127,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset2";
 	rename -uid "8E8FAF85-4531-0C9D-BD18-5E824D5F3E72";
@@ -24350,7 +24155,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:gameExporterPreset3";
 	rename -uid "E1C4DB01-4219-A761-664C-2B8D74E1D36B";
@@ -24461,7 +24266,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Bas
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset2";
 	rename -uid "E1A8E87E-4481-828C-FE88-398D31E8282A";
@@ -24489,7 +24294,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Bas
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig:gameExporterPreset3";
 	rename -uid "E9499B52-4F11-5BC5-C5F8-90930739273A";
@@ -24511,7 +24316,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Bas
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset2";
 	rename -uid "E5121CB7-4E8D-592D-9073-E5A80E985827";
@@ -24539,7 +24344,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Bas
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racoon:Base_Rig1:gameExporterPreset3";
 	rename -uid "2779AA3C-40C7-2D7F-79E7-B0A217441DCA";
@@ -24610,7 +24415,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mo
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset2";
 	rename -uid "8506EFBE-4D51-165D-A96B-AD8358E53CA0";
@@ -24638,7 +24443,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mo
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig:gameExporterPreset3";
 	rename -uid "31CDE780-4C26-51A6-F34C-6D98D6166293";
@@ -24663,7 +24468,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mo
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset2";
 	rename -uid "31F63A7E-45BD-F771-72DE-D596B9489E67";
@@ -24691,7 +24496,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Mo
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Base_Rig1:gameExporterPreset3";
 	rename -uid "E23E758D-4C18-E88F-6944-3DB44347FD4F";
@@ -24824,7 +24629,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Animation:gameExp
 	setAttr ".ebm" yes;
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "Rigged_Character_Animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Animation:gameExporterPreset3";
 	rename -uid "2BB25485-4341-F00F-2692-EBA25CBE7C2B";
@@ -24846,7 +24651,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gam
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "prototype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset2";
 	rename -uid "BFD09E90-4434-CD02-858D-89B8DD222B29";
@@ -24874,7 +24679,7 @@ createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gam
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/School/College/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
+	setAttr ".exp" -type "string" "C:/Users/10802160/Documents/Repos/Summer2019/ProjectMangagementSummer2019/Character Models/Painted_Rigs_new_Models/FBX";
 	setAttr ".exf" -type "string" "protoype_character_animated";
 createNode gameFbxExporter -n "Kirk_Rig_Painted:IK_FK_Rig:Base_Animation:Rig:gameExporterPreset3";
 	rename -uid "BA6A860D-4C55-021D-007D-A3B3247E1D48";
@@ -24939,6 +24744,57 @@ createNode shadingEngine -n "Kirk_Rig_Painted:body_geoSG2";
 	setAttr ".ro" yes;
 createNode materialInfo -n "Kirk_Rig_Painted:materialInfo7";
 	rename -uid "54EED6E2-42E2-EF44-7172-29A982CB4C15";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "6B7B55A7-4A30-1614-E1BE-2C82F045D055";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -540.47616899959723 -547.76537797163633 ;
+	setAttr ".tgi[0].vh" -type "double2" 535.71426442691359 550.14633025797821 ;
+	setAttr -s 6 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 60;
+	setAttr ".tgi[0].ni[0].y" 137.14285278320313;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" -247.14285278320313;
+	setAttr ".tgi[0].ni[1].y" 137.14285278320313;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 60;
+	setAttr ".tgi[0].ni[2].y" 137.14285278320313;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" -247.14285278320313;
+	setAttr ".tgi[0].ni[3].y" 137.14285278320313;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" -247.14285278320313;
+	setAttr ".tgi[0].ni[4].y" 137.14285278320313;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 60;
+	setAttr ".tgi[0].ni[5].y" 137.14285278320313;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+createNode lambert -n "Clothes2";
+	rename -uid "14CF2309-4F75-B56A-D1C4-EEA12C245C28";
+	setAttr ".c" -type "float3" 0.020979021 0.020979021 0.020979021 ;
+createNode shadingEngine -n "body_geoSG";
+	rename -uid "72CC3F72-4052-8EB9-D6B6-0DA9A9CD13AC";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo8";
+	rename -uid "BF9C7763-4899-55DE-D170-AFB1409A512F";
+createNode lambert -n "Shell1";
+	rename -uid "DDCFBC4F-4FD4-C980-CD29-258A8666C3A8";
+	setAttr ".c" -type "float3" 0.17399999 0.084558293 0.018966004 ;
+createNode shadingEngine -n "body_geoSG1";
+	rename -uid "18480281-4242-38D9-ABC3-309E8BB21968";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo9";
+	rename -uid "0B5AA0E3-4B11-0F17-8312-01B22BF09809";
+createNode lambert -n "Body";
+	rename -uid "1F121A64-48D7-3078-75AB-32A12F4D0F36";
+	setAttr ".c" -type "float3" 0.081615008 0.227 0.062652007 ;
+createNode shadingEngine -n "body_geoSG2";
+	rename -uid "95F9D984-4027-1DF7-E6C7-568C4481F166";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo10";
+	rename -uid "3AFACC58-43A8-69B3-1806-F698F069207F";
 createNode skinCluster -n "skinCluster7";
 	rename -uid "6BD73CC0-4D80-02A6-76E2-9BA794F4A563";
 	setAttr -s 1026 ".wl";
@@ -26034,51 +25890,10 @@ createNode skinCluster -n "skinCluster7";
 	setAttr ".ucm" yes;
 	setAttr -s 18 ".ifcl";
 	setAttr -s 18 ".ifcl";
-createNode groupId -n "groupId239";
-	rename -uid "E0CA1F9F-4F5E-45E7-F072-3A84D3A3B4F8";
-	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts56";
-	rename -uid "6BD95519-4C10-199F-F0B6-7DAAE3AB99C5";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 7 "f[0:40]" "f[274:323]" "f[424:443]" "f[494:553]" "f[644:683]" "f[753:812]" "f[903:922]";
-createNode groupId -n "groupId240";
-	rename -uid "4E6D8DDE-478E-956D-7C3E-04B83167C9F0";
-	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts57";
-	rename -uid "B84E0710-4C02-D4F2-61F7-95923B7F8CD8";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "f[41:201]";
-createNode groupId -n "groupId241";
-	rename -uid "1FBCD291-4C89-D699-2127-77AC4746653B";
-	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts58";
-	rename -uid "5B674505-41AE-246D-E1C9-F69260B94193";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 7 "f[202:273]" "f[324:423]" "f[444:493]" "f[554:643]" "f[684:752]" "f[813:902]" "f[923:986]";
-createNode tweak -n "tweak7";
-	rename -uid "43F3D568-44D7-B072-4117-C78CEA7522FA";
 createNode objectSet -n "skinCluster7Set";
 	rename -uid "EC72E143-437D-AA3C-2899-139B237DF9C7";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode groupId -n "skinCluster7GroupId";
-	rename -uid "0D5895A8-4DB6-4FE4-EF10-CDA877155BA5";
-	setAttr ".ihi" 0;
-createNode groupParts -n "skinCluster7GroupParts";
-	rename -uid "6762948C-4A0A-F5E1-F8BF-9FBDB6A84B67";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode objectSet -n "tweakSet7";
-	rename -uid "C4F1B13E-4284-08C0-C115-79B46BB7B74F";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "groupId243";
-	rename -uid "09DEAA98-4E98-E013-D84B-1C9F7D96BF33";
-	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts60";
-	rename -uid "5ABB4F46-4878-7B48-F6AE-39B626FAB412";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
 createNode skinCluster -n "skinCluster8";
 	rename -uid "6B4E0A86-4083-192A-B5ED-9FBA513215DC";
 	setAttr -s 140 ".wl";
@@ -26286,33 +26101,100 @@ createNode skinCluster -n "skinCluster8";
 	setAttr ".ucm" yes;
 	setAttr -s 8 ".ifcl";
 	setAttr -s 8 ".ifcl";
-createNode tweak -n "tweak8";
-	rename -uid "F6B7398D-45DC-7213-728C-15B29CEE44A3";
 createNode objectSet -n "skinCluster8Set";
 	rename -uid "22DA9B68-4F52-0F74-C2DC-E48B2C10008D";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode groupId -n "skinCluster8GroupId";
-	rename -uid "F41898D4-40D4-7A7B-6441-9A9139C93348";
-	setAttr ".ihi" 0;
-createNode groupParts -n "skinCluster8GroupParts";
-	rename -uid "8519C118-47B0-9F36-3A52-F7AE04C5D686";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode objectSet -n "tweakSet8";
-	rename -uid "37A2CC53-40AF-7879-D896-D0835E662E7F";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "groupId245";
-	rename -uid "88988EF1-4818-BA3D-463E-2BB9441E7D6A";
-	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts62";
 	rename -uid "68C6A438-47C6-F908-4F42-D3AB81895C08";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode groupId -n "groupId245";
+	rename -uid "88988EF1-4818-BA3D-463E-2BB9441E7D6A";
+	setAttr ".ihi" 0;
+createNode tweak -n "tweak8";
+	rename -uid "F6B7398D-45DC-7213-728C-15B29CEE44A3";
+createNode groupParts -n "skinCluster8GroupParts";
+	rename -uid "8519C118-47B0-9F36-3A52-F7AE04C5D686";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode groupId -n "skinCluster8GroupId";
+	rename -uid "F41898D4-40D4-7A7B-6441-9A9139C93348";
+	setAttr ".ihi" 0;
+createNode objectSet -n "tweakSet8";
+	rename -uid "37A2CC53-40AF-7879-D896-D0835E662E7F";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupParts -n "groupParts56";
+	rename -uid "6BD95519-4C10-199F-F0B6-7DAAE3AB99C5";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 7 "f[0:40]" "f[274:323]" "f[424:443]" "f[494:553]" "f[644:683]" "f[753:812]" "f[903:922]";
+createNode groupId -n "groupId239";
+	rename -uid "E0CA1F9F-4F5E-45E7-F072-3A84D3A3B4F8";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts57";
+	rename -uid "B84E0710-4C02-D4F2-61F7-95923B7F8CD8";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[41:201]";
+createNode groupId -n "groupId240";
+	rename -uid "4E6D8DDE-478E-956D-7C3E-04B83167C9F0";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts58";
+	rename -uid "5B674505-41AE-246D-E1C9-F69260B94193";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 7 "f[202:273]" "f[324:423]" "f[444:493]" "f[554:643]" "f[684:752]" "f[813:902]" "f[923:986]";
+createNode groupId -n "groupId241";
+	rename -uid "1FBCD291-4C89-D699-2127-77AC4746653B";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts60";
+	rename -uid "5ABB4F46-4878-7B48-F6AE-39B626FAB412";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode groupId -n "groupId243";
+	rename -uid "09DEAA98-4E98-E013-D84B-1C9F7D96BF33";
+	setAttr ".ihi" 0;
+createNode tweak -n "tweak7";
+	rename -uid "43F3D568-44D7-B072-4117-C78CEA7522FA";
+createNode groupParts -n "skinCluster7GroupParts";
+	rename -uid "6762948C-4A0A-F5E1-F8BF-9FBDB6A84B67";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode groupId -n "skinCluster7GroupId";
+	rename -uid "0D5895A8-4DB6-4FE4-EF10-CDA877155BA5";
+	setAttr ".ihi" 0;
+createNode objectSet -n "tweakSet7";
+	rename -uid "C4F1B13E-4284-08C0-C115-79B46BB7B74F";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode lambert -n "Glasses1";
+	rename -uid "AA38645C-4D12-6B64-0BDC-A3894F53E89F";
+createNode shadingEngine -n "lambert9SG";
+	rename -uid "1222137D-4974-2D6F-8699-5596116D605B";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo11";
+	rename -uid "8FD5A925-447A-6EFA-FD87-04977E5FFFB0";
+createNode groupId -n "groupId246";
+	rename -uid "CA39648F-4563-BD25-4905-0594F85D733E";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts63";
+	rename -uid "E67D0771-400B-D19B-33E9-60806D549B9C";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 3 "f[0:8]" "f[11:71]" "f[74:125]";
+	setAttr ".irc" -type "componentList" 2 "f[9:10]" "f[72:73]";
+createNode groupId -n "groupId247";
+	rename -uid "F50A2ABA-42FA-4690-ECBE-80B4C0FEB208";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId248";
+	rename -uid "B861D37E-4305-E6EB-E915-77A3519DA48A";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts64";
+	rename -uid "0FFD59B9-44F9-DF20-09AD-D9B7B974D859";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[9:10]" "f[72:73]";
 select -ne :time1;
-	setAttr ".o" 51;
-	setAttr ".unw" 51;
+	setAttr ".o" 60;
+	setAttr ".unw" 60;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -26320,10 +26202,10 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 138 ".st";
+	setAttr -s 142 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 137 ".s";
+	setAttr -s 83 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
@@ -26342,6 +26224,7 @@ select -ne :hardwareRenderGlobals;
 select -ne :defaultHideFaceDataSet;
 	setAttr -s 22 ".dnsm";
 select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "Joints_layer.di" "Base_Rig_Master_jnt_grp.do";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:Root_parentConstraint1.ctx" "Raccoon_Rig:Racoon:Base_Rig1:Root.tx"
 		;
@@ -28237,24 +28120,29 @@ connectAttr "r_hip_ctrl.s" "r_hip_jnt_IK_parentConstraint1.tg[0].ts";
 connectAttr "r_hip_ctrl.pm" "r_hip_jnt_IK_parentConstraint1.tg[0].tpm";
 connectAttr "r_hip_jnt_IK_parentConstraint1.w0" "r_hip_jnt_IK_parentConstraint1.tg[0].tw"
 		;
-connectAttr "groupId239.id" "body_geoShape.iog.og[0].gid";
-connectAttr "Kirk_Rig_Painted:body_geoSG.mwc" "body_geoShape.iog.og[0].gco";
-connectAttr "groupId240.id" "body_geoShape.iog.og[1].gid";
-connectAttr "Kirk_Rig_Painted:body_geoSG1.mwc" "body_geoShape.iog.og[1].gco";
-connectAttr "groupId241.id" "body_geoShape.iog.og[2].gid";
-connectAttr "Kirk_Rig_Painted:body_geoSG2.mwc" "body_geoShape.iog.og[2].gco";
-connectAttr "skinCluster7GroupId.id" "body_geoShape.iog.og[5].gid";
-connectAttr "skinCluster7Set.mwc" "body_geoShape.iog.og[5].gco";
-connectAttr "groupId243.id" "body_geoShape.iog.og[6].gid";
-connectAttr "tweakSet7.mwc" "body_geoShape.iog.og[6].gco";
-connectAttr "skinCluster7.og[0]" "body_geoShape.i";
-connectAttr "tweak7.vl[0].vt[0]" "body_geoShape.twl";
+connectAttr "groupId239.id" "body_geo_01Shape.iog.og[0].gid";
+connectAttr "Kirk_Rig_Painted:body_geoSG.mwc" "body_geo_01Shape.iog.og[0].gco";
+connectAttr "groupId240.id" "body_geo_01Shape.iog.og[1].gid";
+connectAttr "Kirk_Rig_Painted:body_geoSG1.mwc" "body_geo_01Shape.iog.og[1].gco";
+connectAttr "groupId241.id" "body_geo_01Shape.iog.og[2].gid";
+connectAttr "Kirk_Rig_Painted:body_geoSG2.mwc" "body_geo_01Shape.iog.og[2].gco";
+connectAttr "skinCluster7GroupId.id" "body_geo_01Shape.iog.og[5].gid";
+connectAttr "skinCluster7Set.mwc" "body_geo_01Shape.iog.og[5].gco";
+connectAttr "groupId243.id" "body_geo_01Shape.iog.og[6].gid";
+connectAttr "tweakSet7.mwc" "body_geo_01Shape.iog.og[6].gco";
+connectAttr "skinCluster7.og[0]" "body_geo_01Shape.i";
+connectAttr "tweak7.vl[0].vt[0]" "body_geo_01Shape.twl";
 connectAttr "skinCluster8GroupId.id" "GlassesShape.iog.og[2].gid";
 connectAttr "skinCluster8Set.mwc" "GlassesShape.iog.og[2].gco";
 connectAttr "groupId245.id" "GlassesShape.iog.og[3].gid";
 connectAttr "tweakSet8.mwc" "GlassesShape.iog.og[3].gco";
-connectAttr "skinCluster8.og[0]" "GlassesShape.i";
+connectAttr "groupId246.id" "GlassesShape.iog.og[4].gid";
+connectAttr "Kirk_Rig_Painted:lambert4SG.mwc" "GlassesShape.iog.og[4].gco";
+connectAttr "groupId248.id" "GlassesShape.iog.og[5].gid";
+connectAttr "lambert9SG.mwc" "GlassesShape.iog.og[5].gco";
+connectAttr "groupParts64.og" "GlassesShape.i";
 connectAttr "tweak8.vl[0].vt[0]" "GlassesShape.twl";
+connectAttr "groupId247.id" "GlassesShape.ciog.cog[0].cgid";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -28393,6 +28281,10 @@ relationship "link" ":lightLinker1" "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racc
 relationship "link" ":lightLinker1" "Kirk_Rig_Painted:body_geoSG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Kirk_Rig_Painted:body_geoSG1.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Kirk_Rig_Painted:body_geoSG2.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "body_geoSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "body_geoSG1.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "body_geoSG2.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert9SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -28531,6 +28423,10 @@ relationship "shadowLink" ":lightLinker1" "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Ri
 relationship "shadowLink" ":lightLinker1" "Kirk_Rig_Painted:body_geoSG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Kirk_Rig_Painted:body_geoSG1.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Kirk_Rig_Painted:body_geoSG2.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "body_geoSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "body_geoSG1.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "body_geoSG2.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert9SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "Base_Rig:renderLayerManager.rlmi[0]" "Base_Rig:defaultRenderLayer.rlid"
@@ -28541,9 +28437,7 @@ connectAttr "layerManager.dli[3]" "Base_Rig1:layer1.id";
 connectAttr "HeadandTail.oc" "lambert2SG.ss";
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "HeadandTail.msg" "materialInfo1.m";
-connectAttr "Body.oc" "lambert3SG.ss";
 connectAttr "lambert3SG.msg" "materialInfo2.sg";
-connectAttr "Body.msg" "materialInfo2.m";
 connectAttr "Clothes1.oc" "lambert4SG.ss";
 connectAttr "lambert4SG.msg" "materialInfo3.sg";
 connectAttr "Clothes1.msg" "materialInfo3.m";
@@ -28573,18 +28467,6 @@ connectAttr "pants.msg" "materialInfo6.m";
 connectAttr "Shoes.oc" "lambert8SG.ss";
 connectAttr "lambert8SG.msg" "materialInfo7.sg";
 connectAttr "Shoes.msg" "materialInfo7.m";
-connectAttr "lambert6SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "Shoes.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "pants.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "lambert7SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "lambert8SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "Shirt.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
 connectAttr "Raccoon_Rig:renderLayerManager.rlmi[0]" "Raccoon_Rig:defaultRenderLayer.rlid"
 		;
 connectAttr "Raccoon_Rig:Racoon:renderLayerManager.rlmi[0]" "Raccoon_Rig:Racoon:defaultRenderLayer.rlid"
@@ -28745,36 +28627,15 @@ connectAttr "Alligator_Rig_Painted:Racoon_Model_Seperated:Base_Rig:renderLayerMa
 		;
 connectAttr "Alligator_Rig_Painted:Racoon_Model_Seperated:Base_Rig1:renderLayerManager.rlmi[0]" "Alligator_Rig_Painted:Racoon_Model_Seperated:Base_Rig1:defaultRenderLayer.rlid"
 		;
-connectAttr "Alligator_Rig_Painted:Head_and_Tail.oc" "Alligator_Rig_Painted:Racoon_Model_Seperated:lambert2SG.ss"
-		;
 connectAttr "Alligator_Rig_Painted:Racoon_Model_Seperated:lambert2SG.msg" "Alligator_Rig_Painted:Racoon_Model_Seperated:materialInfo1.sg"
-		;
-connectAttr "Alligator_Rig_Painted:Head_and_Tail.msg" "Alligator_Rig_Painted:Racoon_Model_Seperated:materialInfo1.m"
-		;
-connectAttr "Alligator_Rig_Painted:Body.oc" "Alligator_Rig_Painted:Racoon_Model_Seperated:lambert3SG.ss"
 		;
 connectAttr "Alligator_Rig_Painted:Racoon_Model_Seperated:lambert3SG.msg" "Alligator_Rig_Painted:Racoon_Model_Seperated:materialInfo2.sg"
 		;
-connectAttr "Alligator_Rig_Painted:Body.msg" "Alligator_Rig_Painted:Racoon_Model_Seperated:materialInfo2.m"
-		;
-connectAttr "Alligator_Rig_Painted:Clothes.oc" "Alligator_Rig_Painted:Racoon_Model_Seperated:lambert4SG.ss"
-		;
 connectAttr "Alligator_Rig_Painted:Racoon_Model_Seperated:lambert4SG.msg" "Alligator_Rig_Painted:Racoon_Model_Seperated:materialInfo3.sg"
-		;
-connectAttr "Alligator_Rig_Painted:Clothes.msg" "Alligator_Rig_Painted:Racoon_Model_Seperated:materialInfo3.m"
-		;
-connectAttr "Alligator_Rig_Painted:blinn1.oc" "Alligator_Rig_Painted:blinn1SG.ss"
 		;
 connectAttr "Alligator_Rig_Painted:blinn1SG.msg" "Alligator_Rig_Painted:materialInfo1.sg"
 		;
-connectAttr "Alligator_Rig_Painted:blinn1.msg" "Alligator_Rig_Painted:materialInfo1.m"
-		;
-connectAttr "Alligator_Rig_Painted:teef.oc" "Alligator_Rig_Painted:blinn2SG.ss";
 connectAttr "Alligator_Rig_Painted:blinn2SG.msg" "Alligator_Rig_Painted:materialInfo2.sg"
-		;
-connectAttr "Alligator_Rig_Painted:teef.msg" "Alligator_Rig_Painted:materialInfo2.m"
-		;
-connectAttr "Alligator_Rig_Painted:teef.msg" "Alligator_Rig_Painted:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
 connectAttr "Alligator_Rig_Painted:blinn2SG.msg" "Alligator_Rig_Painted:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
@@ -28786,23 +28647,11 @@ connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig1:renderLayerManager.rlmi[0
 		;
 connectAttr "layerManager.dli[24]" "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig1:layer1.id"
 		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:HeadandTail.oc" "Alligator_Rig_Painted:IK_FK_Rig:lambert2SG.ss"
-		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert2SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo1.sg"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:HeadandTail.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo1.m"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Body.oc" "Alligator_Rig_Painted:IK_FK_Rig:lambert3SG.ss"
 		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert3SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo2.sg"
 		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Body.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo2.m"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Clothes1.oc" "Alligator_Rig_Painted:IK_FK_Rig:lambert4SG.ss"
-		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert4SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo3.sg"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Clothes1.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo3.m"
 		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:renderLayerManager.rlmi[0]" "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:defaultRenderLayer.rlid"
 		;
@@ -28816,11 +28665,7 @@ connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:renderLayer
 		;
 connectAttr "layerManager.dli[28]" "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:layer1.id"
 		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert5.oc" "Alligator_Rig_Painted:IK_FK_Rig:lambert5SG.ss"
-		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert5SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo4.sg"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert5.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo4.m"
 		;
 connectAttr "layerManager.dli[23]" "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig1:layer2.id"
 		;
@@ -28829,35 +28674,17 @@ connectAttr "layerManager.dli[22]" "Alligator_Rig_Painted:IK_FK_Rig:Base_Rig:lay
 		;
 connectAttr "layerManager.dli[29]" "Alligator_Rig_Painted:IK_FK_Rig:Cat_Character_Geo.id"
 		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Shirt.oc" "Alligator_Rig_Painted:IK_FK_Rig:lambert6SG.ss"
-		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert6SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo5.sg"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Shirt.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo5.m"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:pants.oc" "Alligator_Rig_Painted:IK_FK_Rig:lambert7SG.ss"
 		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert7SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo6.sg"
 		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:pants.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo6.m"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Shoes.oc" "Alligator_Rig_Painted:IK_FK_Rig:lambert8SG.ss"
-		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert8SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo7.sg"
 		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Shoes.msg" "Alligator_Rig_Painted:IK_FK_Rig:materialInfo7.m"
-		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert6SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Shoes.msg" "Alligator_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:pants.msg" "Alligator_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert7SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert8SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Shirt.msg" "Alligator_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:renderLayerManager.rlmi[0]" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:defaultRenderLayer.rlid"
 		;
@@ -28885,23 +28712,11 @@ connectAttr "layerManager.dli[33]" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:
 		;
 connectAttr "layerManager.dli[34]" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:layer2.id"
 		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail.oc" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert2SG.ss"
-		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert2SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo1.sg"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail.msg" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo1.m"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body.oc" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert3SG.ss"
 		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert3SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo2.sg"
 		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body.msg" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo2.m"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1.oc" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert4SG.ss"
-		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert4SG.msg" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo3.sg"
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1.msg" "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo3.m"
 		;
 connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Base_Animation:renderLayerManager.rlmi[0]" "Alligator_Rig_Painted:IK_FK_Rig:Base_Animation:defaultRenderLayer.rlid"
 		;
@@ -28923,35 +28738,15 @@ connectAttr "layerManager.dli[41]" "Alligator_Rig_Painted:IK_FK_Rig:IKHandles.id
 		;
 connectAttr "layerManager.dli[42]" "Alligator_Rig_Painted:IK_FK_Rig:BaseControls.id"
 		;
-connectAttr "Alligator_Rig_Painted:Clothes1.oc" "Alligator_Rig_Painted:Alligator_GeoSG.ss"
-		;
 connectAttr "Alligator_Rig_Painted:Alligator_GeoSG.msg" "Alligator_Rig_Painted:materialInfo3.sg"
-		;
-connectAttr "Alligator_Rig_Painted:Clothes1.msg" "Alligator_Rig_Painted:materialInfo3.m"
-		;
-connectAttr "Alligator_Rig_Painted:Body1.oc" "Alligator_Rig_Painted:Alligator_GeoSG1.ss"
 		;
 connectAttr "Alligator_Rig_Painted:Alligator_GeoSG1.msg" "Alligator_Rig_Painted:materialInfo4.sg"
 		;
-connectAttr "Alligator_Rig_Painted:Body1.msg" "Alligator_Rig_Painted:materialInfo4.m"
-		;
-connectAttr "Alligator_Rig_Painted:blinn3.oc" "Alligator_Rig_Painted:Alligator_GeoSG2.ss"
-		;
 connectAttr "Alligator_Rig_Painted:Alligator_GeoSG2.msg" "Alligator_Rig_Painted:materialInfo5.sg"
-		;
-connectAttr "Alligator_Rig_Painted:blinn3.msg" "Alligator_Rig_Painted:materialInfo5.m"
-		;
-connectAttr "Alligator_Rig_Painted:teef1.oc" "Alligator_Rig_Painted:Alligator_GeoSG3.ss"
 		;
 connectAttr "Alligator_Rig_Painted:Alligator_GeoSG3.msg" "Alligator_Rig_Painted:materialInfo6.sg"
 		;
-connectAttr "Alligator_Rig_Painted:teef1.msg" "Alligator_Rig_Painted:materialInfo6.m"
-		;
-connectAttr "Alligator_Rig_Painted:Head_and_Tail1.oc" "Alligator_Rig_Painted:Alligator_GeoSG4.ss"
-		;
 connectAttr "Alligator_Rig_Painted:Alligator_GeoSG4.msg" "Alligator_Rig_Painted:materialInfo7.sg"
-		;
-connectAttr "Alligator_Rig_Painted:Head_and_Tail1.msg" "Alligator_Rig_Painted:materialInfo7.m"
 		;
 connectAttr "Raccoon_Rig:Rig.msg" "bindPose2.m[0]";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:prototype_rig.msg" "bindPose2.m[1]";
@@ -29013,28 +28808,16 @@ connectAttr "Bear_Rig_Painted:Base_Rig1:renderLayerManager.rlmi[0]" "Bear_Rig_Pa
 		;
 connectAttr "Bear_Rig_Painted:lambert2SG.msg" "Bear_Rig_Painted:materialInfo1.sg"
 		;
-connectAttr "Bear_Rig_Painted:Body.oc" "Bear_Rig_Painted:lambert3SG.ss";
 connectAttr "Bear_Rig_Painted:lambert3SG.msg" "Bear_Rig_Painted:materialInfo2.sg"
 		;
-connectAttr "Bear_Rig_Painted:Body.msg" "Bear_Rig_Painted:materialInfo2.m";
-connectAttr "Bear_Rig_Painted:Clothes1.oc" "Bear_Rig_Painted:lambert4SG.ss";
 connectAttr "Bear_Rig_Painted:lambert4SG.msg" "Bear_Rig_Painted:materialInfo3.sg"
-		;
-connectAttr "Bear_Rig_Painted:Clothes1.msg" "Bear_Rig_Painted:materialInfo3.m";
-connectAttr "Bear_Rig_Painted:Hat_And_Shawl1.oc" "Bear_Rig_Painted:lambert5SG.ss"
 		;
 connectAttr "Bear_Rig_Painted:lambert5SG.msg" "Bear_Rig_Painted:materialInfo4.sg"
 		;
-connectAttr "Bear_Rig_Painted:Hat_And_Shawl1.msg" "Bear_Rig_Painted:materialInfo4.m"
-		;
-connectAttr "Bear_Rig_Painted:Pope_Hat.oc" "Bear_Rig_Painted:lambert6SG.ss";
 connectAttr "Bear_Rig_Painted:lambert6SG.msg" "Bear_Rig_Painted:materialInfo5.sg"
 		;
-connectAttr "Bear_Rig_Painted:Pope_Hat.msg" "Bear_Rig_Painted:materialInfo5.m";
-connectAttr "Bear_Rig_Painted:Pendant.oc" "Bear_Rig_Painted:lambert7SG.ss";
 connectAttr "Bear_Rig_Painted:lambert7SG.msg" "Bear_Rig_Painted:materialInfo6.sg"
 		;
-connectAttr "Bear_Rig_Painted:Pendant.msg" "Bear_Rig_Painted:materialInfo6.m";
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:renderLayerManager.rlmi[0]" "Bear_Rig_Painted:IK_FK_Rig:defaultRenderLayer.rlid"
 		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:Base_Rig:renderLayerManager.rlmi[0]" "Bear_Rig_Painted:IK_FK_Rig:Base_Rig:defaultRenderLayer.rlid"
@@ -29043,23 +28826,11 @@ connectAttr "Bear_Rig_Painted:IK_FK_Rig:Base_Rig1:renderLayerManager.rlmi[0]" "B
 		;
 connectAttr "layerManager.dli[45]" "Bear_Rig_Painted:IK_FK_Rig:Base_Rig1:layer1.id"
 		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:HeadandTail.oc" "Bear_Rig_Painted:IK_FK_Rig:lambert2SG.ss"
-		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert2SG.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo1.sg"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:HeadandTail.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo1.m"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Body.oc" "Bear_Rig_Painted:IK_FK_Rig:lambert3SG.ss"
 		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert3SG.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo2.sg"
 		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Body.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo2.m"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Clothes1.oc" "Bear_Rig_Painted:IK_FK_Rig:lambert4SG.ss"
-		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert4SG.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo3.sg"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Clothes1.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo3.m"
 		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:renderLayerManager.rlmi[0]" "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:defaultRenderLayer.rlid"
 		;
@@ -29073,11 +28844,7 @@ connectAttr "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:renderLayerManag
 		;
 connectAttr "layerManager.dli[49]" "Bear_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:layer1.id"
 		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert5.oc" "Bear_Rig_Painted:IK_FK_Rig:lambert5SG.ss"
-		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert5SG.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo4.sg"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert5.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo4.m"
 		;
 connectAttr "layerManager.dli[44]" "Bear_Rig_Painted:IK_FK_Rig:Base_Rig1:layer2.id"
 		;
@@ -29086,35 +28853,17 @@ connectAttr "layerManager.dli[43]" "Bear_Rig_Painted:IK_FK_Rig:Base_Rig:layer1.i
 		;
 connectAttr "layerManager.dli[50]" "Bear_Rig_Painted:IK_FK_Rig:Cat_Character_Geo.id"
 		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Shirt.oc" "Bear_Rig_Painted:IK_FK_Rig:lambert6SG.ss"
-		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert6SG.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo5.sg"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Shirt.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo5.m"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:pants.oc" "Bear_Rig_Painted:IK_FK_Rig:lambert7SG.ss"
 		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert7SG.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo6.sg"
 		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:pants.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo6.m"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Shoes.oc" "Bear_Rig_Painted:IK_FK_Rig:lambert8SG.ss"
-		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert8SG.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo7.sg"
 		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Shoes.msg" "Bear_Rig_Painted:IK_FK_Rig:materialInfo7.m"
-		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert6SG.msg" "Bear_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Shoes.msg" "Bear_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:pants.msg" "Bear_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert7SG.msg" "Bear_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert8SG.msg" "Bear_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Shirt.msg" "Bear_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:renderLayerManager.rlmi[0]" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:defaultRenderLayer.rlid"
 		;
@@ -29141,23 +28890,11 @@ connectAttr "layerManager.dli[54]" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racco
 		;
 connectAttr "layerManager.dli[55]" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:layer2.id"
 		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail.oc" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert2SG.ss"
-		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert2SG.msg" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo1.sg"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail.msg" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo1.m"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body.oc" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert3SG.ss"
 		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert3SG.msg" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo2.sg"
 		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body.msg" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo2.m"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1.oc" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert4SG.ss"
-		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert4SG.msg" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo3.sg"
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1.msg" "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo3.m"
 		;
 connectAttr "Bear_Rig_Painted:IK_FK_Rig:Base_Animation:renderLayerManager.rlmi[0]" "Bear_Rig_Painted:IK_FK_Rig:Base_Animation:defaultRenderLayer.rlid"
 		;
@@ -29174,56 +28911,29 @@ connectAttr "layerManager.dli[60]" "Bear_Rig_Painted:IK_FK_Rig:IK_Switches.id";
 connectAttr "layerManager.dli[61]" "Bear_Rig_Painted:IK_FK_Rig:FK_layer.id";
 connectAttr "layerManager.dli[62]" "Bear_Rig_Painted:IK_FK_Rig:IKHandles.id";
 connectAttr "layerManager.dli[63]" "Bear_Rig_Painted:IK_FK_Rig:BaseControls.id";
-connectAttr "Bear_Rig_Painted:Pope_Hat1.oc" "Bear_Rig_Painted:Pope_Bear_GeoSG.ss"
-		;
 connectAttr "Bear_Rig_Painted:Pope_Bear_GeoSG.msg" "Bear_Rig_Painted:materialInfo7.sg"
-		;
-connectAttr "Bear_Rig_Painted:Pope_Hat1.msg" "Bear_Rig_Painted:materialInfo7.m";
-connectAttr "Bear_Rig_Painted:Pendant1.oc" "Bear_Rig_Painted:Pope_Bear_GeoSG1.ss"
 		;
 connectAttr "Bear_Rig_Painted:Pope_Bear_GeoSG1.msg" "Bear_Rig_Painted:materialInfo8.sg"
 		;
-connectAttr "Bear_Rig_Painted:Pendant1.msg" "Bear_Rig_Painted:materialInfo8.m";
-connectAttr "Bear_Rig_Painted:Body1.oc" "Bear_Rig_Painted:Pope_Bear_GeoSG2.ss";
 connectAttr "Bear_Rig_Painted:Pope_Bear_GeoSG2.msg" "Bear_Rig_Painted:materialInfo9.sg"
-		;
-connectAttr "Bear_Rig_Painted:Body1.msg" "Bear_Rig_Painted:materialInfo9.m";
-connectAttr "Bear_Rig_Painted:Hat_And_Shawl2.oc" "Bear_Rig_Painted:Pope_Bear_GeoSG3.ss"
 		;
 connectAttr "Bear_Rig_Painted:Pope_Bear_GeoSG3.msg" "Bear_Rig_Painted:materialInfo10.sg"
 		;
-connectAttr "Bear_Rig_Painted:Hat_And_Shawl2.msg" "Bear_Rig_Painted:materialInfo10.m"
-		;
-connectAttr "Bear_Rig_Painted:Clothes2.oc" "Bear_Rig_Painted:Pope_Bear_GeoSG4.ss"
-		;
 connectAttr "Bear_Rig_Painted:Pope_Bear_GeoSG4.msg" "Bear_Rig_Painted:materialInfo11.sg"
 		;
-connectAttr "Bear_Rig_Painted:Clothes2.msg" "Bear_Rig_Painted:materialInfo11.m";
 connectAttr "Bunny_Rig_Painted:renderLayerManager.rlmi[0]" "Bunny_Rig_Painted:defaultRenderLayer.rlid"
 		;
 connectAttr "Bunny_Rig_Painted:Base_Rig:renderLayerManager.rlmi[0]" "Bunny_Rig_Painted:Base_Rig:defaultRenderLayer.rlid"
 		;
 connectAttr "Bunny_Rig_Painted:Base_Rig1:renderLayerManager.rlmi[0]" "Bunny_Rig_Painted:Base_Rig1:defaultRenderLayer.rlid"
 		;
-connectAttr "Bunny_Rig_Painted:HeadandTail.oc" "Bunny_Rig_Painted:lambert2SG.ss"
-		;
 connectAttr "Bunny_Rig_Painted:lambert2SG.msg" "Bunny_Rig_Painted:materialInfo1.sg"
 		;
-connectAttr "Bunny_Rig_Painted:HeadandTail.msg" "Bunny_Rig_Painted:materialInfo1.m"
-		;
-connectAttr "Bunny_Rig_Painted:Body.oc" "Bunny_Rig_Painted:lambert3SG.ss";
 connectAttr "Bunny_Rig_Painted:lambert3SG.msg" "Bunny_Rig_Painted:materialInfo2.sg"
 		;
-connectAttr "Bunny_Rig_Painted:Body.msg" "Bunny_Rig_Painted:materialInfo2.m";
-connectAttr "Bunny_Rig_Painted:Clothes1.oc" "Bunny_Rig_Painted:lambert4SG.ss";
 connectAttr "Bunny_Rig_Painted:lambert4SG.msg" "Bunny_Rig_Painted:materialInfo3.sg"
 		;
-connectAttr "Bunny_Rig_Painted:Clothes1.msg" "Bunny_Rig_Painted:materialInfo3.m"
-		;
-connectAttr "Bunny_Rig_Painted:Clothes_02.oc" "Bunny_Rig_Painted:lambert5SG.ss";
 connectAttr "Bunny_Rig_Painted:lambert5SG.msg" "Bunny_Rig_Painted:materialInfo4.sg"
-		;
-connectAttr "Bunny_Rig_Painted:Clothes_02.msg" "Bunny_Rig_Painted:materialInfo4.m"
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:renderLayerManager.rlmi[0]" "Bunny_Rig_Painted:IK_FK_Rig:defaultRenderLayer.rlid"
 		;
@@ -29233,23 +28943,11 @@ connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig1:renderLayerManager.rlmi[0]" "
 		;
 connectAttr "layerManager.dli[66]" "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig1:layer1.id"
 		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:HeadandTail.oc" "Bunny_Rig_Painted:IK_FK_Rig:lambert2SG.ss"
-		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert2SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo1.sg"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:HeadandTail.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo1.m"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Body.oc" "Bunny_Rig_Painted:IK_FK_Rig:lambert3SG.ss"
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert3SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo2.sg"
 		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Body.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo2.m"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Clothes1.oc" "Bunny_Rig_Painted:IK_FK_Rig:lambert4SG.ss"
-		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert4SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo3.sg"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Clothes1.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo3.m"
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:renderLayerManager.rlmi[0]" "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:defaultRenderLayer.rlid"
 		;
@@ -29263,11 +28961,7 @@ connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:renderLayerMana
 		;
 connectAttr "layerManager.dli[70]" "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character:Base_Rig1:layer1.id"
 		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert5.oc" "Bunny_Rig_Painted:IK_FK_Rig:lambert5SG.ss"
-		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert5SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo4.sg"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert5.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo4.m"
 		;
 connectAttr "layerManager.dli[65]" "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig1:layer2.id"
 		;
@@ -29276,11 +28970,7 @@ connectAttr "layerManager.dli[64]" "Bunny_Rig_Painted:IK_FK_Rig:Base_Rig:layer1.
 		;
 connectAttr "layerManager.dli[71]" "Bunny_Rig_Painted:IK_FK_Rig:Cat_Character_Geo.id"
 		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Shirt.oc" "Bunny_Rig_Painted:IK_FK_Rig:lambert6SG.ss"
-		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert6SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo5.sg"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Shirt.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo5.m"
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:pants.oc" "Bunny_Rig_Painted:IK_FK_Rig:lambert7SG.ss"
 		;
@@ -29288,23 +28978,15 @@ connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert7SG.msg" "Bunny_Rig_Painted:IK_F
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:pants.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo6.m"
 		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Shoes.oc" "Bunny_Rig_Painted:IK_FK_Rig:lambert8SG.ss"
-		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert8SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo7.sg"
 		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Shoes.msg" "Bunny_Rig_Painted:IK_FK_Rig:materialInfo7.m"
-		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert6SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Shoes.msg" "Bunny_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:pants.msg" "Bunny_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert7SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert8SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Shirt.msg" "Bunny_Rig_Painted:IK_FK_Rig:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:renderLayerManager.rlmi[0]" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:defaultRenderLayer.rlid"
 		;
@@ -29332,23 +29014,11 @@ connectAttr "layerManager.dli[75]" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Racc
 		;
 connectAttr "layerManager.dli[76]" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:layer2.id"
 		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail.oc" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert2SG.ss"
-		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert2SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo1.sg"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail.msg" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo1.m"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body.oc" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert3SG.ss"
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert3SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo2.sg"
 		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body.msg" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo2.m"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1.oc" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert4SG.ss"
-		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert4SG.msg" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo3.sg"
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1.msg" "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:materialInfo3.m"
 		;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Base_Animation:renderLayerManager.rlmi[0]" "Bunny_Rig_Painted:IK_FK_Rig:Base_Animation:defaultRenderLayer.rlid"
 		;
@@ -29366,26 +29036,13 @@ connectAttr "layerManager.dli[82]" "Bunny_Rig_Painted:IK_FK_Rig:FK_layer.id";
 connectAttr "layerManager.dli[83]" "Bunny_Rig_Painted:IK_FK_Rig:IKHandles.id";
 connectAttr "layerManager.dli[84]" "Bunny_Rig_Painted:IK_FK_Rig:BaseControls.id"
 		;
-connectAttr "Bunny_Rig_Painted:Clothes2.oc" "Bunny_Rig_Painted:Bunny_GeoSG.ss";
 connectAttr "Bunny_Rig_Painted:Bunny_GeoSG.msg" "Bunny_Rig_Painted:materialInfo5.sg"
 		;
-connectAttr "Bunny_Rig_Painted:Clothes2.msg" "Bunny_Rig_Painted:materialInfo5.m"
-		;
-connectAttr "Bunny_Rig_Painted:Body1.oc" "Bunny_Rig_Painted:Bunny_GeoSG1.ss";
 connectAttr "Bunny_Rig_Painted:Bunny_GeoSG1.msg" "Bunny_Rig_Painted:materialInfo6.sg"
-		;
-connectAttr "Bunny_Rig_Painted:Body1.msg" "Bunny_Rig_Painted:materialInfo6.m";
-connectAttr "Bunny_Rig_Painted:Clothes_03.oc" "Bunny_Rig_Painted:Bunny_GeoSG2.ss"
 		;
 connectAttr "Bunny_Rig_Painted:Bunny_GeoSG2.msg" "Bunny_Rig_Painted:materialInfo7.sg"
 		;
-connectAttr "Bunny_Rig_Painted:Clothes_03.msg" "Bunny_Rig_Painted:materialInfo7.m"
-		;
-connectAttr "Bunny_Rig_Painted:HeadandTail1.oc" "Bunny_Rig_Painted:Bunny_GeoSG3.ss"
-		;
 connectAttr "Bunny_Rig_Painted:Bunny_GeoSG3.msg" "Bunny_Rig_Painted:materialInfo8.sg"
-		;
-connectAttr "Bunny_Rig_Painted:HeadandTail1.msg" "Bunny_Rig_Painted:materialInfo8.m"
 		;
 connectAttr "Girl_Wolf_Rig:renderLayerManager.rlmi[0]" "Girl_Wolf_Rig:defaultRenderLayer.rlid"
 		;
@@ -29823,7 +29480,10 @@ connectAttr "Kirk_Rig_Painted:lambert3SG.msg" "Kirk_Rig_Painted:materialInfo2.sg
 		;
 connectAttr "Kirk_Rig_Painted:Body.msg" "Kirk_Rig_Painted:materialInfo2.m";
 connectAttr "Kirk_Rig_Painted:Clothes1.oc" "Kirk_Rig_Painted:lambert4SG.ss";
-connectAttr "GlassesShape.iog" "Kirk_Rig_Painted:lambert4SG.dsm" -na;
+connectAttr "GlassesShape.iog.og[4]" "Kirk_Rig_Painted:lambert4SG.dsm" -na;
+connectAttr "GlassesShape.ciog.cog[0]" "Kirk_Rig_Painted:lambert4SG.dsm" -na;
+connectAttr "groupId246.msg" "Kirk_Rig_Painted:lambert4SG.gn" -na;
+connectAttr "groupId247.msg" "Kirk_Rig_Painted:lambert4SG.gn" -na;
 connectAttr "Kirk_Rig_Painted:lambert4SG.msg" "Kirk_Rig_Painted:materialInfo3.sg"
 		;
 connectAttr "Kirk_Rig_Painted:Clothes1.msg" "Kirk_Rig_Painted:materialInfo3.m";
@@ -29974,22 +29634,43 @@ connectAttr "layerManager.dli[157]" "Kirk_Rig_Painted:IK_FK_Rig:BaseControls.id"
 		;
 connectAttr "Kirk_Rig_Painted:Clothes2.oc" "Kirk_Rig_Painted:body_geoSG.ss";
 connectAttr "groupId239.msg" "Kirk_Rig_Painted:body_geoSG.gn" -na;
-connectAttr "body_geoShape.iog.og[0]" "Kirk_Rig_Painted:body_geoSG.dsm" -na;
+connectAttr "body_geo_01Shape.iog.og[0]" "Kirk_Rig_Painted:body_geoSG.dsm" -na;
 connectAttr "Kirk_Rig_Painted:body_geoSG.msg" "Kirk_Rig_Painted:materialInfo5.sg"
 		;
 connectAttr "Kirk_Rig_Painted:Clothes2.msg" "Kirk_Rig_Painted:materialInfo5.m";
 connectAttr "Kirk_Rig_Painted:Shell2.oc" "Kirk_Rig_Painted:body_geoSG1.ss";
 connectAttr "groupId240.msg" "Kirk_Rig_Painted:body_geoSG1.gn" -na;
-connectAttr "body_geoShape.iog.og[1]" "Kirk_Rig_Painted:body_geoSG1.dsm" -na;
+connectAttr "body_geo_01Shape.iog.og[1]" "Kirk_Rig_Painted:body_geoSG1.dsm" -na;
 connectAttr "Kirk_Rig_Painted:body_geoSG1.msg" "Kirk_Rig_Painted:materialInfo6.sg"
 		;
 connectAttr "Kirk_Rig_Painted:Shell2.msg" "Kirk_Rig_Painted:materialInfo6.m";
 connectAttr "Kirk_Rig_Painted:Body1.oc" "Kirk_Rig_Painted:body_geoSG2.ss";
 connectAttr "groupId241.msg" "Kirk_Rig_Painted:body_geoSG2.gn" -na;
-connectAttr "body_geoShape.iog.og[2]" "Kirk_Rig_Painted:body_geoSG2.dsm" -na;
+connectAttr "body_geo_01Shape.iog.og[2]" "Kirk_Rig_Painted:body_geoSG2.dsm" -na;
 connectAttr "Kirk_Rig_Painted:body_geoSG2.msg" "Kirk_Rig_Painted:materialInfo7.sg"
 		;
 connectAttr "Kirk_Rig_Painted:Body1.msg" "Kirk_Rig_Painted:materialInfo7.m";
+connectAttr "lambert8SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "Shoes.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "lambert7SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "Shirt.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "pants.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "lambert6SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "Clothes2.oc" "body_geoSG.ss";
+connectAttr "body_geoSG.msg" "materialInfo8.sg";
+connectAttr "Clothes2.msg" "materialInfo8.m";
+connectAttr "Shell1.oc" "body_geoSG1.ss";
+connectAttr "body_geoSG1.msg" "materialInfo9.sg";
+connectAttr "Shell1.msg" "materialInfo9.m";
+connectAttr "Body.oc" "body_geoSG2.ss";
+connectAttr "body_geoSG2.msg" "materialInfo10.sg";
+connectAttr "Body.msg" "materialInfo10.m";
 connectAttr "skinCluster7GroupParts.og" "skinCluster7.ip[0].ig";
 connectAttr "skinCluster7GroupId.id" "skinCluster7.ip[0].gi";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:Root.wm" "skinCluster7.ma[0]";
@@ -30086,24 +29767,9 @@ connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_knee_jnt_RK.obcc" "skinCluster7.ifcl
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_foot_jnt_RK.obcc" "skinCluster7.ifcl[17]"
 		;
 connectAttr "bindPose2.msg" "skinCluster7.bp";
-connectAttr "body_geoShapeOrig1.w" "groupParts56.ig";
-connectAttr "groupId239.id" "groupParts56.gi";
-connectAttr "groupParts56.og" "groupParts57.ig";
-connectAttr "groupId240.id" "groupParts57.gi";
-connectAttr "groupParts57.og" "groupParts58.ig";
-connectAttr "groupId241.id" "groupParts58.gi";
-connectAttr "groupParts60.og" "tweak7.ip[0].ig";
-connectAttr "groupId243.id" "tweak7.ip[0].gi";
 connectAttr "skinCluster7GroupId.msg" "skinCluster7Set.gn" -na;
-connectAttr "body_geoShape.iog.og[5]" "skinCluster7Set.dsm" -na;
+connectAttr "body_geo_01Shape.iog.og[5]" "skinCluster7Set.dsm" -na;
 connectAttr "skinCluster7.msg" "skinCluster7Set.ub[0]";
-connectAttr "tweak7.og[0]" "skinCluster7GroupParts.ig";
-connectAttr "skinCluster7GroupId.id" "skinCluster7GroupParts.gi";
-connectAttr "groupId243.msg" "tweakSet7.gn" -na;
-connectAttr "body_geoShape.iog.og[6]" "tweakSet7.dsm" -na;
-connectAttr "tweak7.msg" "tweakSet7.ub[0]";
-connectAttr "groupParts58.og" "groupParts60.ig";
-connectAttr "groupId243.id" "groupParts60.gi";
 connectAttr "skinCluster8GroupParts.og" "skinCluster8.ip[0].ig";
 connectAttr "skinCluster8GroupId.id" "skinCluster8.ip[0].gi";
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:torso_jnt.wm" "skinCluster8.ma[2]";
@@ -30147,18 +29813,42 @@ connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_shoulder_jnt_RK.obcc" "skinCluster8.
 connectAttr "Raccoon_Rig:Racoon:Base_Rig1:r_elbow_jnt_RK.obcc" "skinCluster8.ifcl[9]"
 		;
 connectAttr "bindPose2.msg" "skinCluster8.bp";
-connectAttr "groupParts62.og" "tweak8.ip[0].ig";
-connectAttr "groupId245.id" "tweak8.ip[0].gi";
 connectAttr "skinCluster8GroupId.msg" "skinCluster8Set.gn" -na;
 connectAttr "GlassesShape.iog.og[2]" "skinCluster8Set.dsm" -na;
 connectAttr "skinCluster8.msg" "skinCluster8Set.ub[0]";
+connectAttr "GlassesShapeOrig1.w" "groupParts62.ig";
+connectAttr "groupId245.id" "groupParts62.gi";
+connectAttr "groupParts62.og" "tweak8.ip[0].ig";
+connectAttr "groupId245.id" "tweak8.ip[0].gi";
 connectAttr "tweak8.og[0]" "skinCluster8GroupParts.ig";
 connectAttr "skinCluster8GroupId.id" "skinCluster8GroupParts.gi";
 connectAttr "groupId245.msg" "tweakSet8.gn" -na;
 connectAttr "GlassesShape.iog.og[3]" "tweakSet8.dsm" -na;
 connectAttr "tweak8.msg" "tweakSet8.ub[0]";
-connectAttr "GlassesShapeOrig1.w" "groupParts62.ig";
-connectAttr "groupId245.id" "groupParts62.gi";
+connectAttr "body_geo_01ShapeOrig1.w" "groupParts56.ig";
+connectAttr "groupId239.id" "groupParts56.gi";
+connectAttr "groupParts56.og" "groupParts57.ig";
+connectAttr "groupId240.id" "groupParts57.gi";
+connectAttr "groupParts57.og" "groupParts58.ig";
+connectAttr "groupId241.id" "groupParts58.gi";
+connectAttr "groupParts58.og" "groupParts60.ig";
+connectAttr "groupId243.id" "groupParts60.gi";
+connectAttr "groupParts60.og" "tweak7.ip[0].ig";
+connectAttr "groupId243.id" "tweak7.ip[0].gi";
+connectAttr "tweak7.og[0]" "skinCluster7GroupParts.ig";
+connectAttr "skinCluster7GroupId.id" "skinCluster7GroupParts.gi";
+connectAttr "groupId243.msg" "tweakSet7.gn" -na;
+connectAttr "body_geo_01Shape.iog.og[6]" "tweakSet7.dsm" -na;
+connectAttr "tweak7.msg" "tweakSet7.ub[0]";
+connectAttr "Glasses1.oc" "lambert9SG.ss";
+connectAttr "groupId248.msg" "lambert9SG.gn" -na;
+connectAttr "GlassesShape.iog.og[5]" "lambert9SG.dsm" -na;
+connectAttr "lambert9SG.msg" "materialInfo11.sg";
+connectAttr "Glasses1.msg" "materialInfo11.m";
+connectAttr "skinCluster8.og[0]" "groupParts63.ig";
+connectAttr "groupId246.id" "groupParts63.gi";
+connectAttr "groupParts63.og" "groupParts64.ig";
+connectAttr "groupId248.id" "groupParts64.gi";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
@@ -30349,8 +30039,11 @@ connectAttr "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:lambert4SG.pa"
 connectAttr "Kirk_Rig_Painted:body_geoSG.pa" ":renderPartition.st" -na;
 connectAttr "Kirk_Rig_Painted:body_geoSG1.pa" ":renderPartition.st" -na;
 connectAttr "Kirk_Rig_Painted:body_geoSG2.pa" ":renderPartition.st" -na;
+connectAttr "body_geoSG.pa" ":renderPartition.st" -na;
+connectAttr "body_geoSG1.pa" ":renderPartition.st" -na;
+connectAttr "body_geoSG2.pa" ":renderPartition.st" -na;
+connectAttr "lambert9SG.pa" ":renderPartition.st" -na;
 connectAttr "HeadandTail.msg" ":defaultShaderList1.s" -na;
-connectAttr "Body.msg" ":defaultShaderList1.s" -na;
 connectAttr "Clothes1.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert5.msg" ":defaultShaderList1.s" -na;
 connectAttr "Shirt.msg" ":defaultShaderList1.s" -na;
@@ -30361,88 +30054,7 @@ connectAttr "Raccoon_Rig:Raccoon_Model:HeadandTail.msg" ":defaultShaderList1.s"
 connectAttr "Raccoon_Rig:Raccoon_Model:Body.msg" ":defaultShaderList1.s" -na;
 connectAttr "Raccoon_Rig:Raccoon_Model:Clothes1.msg" ":defaultShaderList1.s" -na
 		;
-connectAttr "Alligator_Rig_Painted:Head_and_Tail.msg" ":defaultShaderList1.s" -na
-		;
-connectAttr "Alligator_Rig_Painted:Body.msg" ":defaultShaderList1.s" -na;
-connectAttr "Alligator_Rig_Painted:Clothes.msg" ":defaultShaderList1.s" -na;
-connectAttr "Alligator_Rig_Painted:blinn1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Alligator_Rig_Painted:teef.msg" ":defaultShaderList1.s" -na;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:HeadandTail.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Body.msg" ":defaultShaderList1.s" -na
-		;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Clothes1.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:lambert5.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Shirt.msg" ":defaultShaderList1.s" 
-		-na;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:pants.msg" ":defaultShaderList1.s" 
-		-na;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Shoes.msg" ":defaultShaderList1.s" 
-		-na;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Alligator_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Alligator_Rig_Painted:Clothes1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Alligator_Rig_Painted:Body1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Alligator_Rig_Painted:blinn3.msg" ":defaultShaderList1.s" -na;
-connectAttr "Alligator_Rig_Painted:teef1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Alligator_Rig_Painted:Head_and_Tail1.msg" ":defaultShaderList1.s" -na
-		;
-connectAttr "Bear_Rig_Painted:Body.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:Clothes1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:Hat_And_Shawl1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:Pope_Hat.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:Pendant.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:HeadandTail.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Body.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Clothes1.msg" ":defaultShaderList1.s" -na
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:lambert5.msg" ":defaultShaderList1.s" -na
-		;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Shirt.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:pants.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Shoes.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Bear_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Bear_Rig_Painted:Pope_Hat1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:Pendant1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:Body1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:Hat_And_Shawl2.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bear_Rig_Painted:Clothes2.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:HeadandTail.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:Body.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:Clothes1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:Clothes_02.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:HeadandTail.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Body.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Clothes1.msg" ":defaultShaderList1.s" -na
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:lambert5.msg" ":defaultShaderList1.s" -na
-		;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Shirt.msg" ":defaultShaderList1.s" -na;
 connectAttr "Bunny_Rig_Painted:IK_FK_Rig:pants.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Shoes.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:HeadandTail.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Body.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Bunny_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1.msg" ":defaultShaderList1.s"
-		 -na;
-connectAttr "Bunny_Rig_Painted:Clothes2.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:Body1.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:Clothes_03.msg" ":defaultShaderList1.s" -na;
-connectAttr "Bunny_Rig_Painted:HeadandTail1.msg" ":defaultShaderList1.s" -na;
 connectAttr "Girl_Wolf_Rig:Body.msg" ":defaultShaderList1.s" -na;
 connectAttr "Girl_Wolf_Rig:Clothes1.msg" ":defaultShaderList1.s" -na;
 connectAttr "Girl_Wolf_Rig:Kim_Model:Ears.msg" ":defaultShaderList1.s" -na;
@@ -30526,6 +30138,10 @@ connectAttr "Kirk_Rig_Painted:IK_FK_Rig:Raccoon_Rig:Raccoon_Model:Clothes1.msg" 
 connectAttr "Kirk_Rig_Painted:Clothes2.msg" ":defaultShaderList1.s" -na;
 connectAttr "Kirk_Rig_Painted:Shell2.msg" ":defaultShaderList1.s" -na;
 connectAttr "Kirk_Rig_Painted:Body1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Clothes2.msg" ":defaultShaderList1.s" -na;
+connectAttr "Shell1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Body.msg" ":defaultShaderList1.s" -na;
+connectAttr "Glasses1.msg" ":defaultShaderList1.s" -na;
 connectAttr "reverse1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "reverse2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "reverse3.msg" ":defaultRenderUtilityList1.u" -na;
