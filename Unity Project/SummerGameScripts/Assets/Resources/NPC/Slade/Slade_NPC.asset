@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe3cb88f9a89cdb439ca7da9f79d88fe, type: 3}
   m_Name: Slade_NPC
   m_EditorClassIdentifier: 
-  Script: {fileID: 11400000, guid: 049535628d58c7c4f91f02d722e23123, type: 2}
+  Script: {fileID: 11400000, guid: 6ebc30c5f72742041b78329f9837840b, type: 2}

@@ -30,8 +30,14 @@ public class NPC_Controller : MonoBehaviour
 
     public void Transport(Transform pos)
     {
+        if (_agent == null)
+        {
+            _agent = GetComponent<NavMeshAgent>();
+        }
+        _agent.enabled = false;
         transform.position = pos.position;
         transform.rotation = pos.rotation;
+        _agent.enabled = true;
     }
     
     public void Move()
@@ -224,6 +230,10 @@ public class NPC_Controller : MonoBehaviour
         reached_dest = false;
         rotate_dest = false;
         target = Destination01.trans.position;
+        if (_agent == null)
+        {
+            _agent = GetComponent<NavMeshAgent>();
+        }
         while (!CheckDest(.1f) && MovementType.value == "GoToDest")
         {
             _agent.destination = target;
