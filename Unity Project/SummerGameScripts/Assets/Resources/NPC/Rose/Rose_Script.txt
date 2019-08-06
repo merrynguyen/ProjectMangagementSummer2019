@@ -12,11 +12,11 @@ Rose@
  ^
 Carl told me there would be a new fruit shipment today!+
  ^
-I am going to make an apple pie today but my hips don't work like they use to..."+
+I am going to make an apple pie today but my hips don't work like they use to..."<
 
-Me@#
-4^#
-~Sure Rose!<#
+Me@
+4^
+~Sure Rose!<
 
 Rose@#
 4^
