@@ -10,6 +10,18 @@
             <e p="Alpha_Change.cs" t="Include" />
           </e>
         </e>
+        <e p="Michael_Stuff" t="Include">
+          <e p="Assets" t="Include">
+            <e p="Buildings" t="Include">
+              <e p="Skybox_import" t="Include">
+                <e p="Fantasy Skybox FREE" t="Include">
+                  <e p="Fog and Ambient references.txt" t="Include" />
+                  <e p="Readme.txt" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="packages" t="Include">
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">
@@ -57,6 +69,15 @@
         </e>
         <e p="Resources" t="Include">
           <e p="NPC" t="Include">
+            <e p="Bope" t="Include">
+              <e p="Bope_Dialogue.txt" t="Include" />
+            </e>
+            <e p="Brad" t="Include">
+              <e p="Brad_Dialogue.txt" t="Include" />
+            </e>
+            <e p="Bunny" t="Include">
+              <e p="Bunny_Dialogue.txt" t="Include" />
+            </e>
             <e p="Cafe_owner" t="Include">
               <e p="Cafe_Owner_Script.txt" t="Include" />
             </e>
@@ -65,6 +86,12 @@
             </e>
             <e p="Carl" t="Include">
               <e p="Carl_Dialogue.txt" t="Include" />
+            </e>
+            <e p="Corky" t="Include">
+              <e p="Corky_Script.txt" t="Include" />
+            </e>
+            <e p="Dog" t="Include">
+              <e p="Dog_Dialogue.txt" t="Include" />
             </e>
             <e p="Ice_Cream_Shop_Owner" t="Include">
               <e p="Ice_Cream_Script.txt" t="Include" />
@@ -75,22 +102,61 @@
             <e p="Kirk" t="Include">
               <e p="Kirk_Dialogue.txt" t="Include" />
             </e>
+            <e p="Librarian" t="Include">
+              <e p="Librarian_Script.txt" t="Include" />
+            </e>
+            <e p="Linny" t="Include">
+              <e p="Linny_Script.txt" t="Include" />
+            </e>
             <e p="Luther" t="Include">
               <e p="Luther_Script.txt" t="Include" />
             </e>
             <e p="Merry" t="Include">
               <e p="Merry_Script.txt" t="Include" />
             </e>
-            <e p="Multiple_Characters" t="Include">
+            <e p="Misc" t="Include">
               <e p="Check on carl" t="Include">
                 <e p="Checking_on_Carl.txt" t="Include" />
               </e>
+              <e p="Commotion" t="Include">
+                <e p="Group_Dialogues.txt" t="Include" />
+              </e>
+              <e p="Michael_Door" t="Include">
+                <e p="Door_Dialogues.txt" t="Include" />
+              </e>
+              <e p="Steve_Diary" t="Include">
+                <e p="Diary_Dialogues.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Mouse" t="Include">
+              <e p="Mouse_Dialogue.txt" t="Include" />
             </e>
             <e p="Rose" t="Include">
               <e p="Rose_Script.txt" t="Include" />
             </e>
+            <e p="Ry" t="Include">
+              <e p="Ry_Dialogue.txt" t="Include" />
+            </e>
             <e p="Scruffles" t="Include">
               <e p="Scruff_Script.txt" t="Include" />
+            </e>
+            <e p="Slade" t="Include">
+              <e p="Slade_Script.txt" t="Include" />
+            </e>
+            <e p="Squirrel" t="Include">
+              <e p="Squirrel_Dialogue.txt" t="Include" />
+            </e>
+            <e p="Steve" t="Include">
+              <e p="STeve_Dialogue.txt" t="Include" />
+            </e>
+            <e p="Tammy" t="Include">
+              <e p="Tammy_Dialogue.txt" t="Include" />
+            </e>
+            <e p="Wolf" t="Include">
+              <e p="Wolf_Dialogue.txt" t="Include" />
+            </e>
+            <e p="Wolf_Girl" t="Include">
+              <e p="Wolf_girl_Dialogue.txt" t="Include" />
             </e>
           </e>
           <e p="Saving_Data" t="Include">
@@ -100,7 +166,6 @@
           </e>
           <e p="Text_Files" t="Include">
             <e p="Get_Item_01.txt" t="Include" />
-            <e p="Group_Dialogues.txt" t="Include" />
             <e p="Test.txt" t="Include" />
           </e>
         </e>
@@ -109,6 +174,7 @@
             <e p="Camera_Controller.cs" t="Include" />
             <e p="Camera_Switch.cs" t="Include" />
           </e>
+          <e p="Character_Scale.cs" t="Include" />
           <e p="DataObjects" t="Include">
             <e p="ActionObject.cs" t="Include" />
             <e p="BoolData.cs" t="Include" />
@@ -129,6 +195,7 @@
             <e p="UnityKeyCodeObject.cs" t="Include" />
             <e p="Vector3Data.cs" t="Include" />
           </e>
+          <e p="Daylight_Change.cs" t="Include" />
           <e p="Dialogue_Scripts" t="Include">
             <e p="Choice_Selection.cs" t="Include" />
             <e p="dialouge_objects.cs" t="Include" />
@@ -161,16 +228,22 @@
           <e p="Item_Pickup.cs" t="Include" />
           <e p="MiscScripts" t="Include">
             <e p="AutomaticSnapScript.cs" t="Include" />
+            <e p="Book_Animator.cs" t="Include" />
             <e p="Change_Rigidbody_Script.cs" t="Include" />
             <e p="Change_Scene.cs" t="Include" />
             <e p="DeacvtivateSnapAreas.cs" t="Include" />
             <e p="Drag_Script.cs" t="Include" />
             <e p="Interact_with_object.cs" t="Include" />
             <e p="Move_Script.cs" t="Include" />
+            <e p="Multiple_Bool_Check.cs" t="Include" />
+            <e p="Mutiple_Action_Modifier.cs" t="Include" />
             <e p="Pause_Script.cs" t="Include" />
+            <e p="Reset_Game.cs" t="Include" />
             <e p="Rotate_Script.cs" t="Include" />
             <e p="Snap_Script.cs" t="Include" />
+            <e p="UnityEvent_List_Script.cs" t="Include" />
             <e p="viewing_spot_trigger.cs" t="Include" />
+            <e p="Wait_Event.cs" t="Include" />
           </e>
           <e p="Movement_Scripts" t="Include">
             <e p="AnimationScript.cs" t="Include" />
@@ -187,13 +260,13 @@
             <e p="TestMovementScript.cs" t="Include" />
             <e p="Transform_Controller.cs" t="Include" />
           </e>
-          <e p="Multiple_Bool_Check.cs" t="Include" />
-          <e p="Mutiple_Action_Modifier.cs" t="Include" />
           <e p="NPC_Scripts" t="Include">
             <e p="NPC_Controller.cs" t="Include" />
+            <e p="StandardShaderUtils.cs" t="Include" />
           </e>
           <e p="Puzzles" t="Include">
             <e p="Antidote_Game_Manager.cs" t="Include" />
+            <e p="Block_Puzzle.cs" t="Include" />
             <e p="Geometry_Puzzle" t="Include">
               <e p="Match_Script.cs" t="Include" />
               <e p="Name_ID.cs" t="Include" />
@@ -222,8 +295,7 @@
           <e p="Scriptable_Object_Saving.cs" t="Include" />
           <e p="Show_Text.cs" t="Include" />
           <e p="Timer_Display.cs" t="Include" />
-          <e p="UnityEvent_List_Script.cs" t="Include" />
-          <e p="Wait_Event.cs" t="Include" />
+          <e p="Transport_Object.cs" t="Include" />
         </e>
         <e p="Test.cs" t="Include" />
         <e p="TriggerReset.cs" t="Include" />
