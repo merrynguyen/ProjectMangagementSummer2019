@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\10802160\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.1860553405.00" t="ExcludeRecursive" />
-    <e p="C:\Users\10802160\Documents\Repos\Summer2019\ProjectMangagementSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
+    <e p="C:\Users\Owner\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.179902281.00" t="ExcludeRecursive" />
+    <e p="E:\School\College\Summer2019\ProjectMangagementSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Material" t="Include">
@@ -174,6 +174,7 @@
             <e p="Camera_Controller.cs" t="Include" />
             <e p="Camera_Switch.cs" t="Include" />
           </e>
+          <e p="Character_Scale.cs" t="Include" />
           <e p="DataObjects" t="Include">
             <e p="ActionObject.cs" t="Include" />
             <e p="BoolData.cs" t="Include" />

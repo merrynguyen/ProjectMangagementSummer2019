@@ -68,7 +68,7 @@ Me@
  ^
 ~That isn't what that is for...>
 
-4 - Library@
+4 - Library#
 Slade@
  ^
 ~Ohh! More books for my own collection!<
@@ -92,7 +92,7 @@ Slade@
 5 - Mansion#
 Slade@
  ^
-~Hi Detective, you’ve found my collection!
+~Hi Detective, you’ve found my collection!<
 Me@
  ^
 ~What is all this?<
@@ -104,10 +104,10 @@ Me@
 ~I don’t think that is borrowing things, I think that is called stealing.<
 Slade@
 H^
-~To-ma-to, To-mah-to. Happy
+~To-ma-to, To-mah-to.<
 Me@
 N^
-~….
+~….<
 Slade@
  ^
 ~There is only ONE place I haven’t been able to get some memorabilia from. It’s beyond Luther’s house.+
