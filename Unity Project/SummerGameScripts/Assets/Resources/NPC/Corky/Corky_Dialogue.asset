@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d8d1e4b870b4cf4bb5a4d5baf949547, type: 3}
   m_Name: Corky_Dialogue
   m_EditorClassIdentifier: 
-  File: {fileID: 11400000, guid: aaef4121f0a7dd64994ec5783aeaa8e5, type: 2}
+  File: {fileID: 11400000, guid: 7371aa1c303a8e0479bb9be9fa9b2de1, type: 2}
