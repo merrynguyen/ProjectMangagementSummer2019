@@ -16,7 +16,7 @@ public class Interact_with_object : MonoBehaviour
     {
         if (interactOnce && interacted)
             return;
-        if (Interact_Keys.KeyDown() && _inRange && !inPuzzleMode.value)
+        else if (Interact_Keys.KeyDown() && _inRange && !inPuzzleMode.value)
         {
             InteractEvent.Invoke();
             interacted = true;
