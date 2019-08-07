@@ -24,7 +24,7 @@ public class Interact_with_object : MonoBehaviour
         else if (Interact_Keys.KeyDown() && inPuzzleMode.value)
         {
             Exit_Puzzle();
-            _inRange = false;
+            //_inRange = true;
         }
     }
 
@@ -32,7 +32,7 @@ public class Interact_with_object : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //Debug.Log("inRange");
+            Debug.Log("inRange");
             _inRange = true;
         }
     }
