@@ -21,6 +21,7 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     public Vector3Data Load_Destination, Room_Load_Pos;
     public QuaternionData Rotation_Destination, Room_Load_Rot;
     private Vector3 _destination, ypos;
+    
  
     void Start()
     {

@@ -331,22 +331,22 @@ PrefabInstance:
     - target: {fileID: 2442724138731279823, guid: a1a5c767a3258e74689554ebeb1b1d16,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.033931777
+      value: 0.03393181
       objectReference: {fileID: 0}
     - target: {fileID: 2442724138731279823, guid: a1a5c767a3258e74689554ebeb1b1d16,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0020175204
+      value: -0.0020175225
       objectReference: {fileID: 0}
     - target: {fileID: 3069077957468647359, guid: a1a5c767a3258e74689554ebeb1b1d16,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.033931777
+      value: 0.03393181
       objectReference: {fileID: 0}
     - target: {fileID: 3069077957468647359, guid: a1a5c767a3258e74689554ebeb1b1d16,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0020175204
+      value: -0.0020175225
       objectReference: {fileID: 0}
     - target: {fileID: 3227220250299521835, guid: a1a5c767a3258e74689554ebeb1b1d16,
         type: 3}
@@ -388,6 +388,41 @@ PrefabInstance:
         type: 3}
       propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472671014404285732, guid: a1a5c767a3258e74689554ebeb1b1d16,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472671014404285732, guid: a1a5c767a3258e74689554ebeb1b1d16,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472671014404285732, guid: a1a5c767a3258e74689554ebeb1b1d16,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472671014404285732, guid: a1a5c767a3258e74689554ebeb1b1d16,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2442724137462155244}
+    - target: {fileID: 2472671014404285732, guid: a1a5c767a3258e74689554ebeb1b1d16,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472671014404285732, guid: a1a5c767a3258e74689554ebeb1b1d16,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472671014404285732, guid: a1a5c767a3258e74689554ebeb1b1d16,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: OpenDoor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1a5c767a3258e74689554ebeb1b1d16, type: 3}
@@ -453,3 +488,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   tagtocompare: Player
+--- !u!95 &2442724137462155244 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3943142733817065390, guid: a1a5c767a3258e74689554ebeb1b1d16,
+    type: 3}
+  m_PrefabInstance: {fileID: 2442724137462155240}
+  m_PrefabAsset: {fileID: 0}

@@ -7,19 +7,56 @@
     <list default="true" id="d183136a-9d8b-4f4a-944d-74955dadf713" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SummerGameScripts/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SummerGameScripts/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SummerGameScripts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SummerGameScripts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Building/Cafe/Cafe_Trans.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Building/Cafe/Cafe_Trans.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Island/LampPost.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Island/LampPost.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Church/Church_Text_Trans.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Church/Church_Text_Trans.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Church/Church_text.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Church/Church_text.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Dock/Dock_text.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Dock/Dock_text.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Doctors office/Doc_Clinic_Trans.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Doctors office/Doc_Clinic_Trans.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Doctors office/Doc_clinic.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Doctors office/Doc_clinic.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Misc_buildings/Graves/Generic.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Misc_buildings/Graves/Professors/Marty_Rod/Fence.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Misc_buildings/Graves/Professors/Marty_Rod/Marty_Rod.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Finished_Code/Clinic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Finished_Code/Clinic.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Finished_Code/Secret_Lab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Finished_Code/Secret_Lab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/dialouge_box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/dialouge_box.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CharacterAnimation/Cat_Animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CharacterAnimation/Cat_Animator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Characters/Cafe_Owner/Fox_Model1_HeadandTail.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Characters/Cafe_Owner/Fox_Model1_HeadandTail.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Characters/Kirk/Material/Krik_body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Characters/Kirk/Material/Krik_body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Characters/Mayor_Merry/Material/Merry_head_Tail.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Characters/Mayor_Merry/Material/Merry_head_Tail.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Characters/Raccoon/Material/Raccoon_Head_Tail.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Characters/Raccoon/Material/Raccoon_Head_Tail.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Characters/Scruffles/Material/Scruff_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Characters/Scruffles/Material/Scruff_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Characters/Steve/Material/Steve_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Characters/Steve/Material/Steve_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Michael_Stuff/Buildings/Island_textures/Island_paint/Island_redone/Misc_buildings/Graves/Professors/Marty_Rod.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Finished_Code/Ice_Cream_Shop_prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Finished_Code/Ice_Cream_Shop_prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Finished_Code/Library.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Finished_Code/Library.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Finished_Code/Sewer_Maze_Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Finished_Code/Sewer_Maze_Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Sewer_Maze_Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Sewer_Maze_Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharacterController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Choice_Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Choice_Box.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Dialogue_Variables/In_Choice_Selection_Mode.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Dialogue_Variables/In_Choice_Selection_Mode.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Items/Detective_Notes/Grave_PIn.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Items/Detective_Notes/Grave_PIn.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Items/Detective_Notes/Kirk_Password.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Items/Detective_Notes/Kirk_Password.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Movement_Variables/Walk_Speed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Movement_Variables/Walk_Speed.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Brad/Brad_Dialogue.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Brad/Brad_Dialogue.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Captain_Al/Captain_Al_Dialogue.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Captain_Al/Captain_Al_Dialogue.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Carl/Carl_Dialogue.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Carl/Carl_Dialogue.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Luther/Luther_Script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Luther/Luther_Script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Check on carl/Checking_on_Carl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Check on carl/Checking_on_Carl.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Steve_Diary/Diary_Dialogues.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Steve_Diary/Diary_Dialogues.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Rose/Rose_Script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Rose/Rose_Script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/NPC/Scruffles/Scruff_Script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/NPC/Scruffles/Scruff_Script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Puzzles/Password.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Puzzles/Password.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Puzzles/Wanted_Key_Code.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Puzzles/Wanted_Key_Code.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Checked_On_Carl.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Checked_On_Carl.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Church/Merry_Left_Church.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Church/Merry_Left_Church.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Brad_House.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Brad_House.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Cafe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Cafe.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Church.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Church.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Clinic.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Clinic.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Ice_Cream.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Ice_Cream.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Kim_Slade_House.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Kim_Slade_House.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Library.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Library.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Luther_House.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Luther_House.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Mansion.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Mansion.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Michael_House.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Michael_House.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Rose_Kirk_House.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Entering_Buildings/Rose_Kirk_House.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Got_Doctor_Ingredient.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Got_Doctor_Ingredient.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Ice Cream Shoppe/Got_Ice_Cream_Ingredient.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Ice Cream Shoppe/Got_Ice_Cream_Ingredient.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Ice Cream Shoppe/Talked_To_Merry.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Ice Cream Shoppe/Talked_To_Merry.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Michael/Got_All_Ingredients.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Michael/Got_All_Ingredients.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Michael/Got_List.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Michael/Got_List.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Outdoors/Given_Rose_Apples.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Outdoors/Given_Rose_Apples.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Solved_Cafe_puzzle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Bools/Solved_Cafe_puzzle.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Time_Set.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Saving_Data/Time_Set.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Brad_Steve_House.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Brad_Steve_House.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cafe_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cafe_Scene.unity" afterDir="false" />
@@ -27,12 +64,20 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Clinic.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Clinic.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ice_Cream_Shop.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ice_Cream_Shop.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Island.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kim and Skye.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Kim and Skye.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Library.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lighthouse.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lighthouse.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luther_Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luther_Home.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mansion.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mansion.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Police Station.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Police Station.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rose and Kirk.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rose and Kirk.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Secret_Lab.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Secret_Lab.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Daylight_Change.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Daylight_Change.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sewer_Pipe_maze.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/Choice_Selection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/Choice_Selection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/dialouge_script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/dialouge_script.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/AnimationScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/AnimationScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Character_Movement_JoystickConf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Character_Movement_JoystickConf.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Standard Assets/Environment/Water/Water/Materials/WaterProDaytime.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Environment/Water/Water/Materials/WaterProDaytime.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,183 +118,84 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Push_Script.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Push_Script.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-              <folding>
-                <marker date="1565155032498" expanded="false" signature="6:44" ph="..." />
-                <marker date="1565155032498" expanded="true" signature="86:2948" ph="{...}" />
-                <marker date="1565155032498" expanded="true" signature="397:458" ph="{...}" />
-                <marker date="1565155032498" expanded="true" signature="508:708" ph="{...}" />
-                <marker date="1565155032498" expanded="true" signature="567:693" ph="{...}" />
-                <marker date="1565155032498" expanded="true" signature="757:884" ph="{...}" />
-                <marker date="1565155032498" expanded="true" signature="953:1818" ph="{...}" />
-                <marker date="1565155032498" expanded="true" signature="1042:1812" ph="{...}" />
-                <marker date="1565155032498" expanded="true" signature="1323:1798" ph="{...}" />
-                <marker date="1565155032498" expanded="true" signature="1864:2300" ph="{...}" />
-                <marker date="1565155032498" expanded="true" signature="1956:2240" ph="{...}" />
-                <marker date="1565155032498" expanded="true" signature="2347:2946" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Inventory_Display.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory_Display.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
-              <folding>
-                <marker date="1565155032491" expanded="false" signature="6:100" ph="..." />
-                <marker date="1565155032491" expanded="true" signature="148:5050" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="536:570" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="600:1434" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="1531:1997" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="1577:1711" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="1796:1991" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="2071:2495" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="2115:2174" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="2259:2489" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="2528:2621" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="2651:2861" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="2895:3105" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="3136:3346" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="3377:3587" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="3622:4242" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="3658:4236" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="3718:3786" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="3833:3901" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="3949:4017" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="4074:4142" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="4278:4892" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="4431:4496" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="4555:4618" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="4676:4738" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="4805:4877" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="4924:5048" ph="{...}" />
-                <marker date="1565155032491" expanded="true" signature="4990:5042" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Interact_with_object.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MiscScripts/Interact_with_object.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-              <folding>
-                <marker date="1565155053387" expanded="false" signature="6:104" ph="..." />
-                <marker date="1565155053387" expanded="true" signature="155:1215" ph="{...}" />
-                <marker date="1565155053387" expanded="true" signature="388:761" ph="{...}" />
-                <marker date="1565155053387" expanded="true" signature="526:613" ph="{...}" />
-                <marker date="1565155053387" expanded="true" signature="677:755" ph="{...}" />
-                <marker date="1565155053387" expanded="true" signature="810:945" ph="{...}" />
-                <marker date="1565155053387" expanded="true" signature="856:939" ph="{...}" />
-                <marker date="1565155053387" expanded="true" signature="993:1136" ph="{...}" />
-                <marker date="1565155053387" expanded="true" signature="1039:1130" ph="{...}" />
-                <marker date="1565155053387" expanded="true" signature="1167:1208" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Ending_on_Carl 1.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Ending/Ending_on_Carl 1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="37" column="105" selection-start-line="37" selection-start-column="105" selection-end-line="37" selection-end-column="105" />
+            <state relative-caret-position="660">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Daylight_Change.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Daylight_Change.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="90" column="57" selection-start-line="90" selection-start-column="57" selection-end-line="90" selection-end-column="57" />
-              <folding>
-                <marker date="1565221223120" expanded="false" signature="6:152" ph="..." />
-                <marker date="1565221223120" expanded="true" signature="198:3733" ph="{...}" />
-                <marker date="1565221223120" expanded="true" signature="405:3725" ph="{...}" />
-                <marker date="1565221223120" expanded="true" signature="438:3719" ph="{...}" />
-                <marker date="1565221223120" expanded="true" signature="485:616" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-                <marker date="1565221223120" expanded="true" signature="1056:1187" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-                <marker date="1565221223120" expanded="true" signature="1509:1639" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-                <marker date="1565221223120" expanded="true" signature="1963:2093" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-                <marker date="1565221223120" expanded="true" signature="2534:2665" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-                <marker date="1565221223120" expanded="true" signature="3109:3240" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Character_Movement_JoystickConf.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Character_Movement_JoystickConf.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
-              <folding>
-                <marker date="1565215807662" expanded="false" signature="6:118" ph="..." />
-                <marker date="1565215807662" expanded="true" signature="180:5276" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="830:985" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="1017:1123" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="1174:1290" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="1319:1489" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="1517:1685" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="1727:1784" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="1823:1881" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="1912:2028" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="2056:2182" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="2214:2330" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="2380:2840" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="2871:3081" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="3141:3583" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="3616:3989" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="3740:3956" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="4025:4951" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="4498:4895" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="5000:5268" ph="{...}" />
-                <marker date="1565215807662" expanded="true" signature="5216:5262" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Wolf_Dialogue.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Wolf/Wolf_Dialogue.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-            </state>
-          </provider>
+      <file leaf-file-name="Door_Dialogues.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Michael_Door/Door_Dialogues.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Rose_Script.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Rose/Rose_Script.txt">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scruff_Script.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Scruffles/Scruff_Script.txt">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="82" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
+              <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Kirk_Dialogue.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Kirk/Kirk_Dialogue.txt">
+      <file leaf-file-name="Merry_Script.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+            <state relative-caret-position="525">
+              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Nav_Mesh_Controller.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Nav_Mesh_Controller.cs">
+      <file leaf-file-name="Luther_Script.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Luther/Luther_Script.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="297">
+              <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Diary_Dialogues.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Steve_Diary/Diary_Dialogues.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="49" column="112" selection-start-line="49" selection-start-column="112" selection-end-line="49" selection-end-column="112" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Slade_Script.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Slade/Slade_Script.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-330">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="STeve_Dialogue.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Steve/STeve_Dialogue.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="Ice_Cream_Script.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -305,6 +251,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Change_Movement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Slide_Tiles_Puzzle/Set_Tile_Text.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Reset_Triggers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Packages/NavMeshComponents/Scripts/NavMeshSurface.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory_Display.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/AnimationScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -320,6 +267,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event_Scripts/EventsScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/TestMovementScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/Set_Parent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/ReadFile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Set_Start_Destination.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Geometry_Puzzle/Piece_Check.cs" root0="SKIP_HIGHLIGHTING" />
@@ -351,14 +299,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Book_Animator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NewBehaviourScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameObject_List.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Pipe_Puzzle/Pipe_Trigger_Event.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Pipe_Puzzle/PipePuzzleScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Material/Maze/Alpha_Change.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MiscScripts/Pause_Script.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Steve_Diary/Diary_Dialogues.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MiscScripts/Reset_Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Cafe_owner/Cafe_Owner_Script.txt" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Librarian/Librarian_Script.txt" />
@@ -367,14 +308,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Block_Puzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataObjects/KeyBoard_StringData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataObjects/BoolData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Camera_Switch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataObjects/StringData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/dialouge_script.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Check on carl/Checking_on_Carl.txt" />
-        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Brad/Brad_Dialogue.txt" />
-        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Scruffles/Scruff_Script.txt" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Kirk/Kirk_Dialogue.txt" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Tammy/Tammy_Dialogue.txt" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Bope/Bope_Dialogue.txt" />
@@ -388,20 +324,32 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Face_Swap.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Steve/STeve_Dialogue.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Nav_Mesh_Controller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Captain_Al/Captain_Al_Dialogue.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character_Scale.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt" />
-        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Rose/Rose_Script.txt" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Wolf/Wolf_Dialogue.txt" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Slade/Slade_Script.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Push_Script.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory_Display.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MiscScripts/Interact_with_object.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Ending/Ending_on_Carl.txt" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Character_Movement_JoystickConf.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Ending/Ending_on_Carl 1.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Daylight_Change.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/dialouge_script.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/Choice_Selection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/Set_Parent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Character_Movement_JoystickConf.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Reset_Triggers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/AnimationScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Brad/Brad_Dialogue.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Captain_Al/Captain_Al_Dialogue.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Check on carl/Checking_on_Carl.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Rose/Rose_Script.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Carl/Carl_Dialogue.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Scruffles/Scruff_Script.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Luther/Luther_Script.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/NPC/Misc/Steve_Diary/Diary_Dialogues.txt" />
       </list>
     </option>
   </component>
@@ -422,6 +370,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="SolutionExplorer" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -444,6 +394,188 @@
               <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
               <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SummerGameScripts" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
             </path>
             <path>
               <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -461,8 +593,6 @@
         </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="Scratches" />
-      <pane id="SolutionExplorer" />
       <pane id="FileSystemExplorer" />
     </panes>
   </component>
@@ -621,11 +751,12 @@
       <workItem from="1565142174092" duration="931000" />
       <workItem from="1565147924374" duration="2431000" />
       <workItem from="1565211192422" duration="6934000" />
+      <workItem from="1565225179400" duration="12283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="448229000" />
+    <option name="totallyTimeSpent" value="460512000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -646,7 +777,7 @@
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2782101" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28404668" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="9" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -670,24 +801,24 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Unity" order="9" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30214426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Unit Tests" order="10" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32902297" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,57 +830,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Multiple_Characters/Commotion/Group_Dialogues.txt" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Reset_Game.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/AnimationScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MiscScripts/Pause_Script.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory_Dialouge.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="105" column="10" selection-start-line="105" selection-start-column="10" selection-end-line="105" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Steve_Diary/Diary_Dialogues.txt" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MiscScripts/Reset_Game.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Transport_Object.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Michael_Door/Door_Dialogues.txt" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Block_Puzzle.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DataObjects/KeyBoard_StringData.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Kim/Kim_Dialogue.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Luther/Luther_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-844" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
         </state>
       </provider>
     </entry>
@@ -795,27 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Cafe_owner/Cafe_Owner_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="186" selection-start-line="186" selection-end-line="186" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/dialouge_script.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="246" column="29" selection-start-line="246" selection-start-column="29" selection-end-line="246" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Check on carl/Checking_on_Carl.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Tammy/Tammy_Dialogue.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -823,22 +886,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Scruffles/Scruff_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-768">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Bunny/Bunny_Dialogue.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Wolf_Girl/Wolf_girl_Dialogue.txt" />
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Linny/Linny_Script.txt" />
     <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Mouse/Mouse_Dialogue.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -853,25 +901,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Corky/Corky_Script.txt" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Face_Swap.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Bope/Bope_Dialogue.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Captain_Al/Captain_Al_Dialogue.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -889,27 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Rose/Rose_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="82" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Kirk/Kirk_Dialogue.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Nav_Mesh_Controller.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -917,31 +929,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Brad/Brad_Dialogue.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Wolf/Wolf_Dialogue.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1905">
-          <caret line="178" selection-start-line="178" selection-end-line="178" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Slade/Slade_Script.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
@@ -1003,16 +994,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Ending/Ending_on_Carl.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Ending/Ending_on_Carl.txt" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MiscScripts/Interact_with_object.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
+        <state relative-caret-position="675">
           <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
           <folding>
             <marker date="1565155053387" expanded="false" signature="6:104" ph="..." />
@@ -1029,59 +1014,359 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Character_Movement_JoystickConf.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Daylight_Change.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
+        <state relative-caret-position="1290">
+          <caret line="90" column="57" selection-start-line="90" selection-start-column="57" selection-end-line="90" selection-end-column="57" />
           <folding>
-            <marker date="1565215807662" expanded="false" signature="6:118" ph="..." />
-            <marker date="1565215807662" expanded="true" signature="180:5276" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="830:985" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="1017:1123" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="1174:1290" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="1319:1489" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="1517:1685" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="1727:1784" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="1823:1881" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="1912:2028" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="2056:2182" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="2214:2330" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="2380:2840" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="2871:3081" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="3141:3583" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="3616:3989" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="3740:3956" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="4025:4951" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="4498:4895" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="5000:5268" ph="{...}" />
-            <marker date="1565215807662" expanded="true" signature="5216:5262" ph="{...}" />
+            <marker date="1565222889555" expanded="false" signature="6:152" ph="..." />
+            <marker date="1565222889555" expanded="true" signature="198:3733" ph="{...}" />
+            <marker date="1565222889555" expanded="true" signature="405:3725" ph="{...}" />
+            <marker date="1565222889555" expanded="true" signature="438:3719" ph="{...}" />
+            <marker date="1565222889555" expanded="true" signature="485:616" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
+            <marker date="1565222889555" expanded="true" signature="1056:1187" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
+            <marker date="1565222889555" expanded="true" signature="1509:1639" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
+            <marker date="1565222889555" expanded="true" signature="1963:2093" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
+            <marker date="1565222889555" expanded="true" signature="2534:2665" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
+            <marker date="1565222889555" expanded="true" signature="3109:3240" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/dialouge_script.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="167" column="32" selection-start-line="167" selection-start-column="32" selection-end-line="167" selection-end-column="32" />
+          <folding>
+            <marker date="1565225214838" expanded="false" signature="6:126" ph="..." />
+            <marker date="1565225214838" expanded="true" signature="172:7948" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="880:1179" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="1229:1365" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="1275:1359" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="1413:1494" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="1526:1710" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="1624:1704" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="1739:1951" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="1795:1949" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="1986:2041" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="2079:2378" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="2158:2325" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="2204:2264" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="2415:5439" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="2678:5123" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="2985:5066" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="3160:4906" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="3299:3521" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="3546:3853" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="3887:4884" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="4008:4800" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="4142:4457" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="4490:4774" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="5160:5433" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="5470:5559" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="5599:6497" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="5943:6316" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="6027:6100" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="6117:6306" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="6529:7755" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="6735:7749" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="7789:7885" ph="{...}" />
+            <marker date="1565225214838" expanded="true" signature="7912:7946" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue_Scripts/Choice_Selection.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1091">
+          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+          <folding>
+            <marker date="1565226616762" expanded="false" signature="6:126" ph="..." />
+            <marker date="1565226616762" expanded="true" signature="173:3179" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="490:558" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="589:1005" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="710:776" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="824:999" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="1038:3054" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="1130:3031" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="1216:1509" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="1299:1407" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="1590:1883" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="1673:1781" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="1963:2256" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="2046:2154" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="2335:2628" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="2418:2526" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="2693:2970" ph="{...}" />
+            <marker date="1565226616762" expanded="true" signature="3079:3177" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/Set_Parent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding>
+            <marker date="1565228037988" expanded="false" signature="6:78" ph="..." />
+            <marker date="1565228037988" expanded="true" signature="119:324" ph="{...}" />
+            <marker date="1565228037988" expanded="true" signature="170:322" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/Character_Movement_JoystickConf.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <marker date="1565229707886" expanded="false" signature="6:118" ph="..." />
+            <marker date="1565229707886" expanded="true" signature="180:5281" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="835:990" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="1022:1128" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="1179:1295" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="1324:1494" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="1522:1690" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="1732:1789" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="1828:1886" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="1917:2033" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="2061:2187" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="2219:2335" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="2385:2845" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="2876:3086" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="3146:3588" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="3621:3994" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="3745:3961" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="4030:4956" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="4503:4900" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="5005:5273" ph="{...}" />
+            <marker date="1565229707886" expanded="true" signature="5221:5267" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Reset_Triggers.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <marker date="1565230385610" expanded="false" signature="6:78" ph="..." />
+            <marker date="1565230385610" expanded="true" signature="123:413" ph="{...}" />
+            <marker date="1565230385610" expanded="true" signature="216:269" ph="{...}" />
+            <marker date="1565230385610" expanded="true" signature="297:411" ph="{...}" />
+            <marker date="1565230385610" expanded="true" signature="347:405" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Movement_Scripts/AnimationScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding>
+            <marker date="1565232340829" expanded="false" signature="6:78" ph="..." />
+            <marker date="1565232340829" expanded="true" signature="124:2854" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="445:539" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="569:674" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="703:804" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="830:883" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="915:2706" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="951:2699" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="1039:1152" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="1233:1445" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="1507:1720" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="1760:1924" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="1966:2455" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="2078:2249" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="2270:2440" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="2493:2689" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="2742:2852" ph="{...}" />
+            <marker date="1565232340829" expanded="true" signature="2790:2846" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/NPC_Scripts/NPC_Controller.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+          <folding>
+            <marker date="1565236730073" expanded="false" signature="6:171" ph="..." />
+            <marker date="1565236730073" expanded="true" signature="216:10335" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="782:1194" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="810:908" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="921:1005" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="1236:1496" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="1270:1341" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="1524:2059" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="1663:1743" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="2109:3418" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="2178:3308" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="2701:3152" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="3004:3138" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="3462:4785" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="3526:4736" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="4051:4292" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="4370:4580" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="4822:5451" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="4991:5406" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="5171:5344" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="5488:6190" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="5657:6145" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="5910:6083" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="6230:6529" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="6363:6523" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="6569:7265" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="6911:7105" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="7303:8085" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="7554:7666" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="7733:7927" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="8121:9112" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="8335:8406" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="8474:8587" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="8652:8920" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="9164:9288" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="9323:9404" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="9435:9550" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="9592:9921" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="9869:9915" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="9962:10242" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="10190:10236" ph="{...}" />
+            <marker date="1565236730073" expanded="true" signature="10274:10333" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Bope/Bope_Dialogue.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Brad/Brad_Dialogue.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Bunny/Bunny_Dialogue.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Cafe_owner/Cafe_Owner_Script.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Corky/Corky_Script.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Kirk/Kirk_End_Conv_Action.asset">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Kirk/Kirk_Dialogue.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Librarian/Librarian_Script.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Linny/Linny_Script.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Check on carl/Checking_on_Carl.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Commotion/Group_Dialogues.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Ending/Ending_on_Carl 1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="37" column="105" selection-start-line="37" selection-start-column="105" selection-end-line="37" selection-end-column="105" />
+        <state relative-caret-position="660">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Daylight_Change.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Michael_Door/Door_Dialogues.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Rose/Rose_Script.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="90" column="57" selection-start-line="90" selection-start-column="57" selection-end-line="90" selection-end-column="57" />
-          <folding>
-            <marker date="1565221223120" expanded="false" signature="6:152" ph="..." />
-            <marker date="1565221223120" expanded="true" signature="198:3733" ph="{...}" />
-            <marker date="1565221223120" expanded="true" signature="405:3725" ph="{...}" />
-            <marker date="1565221223120" expanded="true" signature="438:3719" ph="{...}" />
-            <marker date="1565221223120" expanded="true" signature="485:616" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-            <marker date="1565221223120" expanded="true" signature="1056:1187" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-            <marker date="1565221223120" expanded="true" signature="1509:1639" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-            <marker date="1565221223120" expanded="true" signature="1963:2093" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-            <marker date="1565221223120" expanded="true" signature="2534:2665" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-            <marker date="1565221223120" expanded="true" signature="3109:3240" ph="/* rotation = Sun.transform.eulerAngles; ... */" />
-          </folding>
+        <state relative-caret-position="71">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Slade/Slade_Script.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Steve/STeve_Dialogue.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Captain_Al/Captain_Al_Dialogue.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Carl/Carl_Dialogue.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Ice_Cream_Shop_Owner/Ice_Cream_Script.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Scruffles/Scruff_Script.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Merry/Merry_Script.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Luther/Luther_Script.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/NPC/Misc/Steve_Diary/Diary_Dialogues.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="49" column="112" selection-start-line="49" selection-start-column="112" selection-end-line="49" selection-end-column="112" />
         </state>
       </provider>
     </entry>
