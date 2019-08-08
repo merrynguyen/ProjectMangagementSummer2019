@@ -27,15 +27,15 @@ RectTransform:
   m_GameObject: {fileID: 2389682549277451296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1286258, y: 0.7638251, z: 1}
+  m_LocalScale: {x: 0.121662, y: 0.72247165, z: 0.94586}
   m_Children: []
   m_Father: {fileID: 2389682549667649839}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.1, y: 9}
-  m_SizeDelta: {x: 755, y: 120}
+  m_AnchoredPosition: {x: 1.7, y: 9}
+  m_SizeDelta: {x: 747.42, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2389682549277451301
 CanvasRenderer:
@@ -78,9 +78,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Testing Testing 1 2 3...
-
-    >:( :( :| :) :D :P'
+  m_Text: This is a test of the size of the dialogue box text, I am making sure everything
+    fits nicely. I don't know what to write anymore but luckily its almost full.
 --- !u!1 &2389682549502340812
 GameObject:
   m_ObjectHideFlags: 0
