@@ -161,6 +161,9 @@
               <e p="Commotion" t="Include">
                 <e p="Group_Dialogues.txt" t="Include" />
               </e>
+              <e p="Ending" t="Include">
+                <e p="Ending_on_Carl 1.txt" t="Include" />
+              </e>
               <e p="Michael_Door" t="Include">
                 <e p="Door_Dialogues.txt" t="Include" />
               </e>

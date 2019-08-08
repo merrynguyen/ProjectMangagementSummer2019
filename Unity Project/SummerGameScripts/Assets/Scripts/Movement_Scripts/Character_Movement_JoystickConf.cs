@@ -105,6 +105,7 @@ public class Character_Movement_JoystickConf : MonoBehaviour
 
     public void TurnTowards()
     {
+        Debug.Log("Rotate");
         walkspeed = 0;
         rotatespeed = RotationFloat;
         _rotation = target.trans.rotation;
